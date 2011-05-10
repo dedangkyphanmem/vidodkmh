@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="MyNote_ListView" Index="1" />
+          <Item Id="MyHelp_ListView" Index="2" />
+          <Item Id="MyDetails" Caption="Thông tin cá nhân" Index="3" />
+          <Item Id="AccountTransactionFile_ListView" Removed="True" />
+          <Item Id="AccountTransactionTracking_ListView" Removed="True" />
+          <Item Id="ClassTransactionTracking_ListView" Removed="True" />
+          <Item Id="RegisterState_ListView" Removed="True" />
+          <Item Id="Role_ListView" Removed="True" />
+          <Item Id="StudentAccumulationFile_ListView" Removed="True" />
+          <Item Id="StudentResultFile_ListView" Removed="True" />
+          <Item Id="SubjectFile_ListView" Removed="True" />
+          <Item Id="SubjectRelationFile_ListView" Removed="True" />
+          <Item Id="TeacherFile_ListView" Removed="True" />
+          <Item Id="User_ListView" Removed="True" />
+          <Item Id="WeekReportData_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="Academic Data">
+        <Items>
+          <Item Id="StudentClass_ListView" Index="1" />
+          <Item Id="Subject_ListView" Index="2" />
+          <Item Id="Student_ListView" Index="3" />
+          <Item Id="RegisterdetailWithStudentClass" Index="4" />
+          <Item Id="ConstrainstParameter_ListView" Index="5" />
+          <Item Id="2f236d20-1edd-4405-ad97-9666b774a8aa" IsNewNode="True" Caption="Dữ liệu chung" Index="8">
+            <Items IsNewNode="True">
+              <Item Id="Branch_ListView" IsNewNode="True" ViewId="Branch_ListView" ObjectKey="" />
+              <Item Id="ClassRoom_ListView" IsNewNode="True" ViewId="Classroom_ListView" ObjectKey="" />
+              <Item Id="Department_ListView" IsNewNode="True" ViewId="Department_ListView" ObjectKey="" />
+              <Item Id="Office_ListView" IsNewNode="True" ObjectKey="" Caption="Cơ sở" ViewId="Office_ListView" />
+              <Item Id="RegisterState_ListView" IsNewNode="True" ViewId="RegisterState_ListView" ObjectKey="" />
+              <Item Id="Teacher_ListView" IsNewNode="True" ViewId="Teacher_ListView" ObjectKey="" />
+            </Items>
+          </Item>
+          <Item Id="838ca704-eaa1-4679-97ad-ddcde1c6d298" IsNewNode="True" Caption="Thông tin học phí">
+            <Items IsNewNode="True">
+              <Item Id="AccountTransactionTracking_ListView" IsNewNode="True" ViewId="AccountTransactionTracking_ListView" ObjectKey="" />
+              <Item Id="ClassTransactionTracking_ListView" IsNewNode="True" ViewId="ClassTransactionTracking_ListView" ObjectKey="" />
+            </Items>
+          </Item>
+          <Item Id="Branch_ListView" Removed="True" />
+          <Item Id="ClassRoom_ListView" Removed="True" ViewId="Classroom_ListView" ObjectKey="" />
+          <Item Id="Department_ListView" Removed="True" />
+          <Item Id="Office_ListView" Removed="True" />
+          <Item Id="StudentFile_ListView" Removed="True" />
+          <Item Id="Teacher_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="TimeTable Data">
+        <Items>
+          <Item Id="RegisterTime_ListView" Index="2" />
+          <Item Id="Lesson_ListView" Index="3" />
+          <Item Id="TkbLesson_ListView" Index="4" Removed="True" />
+          <Item Id="TkbSemester_ListView" Index="5" />
+          <Item Id="WeekReportData_ListView" IsNewNode="True" ViewId="WeekReportData_ListView" ObjectKey="" Index="9" />
+          <Item Id="06d290cf-8e2b-489d-9e1b-75cb98a7b5da" Index="10">
+            <Items>
+              <Item Id="TkbLesson_ListView" IsNewNode="True" Index="4" ViewId="TkbLesson_ListView" ObjectKey="" Caption="Nhóm lớp xếp lịch" />
+            </Items>
+          </Item>
+          <Item Id="TkbFile_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="Systems">
+        <Items>
+          <Item Id="Role_ListView" IsNewNode="True" ViewId="Role_ListView" ObjectKey="" />
+          <Item Id="User_ListView" IsNewNode="True" ViewId="User_ListView" ObjectKey="" />
+        </Items>
+      </Item>
+      <Item Id="c94b093e-9e03-43d0-979d-a3c99db1226d" IsNewNode="True" Caption="Dữ liệu import">
+        <Items IsNewNode="True">
+          <Item Id="TkbFile_ListView" IsNewNode="True" Caption="File dữ liệu TKB học kỳ" ViewId="TkbFile_ListView" ObjectKey="" Index="5" />
+          <Item Id="AccountTransactionFile_ListView" IsNewNode="True" ViewId="AccountTransactionFile_ListView" ObjectKey="" />
+          <Item Id="StudentAccumulationFile_ListView" IsNewNode="True" ViewId="StudentAccumulationFile_ListView" ObjectKey="" />
+          <Item Id="StudentFile_ListView" IsNewNode="True" ViewId="StudentFile_ListView" ObjectKey="" Caption="File dữ liệu sinh viên" />
+          <Item Id="StudentResultFile_ListView" IsNewNode="True" ViewId="StudentResultFile_ListView" ObjectKey="" />
+          <Item Id="SubjectFile_ListView" IsNewNode="True" ViewId="SubjectFile_ListView" ObjectKey="" />
+          <Item Id="SubjectRelationFile_ListView" IsNewNode="True" ViewId="SubjectRelationFile_ListView" ObjectKey="" />
+          <Item Id="TeacherFile_ListView" IsNewNode="True" ViewId="TeacherFile_ListView" ObjectKey="" />
+        </Items>
+      </Item>
+      <Item Id="Reports" Caption="Báo biểu" />
+    </Items>
+  </NavigationItems>
+</Application>

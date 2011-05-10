@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<timetable ascttversion="2010.8.3" importtype="database" options="idprefix:XML,groupstype1,decimalseparatordot" defaultexport="1">
+   <days options="canadd" columns="day,name,short">
+      <day name="Monday" short="Mo" day="0"/>
+      <day name="Tuesday" short="Tu" day="1"/>
+      <day name="Wednesday" short="We" day="2"/>
+      <day name="Thursday" short="Th" day="3"/>
+      <day name="Friday" short="Fr" day="4"/>
+      <day name="Saturday" short="Sa" day="5"/>
+   </days>
+   <periods options="canadd" columns="period,starttime,endtime">
+      <period period="1" starttime="8:00" endtime="8:45"/>
+      <period period="2" starttime="9:00" endtime="9:45"/>
+      <period period="3" starttime="10:00" endtime="10:45"/>
+      <period period="4" starttime="11:00" endtime="11:45"/>
+      <period period="5" starttime="12:00" endtime="12:45"/>
+      <period period="6" starttime="13:00" endtime="13:45"/>
+      <period period="7" starttime="14:00" endtime="14:45"/>
+      <period period="8" starttime="15:00" endtime="15:45"/>
+      <period period="9" starttime="16:00" endtime="16:45"/>
+      <period period="10" starttime="17:00" endtime="17:45"/>
+      <period period="11" starttime="18:00" endtime="18:45"/>
+      <period period="12" starttime="20:00" endtime="20:45"/>
+   </periods>
+   <dayperiods options="canadd" columns="day,period,starttime,endtime"/>
+   <teachers options="canadd" columns="id,name,short,gender,color">
+      <teacher id="*1" name="Ngô Thị Ngọc Thắm" short="GV021" gender="F" color="#FF0000"/>
+      <teacher id="*2" name="Võ Lê Quy Nhơn" short="GV071" gender="M" color="#00FF00"/>
+      <teacher id="*3" name="Trần Thành Trí" short="GV072" gender="M" color="#0000FF"/>
+      <teacher id="*4" name="Ngô Hồng Khánh" short="GV073" gender="M" color="#FFCCFF"/>
+      <teacher id="*5" name="Trần Nhật Tân" short="GV074" gender="M" color="#FFFF66"/>
+      <teacher id="*6" name="Trần Xuân Hải (LT)" short="GV008" gender="M" color="#FF6666"/>
+      <teacher id="*7" name="Văn Phú Cường (TH)" short="GV075" gender="M" color="#FFCC66"/>
+      <teacher id="*8" name="Lê Thị Lệ" short="GV001" gender="F" color="#336699"/>
+      <teacher id="*9" name="Huỳnh Mỹ Dung" short="GV002" gender="F" color="#66FFFF"/>
+      <teacher id="*10" name="Nguyễn Đình Tứ" short="GV003" gender="M" color="#009933"/>
+      <teacher id="*11" name="Lê Đăng Hoành" short="GV004" gender="M" color="#DDFF97"/>
+      <teacher id="*12" name="Lê Minh Phong" short="GV005" gender="M" color="#669900"/>
+      <teacher id="*13" name="Nguyễn Minh Chương" short="GV006" gender="M" color="#66FF66"/>
+      <teacher id="*14" name="Phan Thanh Minh" short="GV007" gender="M" color="#FFFFCC"/>
+      <teacher id="*15" name="Nguyễn Hồng Trang" short="GV009" gender="F" color="#6666FF"/>
+      <teacher id="*16" name="Bùi Quang Phú" short="GV010" gender="M" color="#FF00FF"/>
+      <teacher id="*17" name="Bùi Ngọc Triều" short="GV013" gender="M" color="#993333"/>
+      <teacher id="*18" name="Phạm Năm" short="GV014" gender="M" color="#CCFFFF"/>
+      <teacher id="*19" name="Trần Thị Chi Lan" short="GV015" gender="F" color="#33CC33"/>
+      <teacher id="*20" name="Lê Thị Mỹ Hạnh" short="GV016" gender="F" color="#99FF66"/>
+      <teacher id="*21" name="Nguyễn Thị Ái Loan" short="GV017" gender="F" color="#3333FF"/>
+      <teacher id="*22" name="Tạ Đình Minh" short="GV018" gender="M" color="#00CCFF"/>
+      <teacher id="*23" name="Nguyễn Văn Hiếu" short="GV019" gender="M" color="#FFFFFF"/>
+      <teacher id="*24" name="Nguyễn Thị Xuân Chi" short="GV020" gender="F" color="#00CC00"/>
+      <teacher id="*25" name="Ngô Thị Ngọc Thắm" short="GV021" gender="F" color="#808080"/>
+      <teacher id="*26" name="Huỳnh Chí Hỷ" short="GV022" gender="M" color="#FFFF00"/>
+      <teacher id="*27" name="Lưu Vinh Quang" short="GV023" gender="M" color="#FF00FF"/>
+      <teacher id="*28" name="Nguyễn Hồng Bảo Định" short="GV024" gender="F" color="#FF9966"/>
+      <teacher id="*29" name="Trần Khánh Dư" short="GV025" gender="M" color="#00FFFF"/>
+      <teacher id="*30" name="Nguyễn Thị Bích Thủy" short="GV026" gender="F" color="#808000"/>
+      <teacher id="*31" name="Nguyễn Thanh Toàn" short="GV027" gender="M" color="#800080"/>
+      <teacher id="*32" name="Lê Thu Phương" short="GV028" gender="F" color="#008080"/>
+      <teacher id="*33" name="Tạ Công Huy Vũ" short="GV029" gender="M" color="#FF8080"/>
+      <teacher id="*34" name="Dương Anh Vũ" short="GV030" gender="M" color="#80FF80"/>
+      <teacher id="*35" name="Mai Thị Xuân Trang" short="GV031" gender="F" color="#8000FF"/>
+      <teacher id="*36" name="Kim Ngọc Thành" short="GV032" gender="M" color="#0080FF"/>
+      <teacher id="*37" name="Trần Thị Tuyết Oanh" short="GV033" gender="F" color="#FF8000"/>
+      <teacher id="*38" name="Hồ Văn Minh" short="GV034" gender="M" color="#CC6600"/>
+      <teacher id="*39" name="Huỳnh Ái Hậu" short="GV035" gender="M" color="#00FF80"/>
+      <teacher id="*40" name="Phạm Thị Dung" short="GV036" gender="F" color="#FFC0C0"/>
+      <teacher id="*41" name="Phạm Thị Hiền" short="GV037" gender="F" color="#FFC000"/>
+      <teacher id="*42" name="Huỳnh An Thảo Hiếu" short="GV038" gender="F" color="#FFC030"/>
+      <teacher id="*43" name="Nguyễn Thị Thu Thủy" short="GV039" gender="F" color="#00C0FF"/>
+      <teacher id="*44" name="Mai Thị Bích Phượng" short="GV040" gender="F" color="#C0FFFF"/>
+      <teacher id="*45" name="Nguyễn Thái Hòa" short="GV041" gender="M" color="#C0C000"/>
+      <teacher id="*46" name="Lê Nguyễn Huy Tâm" short="GV042" gender="M" color="#80C0FF"/>
+      <teacher id="*47" name="Huỳnh Ngọc Ánh" short="GV043" gender="M" color="#00FFC0"/>
+      <teacher id="*48" name="Trần Quang" short="GV044" gender="M" color="#60FFC0"/>
+      <teacher id="*49" name="Võ Thị Thu Hà" short="GV045" gender="F" color="#6060C0"/>
+      <teacher id="*50" name="Phùng Rân" short="GV046" gender="M" color="#14C0C0"/>
+      <teacher id="*51" name="Trương Ngọc Thục" short="GV047" gender="M" color="#14C000"/>
+      <teacher id="*52" name="Lê Văn Đức" short="GV048" gender="M" color="#14C030"/>
+      <teacher id="*53" name="Đào Thị Thu Hương" short="GV049" gender="F" color="#00C0C8"/>
+      <teacher id="*54" name="Đặng Thái Dương" short="GV050" gender="M" color="#C014FF"/>
+      <teacher id="*55" name="Trịnh Thị Hải Yến" short="GV051" gender="F" color="#80C014"/>
+      <teacher id="*56" name="Nguyễn Thành Cung" short="GV052" gender="M" color="#0014C0"/>
+      <teacher id="*57" name="Lê Việt Sô" short="GV053" gender="M" color="#6014C0"/>
+      <teacher id="*58" name="Phạm Thị Liễu" short="GV054" gender="F" color="#1414C0"/>
+      <teacher id="*59" name="Nguyễn Tuyết Linh" short="GV055" gender="F" color="#CCCC00"/>
+      <teacher id="*60" name="Hồ Thị Hồng Nga" short="GV056" gender="F" color="#CC9900"/>
+      <teacher id="*61" name="Nguyễn Thị Đỗ Quyên" short="GV057" gender="F" color="#999999"/>
+      <teacher id="*62" name="Mai Thanh Tâm" short="GV058" gender="F" color="#99FF99"/>
+      <teacher id="*63" name="Đỗ Đình Tú" short="GV059" gender="M" color="#333399"/>
+      <teacher id="*64" name="Nguyễn Hồng Quân" short="GV060" gender="F" color="#9966FF"/>
+      <teacher id="*65" name="Trần Thị Hoàng Anh" short="GV061" gender="F" color="#3333CC"/>
+      <teacher id="*66" name="Trần Xuân Dũng" short="GV062" gender="M" color="#666666"/>
+      <teacher id="*67" name="Đặng Phạm Hữu Thảo" short="GV063" gender="M" color="#CC99FF"/>
+      <teacher id="*68" name="Nguyễn Đoàn Khuyên" short="GV064" gender="F" color="#CCCCFF"/>
+      <teacher id="*69" name="Lý Minh xuân" short="GV065" gender="F" color="#6600FF"/>
+      <teacher id="*70" name="Phạm Hồng Khánh Loan" short="GV066" gender="F" color="#33CCFF"/>
+      <teacher id="*71" name="Phạm Ngọc Duy Mẫn" short="GV067" gender="F" color="#0066CC"/>
+      <teacher id="*72" name="Phan Hồng Tâm" short="GV068" gender="F" color="#3399FF"/>
+      <teacher id="*73" name="Nguyễn Đoan Trang" short="GV069" gender="F" color="#006699"/>
+      <teacher id="*74" name="Hồ Quảng Đức" short="GV070" gender="M" color="#339933"/>
+      <teacher id="*75" name="Mang Thành Trung" short="GV076" gender="M" color="#663300"/>
+      <teacher id="*76" name="Nguyễn Thanh Trà" short="GV077" gender="M" color="#CC3399"/>
+      <teacher id="*77" name="Nguyễn Hữu Thông" short="GV078" gender="M" color="#993300"/>
+      <teacher id="*78" name="Hoàng Trọng Hỷ" short="GV079" gender="M" color="#00FF80"/>
+      <teacher id="*79" name="Lê Công Thành" short="GV080" gender="M" color="#FFCCCC"/>
+      <teacher id="*80" name="Lê Việt Sô" short="GV081" gender="M" color="#0033CC"/>
+      <teacher id="*81" name="Lê Ngọc Dũng" short="GV082" gender="M" color="#996633"/>
+      <teacher id="*82" name="Vũ Thị Bích Quỳnh" short="GV083" gender="F" color="#FF9900"/>
+      <teacher id="*83" name="Tô Thị Kim Hồng" short="GV084" gender="F" color="#CC00CC"/>
+      <teacher id="*84" name="Nguyễn Quyết" short="GV085" gender="M" color="#00FFCC"/>
+   </teachers>
+   <classes options="canadd" columns="id,name,short,classroomids,teacherid,grade">
+      <class id="*1" name="04THC" short="04THC" teacherid="" classroomids="" grade=""/>
+      <class id="*2" name="04CKC" short="04CKC" teacherid="" classroomids="" grade=""/>
+      <class id="*3" name="04OTC" short="04OTC" teacherid="" classroomids="" grade=""/>
+      <class id="*4" name="04DDTC" short="04DDTC" teacherid="" classroomids="" grade=""/>
+      <class id="*5" name="04QT1C" short="04QT1C" teacherid="" classroomids="" grade=""/>
+      <class id="*6" name="04QT2C" short="04QT2C" teacherid="" classroomids="" grade=""/>
+      <class id="*7" name="04QT3C" short="04QT3C" teacherid="" classroomids="" grade=""/>
+      <class id="*8" name="04QT4C" short="04QT4C" teacherid="" classroomids="" grade=""/>
+      <class id="*9" name="04KT1C" short="04KT1C" teacherid="" classroomids="" grade=""/>
+      <class id="*10" name="04KT2C" short="04KT2C" teacherid="" classroomids="" grade=""/>
+      <class id="*11" name="04KT3C" short="04KT3C" teacherid="" classroomids="" grade=""/>
+      <class id="*12" name="04KT4C" short="04KT4C" teacherid="" classroomids="" grade=""/>
+   </classes>
+   <subjects options="canadd" columns="id,name,short">
+      <subject id="*1" name="Kỹ thuật lập trình" short="6PTE201"/>
+      <subject id="*2" name="Cơ sở dữ liệu" short="06DTA102"/>
+      <subject id="*3" name="Kiến trúc máy tính" short="6CAR103"/>
+      <subject id="*4" name="Lập trình ứng dụng" short="6APR208"/>
+      <subject id="*5" name="Mạng máy tính" short="6CNE104"/>
+      <subject id="*6" name="Toán cao cấp 2" short="0MAT200"/>
+      <subject id="*7" name="Cơ học lý thuyết" short="1MET250"/>
+      <subject id="*8" name="Hình họa vẽ kỹ thuật" short="1GTD250"/>
+      <subject id="*9" name="Vật lý đại cương 2" short="VLDC"/>
+      <subject id="*10" name="Vật liệu học" short="2MAT250"/>
+      <subject id="*11" name="Cơ học lý thuyết" short="1MET250"/>
+      <subject id="*12" name="Nhập môn ngành Ô tô" short="2IAT250"/>
+      <subject id="*13" name="Thực tập nguội" short="1MMP250"/>
+      <subject id="*14" name="Thực tập Hàn" short="1WEP250"/>
+      <subject id="*15" name="Vẽ điện - điện tử" short="3EED250"/>
+      <subject id="*16" name="Điện tử cơ bản" short="3ELB250"/>
+      <subject id="*17" name="Mạch điện" short="3ELC250"/>
+      <subject id="*18" name="Cơ học ứng dụng" short="3APM250"/>
+      <subject id="*19" name="Toán cao cấp 2" short="0MAT201"/>
+      <subject id="*20" name="An toàn điện" short="3EIS250"/>
+   </subjects>
+   <classrooms options="canadd" columns="id,name,short">
+      <classroom id="*1" name="CS3_04" short="CS3_04"/>
+      <classroom id="*2" name="CS1_A11" short="CS1_A11"/>
+      <classroom id="*3" name="CS1_A12" short="CS1_A12"/>
+      <classroom id="*4" name="CS1_A14" short="CS1_A14"/>
+      <classroom id="*5" name="CS1_A15" short="CS1_A15"/>
+      <classroom id="*6" name="CS1_A22" short="CS1_A22"/>
+      <classroom id="*7" name="CS1_A25" short="CS1_A25"/>
+      <classroom id="*8" name="CS1_HT" short="CS1_HT"/>
+      <classroom id="*9" name="CS1_VT21" short="CS1_VT21"/>
+      <classroom id="*10" name="CS1_VT23" short="CS1_VT23"/>
+      <classroom id="*11" name="CS2_P27_28" short="CS2_P27_28"/>
+      <classroom id="*12" name="CS2_P29_30" short="CS2_P29_30"/>
+      <classroom id="*13" name="CS2_P35" short="CS2_P35"/>
+      <classroom id="*14" name="CS2_P33" short="CS2_P33"/>
+      <classroom id="*15" name="CS2_P36" short="CS2_P36"/>
+      <classroom id="*16" name="CS1_A01" short="CS1_A01"/>
+   </classrooms>
+   <students options="canadd" columns="id,classid,name"/>
+   <groups options="canadd" columns="id,classid,name,entireclass,divisiontag,studentcount">
+      <group id="*1" name="Entire class" classid="*1" entireclass="1" divisiontag="0" studentcount=""/>
+      <group id="*2" name="Group 1" classid="*1" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*3" name="Group 2" classid="*1" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*4" name="Boys" classid="*1" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*5" name="Girls" classid="*1" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*6" name="Entire class" classid="*2" entireclass="1" divisiontag="0" studentcount=""/>
+      <group id="*7" name="Group 1" classid="*2" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*8" name="Group 2" classid="*2" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*9" name="Boys" classid="*2" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*10" name="Girls" classid="*2" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*11" name="Entire class" classid="*3" entireclass="1" divisiontag="0" studentcount=""/>
+      <group id="*12" name="Group 1" classid="*3" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*13" name="Group 2" classid="*3" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*14" name="Boys" classid="*3" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*15" name="Girls" classid="*3" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*16" name="Entire class" classid="*4" entireclass="1" divisiontag="0" studentcount=""/>
+      <group id="*17" name="Group 1" classid="*4" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*18" name="Group 2" classid="*4" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*19" name="Boys" classid="*4" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*20" name="Girls" classid="*4" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*21" name="Entire class" classid="*5" entireclass="1" divisiontag="0" studentcount=""/>
+      <group id="*22" name="Group 1" classid="*5" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*23" name="Group 2" classid="*5" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*24" name="Boys" classid="*5" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*25" name="Girls" classid="*5" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*26" name="Entire class" classid="*6" entireclass="1" divisiontag="0" studentcount=""/>
+      <group id="*27" name="Group 1" classid="*6" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*28" name="Group 2" classid="*6" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*29" name="Boys" classid="*6" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*30" name="Girls" classid="*6" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*31" name="Entire class" classid="*7" entireclass="1" divisiontag="0" studentcount=""/>
+      <group id="*32" name="Group 1" classid="*7" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*33" name="Group 2" classid="*7" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*34" name="Boys" classid="*7" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*35" name="Girls" classid="*7" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*36" name="Entire class" classid="*8" entireclass="1" divisiontag="0" studentcount=""/>
+      <group id="*37" name="Group 1" classid="*8" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*38" name="Group 2" classid="*8" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*39" name="Boys" classid="*8" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*40" name="Girls" classid="*8" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*41" name="Entire class" classid="*9" entireclass="1" divisiontag="0" studentcount=""/>
+      <group id="*42" name="Group 1" classid="*9" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*43" name="Group 2" classid="*9" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*44" name="Boys" classid="*9" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*45" name="Girls" classid="*9" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*46" name="Entire class" classid="*10" entireclass="1" divisiontag="0" studentcount=""/>
+      <group id="*47" name="Group 1" classid="*10" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*48" name="Group 2" classid="*10" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*49" name="Boys" classid="*10" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*50" name="Girls" classid="*10" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*51" name="Entire class" classid="*11" entireclass="1" divisiontag="0" studentcount=""/>
+      <group id="*52" name="Group 1" classid="*11" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*53" name="Group 2" classid="*11" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*54" name="Boys" classid="*11" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*55" name="Girls" classid="*11" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*56" name="Entire class" classid="*12" entireclass="1" divisiontag="0" studentcount=""/>
+      <group id="*57" name="Group 1" classid="*12" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*58" name="Group 2" classid="*12" entireclass="0" divisiontag="1" studentcount=""/>
+      <group id="*59" name="Boys" classid="*12" entireclass="0" divisiontag="2" studentcount=""/>
+      <group id="*60" name="Girls" classid="*12" entireclass="0" divisiontag="2" studentcount=""/>
+   </groups>
+   <lessons options="canadd" columns="id,subjectid,classids,groupids,studentids,teacherids,classroomids,periodspercard,periodsperweek,weeks">
+      <lesson id="*1" classids="*1" subjectid="*2" periodspercard="5" periodsperweek="3.0" teacherids="*1,*2" classroomids="*1" groupids="*1" studentids="" weeks="11111111111100000000"/>
+      <lesson id="*2" classids="*1" subjectid="*3" periodspercard="5" periodsperweek="3.0" teacherids="*3,*4" classroomids="*1" groupids="*1" studentids="" weeks="11111111111100000000"/>
+      <lesson id="*3" classids="*1" subjectid="*1" periodspercard="5" periodsperweek="3.0" teacherids="*1,*5" classroomids="*1" groupids="*1" studentids="" weeks="11111111111100000000"/>
+      <lesson id="*4" classids="*1" subjectid="*5" periodspercard="5" periodsperweek="3.0" teacherids="*75,*76" classroomids="*1" groupids="*1" studentids="" weeks="11111111111100000000"/>
+      <lesson id="*5" classids="*1" subjectid="*6" periodspercard="5" periodsperweek="3.0" teacherids="*77" classroomids="*1" groupids="*1" studentids="" weeks="11111111111100000000"/>
+      <lesson id="*6" classids="*1" subjectid="*4" periodspercard="5" periodsperweek="3.0" teacherids="*6,*7" classroomids="*1" groupids="*1" studentids="" weeks="11111111111100000000"/>
+      <lesson id="*7" classids="*2,*3" subjectid="*7" periodspercard="5" periodsperweek="3.0" teacherids="*78" classroomids="*4" groupids="*6,*11" studentids="" weeks="01111111111110000000"/>
+      <lesson id="*8" classids="*2,*3" subjectid="*8" periodspercard="5" periodsperweek="3.0" teacherids="*18" classroomids="*4" groupids="*6,*11" studentids="" weeks="11111111111100000000"/>
+      <lesson id="*9" classids="*2,*3" subjectid="*10" periodspercard="5" periodsperweek="2.3" teacherids="*18" classroomids="*4" groupids="*6,*11" studentids="" weeks="00011111111100000000"/>
+      <lesson id="*10" classids="*2,*3,*4" subjectid="*9" periodspercard="5" periodsperweek="1.0" teacherids="*20" classroomids="*5" groupids="*6,*11,*16" studentids="" weeks="11000000000000000000"/>
+   </lessons>
+   <cards options="canadd" columns="lessonid,day,period,classroomids">
+      <card lessonid="*1" classroomids="*1" day="0" period="1"/>
+      <card lessonid="*1" classroomids="*1" day="0" period="2"/>
+      <card lessonid="*1" classroomids="*1" day="0" period="3"/>
+      <card lessonid="*1" classroomids="*1" day="0" period="4"/>
+      <card lessonid="*1" classroomids="*1" day="0" period="5"/>
+      <card lessonid="*2" classroomids="*1" day="0" period="6"/>
+      <card lessonid="*2" classroomids="*1" day="0" period="7"/>
+      <card lessonid="*2" classroomids="*1" day="0" period="8"/>
+      <card lessonid="*2" classroomids="*1" day="0" period="9"/>
+      <card lessonid="*2" classroomids="*1" day="0" period="10"/>
+   </cards>
+   <grades options="canadd" columns="id,name,short,grade">
+      <grade id="*1" name="Grade 1" short="G 1" grade="1"/>
+      <grade id="*2" name="Grade 2" short="G 2" grade="2"/>
+      <grade id="*3" name="Grade 3" short="G 3" grade="3"/>
+      <grade id="*4" name="Grade 4" short="G 4" grade="4"/>
+      <grade id="*5" name="Grade 5" short="G 5" grade="5"/>
+      <grade id="*6" name="Grade 6" short="G 6" grade="6"/>
+      <grade id="*7" name="Grade 7" short="G 7" grade="7"/>
+      <grade id="*8" name="Grade 8" short="G 8" grade="8"/>
+      <grade id="*9" name="Grade 9" short="G 9" grade="9"/>
+      <grade id="*10" name="Grade 10" short="G 10" grade="10"/>
+      <grade id="*11" name="Grade 11" short="G 11" grade="11"/>
+      <grade id="*12" name="Grade 12" short="G 12" grade="12"/>
+      <grade id="*13" name="Grade 13" short="G 13" grade="13"/>
+      <grade id="*14" name="Grade 14" short="G 14" grade="14"/>
+      <grade id="*15" name="Grade 15" short="G 15" grade="15"/>
+      <grade id="*16" name="Grade 16" short="G 16" grade="16"/>
+      <grade id="*17" name="Grade 17" short="G 17" grade="17"/>
+      <grade id="*18" name="Grade 18" short="G 18" grade="18"/>
+      <grade id="*19" name="Grade 19" short="G 19" grade="19"/>
+      <grade id="*20" name="Grade 20" short="G 20" grade="20"/>
+   </grades>
+</timetable>

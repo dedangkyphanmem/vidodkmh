@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22392DB5-8873-4F2C-A988-4230210D18FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>vidoSolution.Module</RootNamespace>
+    <AssemblyName>vidoSolution.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v10.1.Core, Version=10.1.7.0, Culture=neutral, PublicKeyToken=163290938d0004dc, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v10.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.FileAttachment.Web.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=863746bef25f7c37, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Reports.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=863746bef25f7c37, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v10.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Objects.v10.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v10.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v10.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v10.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v10.1.Core, Version=10.1.7.0, Culture=neutral, PublicKeyToken=163290938d0004dc, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=163290938d0004dc, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v10.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=163290938d0004dc, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=163290938d0004dc, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v10.1.Core, Version=10.1.7.0, Culture=neutral, PublicKeyToken=163290938d0004dc, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=163290938d0004dc, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=163290938d0004dc, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=163290938d0004dc, processorArchitecture=MSIL" />
+    <Reference Include="ExcelLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>C:\Users\VIT\Desktop\SharpZipLib_0860_Bin\net-20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountTransactionFileViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountTransactionFileViewController.Designer.cs">
+      <DependentUpon>AccountTransactionFileViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassroomTimeTableViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassroomTimeTableViewController.Designer.cs">
+      <DependentUpon>ClassroomTimeTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LessonViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LessonViewController.Designer.cs">
+      <DependentUpon>LessonViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportParameter\OfficeReportParametersObject.cs" />
+    <Compile Include="SubjectRelationFileViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubjectRelationFileViewController.Designer.cs">
+      <DependentUpon>SubjectRelationFileViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DomainObject\SubjectRelation.cs" />
+    <Compile Include="MyReportWithSubReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SemesterViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SemesterViewController.Designer.cs">
+      <DependentUpon>SemesterViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportParameter\SemesterReportParametersObject.cs" />
+    <Compile Include="SubjectFileViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubjectFileViewController.Designer.cs">
+      <DependentUpon>SubjectFileViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherFileViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TeacherFileViewController.Designer.cs">
+      <DependentUpon>TeacherFileViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DomainObject\TeacherFile.cs" />
+    <Compile Include="StudentFileViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentFileViewController.Designer.cs">
+      <DependentUpon>StudentFileViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DomainObject\AccountTransactionTracking.cs" />
+    <Compile Include="DomainObject\ClassTransactionTracking.cs" />
+    <Compile Include="StudentResultFileViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentResultFileViewController.Designer.cs">
+      <DependentUpon>StudentResultFileViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportParameter\ClassroomReportParametersObject.cs" />
+    <Compile Include="ReportParameter\StudentClassReportParametersObject.cs" />
+    <Compile Include="ReportParameter\TimetableStudentReportParametersObject.cs" />
+    <Compile Include="ReportParameter\StudentReportParametersObject.cs" />
+    <Compile Include="ReportParameter\SubjectReportParametersObject.cs" />
+    <Compile Include="ReportParameter\TeacherReportParametersObject.cs" />
+    <Compile Include="ReportParameter\LessonReportParametersObject.cs" />
+    <Compile Include="StudentClassTimeTableViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentClassTimeTableViewController.Designer.cs">
+      <DependentUpon>StudentClassTimeTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportParameter\RegisterDetailReportParametersObject.cs" />
+    <Compile Include="SubjectTimeTableViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubjectTimeTableViewController.Designer.cs">
+      <DependentUpon>SubjectTimeTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentTimeTableViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentTimeTableViewController.Designer.cs">
+      <DependentUpon>StudentTimeTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DomainObject\AccountTransaction.cs" />
+    <Compile Include="DomainObject\AccountTransactionFile.cs" />
+    <Compile Include="DomainObject\Branch.cs" />
+    <Compile Include="DomainObject\Classroom.cs" />
+    <Compile Include="DomainObject\ConstrainstParameter.cs" />
+    <Compile Include="DomainObject\Department.cs" />
+    <Compile Include="DomainObject\Lesson.cs" />
+    <Compile Include="DomainObject\MyHelp.cs" />
+    <Compile Include="DomainObject\MyImportResult.cs" />
+    <Compile Include="DomainObject\MyNote.cs" />
+    <Compile Include="DomainObject\Office.cs" />
+    <Compile Include="DomainObject\PopUpMessage.cs" />
+    <Compile Include="DomainObject\RegisterState.cs" />
+    <Compile Include="DomainObject\RegisterTime.cs" />
+    <Compile Include="DomainObject\StudentAccumulation.cs" />
+    <Compile Include="DomainObject\StudentAccumulationFile.cs" />
+    <Compile Include="DomainObject\StudentClass.cs" />
+    <Compile Include="DomainObject\StudentFile.cs" />
+    <Compile Include="DomainObject\StudentResult.cs" />
+    <Compile Include="DomainObject\StudentResultFile.cs" />
+    <Compile Include="DomainObject\SubjectFile.cs" />
+    <Compile Include="DomainObject\SubjectRelationFile.cs" />
+    <Compile Include="DomainObject\Teacher.cs" />
+    <Compile Include="DomainObject\TkbFile.cs" />
+    <Compile Include="DomainObject\TkbPeriod.cs" />
+    <Compile Include="DomainObject\RegisterDetail.cs" />
+    <Compile Include="DomainObject\Semester.cs" />
+    <Compile Include="DomainObject\Student.cs" />
+    <Compile Include="DomainObject\Subject.cs" />
+    <Compile Include="DomainObject\TkbCard.cs" />
+    <Compile Include="DomainObject\TkbClass.cs" />
+    <Compile Include="DomainObject\TkbClassroom.cs" />
+    <Compile Include="DomainObject\TkbDay.cs" />
+    <Compile Include="DomainObject\TkbGrade.cs" />
+    <Compile Include="DomainObject\TkbGroup.cs" />
+    <Compile Include="DomainObject\TkbLesson.cs" />
+    <Compile Include="DomainObject\TkbSemester.cs" />
+    <Compile Include="DomainObject\TkbSubject.cs" />
+    <Compile Include="DomainObject\TkbTeacher.cs" />
+    <Compile Include="DomainObject\WeekReportData.cs" />
+    <Compile Include="FilterByUsersViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FilterByUsersViewController.Designer.cs">
+      <DependentUpon>FilterByUsersViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterRegisterDetailController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FilterRegisterDetailController.designer.cs">
+      <DependentUpon>FilterRegisterDetailController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LessonRegisterViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LessonRegisterViewController.Designer.cs">
+      <DependentUpon>LessonRegisterViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.cs">
+      <DependentUpon>Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeacherTimeTableViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TeacherTimeTableViewController.Designer.cs">
+      <DependentUpon>TeacherTimeTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Updater.cs" />
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AccountTransactionFileViewController.resx">
+      <DependentUpon>AccountTransactionFileViewController.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassroomTimeTableViewController.resx">
+      <DependentUpon>ClassroomTimeTableViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LessonViewController.resx">
+      <DependentUpon>LessonViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectRelationFileViewController.resx">
+      <DependentUpon>SubjectRelationFileViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SemesterViewController.resx">
+      <DependentUpon>SemesterViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectFileViewController.resx">
+      <DependentUpon>SubjectFileViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherFileViewController.resx">
+      <DependentUpon>TeacherFileViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentFileViewController.resx">
+      <DependentUpon>StudentFileViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentResultFileViewController.resx">
+      <DependentUpon>StudentResultFileViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentClassTimeTableViewController.resx">
+      <DependentUpon>StudentClassTimeTableViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectTimeTableViewController.resx">
+      <DependentUpon>SubjectTimeTableViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentTimeTableViewController.resx">
+      <DependentUpon>StudentTimeTableViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterByUsersViewController.resx">
+      <DependentUpon>FilterByUsersViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterRegisterDetailController.resx">
+      <DependentUpon>FilterRegisterDetailController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LessonRegisterViewController.resx">
+      <DependentUpon>LessonRegisterViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherTimeTableViewController.resx">
+      <DependentUpon>TeacherTimeTableViewController.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExcelLibrary.dll" />
+    <Content Include="Functional Tests\Config.xml" />
+    <Content Include="ICSharpCode.SharpZipLib.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedReports\Kết quả ĐK tất cả SV.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Kết quả ĐK 1 SV.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Danh sách lớp biên chế.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Danh sách sinh viên theo lớp.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Kết quả học tập.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Điểm học kỳ.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Lịch giảng viên.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Lịch tuần.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Lịch phòng học cơ sở.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Lịch phòng học.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Lịch lớp biên chế.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Lịch môn học.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Lịch sinh viên.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Giao dịch học phí sinh viên.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Tỉ lệ nợ lớp biên chế NHHK.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Tỉ lệ nợ sinh viên lớp biên chế.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Bảng điểm nhóm MH %28theo nhóm lớp%29.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Bảng điểm nhóm MH.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Điểm tích lũy.repx" />
+    <EmbeddedResource Include="EmbeddedReports\DTBHKReport.repx" />
+    <None Include="Functional Tests\WebSample.ets" />
+    <None Include="Properties\DataSources\vidoSolution.Module.DomainObject.StudentAccumulation.datasource" />
+    <None Include="Properties\DataSources\vidoSolution.Module.DomainObject.WeekReportData.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

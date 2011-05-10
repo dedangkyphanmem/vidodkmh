@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application ProtectedContentText="Dữ liệu không được phép xem" VersionFormat="Phiên bản {0}.{1}.{2}" WebSite="dkmh.vido.edu.vn" Company="Trường Cao Đẳng Viễn Đông, Hồ Chí Minh" Copyright="">
+  <ActionDesign>
+    <Actions>
+      <Action Id="CalculateFeeForLesson" Index="1" />
+      <Action Id="SelectRegister" Caption="Chọn Nhóm MH" Index="1" />
+      <Action Id="CancelRegister" Index="2" />
+      <Action Id="BookRegister" Index="3" Caption="Thực hiện đăng ký" />
+      <Action Id="CheckRegister" Index="4" />
+      <Action Id="ConfirmRegister" Index="5" Caption="In kết quả xác nhận" />
+      <Action Id="ViewDtailTimetable" Index="6" />
+      <Action Id="ExportRegister" Caption="Xuất dữ liệu (xls)" Index="8" />
+      <Action Id="ChangePasswordByUser" Caption="Đổi mật khẩu" />
+      <Action Id="Diagnostic Info" Caption="Chẩn đoán" />
+      <Action Id="Edit" Caption="Chỉnh sửa" />
+      <Action Id="FullTextSearch" ToolTip="Tìm kiếm bằng chuỗi kí tự" />
+      <Action Id="Logoff" Caption="Đăng xuất" />
+      <Action Id="MyDetails" Caption="Thông tin cá nhân" />
+      <Action Id="NavigateBack" Shortcut="Về trước" ToolTip="Chuyển về trước" />
+      <Action Id="NavigateForward" Shortcut="Kế tiếp" ToolTip="Chuyển sang kế tiếp" />
+      <Action Id="NavigateTo" Caption="Đi đến..." />
+      <Action Id="QuickCreateAction" Caption="Tạo nhanh... " />
+      <Action Id="ReportViewerDialogController_Back" Caption="Quay lại" />
+      <Action Id="ReportViewerDialogController_Close" Caption="Đóng" />
+      <Action Id="ReportViewerDialogController_Preview" Caption="Xem trước" />
+      <Action Id="ResetPassword" Caption="Thiết lập lại mật khẩu" ToolTip="Thiết lập lại mật khẩu cho người dùng đang chọn" />
+      <Action Id="SelectDefaultLesson" Caption="Chọn môn mặc định" />
+      <Action Id="ShowAllContexts" Caption="Kiểm tra hợp lệ" ToolTip="Kiểm tra tính hợp lệ dữ liệu " />
+      <Action Id="ShowInReport" Caption="Chọn báo cáo" ToolTip="Hiển thị báo cáo dữ liệu đang chọn" />
+      <Action Id="ShowNavigationItem" Caption="Liên kết" />
+      <Action Id="ShowReportInPreviewWindow" Caption="Xem trước" ToolTip="Xem trước báo cáo" />
+      <Action Id="SwitchToEditMode" Caption="Chỉnh sửa" />
+      <Action Id="TkbFile.ExtractZipFile" Caption="Giải nén file ZIP" />
+      <Action Id="TkbFile.ImportTKB" Caption="Import dữ liệu TKB" />
+      <Action Id="Unlink" ShortCaption="Bỏ chọn (unlink)" ToolTip="Bỏ chọn (unlink)" Caption="Bỏ chọn (unlink)" />
+    </Actions>
+    <ActionToContainerMapping>
+      <ActionContainer Id="View">
+        <ActionLink ActionId="SelectRegister" Index="1" />
+        <ActionLink ActionId="CancelRegister" Index="2" />
+        <ActionLink ActionId="BookRegister" Index="3" />
+        <ActionLink ActionId="CheckRegister" Index="4" />
+        <ActionLink ActionId="ConfirmRegister" Index="5" />
+        <ActionLink ActionId="ViewDtailTimetable" Index="7" />
+        <ActionLink ActionId="ExportRegister" Index="8" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+    <DisableReasons>
+      <Reason Id="ByContext_RequireMultipleObjects" Caption="Chọn ít nhất một đối tượng" />
+      <Reason Id="ByContext_RequireSingleObject" Caption="Chỉ chọn một đối tượng" />
+      <Reason Id="Security" Caption="Không có quyền truy cập" />
+    </DisableReasons>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.ExpressApp.Reports.ReportData" Caption="Báo biểu">
+      <OwnMembers>
+        <Member Name="DataTypeCaption" Caption="Kiểu dữ liệu" />
+        <Member Name="ReportName" Caption="Tên báo biểu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters" Caption="Thông tin đăng nhập">
+      <OwnMembers>
+        <Member Name="Password" Caption="Mật khẩu" />
+        <Member Name="UserName" Caption="Tên đăng nhập (MSSV)" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ChangePasswordOnLogonParameters" Caption="Đổi mật khẩu sau khi đăng nhập">
+      <OwnMembers>
+        <Member Name="ConfirmPassword" Caption="Xác nhận lại mật khẩu" />
+        <Member Name="NewPassword" Caption="Mật khẩu mới" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ChangePasswordParameters" Caption="Đổi mật khẩu">
+      <OwnMembers>
+        <Member Name="OldPassword" Caption="Mật khẩu cũ" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.EditModelPermission">
+      <OwnMembers>
+        <Member Name="Modifier" Caption="Hiệu chỉnh" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ObjectAccessPermission" Caption="Quyền truy cập dữ liệu">
+      <OwnMembers>
+        <Member Name="CreateAccess" Caption="Quyền tạo" />
+        <Member Name="DeleteAccess" Caption="Quyền xóa" />
+        <Member Name="NavigateAccess" Caption="Quyền duyệt xem" />
+        <Member Name="ObjectType" Caption="Loại dữ liệu" />
+        <Member Name="ReadAccess" Caption="Quyền đọc" />
+        <Member Name="WriteAccess" Caption="Quyền ghi" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ResetPasswordParameters" Caption="Thông tin thiết lập mật khẩu">
+      <OwnMembers>
+        <Member Name="Password" Caption="Mật khẩu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Validation.AllContextsView.ContextValidationResult" Caption="Kết quả kiểm tra hợp lệ">
+      <OwnMembers>
+        <Member Name="BrokenRules" Caption="Các luật vi phạm" />
+        <Member Name="Context" Caption="Ngữ cảnh thực hiện" />
+        <Member Name="DisplayableValidationResultItems" Caption="Các kết quả " />
+        <Member Name="State" Caption="Tình trạng" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Web.LogonAttemptsAmountedToLimit" Caption="Số lần giới hạn đăng nhập sai " />
+    <Class Name="DevExpress.ExpressApp.Web.ParameterlessLogonFailedInfo" Caption="Thông tin đăng nhập sai">
+      <OwnMembers>
+        <Member Name="Message" Caption="Thông báo" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Role" Caption="Vai trò">
+      <OwnMembers>
+        <Member Name="Users" Caption="Người dùng" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.User">
+      <OwnMembers>
+        <Member Name="ChangePasswordOnFirstLogon" Caption="Đổi mật khẩu khi đăng nhập lần đầu" />
+        <Member Name="IsActive" Caption="Đang hoạt động" />
+        <Member Name="Permissions" Caption="Quyền" />
+        <Member Name="Roles" Caption="Vai trò" />
+        <Member Name="UserName" Caption="Tên đăng nhập" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.AccountTransaction">
+      <OwnMembers>
+        <Member Name="Student" LookupEditorMode="Auto" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.Lesson">
+      <OwnMembers>
+        <Member Name="Subject" LookupEditorMode="Search" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.RegisterTime">
+      <OwnMembers>
+        <Member Name="DateModified" DisplayFormat="{0:dd/MM/yyyy}" />
+        <Member Name="BookingDateStart" DisplayFormat="{0:dd/MM/yyyy}" />
+        <Member Name="BookingDateEnd" DisplayFormat="{0:dd/MM/yyyy}" />
+        <Member Name="ConfirmDateStart" DisplayFormat="{0:dd/MM/yyyy}" />
+        <Member Name="ConfirmDateEnd" DisplayFormat="{0:dd/MM/yyyy}" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="Captions">
+      <LocalizationItem Name="DownloadReportMessage" Value="Nhấn OK để tải về báo cáo" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Controls">
+      <LocalizationGroup Name="ASPxCriteriaEdit">
+        <LocalizationItem Name="EnterValueText" Value="&lt;nhập giá trị&gt;" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ASPxEditors">
+        <LocalizationItem Name="Captcha_DefaultErrorText" Value="Giá trị mã bảo vệ không đúng " />
+        <LocalizationItem Name="Captcha_DefaultImageAlternateText" Value="Hình mã bảo vệ" />
+        <LocalizationItem Name="Captcha_DefaultTextBoxLabelText" Value="Nhập mã bảo vệ:" />
+        <LocalizationItem Name="Captcha_RefreshText" Value="Hiện mã khác" />
+        <LocalizationItem Name="CheckBox_Checked" Value="X" />
+        <LocalizationItem Name="CheckBox_Unchecked" Value="O" />
+        <LocalizationItem Name="DefaultErrorText" Value="Giá trị không hợp lệ" />
+        <LocalizationItem Name="FilterConrol_Empty" Value="&amp;lt;-&amp;gt;" />
+        <LocalizationItem Name="FilterConrol_EmptyEnter" Value="&amp;lt;nhập giá trị&amp;gt;" />
+        <LocalizationItem Name="FilterControl_AddCondition" Value="Thêm điều kiện" />
+        <LocalizationItem Name="FilterControl_AddConditionHint" Value="Thêm điều kiện mới vào nhóm" />
+        <LocalizationItem Name="FilterControl_AddGroup" Value="Thêm nhóm" />
+        <LocalizationItem Name="FilterControl_AddValueHint" Value="Thêm giá trị mới" />
+        <LocalizationItem Name="FilterControl_BetweenAnd" Value="Và" />
+        <LocalizationItem Name="FilterControl_Cancel" Value="Bỏ qua" />
+        <LocalizationItem Name="FilterControl_ClauseType" Value="bằng,không bằng,lớn hơn,lớn hơn hoặc bằng,bé hơn,bé hơn hoặc bằng,ở giữa,không ở giữa,chứa từ,không chứa từ ,bắt đầu bằng,kết thúc bằng,Is like,Is not like,Is blank,Is not blank,Is any of,Is none of" />
+        <LocalizationItem Name="FilterControl_ClearFilter" Value="Xóa điều kiện lọc" />
+        <LocalizationItem Name="FilterControl_PopupHeaderText" Value="Tạo điều kiện lọc" />
+        <LocalizationItem Name="FilterControl_Remove" Value="Xóa" />
+        <LocalizationItem Name="FilterControl_RemoveConditionHint" Value="Xóa điều kiện này" />
+        <LocalizationItem Name="FilterControl_ShowFilterControl" Value="Tạo điều kiện lọc" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ASPxGridView">
+        <LocalizationItem Name="Alt_Collapse" Value="[Thu gọn]" />
+        <LocalizationItem Name="Alt_DragAndDropHideColumnIcon" Value="Ẩn" />
+        <LocalizationItem Name="Alt_Expand" Value="[Mở rộng]" />
+        <LocalizationItem Name="Alt_FilterRowButton" Value="[Điều kiện]" />
+        <LocalizationItem Name="Alt_HeaderFilterButton" Value="[Lọc dữ liệu]" />
+        <LocalizationItem Name="Alt_HeaderFilterButtonActive" Value="[Đang lọc]" />
+        <LocalizationItem Name="Alt_SortedAscending" Value="(Tăng dần)" />
+        <LocalizationItem Name="Alt_SortedDescending" Value="(Giảm dần)" />
+        <LocalizationItem Name="AutoFilterBeginsWith" Value="bắt đầu bằng" />
+        <LocalizationItem Name="AutoFilterContains" Value="có chứa từ" />
+        <LocalizationItem Name="AutoFilterDoesNotContain" Value="không chứa từ" />
+        <LocalizationItem Name="AutoFilterEndsWith" Value="kết thúc bằng" />
+        <LocalizationItem Name="AutoFilterEquals" Value="Bằng" />
+        <LocalizationItem Name="AutoFilterGreater" Value="lớn hơn" />
+        <LocalizationItem Name="AutoFilterGreaterOrEqual" Value="lớn hơn hoặc bằng" />
+        <LocalizationItem Name="AutoFilterLess" Value="bé hơn" />
+        <LocalizationItem Name="AutoFilterLessOrEqual" Value="bé hơn hoặc bằng" />
+        <LocalizationItem Name="AutoFilterNotEqual" Value="không bằng" />
+        <LocalizationItem Name="CommandCancel" Value="Bỏ qua" />
+        <LocalizationItem Name="CommandClearFilter" Value="Xóa điều kiện lọc" />
+        <LocalizationItem Name="CommandDelete" Value="Xóa" />
+        <LocalizationItem Name="CommandEdit" Value="Chỉnh sửa" />
+        <LocalizationItem Name="CommandNew" Value="Tạo mới" />
+        <LocalizationItem Name="CommandSelect" Value="Chọn" />
+        <LocalizationItem Name="CommandUpdate" Value="Cập nhật" />
+        <LocalizationItem Name="ConfirmDelete" Value="Xác nhận xóa?" />
+        <LocalizationItem Name="CustomizationWindowCaption" Value="Chọn cột hiển thị" />
+        <LocalizationItem Name="EmptyDataRow" Value="Không có dữ liệu" />
+        <LocalizationItem Name="EmptyHeaders" Value="Kéo thả cột vào đây..." />
+        <LocalizationItem Name="GroupContinuedOnNextPage" Value="(Xem tiếp ở trang sau)" />
+        <LocalizationItem Name="GroupPanel" Value="Kéo thả tiêu đề cột vào đây để nhóm lại..." />
+        <LocalizationItem Name="HeaderFilterShowAllItem" Value="(Tất cả)" />
+        <LocalizationItem Name="HeaderFilterShowBlanksItem" Value="(Hiện dòng không có dữ liệu (blank))" />
+        <LocalizationItem Name="HeaderFilterShowNonBlanksItem" Value="(Hiện dòng có dữ liệu)" />
+        <LocalizationItem Name="PageSizeAllRecords" Value="Tất cả" />
+        <LocalizationItem Name="PageSizeCaption" Value="Số dòng 1 trang" />
+        <LocalizationItem Name="PopupEditFormCaption" Value="Form chỉnh sửa" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ASPxperience">
+        <LocalizationItem Name="DataView_PagerSummaryAllPages" Value="Tất cả trang" />
+        <LocalizationItem Name="DataView_PagerSummaryFormat" Value="Trang {0}/{1}" />
+        <LocalizationItem Name="DataViewBase_EmptyDataText" Value="Không có dữ liệu hiển thị" />
+        <LocalizationItem Name="Loading" Value="Đang tải&amp;hellip;" />
+        <LocalizationItem Name="NewsControl_BackToTop" Value="Về đầu trang" />
+        <LocalizationItem Name="NewsControl_Page" Value="Trang:" />
+        <LocalizationItem Name="Pager_All" Value="Tất cả" />
+        <LocalizationItem Name="Pager_First" Value="Trang đầu" />
+        <LocalizationItem Name="Pager_Last" Value="Trang cuối" />
+        <LocalizationItem Name="Pager_Next" Value="Trang kế" />
+        <LocalizationItem Name="Pager_Prev" Value="Trang trước" />
+        <LocalizationItem Name="Pager_SummaryAllPagesFormat" Value="Trang {0} - {1} ({2} dòng dữ liệu)" />
+        <LocalizationItem Name="Pager_SummaryFormat" Value="Trang {0}/{1} ({2} dòng)" />
+        <LocalizationItem Name="PopupControl_CloseButton" Value="[Đóng]" />
+        <LocalizationItem Name="PopupControl_SizeGrip" Value="[Đổi kích thước]" />
+        <LocalizationItem Name="TitleIndex_BackToTop" Value="[Về đầu trang]" />
+        <LocalizationItem Name="TitleIndex_FilterCaption" Value="Điều kiện lọc :&amp;nbsp;&amp;nbsp;&amp;nbsp;" />
+        <LocalizationItem Name="TitleIndex_FilterHint" Value="&lt;b&gt;?&lt;/b&gt; = bất cứ kí tự nào&#xD;&#xA; &lt;b&gt;*&lt;/b&gt; = bất cứ chuỗi nào" />
+        <LocalizationItem Name="TitleIndex_NoData" Value="Không có dữ liệu với điều kiện lọc này" />
+        <LocalizationItem Name="UploadControl_AddButton" Value="Thêm file" />
+        <LocalizationItem Name="UploadControl_CancelButton" Value="Bỏ qua" />
+        <LocalizationItem Name="UploadControl_RemoveButton" Value="Xóa" />
+        <LocalizationItem Name="UploadControl_UploadButton" Value="Tải lên" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="DialogButtons">
+      <LocalizationItem Name="Abort" Value="&amp;Hủy bỏ (Abort)" />
+      <LocalizationItem Name="Add" Value="Thêm" />
+      <LocalizationItem Name="Apply" Value="Thực hiện" />
+      <LocalizationItem Name="Back" Value="&lt; Quay lại" />
+      <LocalizationItem Name="Cancel" Value="&amp;Bỏ qua" />
+      <LocalizationItem Name="Clear" Value="&amp;Xóa" />
+      <LocalizationItem Name="Close" Value="Đóng" />
+      <LocalizationItem Name="Find" Value="Tìm" />
+      <LocalizationItem Name="Ignore" Value="&amp;Không quan tâm" />
+      <LocalizationItem Name="Next" Value="Tiếp theo &gt;" />
+      <LocalizationItem Name="No" Value="&amp;Không" />
+      <LocalizationItem Name="Remove" Value="Xóa" />
+      <LocalizationItem Name="Retry" Value="&amp;Làm lại" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="DevExpress.ExpressApp.Security.ModelAccessModifier">
+        <LocalizationItem Name="Allow" Value="Cho phép" />
+        <LocalizationItem Name="Deny" Value="Không được phép" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Security.ObjectAccess">
+        <LocalizationItem Name="AllAccess" Value="Tất cả quyền" />
+        <LocalizationItem Name="ChangeAccess" Value="Quyền thay đổi" />
+        <LocalizationItem Name="Create" Value="Tạo" />
+        <LocalizationItem Name="Delete" Value="Xóa" />
+        <LocalizationItem Name="Navigate" Value="Duyệt" />
+        <LocalizationItem Name="NoAccess" Value="Không được phép" />
+        <LocalizationItem Name="Read" Value="Đọc" />
+        <LocalizationItem Name="Write" Value="Ghi" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Security.ObjectAccessModifier">
+        <LocalizationItem Name="Allow" Value="Cho phép" />
+        <LocalizationItem Name="Deny" Value="Không được phép" />
+        <LocalizationItem Name="None" Value="Không thiết lập" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.ValueComparisonType">
+        <LocalizationItem Name="Equals" Value="Bằng" />
+        <LocalizationItem Name="GreaterThan" Value="lớn hơn" />
+        <LocalizationItem Name="GreaterThanOrEqual" Value="lớn hơn hoặc bằng" />
+        <LocalizationItem Name="LessThan" Value="bé hơn" />
+        <LocalizationItem Name="LessThanOrEqual" Value="bé hơn hoặc bằng" />
+        <LocalizationItem Name="NotEquals" Value="không bằng" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Xpo.XPBaseObject+ObjectState">
+        <LocalizationItem Name="Changed" Value="Đã thay đổi" />
+        <LocalizationItem Name="Editing" Value="Đang thay đổi" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="System.Security.Permissions.PermissionState">
+        <LocalizationItem Name="Unrestricted" Value="Không bị hạn chế" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="Exceptions">
+      <LocalizationGroup Name="SystemExceptions">
+        <LocalizationItem Name="PermissionIsDenied" Value="Không được phép " />
+      </LocalizationGroup>
+      <LocalizationGroup Name="UserVisibleExceptions">
+        <LocalizationItem Name="FieldValueSizeExceedsMaxLength" Value="Kích thước không được vượt quá {0}" />
+        <LocalizationItem Name="LogonAttemptsAmountedToLimitWin" Value="Đã quá 3 lần đăng nhập. Vui lòng liên hệ quản trị viên!!!" />
+        <LocalizationItem Name="MessageWarningTitle" Value="Cảnh báo" />
+        <LocalizationItem Name="ObjectToSaveWasChanged" Value="Đối tượng đang lưu đã bị thay đổi bởi người khác, vui lòng chọn chức năng làm mới dữ liệu" />
+        <LocalizationItem Name="RequestedObjectHasBeenDeleted" Value="LƯU Ý: Dữ liệu chỉ có thể đọc do đã thực hiện thao tác xóa!!!" />
+        <LocalizationItem Name="RequestedObjectIsNotFound" Value="Không thể tiếp tục xử lý do không tìm thấy đối tượng cần truy xuất" />
+        <LocalizationGroup Name="Security">
+          <LocalizationItem Name="LastAdmin" Value=" '{0}' đang là quản trị duy nhất của hệ thống. Không thể xóa '{0}'" />
+          <LocalizationItem Name="LoginFailed" Value="Đăng nhập sai cho {0}. {1}" />
+          <LocalizationItem Name="NewPasswordIsEqualToOldPassword" Value="Mật khẩu mới giống mật khẩu cũ" />
+          <LocalizationItem Name="OldPasswordIsWrong" Value="Mật khẩu cũ không đúng" />
+          <LocalizationItem Name="PasswordsAreDifferent" Value="Mật khẩu không khớp" />
+          <LocalizationItem Name="RetypeTheInformation" Value="Vui lòng nhập lại thông tin. Mật khẩu phân biệt chữ thường và hoa" />
+          <LocalizationItem Name="UserNameIsEmpty" Value="Tên đăng nhập không được để trống" />
+        </LocalizationGroup>
+        <LocalizationItem Name="SimultaneousChangeDataMessage" Value="CẢNH BÁO: Xuất hiện việc cập nhật dữ liệu đồng thời\n&#xD;&#xA;{0}\n&#xD;&#xA;Chưa thể lưu thay đổi." />
+        <LocalizationItem Name="SystemExceptionMessageFormat" Value="Xảy ra lỗi {0}.\r\n Nội dungi: {1}" />
+        <LocalizationItem Name="TheFollowingErrorOccurred" Value="Thông tin lỗi xảy ra:" />
+        <LocalizationItem Name="UserFriendlyConnectionFailedException" Value="Không kết nối được cơ sở dữ liệu, vui lòng liên hệ quản trị hệ thống" />
+        <LocalizationItem Name="UserFriendlySqlException" Value="Có lỗi kết nối cơ sở dữ liệu, vui lòng liên hệ quản trị hệ thống" />
+        <LocalizationGroup Name="Validation">
+          <LocalizationItem Name="ActionErrorMessageHeaderFormat" Value="Có lỗi khi thực hiện cập nhật dữ liệu, vui lòng kiểm tra thêm thông tin kèm theo:" />
+          <LocalizationItem Name="AllContextsErrorMessageHeader" Value="Có lỗi khi thực hiện cập nhật dữ liệu, vui lòng kiểm tra thêm thông tin kèm theo:" />
+          <LocalizationItem Name="DeleteErrorMessageHeader" Value="Có lỗi khi thực hiện cập nhật dữ liệu, vui lòng kiểm tra thêm thông tin kèm theo:" />
+          <LocalizationItem Name="SaveErrorMessageHeader" Value="Có lỗi khi thực hiện cập nhật dữ liệu, vui lòng kiểm tra thêm thông tin kèm theo:" />
+          <LocalizationItem Name="ValidationSucceededMessageHeader" Value="Kiểm tra hợp lệ!" />
+        </LocalizationGroup>
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="Messages">
+      <LocalizationItem Name="ThereAreNoRecordsToDisplay" Value="Không có dữ liệu hiển thị" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Texts">
+      <LocalizationItem Name="PageSizeCaption" Removed="True" />
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="MyNote_ListView" Index="1" />
+          <Item Id="MyHelp_ListView" Index="2" />
+          <Item Id="MyDetails" Caption="Thông tin cá nhân" Index="3" />
+          <Item Id="User_ListView" Caption="Người dùng" Index="3" Removed="True" />
+          <Item Id="Role_ListView" Index="4" Removed="True" />
+          <Item Id="AccountTransactionFile_ListView" Removed="True" />
+          <Item Id="AccountTransactionTracking_ListView" Removed="True" />
+          <Item Id="ClassTransactionTracking_ListView" Removed="True" />
+          <Item Id="RegisterState_ListView" Removed="True" />
+          <Item Id="StudentAccumulationFile_ListView" Removed="True" />
+          <Item Id="StudentResultFile_ListView" Removed="True" />
+          <Item Id="SubjectFile_ListView" Removed="True" />
+          <Item Id="SubjectRelationFile_ListView" Removed="True" />
+          <Item Id="TeacherFile_ListView" Removed="True" />
+          <Item Id="WeekReportData_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="Academic Data">
+        <Items>
+          <Item Id="StudentClass_ListView" Index="1" />
+          <Item Id="Subject_ListView" Index="2" />
+          <Item Id="Student_ListView" Index="3" />
+          <Item Id="RegisterdetailWithStudentClass" Index="4" />
+          <Item Id="ConstrainstParameter_ListView" Index="5" />
+          <Item Id="410a900f-b463-4d96-9c5e-fecb86e8fdd1" IsNewNode="True" Caption="Dữ liệu chung">
+            <Items IsNewNode="True">
+              <Item Id="Branch_ListView" IsNewNode="True" ViewId="Branch_ListView" ObjectKey="" />
+              <Item Id="ClassRoom_ListView" IsNewNode="True" ViewId="Classroom_ListView" ObjectKey="" />
+              <Item Id="Department_ListView" IsNewNode="True" ViewId="Department_ListView" ObjectKey="" />
+              <Item Id="Office_ListView" IsNewNode="True" ObjectKey="" Caption="Cơ sở" ViewId="Office_ListView" />
+              <Item Id="RegisterState_ListView" IsNewNode="True" ViewId="RegisterState_ListView" ObjectKey="" />
+              <Item Id="SubjectRelations_ListView" IsNewNode="True" ViewId="SubjectRelations_ListView" ObjectKey="" />
+              <Item Id="Teacher_ListView" IsNewNode="True" ViewId="Teacher_ListView" ObjectKey="" />
+            </Items>
+          </Item>
+          <Item Id="Branch_ListView" Removed="True" />
+          <Item Id="ClassRoom_ListView" Removed="True" />
+          <Item Id="Department_ListView" Removed="True" />
+          <Item Id="f430be73-e85d-46a7-a198-70e926a3b63f" IsNewNode="True" Caption="Thông tin học phí">
+            <Items IsNewNode="True">
+              <Item Id="AccountTransactionTracking_ListView" IsNewNode="True" ViewId="AccountTransactionTracking_ListView" ObjectKey="" />
+              <Item Id="ClassTransactionTracking_ListView" IsNewNode="True" ViewId="ClassTransactionTracking_ListView" ObjectKey="" />
+            </Items>
+          </Item>
+          <Item Id="Office_ListView" Removed="True" />
+          <Item Id="StudentFile_ListView" Removed="True" ViewId="StudentFile_ListView" ObjectKey="" Caption="File Dữ liệu SV" />
+          <Item Id="SubjectRelations_ListView" Removed="True" />
+          <Item Id="Teacher_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="TimeTable Data">
+        <Items>
+          <Item Id="Semester_ListView" Index="1" />
+          <Item Id="RegisterTime_ListView" Index="2" />
+          <Item Id="Lesson_ListView" Index="3" />
+          <Item Id="06d290cf-8e2b-489d-9e1b-75cb98a7b5da">
+            <Items>
+              <Item Id="TkbLesson_ListView" IsNewNode="True" ViewId="TkbLesson_ListView" ObjectKey="" Caption="Nhóm lớp xếp lịch (lesson)" Index="3" />
+              <Item Id="TkbCard_ListView" Caption="Lịch học (card)" />
+              <Item Id="TkbClass_ListView" Caption="Lớp biên chế (class)" />
+              <Item Id="TkbClassroom_Listview" Caption="Phòng học (classroom)" />
+              <Item Id="TkbGrade_ListView" Caption="Khóa (Grade)" />
+              <Item Id="TkbGroup_ListView" Caption="Nhóm (group)" />
+            </Items>
+          </Item>
+          <Item Id="d7cb730f-be8d-4f51-b455-5ceb9c0a2e43" IsNewNode="True" Caption="Lịch tuần" ViewId="WeekReportData_ListView" />
+          <Item Id="TkbFile_ListView" Removed="True" />
+          <Item Id="TkbLesson_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="ImportData" IsNewNode="True" Caption="Dữ liệu Import">
+        <Items IsNewNode="True">
+          <Item Id="TkbFile_ListView" IsNewNode="True" Caption="File dữ liệu TKB học kỳ" ViewId="TkbFile_ListView" ObjectKey="" Index="5" />
+          <Item Id="AccountTransactionFile_ListView" IsNewNode="True" ViewId="AccountTransactionFile_ListView" ObjectKey="" />
+          <Item Id="StudentFile_ListView" IsNewNode="True" ViewId="StudentFile_ListView" ObjectKey="" Caption="File dữ liệu sinh viên" />
+          <Item Id="StudentResultFile_ListView" IsNewNode="True" ViewId="StudentResultFile_ListView" ObjectKey="" />
+          <Item Id="SubjectFile_ListView" IsNewNode="True" ViewId="SubjectFile_ListView" ObjectKey="" />
+          <Item Id="SubjectRelationFile_ListView" IsNewNode="True" ViewId="SubjectRelationFile_ListView" ObjectKey="" />
+          <Item Id="TeacherFile_ListView" IsNewNode="True" ViewId="TeacherFile_ListView" ObjectKey="" />
+        </Items>
+      </Item>
+      <Item Id="Reports" Caption="Báo biểu">
+        <Items>
+          <Item Id="Reports" Caption="Báo cáo" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Validation>
+    <Contexts>
+      <ValidationContext Id="Delete" Caption="Xóa" />
+      <ValidationContext Id="Save" Caption="Lưu" />
+    </Contexts>
+  </Validation>
+  <Views>
+    <DetailView Id="AccountTransaction_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" Direction="Horizontal">
+            <LayoutGroup Id="AccountTransaction" Direction="Vertical" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView" Caption="Đăng nhập">
+      <Items>
+        <StaticText Id="LogonText" Text="Chúc mừng đến với Website quản lý học vụ Trường Cao Đẳng Viễn Đông. Nhập thông tin đăng nhập bên dưới:" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ChangePasswordOnLogonParameters_DetailView" Caption="Đổi mật khẩu sau khi đăng nhập lần đầu">
+      <Items>
+        <StaticText Id="ChangePasswordText" Text="Vì lý do bảo mật, vui lòng đổi mật khẩu khác với mật khẩu đăng nhập lần đầu.  " />
+      </Items>
+    </DetailView>
+    <DetailView Id="ChangePasswordParameters_DetailView" Caption="Đổi mật khẩu">
+      <Items>
+        <StaticText Id="ChangePasswordText" Text="Để đổi mật khẩu, vui lòng nhập mật khẩu cũ và mới vào các ô bên dưới" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Lesson_DetailView">
+      <Items>
+        <PropertyEditor Id="Subject" LookupProperty="SubjectName" />
+      </Items>
+    </DetailView>
+    <DetailView Id="LogonAttemptsAmountedToLimit_DetailView" Caption="Đăng nhập">
+      <Items>
+        <StaticText Id="LogonText" Text="Đã 03 lần đăng nhập sai. Vui lòng tắt trình duyệt và liên hệ quản trị. " />
+      </Items>
+    </DetailView>
+    <DetailView Id="MyNoteDetailView" Removed="True">
+      <Items>
+        <PropertyEditor Id="Content" RowCount="10" />
+        <PropertyEditor Id="Intro" RowCount="2" />
+      </Items>
+    </DetailView>
+    <ListView Id="MyNoteViewOnly" GroupSummary="Count" AutoExpandAllGroups="True" IsGroupPanelVisible="True">
+      <Columns>
+        <ColumnInfo Id="Tag" IsNewNode="True" PropertyName="Tag" GroupIndex="0" SummaryType="Count" Index="0" />
+        <ColumnInfo Id="Intro" RowCount="2" />
+        <ColumnInfo Id="DateModified" IsNewNode="True" PropertyName="DateModified" Caption="Ngày cập nhật" Index="4" SortOrder="Descending" />
+      </Columns>
+    </ListView>
+    <ListView Id="ReportData_ListView" Caption="Báo biểu" />
+    <DetailView Id="User_DetailView">
+      <Items>
+        <PropertyEditor Id="FirstName" ImmediatePostData="True" />
+        <PropertyEditor Id="LastName" ImmediatePostData="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Person">
+              <LayoutGroup Id="Person_col1">
+                <LayoutItem Id="FullName" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="StudentAccumulationFile.ImportStudentAccumulation" Caption="Import dữ liệu điểm tích lũy" ToolTip="Import dữ liệu điểm tích lũy vào hệ thống" />
+    </Actions>
+  </ActionDesign>
+</Application>

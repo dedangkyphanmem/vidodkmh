@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="SelectRegister" Caption="Chọn MH đăng ký" Index="1" />
+      <Action Id="CancelRegister" Index="2" />
+      <Action Id="BookRegister" Index="3" />
+      <Action Id="CheckRegister" Index="4" />
+      <Action Id="ConfirmRegister" Index="5" />
+      <Action Id="ExportRegister" Caption="Xuất dữ liệu" Index="6" />
+    </Actions>
+  </ActionDesign>
+  <Views>
+    <ListView Id="AccountTransaction_ListView" AllowEdit="True" NewItemRowPosition="Top" ShowAutoFilterRow="True" UseServerMode="True" />
+    <ListView Id="Branch_ListView" AllowEdit="True" NewItemRowPosition="Top" ShowAutoFilterRow="True" />
+    <ListView Id="Classroom_ListView" ShowAutoFilterRow="True" NewItemRowPosition="Top" AllowEdit="True" InlineEditMode="Inline" />
+    <ListView Id="Department_ListView" NewItemRowPosition="Top" AllowEdit="True" ShowAutoFilterRow="True" />
+    <ListView Id="Lesson_ListView" ShowAutoFilterRow="True" AllowEdit="True" IsGroupPanelVisible="True" />
+    <ListView Id="Office_ListView" AllowEdit="True" NewItemRowPosition="Top" ShowAutoFilterRow="True" />
+    <DetailView Id="Party_DetailView">
+      <Items>
+        <PropertyEditor Id="Address1" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxDefaultPropertyEditor" />
+        <PropertyEditor Id="Address2" PropertyEditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxDefaultPropertyEditor" />
+      </Items>
+    </DetailView>
+    <ListView Id="RegisterDetail_ListView" InlineEditMode="Inline" NewItemRowPosition="None" ShowAutoFilterRow="True" UseServerMode="False" IsGroupPanelVisible="True" AllowEdit="True">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="StudentRegLessonSemester" Index="-1" />
+        <ColumnInfo Id="Student.StudentCode" Index="1" />
+        <ColumnInfo Id="Student" Index="2" />
+        <ColumnInfo Id="Lesson" Index="3" />
+        <ColumnInfo Id="Lesson.ClassIDs" Index="4" />
+        <ColumnInfo Id="Lesson.Subject.SubjectCode" Index="5" />
+        <ColumnInfo Id="Lesson.Subject.SubjectName" Index="6" />
+        <ColumnInfo Id="Lesson.Subject.Credit" Index="7" />
+        <ColumnInfo Id="Lesson.Timetable" Index="8" />
+        <ColumnInfo Id="Lesson.TuitionFee" Index="9" />
+        <ColumnInfo Id="State" Index="10" />
+        <ColumnInfo Id="isChange" Index="11" />
+        <ColumnInfo Id="Note" Index="12" />
+      </Columns>
+    </ListView>
+    <ListView Id="Role_ListView" AllowEdit="True" NewItemRowPosition="Top" ShowAutoFilterRow="True" />
+    <ListView Id="Semester_ListView" ShowAutoFilterRow="True" NewItemRowPosition="Top" AllowEdit="True" IsGroupPanelVisible="False" />
+    <ListView Id="Student_ListView" AllowEdit="True" IsGroupPanelVisible="True" NewItemRowPosition="Top" ShowAutoFilterRow="True" UseServerMode="True" SaveStateInCookies="True" />
+    <ListView Id="Student_StudentResults_ListView" ShowAutoFilterRow="True" IsGroupPanelVisible="True" AllowEdit="True" NewItemRowPosition="Top" UseServerMode="True" />
+    <ListView Id="StudentAccumulation_ListView" ShowAutoFilterRow="True" UseServerMode="True" IsGroupPanelVisible="True" AllowEdit="True" />
+    <ListView Id="StudentClass_ListView" ShowAutoFilterRow="True" AllowEdit="True" NewItemRowPosition="Top" />
+    <ListView Id="StudentResult_ListView" SaveStateInCookies="True" UseServerMode="True" ShowAutoFilterRow="True" NewItemRowPosition="Top" IsGroupPanelVisible="True" AllowEdit="True" GroupSummary="Count" />
+    <ListView Id="Subject_ListView" ShowAutoFilterRow="True" IsGroupPanelVisible="True" AllowEdit="True" NewItemRowPosition="Top" />
+    <ListView Id="Teacher_ListView" NewItemRowPosition="Top" IsGroupPanelVisible="True" AllowEdit="True" ShowAutoFilterRow="True" />
+    <ListView Id="TkbDay_ListView" AllowEdit="True" />
+    <ListView Id="TkbSemester_ListView" AllowEdit="True" NewItemRowPosition="Top" ShowAutoFilterRow="True" IsGroupPanelVisible="True" />
+    <ListView Id="User_ListView" AllowEdit="True" NewItemRowPosition="Top" ShowAutoFilterRow="True" />
+  </Views>
+</Application>

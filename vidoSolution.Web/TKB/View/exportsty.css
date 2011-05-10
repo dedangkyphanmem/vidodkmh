@@ -1,0 +1,60 @@
+body {
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 12px;
+	color: #000066; 
+}
+
+td {
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 12px; 
+	color: #000066;
+}
+
+th {
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 12px; 
+	color: #FFFFFF;
+	background-color: #4B6BAC
+}
+
+h1 {
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 15px;
+	color: #000066;
+	margin-top:10;
+	margin-bottom:10;
+}
+
+h2 {
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 14px;
+	color: #000066;
+	margin-top:5;
+	margin-bottom:5;
+}
+
+
+h3 {
+	FONT-SIZE: 11px; COLOR: ##000066;
+}
+
+SELECT {
+	BORDER-RIGHT: #336699 1px solid; BORDER-TOP: #800040 1px solid;
+	FONT-SIZE: 10px; 
+}
+
+p {
+	FONT-SIZE: 11px; COLOR: "#000066";
+}
+
+A {
+	FONT-SIZE: 11px;
+}
+
+A:hover {
+	FONT-SIZE: 11px;
+}
+
+A:visited {
+	FONT-SIZE: 11px;
+}

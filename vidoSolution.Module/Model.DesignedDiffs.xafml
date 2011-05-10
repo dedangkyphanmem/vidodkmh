@@ -1,0 +1,2397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application ProtectedContentText="Không được xem">
+  <ActionDesign>
+    <Actions>
+      <Action Id="CalculateFeeForLesson" Caption="Tính học phí" ConfirmationMessage="Đồng ý tính lại học phí theo số tín chỉ?" />
+      <Action Id="Cancel" Caption="Bỏ qua" />
+      <Action Id="CancelRegister" Caption="Hủy chọn môn" ConfirmationMessage="Đồng ý xóa các nhóm lớp MH đang chọn?" ToolTip="Hủy chọn nhóm lớp MH" />
+      <Action Id="CheckRegister" Caption="Xác nhận đã kiểm tra" ConfirmationMessage="Đồng ý và thiết lập đã kiểm tra?" ToolTip="Xác nhận đã kiểm tra dữ liệu" />
+      <Action Id="DefaultRegisterAction" Caption="Chọn nhóm lớp MH mặc định" />
+      <Action Id="Delete" Caption="Xóa" ConfirmationMessage="Bạn muốn xóa các dòng đã chọn" />
+      <Action Id="DialogCancel" Caption="Bỏ qua" />
+      <Action Id="Download" Caption="Tải về" ToolTip="Tải về File" />
+      <Action Id="FullTextSearch" Caption="Tìm" ToolTip="Tìm kiếm bằng chuỗi chuỗi kí tự" ShortCaption="Tìm " />
+      <Action Id="ImportStudentAction" Caption="Import Sinh viên" ToolTip="Import Sinh viên vào hệ thống" />
+      <Action Id="ImportStudentResultAction" Caption="Import điểm HK" ToolTip="Import điểm HK cho file dữ liệu đang chọn" />
+      <Action Id="ImportSubjectAction" Caption="Import Môn học" ToolTip="Import Môn học vào hệ thống" />
+      <Action Id="ImportSubjectRelationAction" Caption="Import quan hệ môn học" ToolTip="Import quan hệ môn học vào hệ thống" />
+      <Action Id="ImportTeacherAction" Caption="Import Giảng viên" ToolTip="Import Giảng viên vào hệ thống" />
+      <Action Id="ImportTransactionDataAction" Caption="Import Dữ liệu học phí" ToolTip="Import Dữ liệu học phí" />
+      <Action Id="Link" Caption="Chọn (link)" />
+      <Action Id="ListViewShowObject" Caption="Mở" />
+      <Action Id="Logon" Caption="Đăng nhập" />
+      <Action Id="NavigateBack" Caption="-&lt;&lt;-" />
+      <Action Id="NavigateForward" Caption="-&gt;&gt;-" />
+      <Action Id="New" Caption="Tạo mới" />
+      <Action Id="NextObject" Caption="-&gt;&gt;-" />
+      <Action Id="PreviousObject" Caption="-&lt;&lt;-" />
+      <Action Id="Refresh" Caption="Làm mới" />
+      <Action Id="Save" Caption="Lưu" />
+      <Action Id="SaveAndClose" Caption="Lưu và đóng" />
+      <Action Id="SaveAndNew" Caption="Lưu và tạo mới" />
+      <Action Id="SetDisableSelectAction" Caption="Thiết lập Không ĐK" ConfirmationMessage="Sinh viên sẽ không đăng ký được các môn đang được chọn ?" ToolTip="Không cho phép sinh viên đăng ký các môn đang được chọn" />
+      <Action Id="SetEnableSelectAction" Caption="Thiết lập được ĐK" ConfirmationMessage="Cho phép sinh viên đăng ký các môn đang được chọn?" ToolTip="Cho phép sinh viên đăng ký các môn đang được chọn" />
+      <Action Id="SetFilter" Caption="Lọc" />
+      <Action Id="ShowAllContexts" Caption="Kiểm tra hợp lệ" ToolTip="Kiểm tra hợp lệ dữ liệu" />
+      <Action Id="ShowNavigationItem" Caption="Duyệt xem" />
+      <Action Id="TkbFile.ExtractZipFile" Caption="Extract Zip File" />
+      <Action Id="TkbFile.ImportTKB" Caption="Import TKB" />
+      <Action Id="Unlink" Caption="Xóa chọn (unlink)" ConfirmationMessage="Bạn đang xóa chọn liên kết, bạn chắc chắn chứ?" />
+      <Action Id="ViewClassroomTimetableAction" ShortCaption="Xem lịch" Caption="Xem lịch" ToolTip="Xem lịch phòng học đang chọn" />
+      <Action Id="ViewClassTransactionTrackingAction" Caption="Xem tỉ lệ nợ LBC" ToolTip="Xem tỉ lệ nợ LBC đang chọn" />
+      <Action Id="ViewSemesterClassTransactionTrackingAction" Caption="Xem tỉ lệ nợ LBC" ToolTip="Xem tỉ lệ nợ LBC trong NHHK đang chọn" />
+      <Action Id="ViewStudentClassTimetableAction" Caption="Xem lịch" ToolTip="Xem lịch lớp biên chế đang chọn" />
+      <Action Id="ViewStudentTimetableAction" Caption="Xem lịch " ToolTip="Xem lịch một sinh viên đang chọn" />
+      <Action Id="ViewStudentTransactionTrackingAction" Caption="Xem tỉ lệ nợ SV" ToolTip="Xem tình trạng đóng học phí sinh viên của lớp đang chọn" />
+      <Action Id="ViewSubjectTimetableAction" Caption="Xem lịch" ToolTip="Xem lịch môn học đang chọn" />
+      <Action Id="ViewTeacherTimetableAction" Caption="Xem lịch dạy" ToolTip="Xem lịch dạy cho giảng viên đang chọn" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.ExpressApp.Editors.CriteriaProvider" Caption="Ràng buộc">
+      <OwnMembers>
+        <Member Name="FilteredObjectsType" Caption="Đối tượng lọc dữ liệu" />
+        <Member Name="FilterString" Caption="Chuỗi lọc dữ liệu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.AboutInfo">
+      <OwnMembers>
+        <Member Name="ProductName" Caption="Tên sản phẩm" Index="1" />
+        <Member Name="Version" Index="2" Caption="Phiên bản" />
+        <Member Name="LogoImageName" Caption="Hình logo" Index="3" />
+        <Member Name="Description" Caption="Mô tả" Index="4" />
+        <Member Name="Company" Caption="Đơn vị" />
+        <Member Name="Copyright" Caption="Bản quyền" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.DiagnosticInfoObject">
+      <OwnMembers>
+        <Member Name="AsText" Caption="Thông điệp" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Validation.AllContextsView.ContextValidationResult" Caption="Kết quả kiểm tra ngữ cảnh">
+      <OwnMembers>
+        <Member Name="BrokenRules" Caption="Luật bị vi phạm" />
+        <Member Name="Context" Caption="Ngữ cảnh" />
+        <Member Name="DisplayableValidationResultItems" Caption="Danh sách mục kiểm tra" />
+        <Member Name="State" Caption="Tình trạng" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Validation.AllContextsView.DisplayableValidationResultItem">
+      <OwnMembers>
+        <Member Name="ContextCaption" Caption="Ngữ cảnh" />
+        <Member Name="ContextId" Caption="ID ngữ cảnh" />
+        <Member Name="ErrorMessage" Caption="Thông điệp lỗi" />
+        <Member Name="Rule" Caption="Luật kiểm tra" />
+        <Member Name="RuleName" Caption="Tên luật kiểm tra" />
+        <Member Name="RuleProperties" Caption="Thông số luật kiểm tra" />
+        <Member Name="State" Caption="Tình trạng" />
+        <Member Name="TargetCaption" Caption="Đến đối tượng" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Validation.AllContextsView.ValidationResults" Caption="Kết quả kiểm tra">
+      <OwnMembers>
+        <Member Name="DisplayableValidationResultItems" Caption="Các mục hiện kết quả kiểm tra" />
+        <Member Name="HighlightErrors" Caption="Lỗi tìm thấy" />
+        <Member Name="Results" Caption="Kết quả" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Address" Caption="Địa chỉ">
+      <OwnMembers>
+        <Member Name="FullAddress" Caption="Địa chỉ đầy đủ" Index="1" />
+        <Member Name="Street" Caption="Đường" Index="2" />
+        <Member Name="City" Caption="Thành phố" Index="3" />
+        <Member Name="StateProvince" Caption="Tỉnh thành" Index="4" />
+        <Member Name="Country" Caption="Quốc gia" Index="5" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Country" Caption="Quốc gia">
+      <OwnMembers>
+        <Member Name="Name" Caption="Tên" />
+        <Member Name="PhoneCode" Caption="Mã viễn thông" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.FileData" Caption="File dữ liệu">
+      <OwnMembers>
+        <Member Name="FileName" Caption="Tên file" />
+        <Member Name="Size" Caption="Kích thước" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Party">
+      <OwnMembers>
+        <Member Name="Address1" Removed="True" />
+        <Member Name="Address2" Removed="True" />
+        <Member Name="DisplayName" Caption="Tên hiển thị" />
+        <Member Name="PhoneNumbers" Caption="DS số ĐT" />
+        <Member Name="Photo" Caption="Hình" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PersistentPermission" Caption="Quyền truy cập">
+      <OwnMembers>
+        <Member Name="Permission" Caption="Quyền" />
+        <Member Name="Role" Caption="Vai trò" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Person">
+      <OwnMembers>
+        <Member Name="FirstName" Caption="Họ lót" Index="1" />
+        <Member Name="LastName" Caption="Tên" Index="2" />
+        <Member Name="FullName" Caption="Tên đầy đủ" Index="3" />
+        <Member Name="Birthday" Caption="Ngày sinh" Index="4" />
+        <Member Name="MiddleName" Removed="True" Caption="Tên đệm" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PhoneNumber" Caption="Số ĐT">
+      <OwnMembers>
+        <Member Name="Number" Caption="Số " />
+        <Member Name="Party" Caption="Đơn vị" />
+        <Member Name="PhoneType" Caption="Loại" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Role" Caption="Role" DefaultListViewShowAutoFilterRow="True" DefaultListViewNewItemRowPosition="Top" />
+    <Class Name="DevExpress.Persistent.BaseImpl.RoleBase">
+      <OwnMembers>
+        <Member Name="Name" Caption="Tên" />
+        <Member Name="PersistentPermissions" Caption="Quyền" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.AccountTransaction" Caption="Giao dịch học phí" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" DefaultListViewShowAutoFilterRow="True">
+      <OwnMembers>
+        <Member Name="Name" Caption="Mã giao dịch" Index="1" />
+        <Member Name="Student" Caption="Sinh viên" Index="2" LookupEditorMode="Auto" />
+        <Member Name="MoneyAmount" Caption="Số tiền" Index="3" DisplayFormat="{0:0,0}" />
+        <Member Name="TransactingDate" Caption="Ngày thực hiện" Index="4" DisplayFormat="{0:dd-MM-yyyy}" />
+        <Member Name="Description" Caption="Diễn giải" Index="5" />
+        <Member Name="DateCreated" Caption="Ngày tạo" />
+        <Member Name="DateModified" Caption="Ngày cập nhật" />
+        <Member Name="ImportDescription" Caption="Diễn giải Import" />
+        <Member Name="Semester" Caption="NHHK" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.AccountTransactionFile" Caption="File dữ liệu học phí">
+      <OwnMembers>
+        <Member Name="CsvFile" Index="1" Caption="File Import" />
+        <Member Name="Semester" Caption="NHHK" Index="1" />
+        <Member Name="Note" Caption="Ghi chú" Index="2" />
+        <Member Name="IsImported" Caption="Đã import vào hệ thống" Index="3" AllowEdit="False" />
+        <Member Name="CreateDate" Caption="Ngày tạo" Index="4" AllowEdit="False" />
+        <Member Name="ResultLink" Caption="Kết quả" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.AccountTransactionTracking" Caption="Theo dõi sinh viên nợ học kỳ ">
+      <OwnMembers>
+        <Member Name="Student" Caption="Sinh viên" Index="0" />
+        <Member Name="Semester" Caption="NHHK" Index="1" />
+        <Member Name="BeforeDebtValue" Caption="Nợ HK trước" Index="2" DisplayFormat="{0:0,0}" />
+        <Member Name="RequestValue" Caption="Phải trả" Index="3" DisplayFormat="{0:0,0}" />
+        <Member Name="PaidValue" Caption="Đã trả" Index="4" DisplayFormat="{0:0,0}" />
+        <Member Name="CurrentDebtValue" Caption="Nợ HK hiện tại " Index="5" DisplayFormat="{0:0,0}" />
+        <Member Name="DebtPercentage" Caption="Tỉ lệ nợ/phải trả" Index="6" DisplayFormat="{0:0.00%}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.Branch" Caption="Ngành" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" DefaultListViewShowAutoFilterRow="True">
+      <OwnMembers>
+        <Member Name="BranchName" Caption="Tên ngành" Index="2" />
+        <Member Name="LevelOfEducation" Caption="Trình độ Đào tạo" Index="3" />
+        <Member Name="TypeOfEducation" Caption="Loại hình Đào tạo" Index="4" />
+        <Member Name="Department" Caption="Khoa" Index="5" />
+        <Member Name="StudentClasses" Caption="DS lớp biên chế" Index="6" />
+        <Member Name="Subjects" Caption="DS Môn học" Index="7" />
+        <Member Name="BranchCode" Caption="Mã ngành" />
+        <Member Name="DateCreated" Caption="Ngày tạo" />
+        <Member Name="DateModified" Caption="Ngày hiệu chỉnh" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.Classroom" Caption="Phòng học" DefaultListViewNewItemRowPosition="Top" DefaultListViewAllowEdit="True" DefaultListViewShowAutoFilterRow="True">
+      <OwnMembers>
+        <Member Name="ClassroomCode" Caption="Mã phòng" Index="1" />
+        <Member Name="Capacity" Caption="Sức chứa" Index="3" />
+        <Member Name="ClassroomName" Caption="Tên phòng" Index="3" />
+        <Member Name="RoomType" Caption="Loại phòng" Index="4" />
+        <Member Name="Office" Caption="Cơ sở" Index="5" />
+        <Member Name="Note" Caption="Ghi chú" Index="6" />
+        <Member Name="DateCreated" Caption="Ngày tạo" />
+        <Member Name="DateModified" Caption="Ngày hiệu chỉnh" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.ClassTransactionTracking" Caption="Theo dõi học phí lớp biên chế ">
+      <OwnMembers>
+        <Member Name="Semester" Caption="NHHK" Index="0" />
+        <Member Name="StudentClass" Caption="Lớp biên chế" Index="1" />
+        <Member Name="NumOfStudents" Caption="Sĩ số SV" Index="2" />
+        <Member Name="BeforeDebtAmount" Caption="Nợ TLHK trước" Index="3" DisplayFormat="{0:0,0}" />
+        <Member Name="RequestAmount" Caption="Tiền phải thu HK" Index="3" DisplayFormat="{0:0,0}" />
+        <Member Name="PaidAmount" Caption="Tiền đã trả HK" Index="4" DisplayFormat="{0:0,0}" />
+        <Member Name="DeptAmount" Caption="Nợ TLHK hiện tại" Index="5" DisplayFormat="{0:0,0}" />
+        <Member Name="DeptPercentage" Caption="Tỉ lệ nợ / phải thu" Index="6" DisplayFormat="{0:0.00%}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.ConstrainstParameter" Caption="Tham số ràng buộc">
+      <OwnMembers>
+        <Member Name="Code" Caption="Mã tham số" Index="1" />
+        <Member Name="Name" Caption="Tên" Index="2" />
+        <Member Name="Value" Caption="Giá trị" Index="3" DisplayFormat="{0:0,0}" />
+        <Member Name="Description" Caption="Mô tả" Index="4" />
+        <Member Name="DateCreated" Caption="Ngày tạo" />
+        <Member Name="DateModified" Caption="Ngày hiệu chỉnh" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.Department" Caption="Khoa" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" DefaultListViewShowAutoFilterRow="True">
+      <OwnMembers>
+        <Member Name="DepartmentCode" Caption="Mã Khoa" Index="1" />
+        <Member Name="DepartmentName" Caption="Tên Khoa" Index="2" />
+        <Member Name="Branchs" Caption="DS Ngành" Index="3" />
+        <Member Name="Phone" Caption="Điện thoại" Index="4" />
+        <Member Name="Note" Caption="Ghi chú" Index="5" />
+        <Member Name="Email" Index="6" />
+        <Member Name="Teachers" Caption="DS Giảng viên" Index="7" />
+        <Member Name="DateCreated" Caption="Ngày tạo" />
+        <Member Name="DateModified" Caption="Ngày hiệu chỉnh" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.Lesson" Caption="Nhóm lớp MH" DefaultListViewAllowEdit="True" DefaultListViewShowAutoFilterRow="True" DefaultLookupEditorMode="Auto" DefaultListViewNewItemRowPosition="Top">
+      <OwnMembers>
+        <Member Name="LessonName" IsNewNode="True" Caption="Mã ĐKMH" Index="1" />
+        <Member Name="Semester" Caption="NHHK" Index="1" />
+        <Member Name="Subject" Caption="Môn học" Index="2" ImmediatePostData="True" />
+        <Member Name="TuitionFee" Caption="Học phí" Index="3" DisplayFormat="{0:0,0}" />
+        <Member Name="NumExpectation" Caption="Sĩ số dự kiến" Index="4" />
+        <Member Name="NumRegistration" Caption="Số lượng đăng ký" Index="5" />
+        <Member Name="TKBSemesters" Caption="Chi tiết lịch" Index="6" />
+        <Member Name="RegisterDetails" Caption="Kết quả đăng ký" Index="7" />
+        <Member Name="StudentResults" Caption="ĐTB Học kỳ" Index="8" />
+        <Member Name="TkbLesson" Caption="Lớp xếp lịch" Index="9" />
+        <Member Name="CanRegister" Caption="Được đăng ký" />
+        <Member Name="ClassIDs" Caption="Lớp biên chế" />
+        <Member Name="DateCreated" Caption="Ngày tạo" />
+        <Member Name="DateModified" Caption="Ngày hiệu chỉnh" />
+        <Member Name="LessonCode" Caption="Mã Nhóm MH" DisplayFormat="{0:#####-####}" />
+        <Member Name="LessonNote" Caption="Ghi chú" />
+        <Member Name="Teachers" Caption="Giảng viên" />
+        <Member Name="Timetable" Caption="Lịch học ( Thứ | Tiết | Phòng | Tuần)" RowCount="5" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.MyHelp" Caption="Hướng dẫn" DefaultListViewShowAutoFilterRow="True" DefaultListViewNewItemRowPosition="Top">
+      <OwnMembers>
+        <Member Name="Title" Caption="Tiêu đề" Index="1" />
+        <Member Name="Intro" Caption="Trích dẫn" Index="2" />
+        <Member Name="FullContent" Caption="Nội dung" Index="3" />
+        <Member Name="HyperLink" Caption="Liên kết" Index="4" />
+        <Member Name="Tag" Index="5" />
+        <Member Name="DateCreated" Caption="Ngày tạo" DisplayFormat="{0:dd-MM-yyyy}" />
+        <Member Name="DateModified" Caption="Ngày hiệu chỉnh" DisplayFormat="{0:dd-MM-yyyy}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.MyImportResult" Caption="Dữ liệu Import">
+      <OwnMembers>
+        <Member Name="vwKey" Index="-1" />
+        <Member Name="CanImport" Caption="Có thể Import" Index="1" />
+        <Member Name="Line" Caption="Dòng" Index="2" />
+        <Member Name="Status" Caption="Tình trạng" Index="3" />
+        <Member Name="Data" Caption="Dữ liệu" Index="4" />
+        <Member Name="Message" Caption="Thông điệp" Index="5" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.MyNote" Caption="Thông báo" DefaultListViewShowAutoFilterRow="True">
+      <OwnMembers>
+        <Member Name="Title" Caption="Tiêu đề" Index="1" />
+        <Member Name="Intro" Caption="Tóm tắt" Index="2" />
+        <Member Name="FullContent" Caption="Nội dung" Index="3" />
+        <Member Name="Tag" Index="4" />
+        <Member Name="DateCreated" AllowEdit="False" Caption="Ngày tạo" />
+        <Member Name="DateModified" AllowEdit="False" Caption="Ngày cập nhật" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.Office" Caption="Cơ sở" DefaultListViewShowAutoFilterRow="True" DefaultListViewAllowEdit="True">
+      <OwnMembers>
+        <Member Name="OfficeCode" Caption="Mã Cơ sở" Index="1" />
+        <Member Name="Name" Caption="Tên cơ sở" Index="2" />
+        <Member Name="Phone" Caption="Điện thoại" Index="4" />
+        <Member Name="Address" Caption="Địa chỉ" Index="5" />
+        <Member Name="Note" Caption="Ghi chú" Index="6" />
+        <Member Name="Classrooms" Caption="DS Phòng học" />
+        <Member Name="DateCreated" AllowEdit="False" Caption="Ngày tạo" />
+        <Member Name="DateModified" AllowEdit="False" Caption="Ngày cập nhật" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.PopUpMessage" Caption="Thông báo">
+      <OwnMembers>
+        <Member Name="Title" Caption="Tiêu đề" Index="2" />
+        <Member Name="Message" Caption="Nội dung" RowCount="5" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.RegisterDetail" Caption="Kết quả đăng ký" DefaultListViewShowAutoFilterRow="True" DefaultListViewNewItemRowPosition="Top">
+      <OwnMembers>
+        <Member Name="DateCreated" AllowEdit="False" Caption="Ngày tạo" Index="-1" />
+        <Member Name="DateModified" AllowEdit="False" Caption="Ngày cập nhật" Index="-1" />
+        <Member Name="Student" Index="1" Caption="Sinh viên" />
+        <Member Name="Lesson" Caption="Nhóm lớp MH" Index="2" ImmediatePostData="True" />
+        <Member Name="isChange" Caption="Có thay đổi" Index="3" />
+        <Member Name="Note" Caption="Ghi chú" Index="4" />
+        <Member Name="CheckState" Caption="TT Kiểm Tra" />
+        <Member Name="Name" Removed="True" />
+        <Member Name="RegisterState" Caption="TT Đăng ký" />
+        <Member Name="StudentRegLessonSemester" Caption="SVĐKMHHK" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.RegisterState" Caption="Trạng thái đăng ký" DefaultListViewAllowEdit="True" DefaultListViewShowAutoFilterRow="True" DefaultListViewNewItemRowPosition="Top">
+      <OwnMembers>
+        <Member Name="DateCreated" Caption="Ngày tạo" Index="-1" />
+        <Member Name="DateModified" Caption="Ngày cập nhật" Index="-1" />
+        <Member Name="Code" Caption="Mã trạng thái" Index="1" />
+        <Member Name="Name" Caption="Tên" Index="2" />
+        <Member Name="Type" Caption="Kiểu trạng thái" Index="3" />
+        <Member Name="Description" Caption="Mô tả" Index="4" />
+        <Member Name="RegRegisterDetails" Caption="Trạng thái Các SV ĐKMH " Index="5" />
+        <Member Name="CheckRegisterDetails" Caption="Kiểm tra các SV ĐKMH" Index="6" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.RegisterTime" Caption="Thời gian đăng ký" DefaultListViewShowAutoFilterRow="True" DefaultListViewNewItemRowPosition="Top">
+      <OwnMembers>
+        <Member Name="DateCreated" Index="-1" Caption="Ngày tạo" />
+        <Member Name="DateModified" Index="-1" Caption="Ngày hiệu chỉnh" />
+        <Member Name="Name" Caption="Tên " Index="1" />
+        <Member Name="BookingDateStart" Caption="Đăng ký bắt đầu" Index="4" />
+        <Member Name="BookingDateEnd" Caption="Đăng ký kết thúc" Index="5" />
+        <Member Name="ConfirmDateStart" Caption="Xác nhận bắt đầu" Index="7" />
+        <Member Name="Active" Caption="Đang kích hoạt (Active)" />
+        <Member Name="ConfirmDateEnd" Caption="Xác nhận kết thúc" />
+        <Member Name="Description" Caption="Mô tả" />
+        <Member Name="StudentClasses" Caption="Lớp biên chế" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.Semester" Caption="NHHK" DefaultListViewShowAutoFilterRow="True" DefaultListViewNewItemRowPosition="Top" DefaultListViewAllowEdit="True">
+      <OwnMembers>
+        <Member Name="SemesterName" Caption="Tên HK" Index="1" />
+        <Member Name="NumberOfWeek" Caption="Số tuần" Index="2" />
+        <Member Name="StartDate" Caption="Ngày bắt đầu" Index="3" DisplayFormat="{0:dd/MM/yyyy}" />
+        <Member Name="Description" Caption="Mô tả" Index="4" />
+        <Member Name="DateCreated" AllowEdit="False" Caption="Ngày tạo" />
+        <Member Name="DateModified" AllowEdit="False" Caption="Ngày cập nhật" />
+        <Member Name="EnrollStudentClasses" Removed="True" />
+        <Member Name="GraduateStudentClasses" Removed="True" />
+        <Member Name="Lessons" Caption="DS Nhóm lớp MH" />
+        <Member Name="StudentAccumulations" Caption="ĐTB Tích lũy" />
+        <Member Name="TkbCards" Removed="True" />
+        <Member Name="TkbClasses" Removed="True" />
+        <Member Name="TkbClassrooms" Removed="True" />
+        <Member Name="TkbFiles" Caption="File dữ liệu TKB" />
+        <Member Name="TkbGrades" Removed="True" />
+        <Member Name="TkbGroups" Removed="True" />
+        <Member Name="TkbSubjects" Removed="True" />
+        <Member Name="TkbTeachers" Removed="True" />
+        <Member Name="WeekReportDatas" Caption="Lịch tuần học kỳ" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.Student" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" DefaultListViewShowAutoFilterRow="True" DefaultLookupEditorMode="Auto" Caption="Sinh viên" ObjectCaptionFormat="{0:StudentCode}-{0:FullName} ">
+      <OwnMembers>
+        <Member Name="AccountBalance" Caption="Số dư TKHP" DisplayFormat="{0:0,0}" />
+        <Member Name="AccountTransactions" Caption="Giao dịch học phí" />
+        <Member Name="Address" Caption="Địa chỉ" />
+        <Member Name="BalanceLassModify" Caption="Ngày cập nhật cuối" DisplayFormat="{0:dd-MM-yyyy}" />
+        <Member Name="Birthday" Caption="Ngày sinh" DisplayFormat="{0:dd/MM/yyyy}" />
+        <Member Name="BirthdayText" Caption="Ngày sinh. " />
+        <Member Name="BirthPlace" Caption="Nơi sinh" />
+        <Member Name="Course" Caption="Khóa" />
+        <Member Name="DateCreated" AllowEdit="False" Caption="Ngày tạo" DisplayFormat="{0:dd-MM-yyyy}" />
+        <Member Name="DateModified" AllowEdit="False" Caption="Ngày hiệu chỉnh" DisplayFormat="{0:dd-MM-yyyy}" />
+        <Member Name="Ethnic" Caption="Dân tộc" />
+        <Member Name="IsFemale" Caption="Nữ" />
+        <Member Name="Mobile" Caption="Di động" />
+        <Member Name="Phone" Caption="Điện thoại" />
+        <Member Name="RegisterDetails" Caption="Kết quả ĐKMH" />
+        <Member Name="SemesterCredit" Caption="Số tín chỉ HK" />
+        <Member Name="StudentClass" Caption="Lớp biên chế" />
+        <Member Name="StudentCode" Caption="MSSV" />
+        <Member Name="StudentResults" Caption="Kết quả học kỳ" />
+        <Member Name="StudyState" Caption="Trạng thái" />
+        <Member Name="WeekReportDatas" Caption="Dữ liệu lịch học" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.StudentAccumulation" Caption="ĐTB Tích lũy" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" DefaultListViewShowAutoFilterRow="True">
+      <OwnMembers>
+        <Member Name="Student" Caption="Sinh viên" Index="1" LookupProperty="StudentCode" LookupEditorMode="Auto" />
+        <Member Name="Semester" Caption="NHHK" Index="2" />
+        <Member Name="SemesterCredit" Caption="Tổng tín chí HK" Index="3" />
+        <Member Name="SemesterAvgMark10" Caption="ĐTBHK Hệ 10" Index="4" DisplayFormat="0.00" />
+        <Member Name="SemesterAvgMark4" Caption="ĐTBHK Hệ 4" Index="5" DisplayFormat="0.00" />
+        <Member Name="TotalAccumulateCredit" Caption="Tổng TC tích lũy" Index="7" />
+        <Member Name="AccumulateAvgMark10" Caption="ĐTBTL Hệ 10" DisplayFormat="0.00" />
+        <Member Name="AccumulateAvgMark4" Caption="ĐTBTL Hệ 4" DisplayFormat="0.00" />
+        <Member Name="AccumulationName" Removed="True" />
+        <Member Name="DateCreated" AllowEdit="False" Caption="ngày tạo" />
+        <Member Name="DateModified" AllowEdit="False" Caption="ngày cập nhật" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.StudentAccumulationFile" Caption="File dữ liệu điểm tích lũy">
+      <OwnMembers>
+        <Member Name="CsvFile" Index="1" Caption="File Import" />
+        <Member Name="Note" Index="2" Caption="Ghi chú" />
+        <Member Name="IsImported" Caption="Đã import vào hệ thống" Index="3" AllowEdit="False" />
+        <Member Name="CreateDate" Caption="Ngày tạo" Index="4" DisplayFormat="{0:dd-MM-yyyy}" AllowEdit="False" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.StudentClass" Caption="Lớp biên chế" DefaultListViewShowAutoFilterRow="True" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top">
+      <OwnMembers>
+        <Member Name="Branch" Caption="Ngành" />
+        <Member Name="ClassCode" Caption="Mã lớp" />
+        <Member Name="ClassName" Caption="Tên lớp" />
+        <Member Name="DateCreated" AllowEdit="False" Caption="Ngày tạo" DisplayFormat="{0:dd-MM-yyyy}" />
+        <Member Name="DateModified" AllowEdit="False" DisplayFormat="{0:dd-MM-yyyy}" Caption="Ngày cập nhật" />
+        <Member Name="EnrollSemester" Caption="HK vào" />
+        <Member Name="GraduateSemester" Caption="HK ra" />
+        <Member Name="NumStudent" Caption="Sĩ số" />
+        <Member Name="RegisterTimes" Caption="Thời điểm đăng ký" />
+        <Member Name="Students" Caption="DS Sinh Viên" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.StudentFile" Caption="File dữ liệu sinh viên">
+      <OwnMembers>
+        <Member Name="CsvFile" Index="1" Caption="File Import" />
+        <Member Name="Note" Caption="Ghi chú" Index="2" />
+        <Member Name="CreateDate" Index="3" Caption="Ngày tạo" AllowEdit="False" />
+        <Member Name="IsImported" Caption="Đã import vào hệ thống" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.StudentResult" Caption="ĐTB Học kỳ" DefaultListViewShowAutoFilterRow="True" DefaultListViewNewItemRowPosition="Top" DefaultListViewAllowEdit="True">
+      <OwnMembers>
+        <Member Name="Student" Caption="Sinh viên" LookupProperty="StudentCode" Index="1" />
+        <Member Name="Lesson" Caption="Nhóm lớp MH" Index="2" />
+        <Member Name="AvgMark10" Caption="ĐTB Hệ 10" Index="3" DisplayFormat="0.00" />
+        <Member Name="AvgMark4" Caption="ĐTB Hệ 4" Index="4" DisplayFormat="0.00" />
+        <Member Name="AvgChar" Caption="Điểm chữ" Index="5" />
+        <Member Name="DateCreated" AllowEdit="False" Caption="Ngày tạo" />
+        <Member Name="DateModified" AllowEdit="False" Caption="Ngày cập nhật" />
+        <Member Name="ResultName" Removed="True" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.StudentResultFile" Caption="File dữ liệu điểm học kỳ">
+      <OwnMembers>
+        <Member Name="CsvFile" Index="1" />
+        <Member Name="Note" Caption="Ghi chú" Index="2" />
+        <Member Name="IsImported" Caption="Đã import vào hệ thống" Index="3" />
+        <Member Name="CreateDate" Caption="Ngày tạo" Index="5" AllowEdit="True" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.Subject" Caption="Môn học" DefaultListViewAllowEdit="True" DefaultListViewShowAutoFilterRow="True" DefaultListViewNewItemRowPosition="Top">
+      <OwnMembers>
+        <Member Name="SubjectCode" Index="1" Caption="Mã MH" />
+        <Member Name="SubjectName" Index="2" Caption="Tên MH" />
+        <Member Name="Branch" Caption="Ngành" />
+        <Member Name="CreateExercisePeriod" Removed="True" />
+        <Member Name="CreateExperimentPeriod" Removed="True" />
+        <Member Name="CreatePracticePeriod" Removed="True" />
+        <Member Name="CreateSelfLearningPeriod" Removed="True" />
+        <Member Name="CreateTheoryPeriod" Removed="True" />
+        <Member Name="CreateTutoringPeriod" Removed="True" />
+        <Member Name="Credit" Caption="Số tín chỉ" />
+        <Member Name="DateCreated" AllowEdit="False" Caption="Ngày tạo" DisplayFormat="{0:dd-MM-yyyy}" />
+        <Member Name="DateModified" AllowEdit="False" Caption="Ngày cập nhật" DisplayFormat="{0:dd-MM-yyyy}" />
+        <Member Name="ExercisePeriod" Removed="True" />
+        <Member Name="ExperimentPeriod" Removed="True" />
+        <Member Name="Lessons" Caption="DS Nhóm lớp MH" />
+        <Member Name="Note" Caption="Ghi chú" />
+        <Member Name="PracticePeriod" Removed="True" />
+        <Member Name="SelfLearningPeriod" Removed="True" />
+        <Member Name="TheoryPeriod" Removed="True" />
+        <Member Name="TutoringPeriod" Removed="True" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.SubjectFile" Caption="File dữ liệu môn học">
+      <OwnMembers>
+        <Member Name="CsvFile" Index="1" Caption="File Import" />
+        <Member Name="Note" Index="2" Caption="Ghi chú" />
+        <Member Name="IsImported" Index="3" Caption="Đã import vào hệ thống" AllowEdit="False" />
+        <Member Name="CreateDate" Caption="Ngày tạo" Index="4" AllowEdit="False" />
+        <Member Name="ResultLink" Caption="Kết quả" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.SubjectRelationFile" Caption="File dữ liệu quan hệ môn học">
+      <OwnMembers>
+        <Member Name="CsvFile" Index="1" Caption="File Import" />
+        <Member Name="Note" Caption="Ghi chú" Index="2" />
+        <Member Name="IsImported" Caption="Đã import vào hệ thống" Index="3" AllowEdit="False" />
+        <Member Name="CreateDate" Caption="Ngày tạo" Index="4" AllowEdit="False" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.SubjectRelations" Caption="Quan hệ môn học">
+      <OwnMembers>
+        <Member Name="DateCreated" Caption="Ngày tạo" Index="-1" />
+        <Member Name="DateModified" Caption="Ngày cập nhật" Index="-1" />
+        <Member Name="Subject1" Caption="Môn học 1" Index="1" />
+        <Member Name="Subject2" Caption="Môn học 2" Index="2" />
+        <Member Name="Type" Caption="Kiểu QH" Index="3" />
+        <Member Name="Note" Caption="Ghi chú" Index="5" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.Teacher" Caption="Giảng viên" DefaultListViewShowAutoFilterRow="True" DefaultListViewNewItemRowPosition="Top" DefaultListViewAllowEdit="True">
+      <OwnMembers>
+        <Member Name="FullName" Caption="Tên đầy đủ" Index="-1" />
+        <Member Name="TeacherCode" Caption="Mã GV" Index="1" />
+        <Member Name="FirstName" Caption="Họ lót" Index="2" />
+        <Member Name="LastName" Caption="Tên" Index="3" />
+        <Member Name="Birthday" Caption="Ngày sinh" DisplayFormat="{0:dd/mm/yyyy}" Index="4" />
+        <Member Name="Sex" Caption="Nữ" Index="5" />
+        <Member Name="Address" Caption="Địa chỉ" Index="6" />
+        <Member Name="ShortName" Caption="Tên viết tắt" Index="6" />
+        <Member Name="isNotEmployee" Caption="Là thỉnh giảng" Index="7" />
+        <Member Name="Mobile" Caption="Di động" Index="8" />
+        <Member Name="Phone" Caption="Điện thoại" Index="9" />
+        <Member Name="Email" Index="10" />
+        <Member Name="Department" Caption="Khoa" Index="11" />
+        <Member Name="DateCreated" AllowEdit="False" Caption="Ngày tạo" />
+        <Member Name="DateModified" AllowEdit="False" Caption="Ngày cập nhật" />
+        <Member Name="DepartmentId" Removed="True" />
+        <Member Name="Lessons" Caption="Lớp dạy" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.TeacherFile" Caption="File dữ liệu giảng viên">
+      <OwnMembers>
+        <Member Name="CsvFile" Caption="File Import" Index="1" />
+        <Member Name="Note" Caption="Ghi chú" Index="2" />
+        <Member Name="IsImported" Caption="Đã import vào hệ thống" Index="3" />
+        <Member Name="CreateDate" Caption="Ngày tạo" DisplayFormat="{0:dd/MM/yyyy}" Index="4" />
+        <Member Name="ResultLink" Index="5" Caption="Kết quả" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.TkbCard" Caption="Lịch học (XTKB)">
+      <OwnMembers>
+        <Member Name="ClassroomIDs" Caption="IDs Phòng học" />
+        <Member Name="Day" Caption="Thứ" />
+        <Member Name="LessonID" Caption="ID Nhóm lớp MH" />
+        <Member Name="Note" Caption="Ghi chú" />
+        <Member Name="Period" Caption="Tiết" />
+        <Member Name="Semester" Caption="NHHK" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.TkbClass" Caption="Lớp biên chế (XTKB)">
+      <OwnMembers>
+        <Member Name="ClassroomIDs" Caption="IDs Phòng dành cho lớp" />
+        <Member Name="Grade" Caption="Khóa" />
+        <Member Name="Name" Caption="Tên lớp" />
+        <Member Name="Note" Caption="Ghi chú" />
+        <Member Name="Semester" Caption="NHHK" />
+        <Member Name="Short" Caption="Tên viết tắt" />
+        <Member Name="TeacherIDs" Caption="IDs giảng viên" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.TkbClassroom" Caption="Phòng học (XTKB)">
+      <OwnMembers>
+        <Member Name="Name" Caption="Tên phòng" />
+        <Member Name="Note" Caption="Ghi chú" />
+        <Member Name="Semester" Caption="NHHK" />
+        <Member Name="Short" Caption="Tên viết tắt" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.TkbDay" Caption="Thứ">
+      <OwnMembers>
+        <Member Name="Day" Caption="Thứ" />
+        <Member Name="Name" Caption="Ngày" />
+        <Member Name="Note" Caption="Ghi chú" />
+        <Member Name="Short" Caption="Ghi tắt" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.TkbFile" Caption="File dữ liệu TKB">
+      <OwnMembers>
+        <Member Name="Semester" Caption="NHHK" Index="1" />
+        <Member Name="XmlFile" Index="2" />
+        <Member Name="ZipFile" Index="3" />
+        <Member Name="LocalPath" Index="4" Caption="thư mục server" />
+        <Member Name="Active" Index="5" Caption="Được đăng ký" />
+        <Member Name="Note" Index="6" Caption="Ghi chú" />
+        <Member Name="CreateDate" AllowEdit="False" Caption="Ngày tạo" />
+        <Member Name="ResultMessage" Caption="Kết quả Import" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.TkbGrade" Caption="Khóa (XTKB)">
+      <OwnMembers>
+        <Member Name="Grade" Caption="Khóa" />
+        <Member Name="Name" Caption="Tên" />
+        <Member Name="Note" Caption="Ghi chú" />
+        <Member Name="Semester" Caption="NHHK" />
+        <Member Name="Short" Caption="Ghi tắt" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.TkbGroup" Caption="Nhóm (XTKB)">
+      <OwnMembers>
+        <Member Name="Classid" Caption="Lớp biên chế" />
+        <Member Name="DivisionTag" Caption="Cách chia nhóm" />
+        <Member Name="EntireClass" Caption="Toàn bộ lớp" />
+        <Member Name="Name" Caption="Tên nhóm" />
+        <Member Name="Note" Caption="Ghi chú" />
+        <Member Name="Semester" Caption="NHHK" />
+        <Member Name="StudentCount" Caption="Sĩ số" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.TkbLesson" Caption="Lớp xếp lịch ">
+      <OwnMembers>
+        <Member Name="ClassIDs" Caption="IDs Lớp biên chế" />
+        <Member Name="ClassroomIDs" Caption="IDs Phòng học" />
+        <Member Name="GroupIDs" Caption="IDs Nhóm" />
+        <Member Name="Lesson" Caption="Nhóm lớp MH" />
+        <Member Name="Name" Caption="Tên" />
+        <Member Name="Note" Caption="Chi chú" />
+        <Member Name="PeriodsPerCard" Caption="Số tiết 1 ca" />
+        <Member Name="PeriodsPerWeek" Caption="Số ca 1 tuần" />
+        <Member Name="Semester" Caption="NHHK" />
+        <Member Name="StudentIDs" Caption="IDs Sinh viên" />
+        <Member Name="SubjectID" Caption="Môn học" />
+        <Member Name="TeacherIDs" Caption="IDs Giảng viên" />
+        <Member Name="Week" Caption="Tuần" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.TkbPeriod" Caption="Tiết">
+      <OwnMembers>
+        <Member Name="Name" Caption="Tiết" Index="1" />
+        <Member Name="StartTime" DisplayFormat="" Caption="Giờ bắt đầu" Index="2" EditMask="" />
+        <Member Name="EndTime" DisplayFormat="" Caption="Giờ kết thúc" Index="3" EditMask="" />
+        <Member Name="TimePeriod" Caption="Buổi" Index="4" />
+        <Member Name="Note" Caption="Ghi chú" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.TkbSemester" Caption="Chi tiết lịch" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" DefaultListViewShowAutoFilterRow="True">
+      <OwnMembers>
+        <Member Name="Lesson" Caption="Nhóm lớp MH" Index="1" DisplayFormat="" />
+        <Member Name="Day" Caption="Thứ" Index="2" />
+        <Member Name="Period" Caption="Tiết" Index="3" />
+        <Member Name="Weeks" Caption="Tuần nhập liệu" Index="4" ImmediatePostData="True" />
+        <Member Name="Classroom" Caption="Phòng học" />
+        <Member Name="Name" Removed="True" />
+        <Member Name="Note" Caption="Ghi chú" />
+        <Member Name="StringWeeks" Caption="Tuần" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.TkbSubject" Caption="Môn học (XTKB)">
+      <OwnMembers>
+        <Member Name="Name" Caption="Tên môn học" />
+        <Member Name="Note" Caption="Ghi chú" />
+        <Member Name="Semester" Caption="NHHK" />
+        <Member Name="Short" Caption="Viết tắt" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.TkbTeacher" Caption="Giảng viên (XTKB)">
+      <OwnMembers>
+        <Member Name="Color" Caption="Màu" />
+        <Member Name="Gender" Caption="Phái" />
+        <Member Name="Name" Caption="Tên" />
+        <Member Name="Note" Caption="Ghi chú" />
+        <Member Name="Semester" Caption="NHHK" />
+        <Member Name="Short" Caption="Tên viết tắt" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.DomainObject.WeekReportData" Caption="Lịch tuần">
+      <OwnMembers>
+        <Member Name="Classrooms" Caption="Phòng học" Index="-1" />
+        <Member Name="StudentClasses" Caption="Lớp biên chế" Index="-1" />
+        <Member Name="Students" Caption="Sinh viên" Index="-1" />
+        <Member Name="Subjects" Caption="Môn học" Index="-1" />
+        <Member Name="Teachers" Caption="Giảng viên" Index="-1" />
+        <Member Name="PeriodTime" Caption="Buổi" Index="1" />
+        <Member Name="Day2" Caption="Thứ 2" Index="2" />
+        <Member Name="Day3" Caption="Thứ 3" Index="3" />
+        <Member Name="Day4" Caption="Thứ 4" Index="4" />
+        <Member Name="Day5" Caption="Thứ 5" Index="5" />
+        <Member Name="Day6" Caption="Thứ 6" Index="6" />
+        <Member Name="Day7" Caption="Thứ 7" Index="7" />
+        <Member Name="Day8" Caption="Chủ nhật" Index="8" />
+        <Member Name="Semester" Caption="Học kỳ" Index="9" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.ReportParameter.ClassroomReportParametersObject">
+      <OwnMembers>
+        <Member Name="Classroom" Caption="Phòng " />
+        <Member Name="Semester" Caption="NHHK" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.ReportParameter.OfficeReportParametersObject">
+      <OwnMembers>
+        <Member Name="Office" Caption="Cơ sở" />
+        <Member Name="Semester" Caption="NHHK" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.ReportParameter.RegisterDetailReportParametersObject">
+      <OwnMembers>
+        <Member Name="Semester" Caption="NHHK" />
+        <Member Name="Student" Caption="Sinh viên" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.ReportParameter.SemesterReportParametersObject">
+      <OwnMembers>
+        <Member Name="Semester" Caption="NHHK" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.ReportParameter.StudentClassReportParametersObject">
+      <OwnMembers>
+        <Member Name="Semester" Caption="NHHK" />
+        <Member Name="StudentClass" Caption="Lớp biên chế" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.ReportParameter.StudentReportParametersObject">
+      <OwnMembers>
+        <Member Name="Student" Caption="Sinh viên" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.ReportParameter.SubjectReportParametersObject">
+      <OwnMembers>
+        <Member Name="Semester" Caption="NHHK" />
+        <Member Name="Subject" Caption="Môn học" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.ReportParameter.TeacherReportParametersObject">
+      <OwnMembers>
+        <Member Name="Semester" Caption="NHHK" />
+        <Member Name="Teacher" Caption="Giảng viên" />
+      </OwnMembers>
+    </Class>
+    <Class Name="vidoSolution.Module.ReportParameter.TimetableStudentReportParametersObject">
+      <OwnMembers>
+        <Member Name="Semester" Caption="NHHK" />
+        <Member Name="Student" Caption="Sinh viên" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="DialogButtons">
+      <LocalizationItem Name="Close" Value="Đóng" />
+      <LocalizationItem Name="Find" Value="Tìm" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="DevExpress.Data.Filtering.Aggregate">
+        <LocalizationItem Name="Avg" Value="Trung bình" />
+        <LocalizationItem Name="Count" Value="Số lượng" />
+        <LocalizationItem Name="Sum" Value="Tổng" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Validation.AllContextsView.IsValid">
+        <LocalizationItem Name="Invalid" Value="Không hợp lệ" />
+        <LocalizationItem Name="Valid" Value="Hợp lệ" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.StringComparisonType">
+        <LocalizationItem Name="Contains" Value="Chứa " />
+        <LocalizationItem Name="EndsWith" Value="Kết thúc bằng" />
+        <LocalizationItem Name="Equals" Value="Bằng" />
+        <LocalizationItem Name="NotEquals" Value="Khác" />
+        <LocalizationItem Name="StartsWith" Value="Bắt đầu bằng" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Validation.ValidationState">
+        <LocalizationItem Name="Invalid" Value="Không hợp lệ" />
+        <LocalizationItem Name="Skipped" Value="Bỏ qua" />
+        <LocalizationItem Name="Valid" Value="Hợp lệ" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="FileAttachments">
+      <LocalizationItem Name="Editor_Clear" Value="Xóa" />
+      <LocalizationItem Name="Editor_DownLoad" Value="Tải về" />
+      <LocalizationItem Name="Editor_Edit" Value="Chọn file mới" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Texts">
+      <LocalizationItem Name="NullValueText" Value="-" />
+      <LocalizationItem Name="PageSizeCaption" IsNewNode="True" Value="Số dòng cho 1 trang" />
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default" Caption="Trang chủ" Index="1" ViewId="MyNoteViewOnly">
+        <Items>
+          <Item Id="AccountTransaction_ListView" Removed="True" />
+          <Item Id="Branch_ListView" Removed="True" />
+          <Item Id="Classroom_ListView" Removed="True" />
+          <Item Id="ConstrainstParameter_ListView" Removed="True" />
+          <Item Id="Department_ListView" Removed="True" />
+          <Item Id="Lesson_ListView" Removed="True" />
+          <Item Id="MyNote_ListView" Caption="Thông báo" />
+          <Item Id="Note_ListView" ViewId="Note_ListView" Removed="True" />
+          <Item Id="Office_ListView" Removed="True" />
+          <Item Id="RegisterDetail_ListView" Removed="True" />
+          <Item Id="RegisterTime_ListView" Removed="True" />
+          <Item Id="Semester_ListView" Removed="True" />
+          <Item Id="Student_ListView" Removed="True" />
+          <Item Id="StudentAccumulation_ListView" Removed="True" />
+          <Item Id="StudentCccumulation_ListView" Removed="True" />
+          <Item Id="StudentClass_ListView" Removed="True" />
+          <Item Id="StudentFile_ListView" Removed="True" />
+          <Item Id="StudentResult_ListView" Removed="True" />
+          <Item Id="Subject_ListView" Removed="True" />
+          <Item Id="SubjectRelations_ListView" Removed="True" />
+          <Item Id="Teacher_ListView" Removed="True" />
+          <Item Id="TkbCard_ListView" Removed="True" />
+          <Item Id="TkbClass_ListView" Removed="True" />
+          <Item Id="TkbClassroom_ListView" Removed="True" />
+          <Item Id="TkbDay_ListView" Removed="True" />
+          <Item Id="TkbFile_ListView" Caption="Timetable File" Removed="True" />
+          <Item Id="TkbGrade_ListView" Removed="True" />
+          <Item Id="TkbGroup_ListView" Removed="True" />
+          <Item Id="TkbLesson_ListView" Removed="True" />
+          <Item Id="TkbPeriod_ListView" Removed="True" />
+          <Item Id="TkbSemester_ListView" Removed="True" />
+          <Item Id="TkbSubject_ListView" Removed="True" />
+          <Item Id="TkbTeacher_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="Academic Data" IsNewNode="True" Caption="Dữ liệu đào tạo" Index="2">
+        <Items IsNewNode="True">
+          <Item Id="Branch_ListView" IsNewNode="True" ViewId="Branch_ListView" ObjectKey="" Caption="Ngành" />
+          <Item Id="ClassRoom_ListView" IsNewNode="True" ViewId="Classroom_ListView" ObjectKey="" Caption="Phòng học" />
+          <Item Id="ConstrainstParameter_ListView" IsNewNode="True" ViewId="ConstrainstParameter_ListView" ObjectKey="" />
+          <Item Id="Department_ListView" IsNewNode="True" ViewId="Department_ListView" ObjectKey="" Caption="Khoa" />
+          <Item Id="Office_ListView" IsNewNode="True" ObjectKey="" Caption="Cơ sở" ViewId="Office_ListView" />
+          <Item Id="RegisterdetailWithStudentClass" IsNewNode="True" ViewId="RegisterdetailWithStudentClass" />
+          <Item Id="Student_ListView" IsNewNode="True" ViewId="Student_ListView" ObjectKey="" Caption="Sinh viên" />
+          <Item Id="StudentClass_ListView" IsNewNode="True" ViewId="StudentClass_ListView" ObjectKey="" Caption="Lớp biên chế" />
+          <Item Id="StudentFile_ListView" IsNewNode="True" ViewId="StudentFile_ListView" ObjectKey="" Caption="File Dữ liệu SV" />
+          <Item Id="Subject_ListView" IsNewNode="True" ViewId="Subject_ListView" ObjectKey="" Caption="Môn học" />
+          <Item Id="SubjectRelations_ListView" IsNewNode="True" ViewId="SubjectRelations_ListView" ObjectKey="" />
+          <Item Id="Teacher_ListView" IsNewNode="True" ViewId="Teacher_ListView" ObjectKey="" Caption="Giảng viên" />
+        </Items>
+      </Item>
+      <Item Id="TimeTable Data" IsNewNode="True" Caption="Dữ liệu TKB" Index="3">
+        <Items IsNewNode="True">
+          <Item Id="Semester_ListView" IsNewNode="True" ViewId="Semester_ListView" ObjectKey="" Caption="Năm học học kỳ" Index="1" />
+          <Item Id="Lesson_ListView" IsNewNode="True" ViewId="Lesson_ListView" Index="2" />
+          <Item Id="TkbLesson_ListView" IsNewNode="True" ViewId="TkbLesson_ListView" ObjectKey="" Caption="Nhóm lớp xếp lịch" Index="3" />
+          <Item Id="TkbSemester_ListView" IsNewNode="True" ViewId="TkbSemester_ListView" ObjectKey="" Caption="Lịch học" Index="4" />
+          <Item Id="TkbFile_ListView" IsNewNode="True" Caption="File dữ liệu TKB" ViewId="TkbFile_ListView" ObjectKey="" Index="5" />
+          <Item Id="TkbDay_ListView" IsNewNode="True" ViewId="TkbDay_ListView" ObjectKey="" Caption="Thứ" Index="6" />
+          <Item Id="TkbPeriod_ListView" IsNewNode="True" ViewId="TkbPeriod_ListView" ObjectKey="" Caption="Tiết" Index="7" />
+          <Item Id="06d290cf-8e2b-489d-9e1b-75cb98a7b5da" IsNewNode="True" Caption="Dữ liệu TKB Import">
+            <Items IsNewNode="True">
+              <Item Id="TkbCard_ListView" IsNewNode="True" ViewId="TkbCard_ListView" />
+              <Item Id="TkbClass_ListView" IsNewNode="True" ViewId="TkbClass_ListView" />
+              <Item Id="TkbClassroom_Listview" IsNewNode="True" ViewId="TkbClassroom_ListView" />
+              <Item Id="TkbGrade_ListView" IsNewNode="True" ViewId="TkbGrade_ListView" />
+              <Item Id="TkbGroup_ListView" IsNewNode="True" ViewId="TkbGroup_ListView" />
+            </Items>
+          </Item>
+          <Item Id="RegisterTime_ListView" IsNewNode="True" ViewId="RegisterTime_ListView" ObjectKey="" />
+        </Items>
+      </Item>
+      <Item Id="Student Functions" IsNewNode="True" Caption="Chức năng sinh viên" Index="4">
+        <Items IsNewNode="True">
+          <Item Id="AccountTransaction_ListView" IsNewNode="True" ViewId="AccountTransaction_ListView" Index="1" />
+          <Item Id="RegisterDetail_ListView" IsNewNode="True" ViewId="RegisterDetail_ListView" ObjectKey="" Caption="Đăng ký Môn học" Index="2" />
+          <Item Id="StudentResult_ListView" IsNewNode="True" ViewId="StudentResult_ListView" ObjectKey="" Caption="ĐTB Học kỳ" Index="3" />
+          <Item Id="StudentCccumulation_ListView" IsNewNode="True" ObjectKey="" Caption="ĐTB Tích lũy" ViewId="StudentAccumulation_ListView" Index="4" />
+        </Items>
+      </Item>
+      <Item Id="Systems" IsNewNode="True" Caption="Hệ thống" Index="5">
+        <Items IsNewNode="True">
+          <Item Id="Roles Listview" IsNewNode="True" Caption="Vai trò" ViewId="Role_ListView" />
+          <Item Id="Students Listview" IsNewNode="True" ViewId="Student_ListView" Caption="Sinh viên" />
+          <Item Id="Users Listview" IsNewNode="True" ViewId="User_ListView" Caption="Người dùng" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Validation>
+    <Contexts>
+      <ValidationContext Id="Delete" Caption="Xóa" />
+      <ValidationContext Id="Save" Caption="Lưu" />
+    </Contexts>
+    <Rules>
+      <RuleUniqueValue Id="StudentCode is Unique" IsNewNode="True" Name="StudentCode is Unique" CustomMessageTemplate="StudentCode is Unique" TargetType="vidoSolution.Module.DomainObject.Student" TargetPropertyName="StudentCode" TargetContextIDs="Save" />
+      <RuleRequiredField Id="StudentCode required" IsNewNode="True" TargetType="vidoSolution.Module.DomainObject.Student" TargetPropertyName="StudentCode" CustomMessageTemplate="StudentCode require" TargetContextIDs="Save" Name="StudentCode required" />
+    </Rules>
+  </Validation>
+  <Views>
+    <DetailView Id="AccountTransaction_DetailView">
+      <Items>
+        <PropertyEditor Id="DateCreated" Index="-1" AllowEdit="False" />
+        <PropertyEditor Id="DateModified" Index="-1" AllowEdit="False" />
+        <PropertyEditor Id="Name" Index="-1" />
+        <PropertyEditor Id="Student" IsNewNode="True" PropertyName="Student" Index="1" />
+        <PropertyEditor Id="MoneyAmount" Index="2" />
+        <PropertyEditor Id="TransactingDate" Index="3" />
+        <PropertyEditor Id="Description" Index="4" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" Direction="Vertical">
+            <LayoutGroup Id="AccountTransaction" Caption="Giao dịch học phí" Direction="Vertical">
+              <LayoutItem Id="Semester" IsNewNode="True" Index="1" />
+              <LayoutItem Id="Student" IsNewNode="True" Index="1" />
+              <LayoutItem Id="MoneyAmount" IsNewNode="True" Index="2" />
+              <LayoutItem Id="TransactingDate" IsNewNode="True" Index="3" />
+              <LayoutGroup Id="AccountTransaction_col1" Removed="True">
+                <LayoutItem Id="MoneyAmount" Index="2" Removed="True" />
+                <LayoutItem Id="TransactingDate" Index="3" Removed="True" />
+                <LayoutItem Id="Name" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="AccountTransaction_col2" Removed="True">
+                <LayoutItem Id="Name" IsNewNode="True" Index="0" />
+              </LayoutGroup>
+              <LayoutItem Id="Description" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Removed="True">
+            <LayoutGroup Id="AccountTransaction_Copy" IsNewNode="True" Index="0" Direction="Horizontal" ShowCaption="True" Caption="Account Transaction">
+              <LayoutItem Id="Student" IsNewNode="True" Index="1" />
+              <LayoutItem Id="MoneyAmount" IsNewNode="True" Index="2" />
+              <LayoutItem Id="TransactingDate" IsNewNode="True" Index="3" />
+              <LayoutItem Id="Description" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutItem Id="Description" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="AccountTransaction_ListView" AllowEdit="False" ShowAutoFilterRow="True" IsGroupPanelVisible="True" UseServerMode="True">
+      <Columns>
+        <ColumnInfo Id="DateCreated" IsNewNode="True" Removed="True" PropertyName="DateCreated" Index="-1" Width="70" />
+        <ColumnInfo Id="Name" Index="-1" SortOrder="None" />
+        <ColumnInfo Id="Student" Index="-1" ImmediatePostData="True" />
+        <ColumnInfo Id="Student.StudentCode" IsNewNode="True" PropertyName="Student.StudentCode" Index="0" AllowEdit="False" SortOrder="Ascending" />
+        <ColumnInfo Id="Student.FirstName" IsNewNode="True" PropertyName="Student.FirstName" Index="1" AllowEdit="False" />
+        <ColumnInfo Id="Student.LastName" IsNewNode="True" PropertyName="Student.LastName" Index="2" AllowEdit="False" />
+        <ColumnInfo Id="MoneyAmount" SummaryType="Sum" Index="3" DisplayFormat="{0:0,0}" />
+        <ColumnInfo Id="TransactingDate" Index="4" SortOrder="Descending" />
+        <ColumnInfo Id="DateModified" IsNewNode="True" Removed="True" PropertyName="DateModified" Index="5" Width="70" />
+        <ColumnInfo Id="Description" Index="5" />
+        <ColumnInfo Id="Semester" Index="6" SortOrder="Descending" />
+        <ColumnInfo Id="ImportDescription" Index="7" />
+      </Columns>
+    </ListView>
+    <DetailView Id="AccountTransactionFile_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="AccountTransactionFile">
+              <LayoutGroup Id="AccountTransactionFile_col1">
+                <LayoutItem Id="Semester" IsNewNode="True" Index="2" />
+                <LayoutItem Id="IsImported" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="AccountTransactionFile_col2">
+                <LayoutItem Id="CreateDate" IsNewNode="True" Removed="True" Index="0" />
+                <LayoutItem Id="IsImported" IsNewNode="True" Index="1" />
+                <LayoutItem Id="ResultLink" Index="2" />
+                <LayoutItem Id="Semester" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="AccountTransactionTracking_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="AccountTransactionTracking" ShowCaption="False" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="AccountTransactionTracking_ListView" AllowDelete="False" AllowNew="False" ShowAutoFilterRow="True">
+      <Columns>
+        <ColumnInfo Id="BeforeDebtValue" Caption="Nợ TLHK trước" DisplayFormat="{0:0,0}" />
+        <ColumnInfo Id="RequestValue" Caption="Phải trả HK" DisplayFormat="{0:0,0}" />
+        <ColumnInfo Id="PaidValue" Caption="Đã trả HK" DisplayFormat="{0:0,0}" />
+        <ColumnInfo Id="CurrentDebtValue" Caption="Nợ TLHK hiện tại " DisplayFormat="{0:0,0}" />
+        <ColumnInfo Id="DebtPercentage" DisplayFormat="{0:0.00%}" />
+      </Columns>
+    </ListView>
+    <DetailView Id="BaseObject_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" IsNewNode="True" />
+      </Layout>
+    </DetailView>
+    <DetailView Id="Branch_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="BranchName" IsNewNode="True" Index="0" />
+            <LayoutItem Id="BranchCode" IsNewNode="True" Index="1" />
+            <LayoutItem Id="Department" IsNewNode="True" Index="2" />
+            <LayoutItem Id="LevelOfEducation" IsNewNode="True" Index="4" />
+            <LayoutItem Id="TypeOfEducation" IsNewNode="True" Index="5" />
+            <LayoutGroup Id="Branch" Removed="True">
+              <LayoutGroup Id="Branch_col1">
+                <LayoutItem Id="BranchName" Index="0" Removed="True" />
+                <LayoutItem Id="LevelOfEducation" Removed="True" Index="1" />
+                <LayoutItem Id="Department" Index="3" Removed="True" />
+                <LayoutItem Id="BranchCode" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Branch_col2" Removed="True">
+                <LayoutItem Id="DateCreated" Removed="True" />
+                <LayoutItem Id="DateModified" Removed="True" />
+                <LayoutItem Id="TypeOfEducation" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="StudentClasses" Index="0" />
+            <LayoutGroup Id="Subjects" Index="1" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Branch_ListView">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" AllowEdit="False" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="BranchCode" Index="0" />
+        <ColumnInfo Id="BranchName" Index="1" />
+        <ColumnInfo Id="Department" Index="3" />
+        <ColumnInfo Id="LevelOfEducation" Index="4" />
+        <ColumnInfo Id="TypeOfEducation" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="Branch_LookupListView" AllowEdit="False" AllowDelete="False" AllowNew="False">
+      <Columns>
+        <ColumnInfo Id="BranchCode" IsNewNode="True" PropertyName="BranchCode" Index="1" />
+        <ColumnInfo Id="BranchName" Index="2" />
+        <ColumnInfo Id="Department" IsNewNode="True" PropertyName="Department" Index="3" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Classroom_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="ClassroomCode" IsNewNode="True" Index="0" />
+            <LayoutItem Id="ClassroomName" IsNewNode="True" Index="1" />
+            <LayoutItem Id="Capacity" IsNewNode="True" Index="2" />
+            <LayoutItem Id="RoomType" IsNewNode="True" Index="3" />
+            <LayoutItem Id="Office" IsNewNode="True" Index="4" />
+            <LayoutItem Id="Note" IsNewNode="True" Index="6" />
+            <LayoutGroup Id="Classroom" Removed="True">
+              <LayoutGroup Id="Classroom_col1">
+                <LayoutItem Id="ClassroomCode" Index="0" Removed="True" />
+                <LayoutItem Id="ClassroomName" Index="1" Removed="True" />
+                <LayoutItem Id="Capacity" Index="2" Removed="True" />
+                <LayoutItem Id="Office" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Classroom_col2">
+                <LayoutItem Id="Office" IsNewNode="True" Index="0" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="TkbSemesters" Caption="Lịch học" />
+            <LayoutGroup Id="WeekReportDatas" Removed="True" />
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" Removed="True">
+            <LayoutItem Id="Note" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Classroom_ListView">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="ClassroomCode" Index="0" />
+        <ColumnInfo Id="ClassroomName" Index="1" />
+        <ColumnInfo Id="Capacity" Index="2" />
+        <ColumnInfo Id="RoomType" Index="3" />
+        <ColumnInfo Id="Office" Index="4" />
+        <ColumnInfo Id="Note" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="Classroom_LookupListView" AllowEdit="False" AllowDelete="False" AllowNew="False">
+      <Columns>
+        <ColumnInfo Id="ClassroomCode" IsNewNode="True" PropertyName="ClassroomCode" Index="1" />
+        <ColumnInfo Id="ClassroomName" Index="2" />
+        <ColumnInfo Id="Capacity" IsNewNode="True" PropertyName="Capacity" Index="3" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ClassroomReportParametersObject_DetailView">
+      <Items>
+        <PropertyEditor Id="Classroom" ImmediatePostData="True" />
+        <PropertyEditor Id="Classroom.Office" IsNewNode="True" PropertyName="Classroom.Office" AllowEdit="False" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ClassroomReportParametersObject">
+              <LayoutItem Id="Semester" Index="0" />
+              <LayoutItem Id="Classroom" Index="1" />
+              <LayoutItem Id="Classroom.Office" IsNewNode="True" Index="2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ClassTransactionTracking_DetailView">
+      <Items>
+        <PropertyEditor Id="Semester" IsNewNode="True" PropertyName="Semester" />
+        <PropertyEditor Id="StudentClass" IsNewNode="True" PropertyName="StudentClass" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ClassTransactionTracking" ShowCaption="False">
+              <LayoutGroup Id="ClassTransactionTracking_col1">
+                <LayoutItem Id="Semester" Index="0" />
+                <LayoutItem Id="StudentClass" Index="1" />
+                <LayoutItem Id="NumOfStudents" IsNewNode="True" Index="2" />
+                <LayoutItem Id="BeforeDebtAmount" IsNewNode="True" Removed="True" Index="3" />
+                <LayoutItem Id="DeptAmount" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ClassTransactionTracking_col2">
+                <LayoutItem Id="RequestAmount" IsNewNode="True" Removed="True" Index="0" />
+                <LayoutItem Id="PaidAmount" IsNewNode="True" Removed="True" Index="1" />
+                <LayoutItem Id="DeptAmount" IsNewNode="True" Index="2" />
+                <LayoutItem Id="DeptPercentage" IsNewNode="True" Removed="True" Index="3" />
+                <LayoutItem Id="NumOfStudents" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ClassTransactionTracking_ListView" ShowAutoFilterRow="True" AllowNew="False" AllowDelete="False">
+      <Columns>
+        <ColumnInfo Id="Semester" Index="0" />
+        <ColumnInfo Id="StudentClass" Index="1" />
+        <ColumnInfo Id="NumOfStudents" Index="2" />
+        <ColumnInfo Id="BeforeDebtAmount" Index="3" />
+        <ColumnInfo Id="RequestAmount" Index="4" />
+        <ColumnInfo Id="PaidAmount" Index="5" />
+        <ColumnInfo Id="DeptAmount" Index="6" />
+        <ColumnInfo Id="DeptPercentage" Index="7" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ConstrainstParameter_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="Code" IsNewNode="True" Index="1" />
+            <LayoutItem Id="Name" IsNewNode="True" Index="2" />
+            <LayoutItem Id="Value" IsNewNode="True" Index="3" />
+            <LayoutItem Id="Description" IsNewNode="True" Index="4" />
+            <LayoutGroup Id="ConstrainstParameter" Removed="True">
+              <LayoutGroup Id="ConstrainstParameter_col1">
+                <LayoutItem Id="Code" Removed="True" />
+                <LayoutItem Id="Name" Removed="True" />
+                <LayoutItem Id="Value" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ConstrainstParameter_col2">
+                <LayoutItem Id="Description" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Name" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ConstrainstParameter_ListView">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" AllowEdit="False" DisplayFormat="{0:dd-MM-yyyy}" />
+        <ColumnInfo Id="DateModified" Index="-1" DisplayFormat="{0:dd-MM-yyyy}" AllowEdit="False" />
+      </Columns>
+    </ListView>
+    <ListView Id="ConstrainstParameter_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Index="1" />
+        <ColumnInfo Id="Code" IsNewNode="True" PropertyName="Code" Index="2" />
+        <ColumnInfo Id="Value" IsNewNode="True" PropertyName="Value" Index="3" />
+      </Columns>
+    </ListView>
+    <ListView Id="Department_Branchs_ListView">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="Department" Index="-1" />
+        <ColumnInfo Id="BranchCode" Index="1" />
+        <ColumnInfo Id="BranchName" Index="2" />
+        <ColumnInfo Id="LevelOfEducation" Index="3" />
+        <ColumnInfo Id="TypeOfEducation" Index="4" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Department_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="DepartmentCode" IsNewNode="True" Index="0" />
+            <LayoutItem Id="DepartmentName" IsNewNode="True" Index="1" />
+            <LayoutItem Id="Phone" IsNewNode="True" Index="2" />
+            <LayoutItem Id="Email" IsNewNode="True" Index="3" />
+            <LayoutItem Id="Note" IsNewNode="True" Index="4" />
+            <LayoutGroup Id="Department" Removed="True">
+              <LayoutGroup Id="Department_col1">
+                <LayoutItem Id="DepartmentCode" Removed="True" />
+                <LayoutItem Id="DepartmentName" Removed="True" />
+                <LayoutItem Id="Phone" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Department_col2">
+                <LayoutItem Id="Email" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Removed="True">
+            <LayoutItem Id="Note" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Department_ListView">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" AllowEdit="False" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="DepartmentCode" Index="0" />
+        <ColumnInfo Id="DepartmentName" Index="1" />
+        <ColumnInfo Id="Note" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="Department_LookupListView" AllowEdit="False" AllowDelete="False" AllowNew="False">
+      <Columns>
+        <ColumnInfo Id="DepartmentCode" IsNewNode="True" PropertyName="DepartmentCode" Index="1" />
+        <ColumnInfo Id="DepartmentName" Index="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="DiagnosticInfoObject_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="MainTabbedGroup">
+            <LayoutGroup Id="AsText" Caption="Thông điệp" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DisplayableValidationResultItem_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="RuleProperties" Caption="Chi tiết luật" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Lesson_DetailView">
+      <Items>
+        <PropertyEditor Id="Semester" IsNewNode="True" PropertyName="Semester" Index="1" />
+        <PropertyEditor Id="LessonCode" DisplayFormat="{0:D4}" Index="2" />
+        <PropertyEditor Id="LessonName" Index="2" Removed="True" />
+        <PropertyEditor Id="Subject" IsNewNode="True" PropertyName="Subject" Index="3" ImmediatePostData="True" />
+        <PropertyEditor Id="TuitionFee" Index="6" />
+        <PropertyEditor Id="CanRegister" Index="7" />
+        <PropertyEditor Id="NumExpectation" Index="7" />
+        <PropertyEditor Id="NumRegistration" Index="8" AllowEdit="False" />
+        <PropertyEditor Id="LessonNote" Index="9" />
+        <PropertyEditor Id="DateCreated" IsNewNode="True" Removed="True" PropertyName="DateCreated" />
+        <PropertyEditor Id="DateModified" IsNewNode="True" Removed="True" PropertyName="DateModified" />
+        <PropertyEditor Id="RegisterDetails" IsNewNode="True" Removed="True" PropertyName="RegisterDetails" View="Lesson_RegisterDetails_ListView" AllowEdit="True" />
+        <PropertyEditor Id="StudentResults" IsNewNode="True" Removed="True" PropertyName="StudentResults" View="Lesson_StudentResults_ListView" AllowEdit="False" />
+        <PropertyEditor Id="Subject.Credit" IsNewNode="True" PropertyName="Subject.Credit" />
+        <PropertyEditor Id="Timetable" IsNewNode="True" Removed="True" PropertyName="Timetable" AllowEdit="False" />
+        <PropertyEditor Id="TkbLesson" IsNewNode="True" Removed="True" PropertyName="TkbLesson" AllowEdit="True" />
+        <PropertyEditor Id="TKBSemesters" IsNewNode="True" Removed="True" PropertyName="TKBSemesters" View="Lesson_TKBSemesters_ListView" AllowEdit="True" ImmediatePostData="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" IsNewNode="True" Removed="True" Index="0">
+            <LayoutGroup Id="Lesson" IsNewNode="True" Index="0" Direction="Horizontal">
+              <LayoutGroup Id="Lesson_col1" IsNewNode="True" Index="0">
+                <LayoutItem Id="Semester" IsNewNode="True" Index="0" />
+                <LayoutItem Id="LessonCode" IsNewNode="True" Index="1" />
+                <LayoutItem Id="ClassIDs" IsNewNode="True" Index="2" />
+                <LayoutItem Id="Subject" IsNewNode="True" Index="3" />
+                <LayoutItem Id="Subject.Credit" IsNewNode="True" Index="5" />
+              </LayoutGroup>
+              <LayoutGroup Id="Lesson_col2" IsNewNode="True" Index="1">
+                <LayoutItem Id="TuitionFee" IsNewNode="True" Index="0" />
+                <LayoutItem Id="CanRegister" IsNewNode="True" Index="2" />
+                <LayoutItem Id="NumExpectation" IsNewNode="True" Index="3" />
+                <LayoutItem Id="TkbLesson" IsNewNode="True" Index="4" />
+                <LayoutItem Id="LessonNote" IsNewNode="True" Index="5" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizebleEditor" IsNewNode="True" Index="1">
+            <LayoutItem Id="Timetable" IsNewNode="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="TKBSemesters" Index="0" />
+            <LayoutGroup Id="Teachers" Index="1" />
+            <LayoutGroup Id="RegisterDetails" Index="2" />
+            <LayoutGroup Id="StudentResults" Index="3" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Lesson_ListView" MasterDetailMode="ListViewOnly" ShowAutoFilterRow="True" IsGroupPanelVisible="True" GroupSummary="Count" AllowEdit="True" AllowNew="False">
+      <Columns>
+        <ColumnInfo Id="DateCreated" IsNewNode="True" Removed="True" PropertyName="DateCreated" Index="-1" Width="70" />
+        <ColumnInfo Id="DateModified" IsNewNode="True" Removed="True" PropertyName="DateModified" Index="-1" Width="70" />
+        <ColumnInfo Id="Semester" IsNewNode="True" Removed="True" PropertyName="Semester" Index="0" Width="70" />
+        <ColumnInfo Id="LessonCode" IsNewNode="True" Removed="True" PropertyName="LessonCode" Index="1" Width="50" SortOrder="None" />
+        <ColumnInfo Id="LessonName" SummaryType="Count" Index="1" />
+        <ColumnInfo Id="ClassIDs" Caption="Lớp biên chế" Index="2" GroupIndex="-1" SortOrder="Ascending" />
+        <ColumnInfo Id="Subject" Index="2" AllowEdit="True" SummaryType="Count" GroupIndex="1" />
+        <ColumnInfo Id="Subject.SubjectCode" IsNewNode="True" PropertyName="Subject.SubjectCode" Index="3" AllowEdit="True" />
+        <ColumnInfo Id="Subject.Credit" IsNewNode="True" PropertyName="Subject.Credit" Index="4" AllowEdit="True" SummaryType="Sum" />
+        <ColumnInfo Id="TuitionFee" Index="5" AllowEdit="True" DisplayFormat="{0:0,0}" SummaryType="Sum" />
+        <ColumnInfo Id="NumExpectation" Index="6" AllowEdit="True" SummaryType="Sum" />
+        <ColumnInfo Id="NumRegistration" Index="7" AllowEdit="True" SummaryType="Sum" />
+        <ColumnInfo Id="CanRegister" Index="8" AllowEdit="True" />
+        <ColumnInfo Id="Timetable" IsNewNode="True" PropertyName="Timetable" Index="9" />
+        <ColumnInfo Id="LessonNote" Index="10" SummaryType="None" AllowEdit="True" />
+        <ColumnInfo Id="TkbLesson" IsNewNode="True" Removed="True" PropertyName="TkbLesson" Index="10" Width="70" />
+      </Columns>
+    </ListView>
+    <ListView Id="Lesson_LookupListView" ShowAutoFilterRow="True" AllowNew="False" AllowEdit="False">
+      <Columns>
+        <ColumnInfo Id="LessonName" Index="0" />
+        <ColumnInfo Id="ClassIDs" IsNewNode="True" PropertyName="ClassIDs" Index="1" />
+        <ColumnInfo Id="Subject.SubjectCode" IsNewNode="True" PropertyName="Subject.SubjectCode" Index="2" />
+        <ColumnInfo Id="Subject.SubjectName" IsNewNode="True" PropertyName="Subject.SubjectName" Index="3" />
+        <ColumnInfo Id="Subject.Credit" IsNewNode="True" PropertyName="Subject.Credit" Index="4" />
+        <ColumnInfo Id="Semester" IsNewNode="True" PropertyName="Semester" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="Lesson_RegisterDetails_ListView" ShowAutoFilterRow="True" GroupSummary="Count">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="Name" Index="-1" />
+        <ColumnInfo Id="StudentRegLessonSemester" Index="-1" />
+        <ColumnInfo Id="Student" Index="0" />
+        <ColumnInfo Id="Lesson" Index="1" />
+        <ColumnInfo Id="Lesson.ClassIDs" IsNewNode="True" PropertyName="Lesson.ClassIDs" Index="2" />
+        <ColumnInfo Id="Lesson.Subject" IsNewNode="True" PropertyName="Lesson.Subject" Index="2" />
+        <ColumnInfo Id="isChange" Index="4" />
+        <ColumnInfo Id="Note" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="Lesson_StudentResults_ListView" ShowAutoFilterRow="True" GroupSummary="Count">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="ResultName" Index="-1" />
+        <ColumnInfo Id="Student.StudentCode" IsNewNode="True" PropertyName="Student.StudentCode" Index="0" />
+        <ColumnInfo Id="Student" Index="1" />
+        <ColumnInfo Id="Lesson" Index="2" />
+        <ColumnInfo Id="Lesson.Subject" IsNewNode="True" PropertyName="Lesson.Subject" Index="2" />
+        <ColumnInfo Id="Lesson.Subject.Credit" IsNewNode="True" PropertyName="Lesson.Subject.Credit" Index="3" />
+        <ColumnInfo Id="AvgMark10" Index="5" />
+        <ColumnInfo Id="AvgMark4" Index="6" />
+        <ColumnInfo Id="AvgChar" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="Lesson_TKBSemesters_ListView" ShowAutoFilterRow="True" NewItemRowPosition="Top">
+      <Columns>
+        <ColumnInfo Id="Name" Index="-1" />
+        <ColumnInfo Id="Lesson" Index="0" />
+        <ColumnInfo Id="Weeks" Index="3" />
+        <ColumnInfo Id="Classroom" Index="4" />
+      </Columns>
+    </ListView>
+    <DetailView Id="LessonReportParametersObject_DetailView">
+      <Items>
+        <PropertyEditor Id="Lesson" ImmediatePostData="True" />
+        <PropertyEditor Id="Lesson.Semester.SemesterName" IsNewNode="True" PropertyName="Lesson.Semester.SemesterName" AllowEdit="False" />
+        <PropertyEditor Id="Lesson.Subject.Credit" IsNewNode="True" PropertyName="Lesson.Subject.Credit" AllowEdit="False" />
+        <PropertyEditor Id="Lesson.Subject.SubjectCode" IsNewNode="True" PropertyName="Lesson.Subject.SubjectCode" AllowEdit="False" />
+        <PropertyEditor Id="Lesson.Subject.SubjectName" IsNewNode="True" PropertyName="Lesson.Subject.SubjectName" AllowEdit="False" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="LessonReportParametersObject">
+              <LayoutItem Id="Lesson.Semester.SemesterName" IsNewNode="True" Index="1" />
+              <LayoutItem Id="Lesson.Subject.SubjectCode" IsNewNode="True" Index="2" />
+              <LayoutItem Id="Lesson.Subject.SubjectName" IsNewNode="True" Index="3" />
+              <LayoutItem Id="Lesson.Subject.Credit" IsNewNode="True" Index="4" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="MyImportResult_ListView" ShowAutoFilterRow="True">
+      <Columns>
+        <ColumnInfo Id="Line" SortIndex="0" />
+      </Columns>
+    </ListView>
+    <DetailView Id="MyNote_DetailView">
+      <Items>
+        <PropertyEditor Id="FullContent" RowCount="10" MaxLength="20000" />
+        <PropertyEditor Id="Intro" RowCount="2" />
+        <PropertyEditor Id="Tag" RowCount="2" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="Title" IsNewNode="True" Index="0" />
+            <LayoutItem Id="Intro" IsNewNode="True" Index="1" />
+            <LayoutItem Id="FullContent" IsNewNode="True" Index="2" />
+            <LayoutItem Id="Tag" IsNewNode="True" Index="3" />
+            <LayoutGroup Id="MyNote" Removed="True">
+              <LayoutGroup Id="MyNote_col1">
+                <LayoutItem Id="FullContent" Removed="True" />
+                <LayoutItem Id="Intro" Removed="True" />
+                <LayoutItem Id="Title" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="MyNote_col2">
+                <LayoutItem Id="Tag" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="MyNote_ListView" ShowAutoFilterRow="False" NewItemRowPosition="Top">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="MyNoteDetailView" IsNewNode="True" AllowDelete="False" AllowEdit="False" AllowNew="False" ClassName="vidoSolution.Module.DomainObject.MyNote">
+      <Items IsNewNode="True">
+        <PropertyEditor Id="Tag" IsNewNode="True" Index="-1" PropertyName="Tag" AllowEdit="False" />
+        <PropertyEditor Id="Title" IsNewNode="True" PropertyName="Title" AllowEdit="False" Index="1" />
+        <PropertyEditor Id="Intro" IsNewNode="True" Index="2" PropertyName="Intro" AllowEdit="False" />
+        <PropertyEditor Id="Content" IsNewNode="True" PropertyName="FullContent" Caption="Content" AllowEdit="False" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" IsNewNode="True" Index="0" Caption="Main">
+          <LayoutGroup Id="SimpleEditors" IsNewNode="True" Index="0">
+            <LayoutGroup Id="MyNote" IsNewNode="True" Index="0">
+              <LayoutItem Id="Title" IsNewNode="True" Index="0" />
+              <LayoutItem Id="Intro" IsNewNode="True" Index="1" />
+              <LayoutItem Id="FullContent" IsNewNode="True" Index="2" />
+              <LayoutItem Id="Tag" IsNewNode="True" Index="3" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="MyNoteViewOnly" IsNewNode="True" AllowDelete="False" AllowNew="False" ClassName="vidoSolution.Module.DomainObject.MyNote" DetailViewID="MyNote_DetailView">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Title" IsNewNode="True" PropertyName="Title" Index="1" />
+        <ColumnInfo Id="Intro" IsNewNode="True" PropertyName="Intro" Index="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Note_DetailView" Removed="True" />
+    <ListView Id="Note_ListView" Removed="True" />
+    <ListView Id="Note_LookupListView" Removed="True" />
+    <DetailView Id="Office_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="OfficeCode" IsNewNode="True" Index="0" />
+            <LayoutItem Id="Name" IsNewNode="True" Index="1" />
+            <LayoutItem Id="Phone" IsNewNode="True" Index="2" />
+            <LayoutItem Id="Address" IsNewNode="True" Index="3" />
+            <LayoutItem Id="Note" IsNewNode="True" Index="5" />
+            <LayoutGroup Id="Office" Removed="True">
+              <LayoutGroup Id="Office_col1">
+                <LayoutItem Id="Address" Removed="True" />
+                <LayoutItem Id="Name" Removed="True" />
+                <LayoutItem Id="OfficeCode" Removed="True" />
+                <LayoutItem Id="Phone" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Office_col2">
+                <LayoutItem Id="Note" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Office_ListView">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="OfficeCode" Index="0" />
+        <ColumnInfo Id="Name" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Office_LookupListView" AllowNew="False" AllowEdit="False">
+      <Columns>
+        <ColumnInfo Id="OfficeCode" IsNewNode="True" PropertyName="OfficeCode" Index="1" />
+        <ColumnInfo Id="Name" Index="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PersistentBase_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" IsNewNode="True" />
+      </Layout>
+    </DetailView>
+    <DetailView Id="Person_DetailView">
+      <Items>
+        <PropertyEditor Id="Address1" Removed="True" />
+        <PropertyEditor Id="Address2" Removed="True" />
+        <PropertyEditor Id="MiddleName" Removed="True" />
+        <PropertyEditor Id="PhoneNumbers" Removed="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Person">
+            <LayoutGroup Id="Person_col1">
+              <LayoutItem Id="FullName" Removed="True" />
+              <LayoutItem Id="MiddleName" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Person_col2" Index="0">
+              <LayoutItem Id="Birthday" Index="1" />
+              <LayoutItem Id="Email" Index="2" />
+            </LayoutGroup>
+            <LayoutItem Id="Photo" Removed="True" />
+          </LayoutGroup>
+          <LayoutItem Id="Photo" IsNewNode="True" Caption="Hình" Index="2" />
+          <LayoutGroup Id="PhoneNumbers_Group" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="PopUpMessage_DetailView">
+      <Items>
+        <PropertyEditor Id="Title" Index="1" />
+        <PropertyEditor Id="Message" Index="2" RowCount="5" />
+      </Items>
+    </DetailView>
+    <DetailView Id="RegisterDetail_DetailView">
+      <Items>
+        <PropertyEditor Id="DateCreated" Index="-1" />
+        <PropertyEditor Id="DateModified" Index="-1" />
+        <PropertyEditor Id="Name" Index="-1" />
+        <PropertyEditor Id="Note" Index="-1" />
+        <PropertyEditor Id="StudentRegLessonSemester" Index="-1" />
+        <PropertyEditor Id="Student" Index="0" LookupEditorMode="Auto" />
+        <PropertyEditor Id="Lesson.ClassIDs" IsNewNode="True" PropertyName="Lesson.ClassIDs" AllowEdit="False" Index="2" />
+        <PropertyEditor Id="Lesson.Subject.Credit" IsNewNode="True" PropertyName="Lesson.Subject.Credit" AllowEdit="False" Index="4" />
+        <PropertyEditor Id="Lesson.Subject.SubjectCode" IsNewNode="True" PropertyName="Lesson.Subject.SubjectCode" AllowEdit="False" Index="5" />
+        <PropertyEditor Id="Lesson.Subject.SubjectName" IsNewNode="True" PropertyName="Lesson.Subject.SubjectName" AllowEdit="False" Index="6" />
+        <PropertyEditor Id="RegisterState" Index="6" />
+        <PropertyEditor Id="CheckState" Index="7" />
+        <PropertyEditor Id="Lesson.Semester" IsNewNode="True" PropertyName="Lesson.Semester" Index="9" AllowEdit="False" />
+        <PropertyEditor Id="isChange" Index="11" />
+        <PropertyEditor Id="Lesson" IsNewNode="True" PropertyName="Lesson" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="RegisterDetail" IsNewNode="True" Removed="True" Index="0" Direction="Horizontal" ShowCaption="False" Caption="Register Detail">
+              <LayoutGroup Id="RegisterDetail_col1" IsNewNode="True" Index="0">
+                <LayoutItem Id="Lesson" IsNewNode="True" Index="0" Caption="Nhóm lớp MH" />
+                <LayoutItem Id="Student" IsNewNode="True" Index="0" />
+                <LayoutItem Id="RegisterState" IsNewNode="True" Index="2" />
+                <LayoutItem Id="CheckState" IsNewNode="True" Index="4" />
+                <LayoutItem Id="Note" IsNewNode="True" Index="4" />
+                <LayoutItem Id="isChange" IsNewNode="True" Index="5" />
+              </LayoutGroup>
+              <LayoutGroup Id="RegisterDetail_col2" IsNewNode="True" Index="1">
+                <LayoutItem Id="Lesson.Semester" IsNewNode="True" Index="0" />
+                <LayoutItem Id="Lesson.ClassIDs" IsNewNode="True" Index="1" />
+                <LayoutItem Id="Lesson.Subject.SubjectCode" IsNewNode="True" Index="2" />
+                <LayoutItem Id="Lesson.Subject.SubjectName" IsNewNode="True" Index="3" />
+                <LayoutItem Id="Lesson.Subject.Credit" IsNewNode="True" Index="4" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RegisterDetail_ListView" IsGroupPanelVisible="True" NewItemRowPosition="None" ShowAutoFilterRow="True" UseServerMode="True" AllowEdit="False" GroupSummary="Count">
+      <Columns>
+        <ColumnInfo Id="DateCreated" IsNewNode="True" Removed="True" PropertyName="DateCreated" Index="-1" Width="70" />
+        <ColumnInfo Id="DateModified" IsNewNode="True" Removed="True" PropertyName="DateModified" Index="-1" Width="70" />
+        <ColumnInfo Id="Note" Index="-1" />
+        <ColumnInfo Id="StudentRegLessonSemester" Index="-1" />
+        <ColumnInfo Id="RegisterState" Index="0" />
+        <ColumnInfo Id="Student.StudentCode" IsNewNode="True" PropertyName="Student.StudentCode" Index="0" AllowEdit="False" />
+        <ColumnInfo Id="Student" Index="1" GroupIndex="0" LookupEditorMode="Search" />
+        <ColumnInfo Id="Lesson" PropertyName="Lesson.LessonCode" Index="2" AllowEdit="True" GroupIndex="-1" />
+        <ColumnInfo Id="Lesson.ClassIDs" IsNewNode="True" PropertyName="Lesson.ClassIDs" Index="3" SortOrder="Ascending" />
+        <ColumnInfo Id="Lesson.Subject.SubjectCode" IsNewNode="True" PropertyName="Lesson.Subject.SubjectCode" Index="4" AllowEdit="False" />
+        <ColumnInfo Id="Lesson.Subject.SubjectName" IsNewNode="True" PropertyName="Lesson.Subject.SubjectName" Index="5" AllowEdit="False" SortOrder="Ascending" />
+        <ColumnInfo Id="Lesson.Subject.Credit" IsNewNode="True" PropertyName="Lesson.Subject.Credit" Index="6" SummaryType="Sum" AllowEdit="False" />
+        <ColumnInfo Id="Lesson.Timetable" IsNewNode="True" PropertyName="Lesson.Timetable" Index="7" SortOrder="None" />
+        <ColumnInfo Id="Lesson.TuitionFee" IsNewNode="True" PropertyName="Lesson.TuitionFee" Index="8" SummaryType="Sum" AllowEdit="False" />
+        <ColumnInfo Id="Lesson.NumRegistration" IsNewNode="True" PropertyName="Lesson.NumRegistration" Index="10" />
+        <ColumnInfo Id="Lesson.NumExpectation" IsNewNode="True" PropertyName="Lesson.NumExpectation" Index="11" />
+        <ColumnInfo Id="CheckState" Index="12" />
+        <ColumnInfo Id="isChange" Index="12" />
+        <ColumnInfo Id="Name" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="RegisterDetail_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Index="-1" />
+        <ColumnInfo Id="Student.StudentCode" IsNewNode="True" PropertyName="Student.StudentCode" Index="1" />
+        <ColumnInfo Id="Student" IsNewNode="True" PropertyName="Student" Index="2" />
+        <ColumnInfo Id="Lesson" IsNewNode="True" PropertyName="Lesson" Index="3" />
+        <ColumnInfo Id="Lesson.Subject.SubjectCode" IsNewNode="True" PropertyName="Lesson.Subject.SubjectCode" Index="4" />
+        <ColumnInfo Id="Lesson.Subject.SubjectName" IsNewNode="True" PropertyName="Lesson.Subject.SubjectName" Index="5" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RegisterDetailReportParametersObject_DetailView">
+      <Items>
+        <PropertyEditor Id="Student" ImmediatePostData="True" />
+        <PropertyEditor Id="Student.Birthday" IsNewNode="True" PropertyName="Student.Birthday" AllowEdit="False" />
+        <PropertyEditor Id="Student.IsFemale" IsNewNode="True" PropertyName="Student.IsFemale" AllowEdit="False" />
+        <PropertyEditor Id="Student.StudentClass" IsNewNode="True" PropertyName="Student.StudentClass" AllowEdit="False" />
+        <PropertyEditor Id="Student.StudentCode" IsNewNode="True" PropertyName="Student.StudentCode" AllowEdit="False" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="RegisterDetailReportParametersObject">
+              <LayoutItem Id="Semester" Index="1" />
+              <LayoutItem Id="Student" Index="2" />
+              <LayoutItem Id="Student.StudentCode" IsNewNode="True" Index="3" />
+              <LayoutItem Id="Student.Birthday" IsNewNode="True" Index="4" />
+              <LayoutItem Id="Student.IsFemale" IsNewNode="True" Index="5" />
+              <LayoutItem Id="Student.StudentClass" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RegisterdetailWithStudentClass" IsNewNode="True" ClassName="vidoSolution.Module.DomainObject.RegisterDetail" GroupSummary="Count" IsGroupPanelVisible="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="StudentInWithStudentClass" IsNewNode="True" PropertyName="Student" AllowEdit="False" Index="-1" />
+        <ColumnInfo Id="LessonInWithStudentClass" IsNewNode="True" PropertyName="Lesson" Index="1" AllowEdit="False" />
+        <ColumnInfo Id="RegisterState" IsNewNode="True" PropertyName="RegisterState" Index="1" />
+        <ColumnInfo Id="Student.StudentClass.ClassCode" IsNewNode="True" PropertyName="Student.StudentClass.ClassCode" Index="2" AllowEdit="False" GroupIndex="0" SummaryType="Count" />
+        <ColumnInfo Id="Student.StudentCode" IsNewNode="True" PropertyName="Student.StudentCode" Index="2" AllowEdit="False" SummaryType="Count" />
+        <ColumnInfo Id="Student.FirstName" IsNewNode="True" PropertyName="Student.FirstName" Index="3" AllowEdit="False" />
+        <ColumnInfo Id="Student.LastName" IsNewNode="True" PropertyName="Student.LastName" Index="4" AllowEdit="False" />
+        <ColumnInfo Id="Student.Birthday" IsNewNode="True" PropertyName="Student.Birthday" DisplayFormat="{0:dd/MM/yyyy}" Index="5" AllowEdit="False" />
+        <ColumnInfo Id="Student.IsFemale" IsNewNode="True" PropertyName="Student.IsFemale" Index="6" AllowEdit="False" />
+        <ColumnInfo Id="Lesson.Subject.SubjectCode" IsNewNode="True" PropertyName="Lesson.Subject.SubjectCode" Index="8" AllowEdit="False" />
+        <ColumnInfo Id="Lesson.Subject.SubjectName" IsNewNode="True" PropertyName="Lesson.Subject.SubjectName" Index="9" AllowEdit="False" />
+        <ColumnInfo Id="Lesson.Subject.Credit" IsNewNode="True" PropertyName="Lesson.Subject.Credit" Index="10" AllowEdit="False" SummaryType="Sum" />
+        <ColumnInfo Id="Lesson.Timetable" IsNewNode="True" PropertyName="Lesson.Timetable" Index="11" />
+        <ColumnInfo Id="Lesson.TuitionFee" IsNewNode="True" PropertyName="Lesson.TuitionFee" Index="12" AllowEdit="False" SummaryType="Sum" />
+        <ColumnInfo Id="Lesson.NumRegistration" IsNewNode="True" PropertyName="Lesson.NumRegistration" Index="13" AllowEdit="False" />
+        <ColumnInfo Id="Lesson.NumExpectation" IsNewNode="True" PropertyName="Lesson.NumExpectation" Index="14" AllowEdit="False" />
+        <ColumnInfo Id="CheckState" IsNewNode="True" PropertyName="CheckState" Index="15" />
+        <ColumnInfo Id="Lesson.Semester.SemesterName" IsNewNode="True" PropertyName="Lesson.Semester.SemesterName" Index="15" AllowEdit="False" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RegisterState_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="RegRegisterDetails" Caption="Trạng thái đăng ký môn học sinh viên" />
+            <LayoutGroup Id="CheckRegisterDetails" Caption="Trạng thái kiểm tra đăng ký sinh viên" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RegisterState_ListView" ShowAutoFilterRow="True" NewItemRowPosition="Top" IsGroupPanelVisible="True" AutoExpandAllGroups="True">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="RegisterState_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Code" IsNewNode="True" PropertyName="Code" Index="1" />
+        <ColumnInfo Id="Name" Index="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RegisterTime_DetailView">
+      <Items>
+        <PropertyEditor Id="DateCreated" Index="-1" />
+        <PropertyEditor Id="DateModified" Index="-1" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="RegisterTime" Caption="Qui định thời gian đăng ký">
+              <LayoutGroup Id="RegisterTime_col1">
+                <LayoutItem Id="BookingDateEnd" Removed="True" />
+                <LayoutItem Id="BookingDateStart" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="RegisterTime_col2">
+                <LayoutItem Id="DateCreated" Index="-1" Removed="True" />
+                <LayoutItem Id="DateModified" Index="-1" Removed="True" />
+                <LayoutItem Id="BookingDateStart" IsNewNode="True" Index="0" />
+                <LayoutItem Id="BookingDateEnd" IsNewNode="True" Index="1" />
+                <LayoutItem Id="ConfirmDateStart" Index="2" />
+                <LayoutItem Id="ConfirmDateEnd" Index="3" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="StudentClasses_Group" Caption="DS lớp biên chế tương ứng" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RegisterTime_ListView">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" AllowEdit="False" />
+        <ColumnInfo Id="DateModified" Index="-1" AllowEdit="False" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ReportParametersObjectBase_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" IsNewNode="True" />
+      </Layout>
+    </DetailView>
+    <DetailView Id="Semester_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Semester" Caption="Năm học học kỳ" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Lessons" Index="0" />
+            <LayoutGroup Id="AccountTransactionFiles" Removed="True" />
+            <LayoutGroup Id="AccountTransactions" Removed="True" />
+            <LayoutGroup Id="AccountTransactionTrackings" Removed="True" />
+            <LayoutGroup Id="ClassTransactionTrackings" Removed="True" />
+            <LayoutGroup Id="EnrollStudentClass" IsNewNode="True" Caption="Lớp biên chế có NHHK vào">
+              <LayoutItem Id="EnrollStudentClasses" IsNewNode="True" ShowCaption="False" />
+            </LayoutGroup>
+            <LayoutGroup Id="EnrollStudentClasses" Removed="True" />
+            <LayoutGroup Id="GraduateStudentClass" IsNewNode="True" Caption="Lớp biên chế có NHHK ra">
+              <LayoutItem Id="GraduateStudentClasses" IsNewNode="True" ShowCaption="False" />
+            </LayoutGroup>
+            <LayoutGroup Id="GraduateStudentClasses" Removed="True" />
+            <LayoutGroup Id="TkbCards" Removed="True" />
+            <LayoutGroup Id="TkbClasses" Removed="True" />
+            <LayoutGroup Id="TkbClassrooms" Removed="True" />
+            <LayoutGroup Id="TkbGrades" Removed="True" />
+            <LayoutGroup Id="TkbGroups" Removed="True" />
+            <LayoutGroup Id="TkbLessons" Removed="True" />
+            <LayoutGroup Id="TkbSubjects" Removed="True" />
+            <LayoutGroup Id="TkbTeachers" Removed="True" />
+            <LayoutGroup Id="WeekReportDatas" Removed="True" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Semester_Lessons_ListView">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="LessonCode" Index="-1" />
+        <ColumnInfo Id="Semester" Index="-1" />
+        <ColumnInfo Id="ClassIDs" Index="1" />
+        <ColumnInfo Id="Subject" Index="2" />
+        <ColumnInfo Id="TuitionFee" Index="3" />
+        <ColumnInfo Id="CanRegister" Index="4" />
+        <ColumnInfo Id="NumExpectation" Index="5" />
+        <ColumnInfo Id="NumRegistration" Index="6" />
+        <ColumnInfo Id="LessonNote" Index="7" />
+        <ColumnInfo Id="Timetable" Index="8" />
+        <ColumnInfo Id="TkbLesson" Index="8" />
+      </Columns>
+    </ListView>
+    <ListView Id="Semester_ListView">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="Description" Index="4" />
+      </Columns>
+    </ListView>
+    <ListView Id="Semester_LookupListView" AllowNew="False" AllowEdit="False">
+      <Columns>
+        <ColumnInfo Id="Description" IsNewNode="True" PropertyName="Description" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Student_DetailView">
+      <Items>
+        <PropertyEditor Id="Address1" Removed="True" />
+        <PropertyEditor Id="Address2" Removed="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="User" Caption="Đăng nhập" ShowCaption="True" Index="0" />
+            <LayoutGroup Id="Person" Caption="Cá nhân" Index="1">
+              <LayoutGroup Id="Person_col1">
+                <LayoutItem Id="MiddleName" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Person_col2">
+                <LayoutItem Id="Email" Index="1" />
+                <LayoutItem Id="BirthdayText" IsNewNode="True" Index="3" />
+                <LayoutItem Id="FullName" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Student" Caption="Sinh viên" Index="2">
+              <LayoutGroup Id="Student_col1">
+                <LayoutItem Id="Birthday" Removed="True" />
+                <LayoutItem Id="BirthdayText" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Party" Caption="Liên hệ" ShowCaption="True">
+              <LayoutItem Id="Address" IsNewNode="True" Index="0" />
+              <LayoutItem Id="DisplayName" Index="0" Removed="True" />
+              <LayoutItem Id="BirthPlace" IsNewNode="True" Index="1" />
+              <LayoutItem Id="Address1" Removed="True" />
+              <LayoutItem Id="Address2" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="StudentAccumulations" Caption="ĐTB học kỳ" />
+            <LayoutGroup Id="Roles" Caption="Vai trò" />
+            <LayoutGroup Id="AccountTransactionTrackings" Removed="True" />
+            <LayoutGroup Id="Permissions" Removed="True" />
+            <LayoutGroup Id="PhoneNumbers" Removed="True" />
+            <LayoutGroup Id="WeekReportDatas" Removed="True" />
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" Removed="True">
+            <LayoutItem Id="Address" Removed="True" />
+            <LayoutItem Id="BirthPlace" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Student_ListView" IsGroupPanelVisible="True" AllowEdit="True" ShowAutoFilterRow="True">
+      <Columns>
+        <ColumnInfo Id="Birthday" Index="-1" />
+        <ColumnInfo Id="DateCreated" Index="-1" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="FullName" Index="-1" />
+        <ColumnInfo Id="UserName" Index="-1" />
+        <ColumnInfo Id="StudentClass" Index="0" />
+        <ColumnInfo Id="StudentCode" Index="1" />
+        <ColumnInfo Id="FirstName" Index="3" />
+        <ColumnInfo Id="LastName" Index="4" />
+        <ColumnInfo Id="BirthdayText" Index="5" />
+        <ColumnInfo Id="IsFemale" Index="6" />
+        <ColumnInfo Id="SemesterCredit" Index="7" />
+        <ColumnInfo Id="AccountBalance" Index="8" />
+        <ColumnInfo Id="BalanceLassModify" Index="9" />
+        <ColumnInfo Id="Course" Index="10" />
+        <ColumnInfo Id="StudyState" Index="11" />
+        <ColumnInfo Id="BirthPlace" Index="12" />
+        <ColumnInfo Id="Ethnic" Index="13" />
+        <ColumnInfo Id="Mobile" Index="14" />
+        <ColumnInfo Id="Phone" Index="14" />
+        <ColumnInfo Id="Email" Index="16" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Index="17" />
+        <ColumnInfo Id="Address1" Removed="True" />
+        <ColumnInfo Id="Address2" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="Student_LookupListView" ShowAutoFilterRow="True" IsFooterVisible="True" Caption="" AllowEdit="False" AllowNew="False">
+      <Columns>
+        <ColumnInfo Id="StudentClass.ClassCode" IsNewNode="True" PropertyName="StudentClass.ClassCode" Index="1" />
+        <ColumnInfo Id="StudentCode" IsNewNode="True" PropertyName="StudentCode" Index="1" LookupEditorMode="Auto" />
+        <ColumnInfo Id="FullName" Index="2" />
+        <ColumnInfo Id="Birthday" IsNewNode="True" PropertyName="Birthday" Index="3" />
+        <ColumnInfo Id="IsFemale" IsNewNode="True" PropertyName="IsFemale" />
+      </Columns>
+    </ListView>
+    <ListView Id="Student_RegisterDetails_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="Student_StudentAccumulations_ListView">
+      <Columns>
+        <ColumnInfo Id="AccumulationName" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="Student_StudentResults_ListView">
+      <Columns>
+        <ColumnInfo Id="ResultName" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="StudentAccumulation_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="StudentAccumulation" ShowCaption="False">
+              <LayoutGroup Id="StudentAccumulation_col1">
+                <LayoutItem Id="AccumulationName" Index="5" ShowCaption="False" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="StudentAccumulation_ListView">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="Student.FullName" IsNewNode="True" PropertyName="Student.FullName" Index="2" />
+        <ColumnInfo Id="AccumulationName" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="StudentClass_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="StudentClass" ShowCaption="False" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="ClassTransactionTrackings" Caption="Theo dõi học phí lớp biên chế " />
+            <LayoutGroup Id="WeekReportDatas" Removed="True" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="StudentClass_ListView" IsGroupPanelVisible="True" NewItemRowPosition="Top" ShowAutoFilterRow="True" AllowEdit="True">
+      <Columns>
+        <ColumnInfo Id="ClassCode" SortOrder="Descending" />
+      </Columns>
+    </ListView>
+    <ListView Id="StudentClass_LookupListView" ShowAutoFilterRow="True" AllowNew="False" AllowEdit="False">
+      <Columns>
+        <ColumnInfo Id="ClassCode" IsNewNode="True" PropertyName="ClassCode" Index="1" />
+        <ColumnInfo Id="ClassName" Index="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="StudentClassReportParametersObject_DetailView">
+      <Items>
+        <PropertyEditor Id="StudentClass" ImmediatePostData="True" />
+        <PropertyEditor Id="StudentClass.Branch" IsNewNode="True" PropertyName="StudentClass.Branch" AllowEdit="False" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="StudentClassReportParametersObject">
+              <LayoutItem Id="Semester" Index="0" />
+              <LayoutItem Id="StudentClass" Index="1" />
+              <LayoutItem Id="StudentClass.Branch" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="StudentReportParametersObject_DetailView">
+      <Items>
+        <PropertyEditor Id="Student" ImmediatePostData="True" />
+        <PropertyEditor Id="Student.Birthday" IsNewNode="True" PropertyName="Student.Birthday" AllowEdit="False" />
+        <PropertyEditor Id="Student.FullName" IsNewNode="True" PropertyName="Student.FullName" AllowEdit="False" />
+        <PropertyEditor Id="Student.IsFemale" IsNewNode="True" PropertyName="Student.IsFemale" AllowEdit="False" />
+        <PropertyEditor Id="Student.StudentClass.ClassCode" IsNewNode="True" PropertyName="Student.StudentClass.ClassCode" AllowEdit="False" />
+        <PropertyEditor Id="Student.StudentCode" IsNewNode="True" PropertyName="Student.StudentCode" AllowEdit="False" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="StudentReportParametersObject">
+              <LayoutItem Id="Student.StudentCode" IsNewNode="True" Index="1" />
+              <LayoutItem Id="Student.Birthday" IsNewNode="True" Index="2" />
+              <LayoutItem Id="Student.IsFemale" IsNewNode="True" />
+              <LayoutItem Id="Student.StudentClass.ClassCode" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="StudentResult_DetailView">
+      <Items>
+        <PropertyEditor Id="Lesson" IsNewNode="True" PropertyName="Lesson" />
+        <PropertyEditor Id="Lesson.Semester.SemesterName" IsNewNode="True" PropertyName="Lesson.Semester.SemesterName" AllowEdit="False" />
+        <PropertyEditor Id="Lesson.Subject.Credit" IsNewNode="True" PropertyName="Lesson.Subject.Credit" AllowEdit="False" />
+        <PropertyEditor Id="Lesson.Subject.SubjectCode" IsNewNode="True" PropertyName="Lesson.Subject.SubjectCode" AllowEdit="False" />
+        <PropertyEditor Id="Lesson.Subject.SubjectName" IsNewNode="True" PropertyName="Lesson.Subject.SubjectName" AllowEdit="False" />
+        <PropertyEditor Id="Student" IsNewNode="True" PropertyName="Student" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="StudentResult" ShowCaption="False">
+              <LayoutGroup Id="StudentResult_col1">
+                <LayoutItem Id="Student" IsNewNode="True" Index="0" />
+                <LayoutItem Id="Lesson" IsNewNode="True" Index="1" />
+                <LayoutItem Id="Lesson.Semester.SemesterName" IsNewNode="True" Index="2" />
+                <LayoutItem Id="AvgMark10" Index="3" />
+                <LayoutItem Id="AvgChar" IsNewNode="True" Index="5" />
+                <LayoutItem Id="ResultName" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="StudentResult_col2">
+                <LayoutItem Id="Lesson.Subject.SubjectCode" IsNewNode="True" Index="1" />
+                <LayoutItem Id="Lesson.Subject.SubjectName" IsNewNode="True" Index="1" />
+                <LayoutItem Id="Lesson.Subject.Credit" IsNewNode="True" Index="2" />
+                <LayoutItem Id="DateCreated" Index="4" />
+                <LayoutItem Id="DateModified" Index="5" />
+                <LayoutItem Id="AvgChar" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="StudentResult_ListView">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="ResultName" Index="-1" Caption="Mã KQMHSV" />
+        <ColumnInfo Id="Lesson.Subject.SubjectCode" IsNewNode="True" PropertyName="Lesson.Subject.SubjectCode" Index="1" AllowEdit="False" />
+        <ColumnInfo Id="Student.StudentCode" IsNewNode="True" PropertyName="Student.StudentCode" Index="3" AllowEdit="False" />
+        <ColumnInfo Id="Student" Index="4" Removed="True" />
+        <ColumnInfo Id="Student.FullName" IsNewNode="True" PropertyName="Student.FullName" Index="4" />
+        <ColumnInfo Id="AvgMark10" Index="5" />
+        <ColumnInfo Id="AvgMark4" Index="6" />
+        <ColumnInfo Id="AvgChar" Index="7" />
+        <ColumnInfo Id="Lesson.Subject.SubjectName" IsNewNode="True" PropertyName="Lesson.Subject.SubjectName" Index="7" AllowEdit="False" />
+        <ColumnInfo Id="Lesson.Subject.Credit" IsNewNode="True" PropertyName="Lesson.Subject.Credit" Index="8" AllowEdit="False" />
+        <ColumnInfo Id="Lesson.Semester.SemesterName" IsNewNode="True" PropertyName="Lesson.Semester.SemesterName" Index="9" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Subject_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Subject" ShowCaption="False">
+              <LayoutGroup Id="Subject_col1">
+                <LayoutItem Id="Credit" IsNewNode="True" Index="4" />
+              </LayoutGroup>
+              <LayoutGroup Id="Subject_col2">
+                <LayoutItem Id="Credit" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Subject1s" Removed="True" />
+            <LayoutGroup Id="Subject2s" Removed="True" />
+            <LayoutGroup Id="WeekReportDatas" Removed="True" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Subject_LookupListView" AllowNew="False" AllowEdit="False">
+      <Columns>
+        <ColumnInfo Id="SubjectCode" IsNewNode="True" PropertyName="SubjectCode" Index="1" />
+        <ColumnInfo Id="SubjectName" Index="2" />
+        <ColumnInfo Id="Credit" IsNewNode="True" PropertyName="Credit" Index="3" />
+        <ColumnInfo Id="Branch" IsNewNode="True" PropertyName="Branch" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SubjectFile_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SubjectFile" ShowCaption="False" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SubjectRelations_DetailView">
+      <Items>
+        <PropertyEditor Id="Type" ImmediatePostData="True" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SubjectReportParametersObject_DetailView">
+      <Items>
+        <PropertyEditor Id="Subject" ImmediatePostData="True" />
+        <PropertyEditor Id="Subject.Branch" IsNewNode="True" PropertyName="Subject.Branch" AllowEdit="False" />
+        <PropertyEditor Id="Subject.Credit" IsNewNode="True" PropertyName="Subject.Credit" AllowEdit="False" />
+        <PropertyEditor Id="Subject.SubjectCode" IsNewNode="True" PropertyName="Subject.SubjectCode" AllowEdit="False" />
+        <PropertyEditor Id="Subject.SubjectName" IsNewNode="True" PropertyName="Subject.SubjectName" AllowEdit="False" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SubjectReportParametersObject">
+              <LayoutItem Id="Semester" Index="0" />
+              <LayoutItem Id="Subject" Index="1" />
+              <LayoutItem Id="Subject.SubjectCode" IsNewNode="True" Index="1" />
+              <LayoutItem Id="Subject.SubjectName" IsNewNode="True" Index="2" />
+              <LayoutItem Id="Subject.Credit" IsNewNode="True" Index="3" />
+              <LayoutItem Id="Subject.Branch" IsNewNode="True" Index="4" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Teacher_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="WeekReportDatas" Removed="True" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Teacher_ListView">
+      <Columns>
+        <ColumnInfo Id="DateCreated" Index="-1" />
+        <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="FullName" Index="-1" />
+        <ColumnInfo Id="Department" Index="0" />
+        <ColumnInfo Id="TeacherCode" Index="1" />
+        <ColumnInfo Id="FirstName" Index="2" />
+        <ColumnInfo Id="LastName" Index="3" />
+      </Columns>
+    </ListView>
+    <ListView Id="Teacher_LookupListView" AllowNew="False" AllowEdit="False">
+      <Columns>
+        <ColumnInfo Id="TeacherCode" IsNewNode="True" PropertyName="TeacherCode" Index="1" />
+        <ColumnInfo Id="FirstName" IsNewNode="True" PropertyName="FirstName" Index="2" />
+        <ColumnInfo Id="LastName" Index="3" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TeacherFile_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TeacherFile" ShowCaption="False">
+              <LayoutGroup Id="TeacherFile_col1">
+                <LayoutItem Id="CreateDate" IsNewNode="True" Index="2" />
+                <LayoutItem Id="IsImported" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="TeacherFile_col2">
+                <LayoutItem Id="IsImported" IsNewNode="True" Index="0" />
+                <LayoutItem Id="CreateDate" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TeacherReportParametersObject_DetailView">
+      <Items>
+        <PropertyEditor Id="Teacher" ImmediatePostData="True" />
+        <PropertyEditor Id="Teacher.FullName" IsNewNode="True" PropertyName="Teacher.FullName" />
+        <PropertyEditor Id="Teacher.ShortName" IsNewNode="True" PropertyName="Teacher.ShortName" AllowEdit="False" />
+        <PropertyEditor Id="Teacher.TeacherCode" IsNewNode="True" PropertyName="Teacher.TeacherCode" AllowEdit="False" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TeacherReportParametersObject">
+              <LayoutItem Id="Teacher.FullName" IsNewNode="True" />
+              <LayoutItem Id="Teacher.ShortName" IsNewNode="True" />
+              <LayoutItem Id="Teacher.TeacherCode" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TimetableStudentReportParametersObject_DetailView">
+      <Items>
+        <PropertyEditor Id="Student" ImmediatePostData="True" />
+        <PropertyEditor Id="Student.Birthday" IsNewNode="True" PropertyName="Student.Birthday" AllowEdit="False" />
+        <PropertyEditor Id="Student.IsFemale" IsNewNode="True" PropertyName="Student.IsFemale" AllowEdit="False" />
+        <PropertyEditor Id="Student.StudentClass" IsNewNode="True" PropertyName="Student.StudentClass" AllowEdit="False" />
+        <PropertyEditor Id="Student.StudentCode" IsNewNode="True" PropertyName="Student.StudentCode" AllowEdit="False" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TimetableStudentReportParametersObject">
+              <LayoutItem Id="Semester" Index="1" />
+              <LayoutItem Id="Student" Index="1" />
+              <LayoutItem Id="Student.StudentCode" IsNewNode="True" Index="2" />
+              <LayoutItem Id="Student.Birthday" IsNewNode="True" Index="3" />
+              <LayoutItem Id="Student.IsFemale" IsNewNode="True" Index="4" />
+              <LayoutItem Id="Student.StudentClass" IsNewNode="True" Index="5" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TkbCard_DetailView" AllowEdit="False" AllowNew="False">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TkbCard" Caption="Lịch học" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TkbCard_ListView" AllowNew="False" />
+    <DetailView Id="TkbClass_DetailView" AllowEdit="False" AllowNew="False">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TkbClass" Caption="Lớp xếp lịch" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TkbClass_ListView" AllowNew="False" />
+    <DetailView Id="TkbClassroom_DetailView" AllowNew="False" AllowEdit="False">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TkbClassroom" Caption="Dữ liệu Phòng " />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TkbClassroom_ListView" AllowNew="False" />
+    <DetailView Id="TkbDay_DetailView" AllowEdit="False" AllowNew="False" />
+    <ListView Id="TkbDay_ListView" AllowNew="False" />
+    <DetailView Id="TkbFile_DetailView">
+      <Items>
+        <PropertyEditor Id="Semester" IsNewNode="True" PropertyName="Semester" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TkbFile" ShowCaption="False">
+              <LayoutGroup Id="TkbFile_col1">
+                <LayoutItem Id="Semester" IsNewNode="True" Index="1" />
+                <LayoutItem Id="XmlFile" Index="2" />
+                <LayoutItem Id="Active" IsNewNode="True" Index="3" />
+                <LayoutItem Id="LocalPath" Removed="True" />
+                <LayoutItem Id="ZipFile" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="TkbFile_col2">
+                <LayoutItem Id="CreateDate" IsNewNode="True" Index="3" />
+                <LayoutItem Id="Active" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TkbFile_ListView">
+      <Columns>
+        <ColumnInfo Id="Active" Index="4" />
+        <ColumnInfo Id="CreateDate" Index="8" />
+        <ColumnInfo Id="LocalPath" Removed="True" />
+        <ColumnInfo Id="ZipFile" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TkbGrade_DetailView" AllowEdit="False" AllowNew="False">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TkbGrade" Caption="Khóa" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TkbGrade_ListView" AllowNew="False" />
+    <DetailView Id="TkbGroup_DetailView" AllowEdit="False" AllowNew="False">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TkbGroup" Caption="Nhóm" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TkbGroup_ListView" AllowEdit="False" AllowNew="False" />
+    <DetailView Id="TkbLesson_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TkbLesson" Caption="Lớp xếp lịch" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TkbLesson_ListView" AllowNew="False" />
+    <DetailView Id="TkbPeriod_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TkbPeriod" ShowCaption="False" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TkbSemester_DetailView">
+      <Items>
+        <PropertyEditor Id="Lesson" IsNewNode="True" PropertyName="Lesson" ImmediatePostData="True" />
+        <PropertyEditor Id="Lesson.ClassIDs" IsNewNode="True" PropertyName="Lesson.ClassIDs" AllowEdit="False" />
+        <PropertyEditor Id="Lesson.LessonCode" IsNewNode="True" PropertyName="Lesson.LessonCode" AllowEdit="False" />
+        <PropertyEditor Id="Lesson.Subject.Credit" IsNewNode="True" PropertyName="Lesson.Subject.Credit" AllowEdit="False" />
+        <PropertyEditor Id="Lesson.Subject.SubjectCode" IsNewNode="True" PropertyName="Lesson.Subject.SubjectCode" AllowEdit="False" />
+        <PropertyEditor Id="Lesson.Subject.SubjectName" IsNewNode="True" PropertyName="Lesson.Subject.SubjectName" AllowEdit="False" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TkbSemester" ShowCaption="False">
+              <LayoutGroup Id="TkbSemester_col1">
+                <LayoutItem Id="Lesson" IsNewNode="True" Index="1" />
+                <LayoutItem Id="Lesson.LessonCode" IsNewNode="True" Index="1" />
+                <LayoutItem Id="Lesson.ClassIDs" IsNewNode="True" Index="2" />
+                <LayoutItem Id="Lesson.Subject.SubjectCode" IsNewNode="True" Index="3" />
+                <LayoutItem Id="Lesson.Subject.SubjectName" IsNewNode="True" Index="4" />
+                <LayoutItem Id="Lesson.Subject.Credit" IsNewNode="True" Index="5" />
+                <LayoutItem Id="Day" Removed="True" />
+                <LayoutItem Id="Name" Removed="True" />
+                <LayoutItem Id="Period" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="TkbSemester_col2">
+                <LayoutItem Id="Day" IsNewNode="True" Index="1" />
+                <LayoutItem Id="Period" IsNewNode="True" Index="2" />
+                <LayoutItem Id="Classroom" IsNewNode="True" Index="3" />
+                <LayoutItem Id="Weeks" Index="4" />
+                <LayoutItem Id="StringWeeks" Index="5" />
+                <LayoutItem Id="Note" Index="6" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TkbSemester_ListView" ShowAutoFilterRow="True" IsGroupPanelVisible="True" AllowEdit="True" NewItemRowPosition="Top">
+      <Columns>
+        <ColumnInfo Id="Lesson" Index="0" SummaryType="Count" />
+        <ColumnInfo Id="ClassIDs" IsNewNode="True" PropertyName="Lesson.ClassIDs" Caption="Lớp biên chế" Index="1" SummaryType="Count" SortOrder="None" GroupIndex="1" />
+        <ColumnInfo Id="Lesson.Subject.SubjectCode" IsNewNode="True" PropertyName="Lesson.Subject.SubjectCode" Index="1" />
+        <ColumnInfo Id="Lesson.Subject.SubjectName" IsNewNode="True" PropertyName="Lesson.Subject.SubjectName" Index="3" />
+        <ColumnInfo Id="Lesson.Subject.Credit" IsNewNode="True" PropertyName="Lesson.Subject.Credit" Index="4" SummaryType="Sum" />
+        <ColumnInfo Id="Day" Index="5" SortOrder="Ascending" />
+        <ColumnInfo Id="Period" Index="6" SortOrder="Ascending" />
+        <ColumnInfo Id="Classroom" Index="7" SortOrder="Ascending" />
+        <ColumnInfo Id="Weeks" Index="7" Removed="True" />
+        <ColumnInfo Id="StringWeeks" Caption="Tuần " Index="8" />
+        <ColumnInfo Id="Note" Index="9" />
+        <ColumnInfo Id="Name" Caption="Name" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TkbSubject_DetailView" AllowEdit="False" AllowNew="False">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TkbSubject" Caption="Môn học" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TkbSubject_ListView" AllowNew="False" />
+    <DetailView Id="TkbTeacher_DetailView" AllowEdit="False" AllowNew="False">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TkbTeacher" Caption="Giảng viên" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TkbTeacher_ListView" AllowNew="False" />
+    <DetailView Id="User_DetailView">
+      <Items>
+        <PropertyEditor Id="Address1" Removed="True" />
+        <PropertyEditor Id="Address2" Removed="True" />
+        <PropertyEditor Id="MiddleName" Removed="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Person" ShowCaption="False">
+              <LayoutGroup Id="Person_col1">
+                <LayoutItem Id="MiddleName" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Person_col2">
+                <LayoutItem Id="FullName" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Party" Removed="True">
+              <LayoutItem Id="DisplayName" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="PhoneNumbers" Removed="True" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="User_LookupListView">
+      <Columns>
+        <ColumnInfo Id="UserName" IsNewNode="True" PropertyName="UserName" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ValidationResults_DetailView" Caption="Kết quả kiểm tra" />
+    <ListView Id="ValidationResults_ListView" Caption="Kết quả kiểm tra">
+      <Columns>
+        <ColumnInfo Id="HighlightErrors" Caption="Lỗi tìm thấy" />
+      </Columns>
+    </ListView>
+    <ListView Id="WeekReportData_ListView">
+      <Columns>
+        <ColumnInfo Id="PeriodTime" Index="0" />
+        <ColumnInfo Id="Day2" Index="2" />
+        <ColumnInfo Id="Day3" Index="3" />
+        <ColumnInfo Id="Day4" Index="4" />
+        <ColumnInfo Id="Day5" Index="5" />
+        <ColumnInfo Id="Day6" Index="6" />
+        <ColumnInfo Id="Day7" Index="7" />
+        <ColumnInfo Id="Day8" Index="8" />
+        <ColumnInfo Id="Semester" Index="9" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
