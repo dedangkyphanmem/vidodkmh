@@ -383,7 +383,7 @@
         <Member Name="WeekReportDatas" Caption="Lịch tuần học kỳ" />
       </OwnMembers>
     </Class>
-    <Class Name="vidoSolution.Module.DomainObject.Student" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top" DefaultListViewShowAutoFilterRow="True" DefaultLookupEditorMode="Auto" Caption="Sinh viên" ObjectCaptionFormat="{0:StudentCode}-{0:FullName} ">
+    <Class Name="vidoSolution.Module.DomainObject.Student" DefaultListViewShowAutoFilterRow="True" DefaultLookupEditorMode="Auto" Caption="Sinh viên" ObjectCaptionFormat="{0:StudentCode}-{0:FullName} ">
       <OwnMembers>
         <Member Name="AccountBalance" Caption="Số dư TKHP" DisplayFormat="{0:0,0}" />
         <Member Name="AccountTransactions" Caption="Giao dịch học phí" />
@@ -1308,13 +1308,15 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="Lesson_ListView" MasterDetailMode="ListViewOnly" ShowAutoFilterRow="True" IsGroupPanelVisible="True" GroupSummary="Count" AllowEdit="True" AllowNew="False">
+    <ListView Id="Lesson_ListView" MasterDetailMode="ListViewOnly" ShowAutoFilterRow="True" IsGroupPanelVisible="True" GroupSummary="Count" AllowEdit="False" AllowNew="False">
       <Columns>
         <ColumnInfo Id="DateCreated" IsNewNode="True" Removed="True" PropertyName="DateCreated" Index="-1" Width="70" />
         <ColumnInfo Id="DateModified" IsNewNode="True" Removed="True" PropertyName="DateModified" Index="-1" Width="70" />
+        <ColumnInfo Id="LessonName" SummaryType="Count" Index="-1" />
+        <ColumnInfo Id="LessonNote" Index="-1" SummaryType="None" AllowEdit="True" />
+        <ColumnInfo Id="TkbLesson" IsNewNode="True" Removed="True" PropertyName="TkbLesson" Index="-1" Width="70" />
         <ColumnInfo Id="Semester" IsNewNode="True" Removed="True" PropertyName="Semester" Index="0" Width="70" />
         <ColumnInfo Id="LessonCode" IsNewNode="True" Removed="True" PropertyName="LessonCode" Index="1" Width="50" SortOrder="None" />
-        <ColumnInfo Id="LessonName" SummaryType="Count" Index="1" />
         <ColumnInfo Id="ClassIDs" Caption="Lớp biên chế" Index="2" GroupIndex="-1" SortOrder="Ascending" />
         <ColumnInfo Id="Subject" Index="2" AllowEdit="True" SummaryType="Count" GroupIndex="1" />
         <ColumnInfo Id="Subject.SubjectCode" IsNewNode="True" PropertyName="Subject.SubjectCode" Index="3" AllowEdit="True" />
@@ -1324,8 +1326,6 @@
         <ColumnInfo Id="NumRegistration" Index="7" AllowEdit="True" SummaryType="Sum" />
         <ColumnInfo Id="CanRegister" Index="8" AllowEdit="True" />
         <ColumnInfo Id="Timetable" IsNewNode="True" PropertyName="Timetable" Index="9" />
-        <ColumnInfo Id="LessonNote" Index="10" SummaryType="None" AllowEdit="True" />
-        <ColumnInfo Id="TkbLesson" IsNewNode="True" Removed="True" PropertyName="TkbLesson" Index="10" Width="70" />
       </Columns>
     </ListView>
     <ListView Id="Lesson_LookupListView" ShowAutoFilterRow="True" AllowNew="False" AllowEdit="False">
@@ -1826,12 +1826,21 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="Student_ListView" IsGroupPanelVisible="True" AllowEdit="True" ShowAutoFilterRow="True">
+    <ListView Id="Student_ListView" IsGroupPanelVisible="True" AllowEdit="False" ShowAutoFilterRow="True" AllowNew="False">
       <Columns>
+        <ColumnInfo Id="BalanceLassModify" Index="-1" />
         <ColumnInfo Id="Birthday" Index="-1" />
+        <ColumnInfo Id="BirthPlace" Index="-1" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Index="-1" />
+        <ColumnInfo Id="Course" Index="-1" />
         <ColumnInfo Id="DateCreated" Index="-1" />
         <ColumnInfo Id="DateModified" Index="-1" />
+        <ColumnInfo Id="Email" Index="-1" />
+        <ColumnInfo Id="Ethnic" Index="-1" />
         <ColumnInfo Id="FullName" Index="-1" />
+        <ColumnInfo Id="Mobile" Index="-1" />
+        <ColumnInfo Id="Phone" Index="-1" />
+        <ColumnInfo Id="StudyState" Index="-1" />
         <ColumnInfo Id="UserName" Index="-1" />
         <ColumnInfo Id="StudentClass" Index="0" />
         <ColumnInfo Id="StudentCode" Index="1" />
@@ -1841,15 +1850,6 @@
         <ColumnInfo Id="IsFemale" Index="6" />
         <ColumnInfo Id="SemesterCredit" Index="7" />
         <ColumnInfo Id="AccountBalance" Index="8" />
-        <ColumnInfo Id="BalanceLassModify" Index="9" />
-        <ColumnInfo Id="Course" Index="10" />
-        <ColumnInfo Id="StudyState" Index="11" />
-        <ColumnInfo Id="BirthPlace" Index="12" />
-        <ColumnInfo Id="Ethnic" Index="13" />
-        <ColumnInfo Id="Mobile" Index="14" />
-        <ColumnInfo Id="Phone" Index="14" />
-        <ColumnInfo Id="Email" Index="16" />
-        <ColumnInfo Id="ChangePasswordOnFirstLogon" Index="17" />
         <ColumnInfo Id="Address1" Removed="True" />
         <ColumnInfo Id="Address2" Removed="True" />
       </Columns>
@@ -2259,7 +2259,12 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="TkbLesson_ListView" AllowNew="False" />
+    <ListView Id="TkbLesson_ListView" AllowNew="False">
+      <Columns>
+        <ColumnInfo Id="Name" Index="-1" />
+        <ColumnInfo Id="StudentIDs" Index="-1" />
+      </Columns>
+    </ListView>
     <DetailView Id="TkbPeriod_DetailView">
       <Layout>
         <LayoutGroup Id="Main">
