@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vidoSolution.Win", "vidoWin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vidoSolution.Module.Win", "vidoWinSolution.Module.Win\vidoSolution.Module.Win.csproj", "{BEFB2A8D-BE96-44A9-A7ED-0D64DD54CE76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VidoWebServices", "VidoWebServices\VidoWebServices.csproj", "{35C4DF89-7CB9-4B20-9244-D2B8DBE2FCB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,12 @@ Global
 		{BEFB2A8D-BE96-44A9-A7ED-0D64DD54CE76}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
 		{BEFB2A8D-BE96-44A9-A7ED-0D64DD54CE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEFB2A8D-BE96-44A9-A7ED-0D64DD54CE76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35C4DF89-7CB9-4B20-9244-D2B8DBE2FCB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35C4DF89-7CB9-4B20-9244-D2B8DBE2FCB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35C4DF89-7CB9-4B20-9244-D2B8DBE2FCB5}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{35C4DF89-7CB9-4B20-9244-D2B8DBE2FCB5}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{35C4DF89-7CB9-4B20-9244-D2B8DBE2FCB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35C4DF89-7CB9-4B20-9244-D2B8DBE2FCB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

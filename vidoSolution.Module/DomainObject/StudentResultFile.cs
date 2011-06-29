@@ -52,15 +52,21 @@ namespace vidoSolution.Module.DomainObject
             get { return _link; }
             set { SetPropertyValue("Link", ref _link, value); }
         }
-
-        DateTime createDate;        
-        public DateTime CreateDate
+       
+        protected override void OnSaving()
+        {
+           
+            if (createDate == null) createDate = DateTime.Now;
+            base.OnSaving();
+        }
+        DateTime? createDate=null;        
+        public DateTime? CreateDate
         {
             get { return createDate; }
             set
             {
                 if (createDate == null)
-                    SetPropertyValue("CreateDate", ref createDate, DateTime.Now);
+                    SetPropertyValue<DateTime?>("CreateDate", ref createDate, DateTime.Now);
             }
         }
         //[Action(ToolTip = "Import Students Semester Result to Database", TargetObjectsCriteria="IsImported=false")]

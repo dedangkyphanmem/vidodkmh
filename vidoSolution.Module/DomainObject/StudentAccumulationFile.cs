@@ -47,11 +47,24 @@ namespace vidoSolution.Module.DomainObject
                 SetPropertyValue<bool>("IsImported", ref _isImported, value);
             }
         }
-        DateTime createDate;
-        public DateTime CreateDate
+        DateTime? fdatecreated = null;
+        public DateTime? DateCreated
         {
-            get { return createDate; }
-            set { if (createDate == null) SetPropertyValue("CreateDate", ref createDate, DateTime.Now); }
+            get
+            {
+                return fdatecreated;
+            }
+            set
+            {
+                SetPropertyValue<DateTime?>("DateCreated", ref fdatecreated, value);
+            }
+        }
+        
+        protected override void OnSaving()
+        {
+          
+            if (DateCreated == null) DateCreated = DateTime.Now;
+            base.OnSaving();
         }
         //[Action(ToolTip = "Import Students Accumulation to Database", TargetObjectsCriteria = "IsImported=false")]
         public void ImportStudentAccumulation()

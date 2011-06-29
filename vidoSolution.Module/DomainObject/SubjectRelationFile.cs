@@ -50,15 +50,22 @@ namespace vidoSolution.Module.DomainObject
             get { return _link; }
             set { SetPropertyValue("Link", ref _link, value); }
         }
-        DateTime createDate;
-        public DateTime CreateDate
+        DateTime? createDate;
+        public DateTime? CreateDate
         {
             get { return createDate; }
             set
             {
                 if (createDate == null)
-                    SetPropertyValue("CreateDate", ref createDate, DateTime.Now);
+                    SetPropertyValue<DateTime?>("CreateDate", ref createDate, DateTime.Now);
             }
+        }
+        
+        protected override void OnSaving()
+        {
+           
+            if (createDate == null) createDate = DateTime.Now;
+            base.OnSaving();
         }
        // [Action(ToolTip = "Import Subject Relation to Database", TargetObjectsCriteria = "IsImported=false")]
         //public void ImportSubjectRelation()

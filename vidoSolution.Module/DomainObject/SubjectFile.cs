@@ -61,9 +61,15 @@ namespace vidoSolution.Module.DomainObject
             }
             set
             {
-                if (GetPropertyValue ("CreateDate")== null)
-                    SetPropertyValue("CreateDate", ref createDate, DateTime.Now);
+                SetPropertyValue<DateTime?>("CreateDate", ref createDate, value);
             }
+        }
+       
+        protected override void OnSaving()
+        {
+            
+            if (createDate == null) createDate = DateTime.Now;
+            base.OnSaving();
         }
         //[Action(ToolTip = "Import Subject to Database", TargetObjectsCriteria = "IsImported=false")]
         public void ImportSubject()

@@ -63,17 +63,35 @@ namespace vidoSolution.Module.DomainObject
             get { return fnote; }
             set { SetPropertyValue<string>("note", ref fnote, value); }
         }
-        DateTime fdatecreated = DateTime.MinValue;
-        public DateTime DateCreated
+        DateTime? fdatecreated = null;
+        public DateTime? DateCreated
         {
-            get { return fdatecreated; }
-            set { SetPropertyValue<DateTime>("DateCreated", ref fdatecreated, value); }
+            get
+            {
+                return fdatecreated;
+            }
+            set
+            {
+                SetPropertyValue<DateTime?>("DateCreated", ref fdatecreated, value);
+            }
         }
         DateTime fdatemodified;
         public DateTime DateModified
         {
-            get { return fdatemodified; }
-            set { SetPropertyValue<DateTime>("DateModified", ref fdatemodified, value); }
+            get
+            {
+                return fdatemodified;
+            }
+            set
+            {
+                SetPropertyValue<DateTime>("DateModified", ref fdatemodified, value);
+            }
+        }
+        protected override void OnSaving()
+        {
+            DateModified = DateTime.Now;
+            if (DateCreated == null) DateCreated = DateTime.Now;
+            base.OnSaving();
         }
         public Department(Session session) : base(session) { }
         //public department() : base(Session.DefaultSession) { }

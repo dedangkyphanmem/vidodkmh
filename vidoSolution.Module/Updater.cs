@@ -85,25 +85,25 @@ namespace vidoSolution.Module
                 studentRole.Name = "Students";
             }
            
-            // Delete all permissions assigned to the Administrators and Users roles 
-          
-            while (adminRole.PersistentPermissions.Count > 0)
-            {
-                UOW.Delete(adminRole.PersistentPermissions[0]);
-            }
-            while (userRole.PersistentPermissions.Count > 0)
-            {
-                UOW.Delete(userRole.PersistentPermissions[0]);
-            }
-            while (dataRole.PersistentPermissions.Count > 0)
-            {
-                UOW.Delete(dataRole.PersistentPermissions[0]);
-            }
-            while (studentRole.PersistentPermissions.Count > 0)
-            {
-                UOW.Delete(studentRole.PersistentPermissions[0]);
-            }
-            UOW.PurgeDeletedObjects();
+             //Delete all permissions assigned to the Administrators and Users roles 
+
+            //while (adminRole.PersistentPermissions.Count > 0)
+            //{
+            //    UOW.Delete(adminRole.PersistentPermissions[0]);
+            //}
+            //while (userRole.PersistentPermissions.Count > 0)
+            //{
+            //    UOW.Delete(userRole.PersistentPermissions[0]);
+            //}
+            //while (dataRole.PersistentPermissions.Count > 0)
+            //{
+            //    UOW.Delete(dataRole.PersistentPermissions[0]);
+            //}
+            //while (studentRole.PersistentPermissions.Count > 0)
+            //{
+            //    UOW.Delete(studentRole.PersistentPermissions[0]);
+            //}
+            //UOW.PurgeDeletedObjects();
             
 
             // Allow full access to all objects to the Administrators role 

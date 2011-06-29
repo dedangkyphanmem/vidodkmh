@@ -19,7 +19,12 @@ namespace vidoSolution.Module.DomainObject
     {
         public AccountTransactionFile(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
-
+        protected override void OnSaving()
+        {
+            
+            if (CreateDate == null) CreateDate = DateTime.Now;
+            base.OnSaving();
+        }
         FileData csvFile;
         public FileData CsvFile
         {
@@ -51,11 +56,11 @@ namespace vidoSolution.Module.DomainObject
             get { return link; }
             set { SetPropertyValue("ResultLink", ref link, value); }
         }
-        DateTime createDate;
-        public DateTime CreateDate
+        DateTime? createDate=null;
+        public DateTime? CreateDate
         {
             get { return createDate; }
-            set { if (createDate == null) SetPropertyValue("CreateDate", ref createDate, DateTime.Now); }
+            set {  SetPropertyValue<DateTime?>("CreateDate", ref createDate, value); }
         }
         Semester semester;
         [Association("Semester-AccountTransactionFiles")]

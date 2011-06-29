@@ -624,7 +624,7 @@ namespace vidoSolution.Module.Web
                         result = ruleSet.ValidateTarget(regdetail, DefaultContexts.Save);
                         if (ValidationState.Invalid ==
                             result.GetResultItem("RegisterDetail.StudentRegLessonSemester").State)
-                        {                            
+                        {
                             regdetail.Delete();
                             selectcredits -= curLesson.Subject.Credit;
                             selectsubject--;
@@ -910,7 +910,7 @@ namespace vidoSolution.Module.Web
 
                     ms = objectSpace.CreateObject<PopUpMessage>();
                     ms.Title = "Thực hiện đăng ký thành công";
-                    ms.Message = string.Format("Bạn đã chọn đăng ký {0} tín chí, với số tiền {1} cho {2} nhóm lớp MH", numcredits, sumTuitionFee, ((ListView)View).SelectedObjects.Count);
+                    ms.Message = string.Format("Bạn đã chọn đăng ký {0} tín chí, với số tiền {1:0,0} cho {2} nhóm lớp MH", numcredits, sumTuitionFee, ((ListView)View).SelectedObjects.Count);
                     ms.Message += "\r\n Vui lòng xem kết quả giao dịch học phí và thực hiện xác nhận ";
                     IsInConfirmTime((Student)SecuritySystem.CurrentUser);
                     ms.Message += string.Format("\r\n từ ngày {0:dd/MM/yyyy} đến ngày {1:dd/MM/yyyy}!!!", StartConfirmDate, EndConfirmDate);
@@ -921,7 +921,9 @@ namespace vidoSolution.Module.Web
                     e.ShowViewParameters.CreatedView.Caption = "Thông báo";
                     dc = Application.CreateController<DialogController>();
                     e.ShowViewParameters.Controllers.Add(dc);
-
+                    dc.Accepting += new EventHandler<DialogControllerAcceptingEventArgs>(dc_Book_Accepting);
+                    dc.AcceptAction.Caption = "In kết quả & Đóng";
+                    dc.CancelAction.Active.SetItemValue("object", false);
                     dc.SaveOnAccept = false;
                     #endregion
 
@@ -936,7 +938,7 @@ namespace vidoSolution.Module.Web
                     string semesterName = "";
                     foreach (RegisterDetail regDetail in View.SelectedObjects)
                     {
-
+                        
                         if (!studentnumcredits.ContainsKey(regDetail.Student.StudentCode))
                         {
                             studentnumcredits.Add(regDetail.Student.StudentCode, 0);
@@ -974,6 +976,7 @@ namespace vidoSolution.Module.Web
                                 regDetail.Lesson.NumRegistration++;
                             }
                         }
+                       
                     }
                     int numstudent = 0;
                     double credit = 0;
@@ -1031,6 +1034,50 @@ namespace vidoSolution.Module.Web
                     dc.CancelAction.Caption = "Đóng";
                     dc.SaveOnAccept = false;
                 }
+            }
+        }
+
+        void dc_Book_Accepting(object sender, DialogControllerAcceptingEventArgs e)
+        {
+            Controller controller = sender as Controller;
+            ObjectSpace objectSpace = Application.CreateObjectSpace();
+            ReportData rd = objectSpace.FindObject<ReportData>(
+                new BinaryOperator("Name", "Kết quả ĐK 1 SV"));
+            if (rd != null)
+            {
+                XafReport report = rd.LoadXtraReport(objectSpace);
+
+                CriteriaOperator criteriaOperator = CriteriaOperator.TryParse(
+                        String.Format("[Student.Oid] = '{0}'", SecuritySystem.CurrentUserId));
+                Student stud = objectSpace.FindObject<Student>(CriteriaOperator.TryParse(
+                        String.Format("[Oid] = '{0}'", SecuritySystem.CurrentUserId)));
+
+                //Frame.GetController<ReportServiceController>().ShowPreview((IReportData)rd, criteriaOperator);
+                report.Filtering.Filter = criteriaOperator.ToString();
+                MemoryStream stream = new MemoryStream();
+                report.ExportToPdf(stream);
+
+                if (HttpContext.Current != null)
+                {
+
+
+                    byte[] buffer = stream.GetBuffer();
+                    string contentType = "application/pdf";
+                    string contentDisposition = "attachment; filename=KQDK_" + stud.StudentCode + ".pdf";
+                    HttpContext.Current.Response.Clear();
+                    HttpContext.Current.Response.Buffer = false;
+                    HttpContext.Current.Response.AppendHeader("Content-Type", contentType);
+                    HttpContext.Current.Response.AppendHeader("Content-Transfer-Encoding", "binary");
+                    HttpContext.Current.Response.AppendHeader("Content-Disposition", contentDisposition);
+                    HttpContext.Current.Response.BinaryWrite(buffer);
+                    HttpContext.Current.Response.End();
+                }
+                else
+                {
+                    report.ShowPreview();
+                }
+                controller.Dispose();
+
             }
         }
 

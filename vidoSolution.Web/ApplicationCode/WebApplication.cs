@@ -20,7 +20,7 @@ namespace vidoSolution.Web
         private DevExpress.ExpressApp.Reports.Web.ReportsAspNetModule reportsAspNetModule1;
         private DevExpress.ExpressApp.Reports.ReportsModule reportsModule1;
         private DevExpress.ExpressApp.Validation.ValidationModule module5;
-
+        private DevExpress.ExpressApp.AuditTrail.AuditTrailModule auditTrailModule1;
         public vidoSolutionAspNetApplication()
         {
             InitializeComponent();
@@ -75,6 +75,8 @@ namespace vidoSolution.Web
             this.fileAttachmentsAspNetModule1 = new DevExpress.ExpressApp.FileAttachments.Web.FileAttachmentsAspNetModule();
             this.reportsAspNetModule1 = new DevExpress.ExpressApp.Reports.Web.ReportsAspNetModule();
             this.reportsModule1 = new DevExpress.ExpressApp.Reports.ReportsModule();
+            this.auditTrailModule1 = new DevExpress.ExpressApp.AuditTrail.AuditTrailModule();
+
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // module5
@@ -117,6 +119,8 @@ namespace vidoSolution.Web
             this.Modules.Add(this.securityModule1);
             this.Modules.Add(this.reportsModule1);
             this.Modules.Add(this.reportsAspNetModule1);
+            this.Modules.Add(this.auditTrailModule1);
+
             this.ResourcesExportedToModel.Add(typeof(DevExpress.ExpressApp.Web.Localization.ASPxGridViewControlLocalizer));
             this.ResourcesExportedToModel.Add(typeof(DevExpress.ExpressApp.Web.Localization.ASPxGridViewResourceLocalizer));
             this.ResourcesExportedToModel.Add(typeof(DevExpress.ExpressApp.Web.Localization.ASPxEditorsResourceLocalizer));

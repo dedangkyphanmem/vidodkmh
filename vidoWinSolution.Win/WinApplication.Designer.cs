@@ -38,6 +38,7 @@ namespace vidoSolution.Win {
             this.fileAttachmentsWindowsFormsModule1 = new DevExpress.ExpressApp.FileAttachments.Win.FileAttachmentsWindowsFormsModule();
             this.reportsWindowsFormsModule1 = new DevExpress.ExpressApp.Reports.Win.ReportsWindowsFormsModule();
             this.reportsModule1 = new DevExpress.ExpressApp.Reports.ReportsModule();
+            this.auditTrailModule1 = new DevExpress.ExpressApp.AuditTrail.AuditTrailModule();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // module5
@@ -80,6 +81,7 @@ namespace vidoSolution.Win {
             this.Modules.Add(this.fileAttachmentsWindowsFormsModule1);
             this.Modules.Add(this.reportsModule1);
             this.Modules.Add(this.reportsWindowsFormsModule1);
+            this.Modules.Add(this.auditTrailModule1);
             this.Security = this.securityComplex1;
             this.DatabaseVersionMismatch += new System.EventHandler<DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs>(this.vidoWinSolutionWindowsFormsApplication_DatabaseVersionMismatch);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -103,5 +105,6 @@ namespace vidoSolution.Win {
         private DevExpress.ExpressApp.FileAttachments.Win.FileAttachmentsWindowsFormsModule fileAttachmentsWindowsFormsModule1;
         private DevExpress.ExpressApp.Reports.Win.ReportsWindowsFormsModule reportsWindowsFormsModule1;
         private DevExpress.ExpressApp.Reports.ReportsModule reportsModule1;
+        private DevExpress.ExpressApp.AuditTrail.AuditTrailModule auditTrailModule1;
     }
 }

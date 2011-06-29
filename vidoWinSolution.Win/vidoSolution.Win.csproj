@@ -71,6 +71,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=863746bef25f7c37, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.EasyTest.WinAdapter.v10.1">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>

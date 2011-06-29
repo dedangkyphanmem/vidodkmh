@@ -63,6 +63,8 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.Design.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=863746bef25f7c37, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=863746bef25f7c37, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.FileAttachment.Web.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=863746bef25f7c37, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -112,10 +114,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Web.ASPxGridView.v10.1">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DevExpress.Web.ASPxThemes.v10.1">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
@@ -188,6 +186,125 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Aqua\Xaf\ULbarC.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtButtonBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtButtonBackDis.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtButtonCheckedBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtButtonHoverBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtButtonPressedBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtCalendarButtonHoverBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtCalendarButtonPressedBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtCalendarFooterBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtCalendarHeaderBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtDropDownBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtDropDownBackDis.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtDropDownButtonHoverBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtDropDownButtonPressedBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtProgressBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtProgressIndicatorBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtProgressPositionBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtSpinDecBtnBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtSpinDecButtonHoverBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtSpinDecButtonPressedBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtSpinIncBtnBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtSpinIncButtonHoverBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\edtSpinIncButtonPressedBack.gif" />
+    <Content Include="App_Themes\Vido\Editors\lbHeaderBackground.gif" />
+    <Content Include="App_Themes\Vido\Editors\Loading.gif" />
+    <Content Include="App_Themes\Vido\Editors\sprite.css" />
+    <Content Include="App_Themes\Vido\Editors\spriteEditor.gif" />
+    <Content Include="App_Themes\Vido\Editors\spriteEditor.png" />
+    <Content Include="App_Themes\Vido\Editors\styles.css" />
+    <Content Include="App_Themes\Vido\GridView\gvGroupPanelBackground.gif" />
+    <Content Include="App_Themes\Vido\GridView\gvHeaderBackground.gif" />
+    <Content Include="App_Themes\Vido\GridView\gvLoadingOnStatusBar.gif" />
+    <Content Include="App_Themes\Vido\GridView\gvPagerBottomPanelBackground.gif" />
+    <Content Include="App_Themes\Vido\GridView\Loading.gif" />
+    <Content Include="App_Themes\Vido\GridView\sprite.css" />
+    <Content Include="App_Themes\Vido\GridView\spriteGrid.gif" />
+    <Content Include="App_Themes\Vido\GridView\spriteGrid.png" />
+    <Content Include="App_Themes\Vido\GridView\styles.css" />
+    <Content Include="App_Themes\Vido\HtmlEditor\Loading.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\RoundPanel\herpBottomEdge.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\RoundPanel\herpHeaderBackground.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\RoundPanel\herpHeaderLeftEdge.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\RoundPanel\herpHeaderRightEdge.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\RoundPanel\herpLeftEdge.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\RoundPanel\herpNoHeaderTopEdge.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\RoundPanel\herpRightEdge.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\RoundPanel\herpTopEdge.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\sprite.css" />
+    <Content Include="App_Themes\Vido\HtmlEditor\spriteHtml.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\spriteHtml.png" />
+    <Content Include="App_Themes\Vido\HtmlEditor\styles.css" />
+    <Content Include="App_Themes\Vido\HtmlEditor\tbBack.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\tbItemBack.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\tbItemHBack.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\tbItemSBack.gif" />
+    <Content Include="App_Themes\Vido\HtmlEditor\tbSeparator.gif" />
+    <Content Include="App_Themes\Vido\menubar.png" />
+    <Content Include="App_Themes\Vido\menubar_hover.png" />
+    <Content Include="App_Themes\Vido\Web\dxpcFooterBack.gif" />
+    <Content Include="App_Themes\Vido\Web\hackvido.png" />
+    <Content Include="App_Themes\Vido\Web\Loading.gif" />
+    <Content Include="App_Themes\Vido\Web\mBack.gif" />
+    <Content Include="App_Themes\Vido\Web\mGutter.gif" />
+    <Content Include="App_Themes\Vido\Web\mGutterRightBorder.gif" />
+    <Content Include="App_Themes\Vido\Web\mItemBack.gif" />
+    <Content Include="App_Themes\Vido\Web\mItemBackVido.gif" />
+    <Content Include="App_Themes\Vido\Web\mItemHBack.gif" />
+    <Content Include="App_Themes\Vido\Web\mItemHBackVido.gif" />
+    <Content Include="App_Themes\Vido\Web\mItemSBack.gif" />
+    <Content Include="App_Themes\Vido\Web\mSeparator.gif" />
+    <Content Include="App_Themes\Vido\Web\mVertBack.gif" />
+    <Content Include="App_Themes\Vido\Web\mVertHBack.gif" />
+    <Content Include="App_Themes\Vido\Web\mVerticalSeparator.gif" />
+    <Content Include="App_Themes\Vido\Web\mVertSBack.gif" />
+    <Content Include="App_Themes\Vido\Web\nbGroupHeaderBack.gif" />
+    <Content Include="App_Themes\Vido\Web\nbGroupHeaderBackVido.gif" />
+    <Content Include="App_Themes\Vido\Web\nbLoading.gif" />
+    <Content Include="App_Themes\Vido\Web\pcHeaderBack.gif" />
+    <Content Include="App_Themes\Vido\Web\pcModalBack.gif" />
+    <Content Include="App_Themes\Vido\Web\rcMapImage.png" />
+    <Content Include="App_Themes\Vido\Web\rpBottomEdge.gif" />
+    <Content Include="App_Themes\Vido\Web\rpHeaderBackground.gif" />
+    <Content Include="App_Themes\Vido\Web\rpHeaderLeftEdge.gif" />
+    <Content Include="App_Themes\Vido\Web\rpHeaderRightEdge.gif" />
+    <Content Include="App_Themes\Vido\Web\rpLeftEdge.gif" />
+    <Content Include="App_Themes\Vido\Web\rpNoHeaderTopEdge.gif" />
+    <Content Include="App_Themes\Vido\Web\rpRightEdge.gif" />
+    <Content Include="App_Themes\Vido\Web\rpTopEdge.gif" />
+    <Content Include="App_Themes\Vido\Web\splHSeparatorBackground.png" />
+    <Content Include="App_Themes\Vido\Web\splHSeparatorBackgroundHover.png" />
+    <Content Include="App_Themes\Vido\Web\splResizingPointer.gif" />
+    <Content Include="App_Themes\Vido\Web\splVSeparatorBackground.png" />
+    <Content Include="App_Themes\Vido\Web\splVSeparatorBackgroundHover.png" />
+    <Content Include="App_Themes\Vido\Web\sprite.css" />
+    <Content Include="App_Themes\Vido\Web\spriteWeb.gif" />
+    <Content Include="App_Themes\Vido\Web\spriteWeb.png" />
+    <Content Include="App_Themes\Vido\Web\spriteWeb1.gif" />
+    <Content Include="App_Themes\Vido\Web\spriteWeb1.png" />
+    <Content Include="App_Themes\Vido\Web\styles.css" />
+    <Content Include="App_Themes\Vido\Web\tcTabBottomBack.gif" />
+    <Content Include="App_Themes\Vido\Web\tcTabBottomHottrackedBack.gif" />
+    <Content Include="App_Themes\Vido\Web\tcTabLeftBack.gif" />
+    <Content Include="App_Themes\Vido\Web\tcTabLeftHottrackedBack.gif" />
+    <Content Include="App_Themes\Vido\Web\tcTabRightBack.gif" />
+    <Content Include="App_Themes\Vido\Web\tcTabRightHottrackedBack.gif" />
+    <Content Include="App_Themes\Vido\Web\tcTabTopBack.gif" />
+    <Content Include="App_Themes\Vido\Web\tcTabTopHottrackedBack.gif" />
+    <Content Include="App_Themes\Vido\Web\ucProgressBack.gif" />
+    <Content Include="App_Themes\Vido\Web\ucProgressIndicatorBack.gif" />
+    <Content Include="App_Themes\Vido\Xaf\background.jpg" />
+    <Content Include="App_Themes\Vido\Xaf\BackgroundRepeat.gif" />
+    <Content Include="App_Themes\Vido\Xaf\BgWhite.gif" />
+    <Content Include="App_Themes\Vido\Xaf\DialogBackImage.jpg" />
+    <Content Include="App_Themes\Vido\Xaf\DialogBackRepeat.gif" />
+    <Content Include="App_Themes\Vido\Xaf\Logo.gif" />
+    <Content Include="App_Themes\Vido\Xaf\Logo.png" />
+    <Content Include="App_Themes\Vido\Xaf\LogoSmall.png" />
+    <Content Include="App_Themes\Vido\Xaf\styles_xaf.css" />
+    <Content Include="App_Themes\Vido\Xaf\template.css" />
+    <Content Include="App_Themes\Vido\Xaf\ULbarC.gif" />
     <Content Include="Default.asp" />
     <Content Include="DefaultHorizontal.aspx" />
     <Content Include="Dialog.aspx" />
@@ -399,6 +516,49 @@
     <Content Include="App_Themes\Aqua\ReportViewer.skin" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\Vido\ASPxButton.skin" />
+    <Content Include="App_Themes\Vido\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Vido\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Vido\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Vido\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\Vido\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Vido\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Vido\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Vido\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Vido\ASPxDataView.skin" />
+    <Content Include="App_Themes\Vido\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Vido\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Vido\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Vido\ASPxGridView.skin" />
+    <Content Include="App_Themes\Vido\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Vido\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Vido\ASPxLabel.skin" />
+    <Content Include="App_Themes\Vido\ASPxListBox.skin" />
+    <Content Include="App_Themes\Vido\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Vido\ASPxMemo.skin" />
+    <Content Include="App_Themes\Vido\ASPxMenu.skin" />
+    <Content Include="App_Themes\Vido\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Vido\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Vido\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Vido\ASPxPager.skin" />
+    <Content Include="App_Themes\Vido\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Vido\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Vido\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Vido\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Vido\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Vido\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Vido\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Vido\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Vido\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Vido\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Vido\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Vido\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Vido\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Vido\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\Vido\ASPxTreeList.skin" />
+    <None Include="App_Themes\Vido\Editors.rar" />
+    <Content Include="App_Themes\Vido\ReportToolbar.skin" />
+    <Content Include="App_Themes\Vido\ReportViewer.skin" />
     <None Include="huong dan\hddkmh_files\themedata.thmx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -81,11 +81,11 @@ namespace vidoSolution.Module.DomainObject
             set { SetPropertyValue<bool>("ischange", ref fischange, value); }
         }
 
-        DateTime fdatecreated = DateTime.MinValue;
-        public DateTime DateCreated
+        DateTime? fdatecreated=null;
+        public DateTime? DateCreated
         {
             get { return fdatecreated; }
-            set { SetPropertyValue<DateTime>("DateCreated", ref fdatecreated, value); }
+            set { SetPropertyValue<DateTime?>("DateCreated", ref fdatecreated, value); }
         }
         DateTime fdatemodified;
         public DateTime DateModified
@@ -111,6 +111,12 @@ namespace vidoSolution.Module.DomainObject
         public RegisterDetail(Session session) : base(session) { }
       
         public override void AfterConstruction() { base.AfterConstruction(); }
+        protected  override void OnSaving()
+        {
+            DateModified = DateTime.Now;
+            if (DateCreated == null) DateCreated = DateTime.Now;
+            base.OnSaving();
+        }
     }
 
 }

@@ -75,8 +75,8 @@ namespace vidoSolution.Module.DomainObject
             get { return fImportDescription; }
             set { SetPropertyValue<string>("ImportDescription", ref fImportDescription, value); }
         }
-        DateTime fdatecreated;
-        public DateTime DateCreated
+        DateTime? fdatecreated=null;
+        public DateTime? DateCreated
         {
             get
             {
@@ -84,10 +84,10 @@ namespace vidoSolution.Module.DomainObject
             }
             set
             {
-                SetPropertyValue<DateTime>("DateCreated", ref fdatecreated, value);
+                SetPropertyValue<DateTime?>("DateCreated", ref fdatecreated, value);
             }
         }
-        DateTime fdatemodified= DateTime.MinValue;
+        DateTime fdatemodified;
         public DateTime DateModified
         {
             get
@@ -101,6 +101,12 @@ namespace vidoSolution.Module.DomainObject
         }
         public AccountTransaction(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
+        protected override void OnSaving()
+        {
+            DateModified = DateTime.Now;
+            if (DateCreated == null) DateCreated = DateTime.Now;
+            base.OnSaving();
+        }
     }
 
 }
