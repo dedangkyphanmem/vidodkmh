@@ -2,7 +2,12 @@
 <Application>
   <ActionDesign Id="ActionDesign">
     <Actions Id="Actions">
-      <Action Id="StudentFile.ImportStudent" Caption="Import Sinh viên" />
+      <Action Id="ViewDtailTimetable" Index="6" />
     </Actions>
+    <ActionToContainerMapping Id="ActionToContainerMapping">
+      <ActionContainer Id="View">
+        <ActionLink ActionId="ViewDtailTimetable" Index="7" />
+      </ActionContainer>
+    </ActionToContainerMapping>
   </ActionDesign>
 </Application>

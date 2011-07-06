@@ -73,11 +73,6 @@ namespace vidoSolution.Module
             CancelRegister.Active.SetItemValue(
                  "ObjectType", showRegister);
            
-
-            ViewDetailLessonTimetable.Active.SetItemValue(
-                                "ObjectType", ((ListView)View).ObjectTypeInfo.Type == typeof(Lesson) ||
-                                ((ListView)View).ObjectTypeInfo.Type == typeof(RegisterDetail));
-            
             CalculateFeeForLesson.Active.SetItemValue(
                    "ObjectType", false);
 
@@ -507,85 +502,85 @@ namespace vidoSolution.Module
 
             }
         }
-     
-        private void ViewDetailLessonTimetable_CustomizePopupWindowParams(object sender, CustomizePopupWindowParamsEventArgs e)
-        {
-            if (((ListView)View).ObjectTypeInfo.Type == typeof(RegisterDetail))
-            {
-                ListEditor listEditor = ((ListView)View).Editor as ListEditor;
+         
+        //private void ViewDetailLessonTimetable_CustomizePopupWindowParams(object sender, CustomizePopupWindowParamsEventArgs e)
+        //{
+        //    if (((ListView)View).ObjectTypeInfo.Type == typeof(RegisterDetail))
+        //    {
+        //        ListEditor listEditor = ((ListView)View).Editor as ListEditor;
 
-                ObjectSpace objectSpace = Application.CreateObjectSpace();
-                CollectionSource collectionSource =
-                    new CollectionSource(objectSpace, typeof(TkbSemester));
-                if ((collectionSource.Collection as XPCollection) != null)
-                {
-                    ((XPCollection)collectionSource.Collection).LoadingEnabled = false;
-                }
+        //        ObjectSpace objectSpace = Application.CreateObjectSpace();
+        //        CollectionSource collectionSource =
+        //            new CollectionSource(objectSpace, typeof(TkbSemester));
+        //        if ((collectionSource.Collection as XPCollection) != null)
+        //        {
+        //            ((XPCollection)collectionSource.Collection).LoadingEnabled = false;
+        //        }
 
-                if (listEditor != null)
-                {
-                    foreach (RegisterDetail regDetail in View.SelectedObjects)
-                    {
-                        foreach (TkbSemester tkbsem in regDetail.Lesson.TKBSemesters)
-                        {
-                            TkbSemester lview = objectSpace.FindObject<TkbSemester>(
-                                new BinaryOperator("Oid", tkbsem.Oid));
-                            ((XPCollection)collectionSource.Collection).Add(lview);
-                        }
-                    }
-                    ListView view = Application.CreateListView(
-                        Application.GetListViewId(typeof(TkbSemester)),
-                        collectionSource, true);
-                    view.Editor.AllowEdit = false;
-
-
-                    e.View = view;
-                    e.DialogController.SaveOnAccept = false;
-                }
-            }
-            else if (((ListView)View).ObjectTypeInfo.Type == typeof(Lesson))
-            {
-                ListEditor listEditor = ((ListView)View).Editor as ListEditor;
-
-                ObjectSpace objectSpace = Application.CreateObjectSpace();
-                CollectionSource collectionSource =
-                    new CollectionSource(objectSpace, typeof(TkbSemester));
-                if ((collectionSource.Collection as XPCollection) != null)
-                {
-                    ((XPCollection)collectionSource.Collection).LoadingEnabled = false;
-                }
-
-                if (listEditor != null)
-                {
-
-                    foreach (Lesson lesson in ((ProxyCollection)((ListView)View).CollectionSource.Collection))
-                    {
-
-                        foreach (TkbSemester tkbsem in lesson.TKBSemesters)
-                        {
-                            TkbSemester lview = objectSpace.FindObject<TkbSemester>(
-                                new BinaryOperator("Oid", tkbsem.Oid));
-
-                            ((XPCollection)collectionSource.Collection).Add(lview);
-                        }
-                    }
-                    ListView view = Application.CreateListView(
-                        Application.GetListViewId(typeof(TkbSemester)),
-                        collectionSource, false);
-                    view.Editor.AllowEdit = false;
+        //        if (listEditor != null)
+        //        {
+        //            foreach (RegisterDetail regDetail in View.SelectedObjects)
+        //            {
+        //                foreach (TkbSemester tkbsem in regDetail.Lesson.TKBSemesters)
+        //                {
+        //                    TkbSemester lview = objectSpace.FindObject<TkbSemester>(
+        //                        new BinaryOperator("Oid", tkbsem.Oid));
+        //                    ((XPCollection)collectionSource.Collection).Add(lview);
+        //                }
+        //            }
+        //            ListView view = Application.CreateListView(
+        //                Application.GetListViewId(typeof(TkbSemester)),
+        //                collectionSource, true);
+        //            view.Editor.AllowEdit = false;
 
 
-                    //ASPxGridListEditor gc = (ASPxGridListEditor)view.Editor;
-                    //gc.ControlsCreated += new EventHandler(gc_ControlsCreated);
-                    e.View = view;
-                    e.DialogController.SaveOnAccept = false;
+        //            e.View = view;
+        //            e.DialogController.SaveOnAccept = false;
+        //        }
+        //    }
+        //    else if (((ListView)View).ObjectTypeInfo.Type == typeof(Lesson))
+        //    {
+        //        ListEditor listEditor = ((ListView)View).Editor as ListEditor;
 
-                }
+        //        ObjectSpace objectSpace = Application.CreateObjectSpace();
+        //        CollectionSource collectionSource =
+        //            new CollectionSource(objectSpace, typeof(TkbSemester));
+        //        if ((collectionSource.Collection as XPCollection) != null)
+        //        {
+        //            ((XPCollection)collectionSource.Collection).LoadingEnabled = false;
+        //        }
+
+        //        if (listEditor != null)
+        //        {
+
+        //            foreach (Lesson lesson in ((ProxyCollection)((ListView)View).CollectionSource.Collection))
+        //            {
+
+        //                foreach (TkbSemester tkbsem in lesson.TKBSemesters)
+        //                {
+        //                    TkbSemester lview = objectSpace.FindObject<TkbSemester>(
+        //                        new BinaryOperator("Oid", tkbsem.Oid));
+
+        //                    ((XPCollection)collectionSource.Collection).Add(lview);
+        //                }
+        //            }
+        //            ListView view = Application.CreateListView(
+        //                Application.GetListViewId(typeof(TkbSemester)),
+        //                collectionSource, false);
+        //            view.Editor.AllowEdit = false;
 
 
-            }
+        //            //ASPxGridListEditor gc = (ASPxGridListEditor)view.Editor;
+        //            //gc.ControlsCreated += new EventHandler(gc_ControlsCreated);
+        //            e.View = view;
+        //            e.DialogController.SaveOnAccept = false;
 
-        }
+        //        }
+
+
+        //    }
+
+        //}
 
         Dictionary<string, List<string>> dicStudentRegDetail;
         List<Vacancy> listVacancies;
@@ -667,6 +662,8 @@ namespace vidoSolution.Module
                                         if (!errorstudent[currentStudent.StudentCode].Contains(curLesson.Subject.SubjectCode))
                                             errorstudent[currentStudent.StudentCode].Add(curLesson.Subject.SubjectCode + "{D}");
                                         regdetail.Delete();
+                                        //regdetail.Reload();
+                                        
                                     }
                                     else
                                     {

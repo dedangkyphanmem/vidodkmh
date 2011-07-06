@@ -29,11 +29,29 @@ namespace vidoSolution.Module.Web
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            
             this.ConfirmRegister = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             this.BookRegister = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             this.ExportRegister = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             this.SelectRegister = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
-           
+            this.PrintRegister = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
+            // 
+            // PrintRegister
+            // 
+            this.PrintRegister.Caption = "Print Register";
+            this.PrintRegister.Category = "View";
+            this.PrintRegister.ConfirmationMessage = null;
+            this.PrintRegister.Id = "PrintRegister";
+            this.PrintRegister.ImageName = null;
+            this.PrintRegister.Shortcut = null;
+            this.PrintRegister.Tag = null;
+            this.PrintRegister.TargetObjectsCriteria = null;
+            this.PrintRegister.TargetViewId = null;
+            this.PrintRegister.TargetViewType = DevExpress.ExpressApp.ViewType.ListView;
+            this.PrintRegister.ToolTip = null;
+            this.PrintRegister.TypeOfView = typeof(DevExpress.ExpressApp.ListView);
+            this.PrintRegister.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.PrintRegister_Execute);
+
             // 
             // ConfirmRegister
             // 
@@ -113,6 +131,7 @@ namespace vidoSolution.Module.Web
         private DevExpress.ExpressApp.Actions.SimpleAction ExportRegister;
         private DevExpress.ExpressApp.Actions.SimpleAction ConfirmRegister;
         private DevExpress.ExpressApp.Actions.SimpleAction SelectRegister;
+        private DevExpress.ExpressApp.Actions.SimpleAction PrintRegister;
         
         #endregion
     }

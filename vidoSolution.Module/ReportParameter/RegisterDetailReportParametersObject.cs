@@ -13,7 +13,7 @@ using vidoSolution.Module.DomainObject;
 
 namespace vidoSolution.Module.ReportParameter
 {
-    [NonPersistent]
+    [NonPersistent]    
     public class RegisterDetailReportParametersObject : ReportParametersObjectBase
     {
         public RegisterDetailReportParametersObject(Session session) : base(session) { }

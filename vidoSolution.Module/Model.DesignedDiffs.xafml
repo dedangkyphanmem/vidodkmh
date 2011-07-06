@@ -428,7 +428,6 @@
         <Member Name="CsvFile" Index="1" Caption="File Import" />
         <Member Name="Note" Index="2" Caption="Ghi chú" />
         <Member Name="IsImported" Caption="Đã import vào hệ thống" Index="3" AllowEdit="False" />
-        <Member Name="CreateDate" Caption="Ngày tạo" Index="4" DisplayFormat="{0:dd-MM-yyyy}" AllowEdit="False" />
       </OwnMembers>
     </Class>
     <Class Name="vidoSolution.Module.DomainObject.StudentClass" Caption="Lớp biên chế" DefaultListViewShowAutoFilterRow="True" DefaultListViewAllowEdit="True" DefaultListViewNewItemRowPosition="Top">
@@ -703,6 +702,16 @@
         <Member Name="Semester" Caption="NHHK" />
       </OwnMembers>
     </Class>
+    <Class Name="vidoSolution.Module.ReportParameter.LessonReportParametersObject">
+      <OwnMembers>
+        <Member Name="Lesson" Caption="Nhóm lớp MH" />
+        <Member Name="SelectAllStudentClass" Caption="Không tách lớp" />
+        <Member Name="Semester" Caption="Học kỳ" />
+        <Member Name="ShowOnlyCheckedStudent" Caption="Chỉ in sinh viên đã kiểm tra" />
+        <Member Name="StudentClass" Caption="Chọn lớp biên chế" />
+        <Member Name="Subject" Caption="Môn học" />
+      </OwnMembers>
+    </Class>
     <Class Name="vidoSolution.Module.ReportParameter.OfficeReportParametersObject">
       <OwnMembers>
         <Member Name="Office" Caption="Cơ sở" />
@@ -936,7 +945,6 @@
     <ListView Id="AccountTransaction_ListView" AllowEdit="False" ShowAutoFilterRow="True" IsGroupPanelVisible="True" UseServerMode="True">
       <Columns>
         <ColumnInfo Id="DateCreated" IsNewNode="True" Removed="True" PropertyName="DateCreated" Index="-1" Width="70" />
-        <ColumnInfo Id="Name" Index="-1" SortOrder="None" />
         <ColumnInfo Id="Student" Index="-1" ImmediatePostData="True" />
         <ColumnInfo Id="Student.StudentCode" IsNewNode="True" PropertyName="Student.StudentCode" Index="0" AllowEdit="False" SortOrder="Ascending" />
         <ColumnInfo Id="Student.FirstName" IsNewNode="True" PropertyName="Student.FirstName" Index="1" AllowEdit="False" />
@@ -946,7 +954,8 @@
         <ColumnInfo Id="DateModified" IsNewNode="True" Removed="True" PropertyName="DateModified" Index="5" Width="70" />
         <ColumnInfo Id="Description" Index="5" />
         <ColumnInfo Id="Semester" Index="6" SortOrder="Descending" />
-        <ColumnInfo Id="ImportDescription" Index="7" />
+        <ColumnInfo Id="Name" Index="7" SortOrder="None" AllowEdit="True" />
+        <ColumnInfo Id="ImportDescription" Index="8" />
       </Columns>
     </ListView>
     <DetailView Id="AccountTransactionFile_DetailView">
@@ -1386,11 +1395,11 @@
       <Layout>
         <LayoutGroup Id="Main">
           <LayoutGroup Id="SimpleEditors">
-            <LayoutGroup Id="LessonReportParametersObject">
-              <LayoutItem Id="Lesson.Semester.SemesterName" IsNewNode="True" Index="1" />
-              <LayoutItem Id="Lesson.Subject.SubjectCode" IsNewNode="True" Index="2" />
-              <LayoutItem Id="Lesson.Subject.SubjectName" IsNewNode="True" Index="3" />
-              <LayoutItem Id="Lesson.Subject.Credit" IsNewNode="True" Index="4" />
+            <LayoutGroup Id="LessonReportParametersObject" Direction="Vertical" Caption="Chọn nhóm lớp để in ">
+              <LayoutGroup Id="LessonReportParametersObject_col2">
+                <LayoutItem Id="ShowOnlyCheckedStudent" Index="0" />
+                <LayoutItem Id="StudentClass" Index="2" />
+              </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
         </LayoutGroup>
@@ -1611,7 +1620,7 @@
         <ColumnInfo Id="Lesson.Subject.SubjectName" IsNewNode="True" PropertyName="Lesson.Subject.SubjectName" Index="5" />
       </Columns>
     </ListView>
-    <DetailView Id="RegisterDetailReportParametersObject_DetailView">
+    <DetailView Id="RegisterDetailReportParametersObject_DetailView" Caption="Nhập thông tin cho báo biểu:">
       <Items>
         <PropertyEditor Id="Student" ImmediatePostData="True" />
         <PropertyEditor Id="Student.Birthday" IsNewNode="True" PropertyName="Student.Birthday" AllowEdit="False" />

@@ -9,6 +9,7 @@ using vidoSolution.Module.DomainObject;
 using DevExpress.ExpressApp.Reports;
 using DevExpress.ExpressApp;
 using System.Drawing;
+using vidoSolution.Module.ReportParameter;
 
 namespace vidoSolution.Module
 {
@@ -87,23 +88,23 @@ namespace vidoSolution.Module
            
              //Delete all permissions assigned to the Administrators and Users roles 
 
-            //while (adminRole.PersistentPermissions.Count > 0)
-            //{
-            //    UOW.Delete(adminRole.PersistentPermissions[0]);
-            //}
-            //while (userRole.PersistentPermissions.Count > 0)
-            //{
-            //    UOW.Delete(userRole.PersistentPermissions[0]);
-            //}
-            //while (dataRole.PersistentPermissions.Count > 0)
-            //{
-            //    UOW.Delete(dataRole.PersistentPermissions[0]);
-            //}
-            //while (studentRole.PersistentPermissions.Count > 0)
-            //{
-            //    UOW.Delete(studentRole.PersistentPermissions[0]);
-            //}
-            //UOW.PurgeDeletedObjects();
+            while (adminRole.PersistentPermissions.Count > 0)
+            {
+                UOW.Delete(adminRole.PersistentPermissions[0]);
+            }
+            while (userRole.PersistentPermissions.Count > 0)
+            {
+                UOW.Delete(userRole.PersistentPermissions[0]);
+            }
+            while (dataRole.PersistentPermissions.Count > 0)
+            {
+                UOW.Delete(dataRole.PersistentPermissions[0]);
+            }
+            while (studentRole.PersistentPermissions.Count > 0)
+            {
+                UOW.Delete(studentRole.PersistentPermissions[0]);
+            }
+            UOW.PurgeDeletedObjects();
             
 
             // Allow full access to all objects to the Administrators role 
@@ -151,15 +152,18 @@ namespace vidoSolution.Module
             
             //create report
             CreateReport("Bảng điểm nhóm MH");
+            CreateReport("Bảng điểm nhóm MH (tách lớp sv)");
             CreateReport("Bảng điểm nhóm MH (theo nhóm lớp)");
             CreateReport("Danh sách lớp biên chế");
             CreateReport("Danh sách sinh viên theo lớp");
             CreateReport("Điểm học kỳ");
+            CreateReport("Điểm học tập");
             CreateReport("Điểm tích lũy");
             CreateReport("DTBHKReport");
             CreateReport("Giao dịch học phí sinh viên");
             CreateReport("Kết quả ĐK 1 SV");
-            CreateReport("Kết quả ĐK tất cả SV");            
+            CreateReport("Kết quả ĐK tất cả SV");
+            CreateReport("Kết quả KT ĐK tất cả SV");
             CreateReport("Kết quả học tập");           
             CreateReport("Lịch giảng viên");
             CreateReport("Lịch lớp biên chế");
@@ -264,7 +268,7 @@ namespace vidoSolution.Module
             //studentRole.AddPermission(new ObjectAccessPermission(typeof(SubjectFile), ObjectAccess.ChangeAccess, ObjectAccessModifier.Deny));
             //studentRole.AddPermission(new ObjectAccessPermission(typeof(StudentResultFile), ObjectAccess.AllAccess ^ ObjectAccess.Navigate));
             //studentRole.AddPermission(new ObjectAccessPermission(typeof(StudentResultFile), ObjectAccess.ChangeAccess, ObjectAccessModifier.Deny));
-                      
+            studentRole.AddPermission(new ObjectAccessPermission(typeof(RegisterDetailReportParametersObject), ObjectAccess.AllAccess));                     
 
             studentRole.AddPermission(new EditModelPermission(ModelAccessModifier.Deny));
         }

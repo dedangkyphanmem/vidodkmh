@@ -30,6 +30,7 @@ using DevExpress.Web.ASPxHtmlEditor;
 using DevExpress.ExpressApp.Web.Editors.Standard;
 using DevExpress.ExpressApp.Web.SystemModule;
 using System.Collections;
+using vidoSolution.Module.ReportParameter;
 
 namespace vidoSolution.Module.Web
 {
@@ -138,6 +139,8 @@ namespace vidoSolution.Module.Web
 
             bool showRegister = (SecuritySystem.CurrentUser is Student) && ((ListView)View).ObjectTypeInfo.Type == typeof(RegisterDetail);
 
+            PrintRegister.Active.SetItemValue(
+              "ObjectType", showRegister);
             ConfirmRegister.Active.SetItemValue(
               "ObjectType", showRegister);
             SelectRegister.Active.SetItemValue(
@@ -157,6 +160,7 @@ namespace vidoSolution.Module.Web
                  "ObjectType", showRegister);
                 BookRegister.Active.SetItemValue(
                     "ObjectType", ((ListView)View).ObjectTypeInfo.Type == typeof(RegisterDetail));
+                
                
             }
 
@@ -1161,10 +1165,11 @@ namespace vidoSolution.Module.Web
                     i++;
                 }
                 View.ObjectSpace.CommitChanges();
-                ms.Message= string.Format("Đã chọn in kết quả đăng ký cho \"{0}\" Nhóm MH,\r\n(Có {1} nhóm MH đã được kiểm tra, xác nhận), \r\n Nhấn OK để in kết quả!", i, j);
+                ms.Message= string.Format("Đã xác nhận đăng ký cho \"{0}\" Nhóm MH,\r\n(Có {1} nhóm MH đã được kiểm tra, xác nhận), \r\n Vui lòng Nhấn In kết quả để xem chi tiết!", i, j);
                 ms.Title = "Kết quả xác nhận!";
-                dc.Accepting += dc_Accepting_Report;
-                dc.CancelAction.Caption = "Bỏ qua";
+                //dc.Accepting += dc_Accepting_Report;
+                dc.AcceptAction.Active.SetItemValue("object", false);
+                dc.CancelAction.Caption = "Đóng";
                 dc.SaveOnAccept = false;
                 
                 e.ShowViewParameters.CreatedView = Application.CreateDetailView(
@@ -1204,7 +1209,7 @@ namespace vidoSolution.Module.Web
 
         void dc_Accepting_Report(object sender, DialogControllerAcceptingEventArgs e)
         {
-            Controller controller = sender as Controller;
+           
             ObjectSpace objectSpace = Application.CreateObjectSpace();
             ReportData rd = objectSpace.FindObject<ReportData>(
                 new BinaryOperator("Name", "Kết quả ĐK 1 SV"));
@@ -1241,12 +1246,95 @@ namespace vidoSolution.Module.Web
                 {
                     report.ShowPreview();
                 }
-                controller.Dispose();
+                
 
             }
         }
 
-        //Dictionary<string, Dictionary<string, WeekReportData>> dicTeacherWeekData= new Dictionary<string,Dictionary<string,WeekReportData>>();
+        private void PrintRegister_Execute(object sender, SimpleActionExecuteEventArgs e)
+        {
+            ObjectSpace objectSpace = Application.CreateObjectSpace();
+            Student stud = objectSpace.FindObject<Student>(CriteriaOperator.TryParse(
+                        String.Format("[Oid] = '{0}'", SecuritySystem.CurrentUserId)));
+            ConstrainstParameter cpNHHK = objectSpace.FindObject<ConstrainstParameter>(
+                           new BinaryOperator("Code", "REGISTERSEMESTER"));
+            Semester semester =  objectSpace.FindObject<Semester>(new BinaryOperator("SemesterName", cpNHHK.Value));
+
+            RegisterDetailReportParametersObject rdrObj = objectSpace.CreateObject<RegisterDetailReportParametersObject>();
+            rdrObj.Student = stud;
+            rdrObj.Semester = semester; 
+            DetailView detailView = Application.CreateDetailView(objectSpace, rdrObj, true);
+            detailView.AllowEdit.SetItemValue("object",true);
+            detailView.ViewEditMode = ViewEditMode.Edit;
+            e.ShowViewParameters.CreatedView = detailView;
+            e.ShowViewParameters.TargetWindow = TargetWindow.NewModalWindow;
+            e.ShowViewParameters.CreateAllControllers = true;
+            //args.ShowViewParameters.Context = TemplateContext.View;
+            DialogController printRegisterReport = new DialogController();
+            e.ShowViewParameters.Controllers.Add(printRegisterReport);
+            printRegisterReport.Accepting += new EventHandler<DialogControllerAcceptingEventArgs>(printRegisterReport_Accepting);
+
+            printRegisterReport.AcceptAction.Caption = "Chọn";
+            printRegisterReport.CancelAction.Caption = "Bỏ qua";
+           
+
+
+            
+        }
+
+        void printRegisterReport_Accepting(object sender, DialogControllerAcceptingEventArgs e)
+        {
+           
+            DetailView detailView = ((DetailView)((WindowController)sender).Window.View);
+            ObjectSpace objectSpace = detailView.ObjectSpace;
+            RegisterDetailReportParametersObject rdrObj =  
+                (RegisterDetailReportParametersObject) detailView.CurrentObject;
+            ReportData rd = objectSpace.FindObject<ReportData>(
+                new BinaryOperator("Name", "Kết quả ĐK 1 SV"));
+
+            if (rd != null)
+            {
+                XafReport report = rd.LoadXtraReport(objectSpace);
+
+                //CriteriaOperator criteriaOperator = CriteriaOperator.TryParse(
+                //        String.Format("[Student.Oid] = '{0}'", SecuritySystem.CurrentUserId));
+                //Student stud = objectSpace.FindObject<Student>(CriteriaOperator.TryParse(
+                //        String.Format("[Oid] = '{0}'", SecuritySystem.CurrentUserId)));
+
+                //Frame.GetController<ReportServiceController>().ShowPreview((IReportData)rd, criteriaOperator);
+                report.SetFilteringObject(rdrObj);// = rdrObj.GetCriteria().ToString();//criteriaOperator.ToString();
+                MemoryStream stream = new MemoryStream();
+                report.ExportToPdf(stream);
+
+                if (HttpContext.Current != null)
+                {
+
+
+                    byte[] buffer = stream.GetBuffer();
+                    string contentType = "application/pdf";
+                    string contentDisposition = "attachment; filename=KQDK_" + rdrObj.Student.StudentCode + ".pdf";
+                    HttpContext.Current.Response.Clear();
+                    HttpContext.Current.Response.Buffer = false;
+                    HttpContext.Current.Response.AppendHeader("Content-Type", contentType);
+                    HttpContext.Current.Response.AppendHeader("Content-Transfer-Encoding", "binary");
+                    HttpContext.Current.Response.AppendHeader("Content-Disposition", contentDisposition);
+                    HttpContext.Current.Response.BinaryWrite(buffer);
+                    HttpContext.Current.Response.End();
+                }
+                else
+                {
+                    report.ShowPreview();
+                }
+
+            }
+            else
+            {
+                throw new UserFriendlyException("Không tìm thấy báo biểu phù hợp");
+            }
+        }
+      
+       
+         //Dictionary<string, Dictionary<string, WeekReportData>> dicTeacherWeekData= new Dictionary<string,Dictionary<string,WeekReportData>>();
         //private void ViewTeacherWeekTimeAction_Execute(object sender, SimpleActionExecuteEventArgs e)
         //{
 

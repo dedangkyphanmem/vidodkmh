@@ -390,6 +390,9 @@
     <EmbeddedResource Include="EmbeddedReports\Bảng điểm nhóm MH.repx" />
     <EmbeddedResource Include="EmbeddedReports\Điểm tích lũy.repx" />
     <EmbeddedResource Include="EmbeddedReports\DTBHKReport.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Bảng điểm nhóm MH %28tách lớp sv%29.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Kết quả KT ĐK tất cả SV.repx" />
+    <EmbeddedResource Include="EmbeddedReports\Điểm học tập.repx" />
     <None Include="Functional Tests\WebSample.ets" />
     <None Include="Properties\DataSources\vidoSolution.Module.DomainObject.StudentAccumulation.datasource" />
     <None Include="Properties\DataSources\vidoSolution.Module.DomainObject.WeekReportData.datasource" />

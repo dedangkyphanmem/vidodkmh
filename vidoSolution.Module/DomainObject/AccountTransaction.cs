@@ -37,10 +37,10 @@ namespace vidoSolution.Module.DomainObject
         public string Name
         {
             get { 
-                string str4LastCharsOid= Oid.ToString();
-                str4LastCharsOid =  str4LastCharsOid.Substring(str4LastCharsOid.Length-4,4); 
+                string str6LastCharsOid= Oid.ToString();
+                str6LastCharsOid =  str6LastCharsOid.Substring(str6LastCharsOid.Length-6,6); 
                 if (Student!=null)
-                    return String.Format("{0}-{1}-{2:ddMMyyyy}", Student.StudentCode, str4LastCharsOid, TransactingDate);
+                    return String.Format("{0}-{1}-{2:ddMMyy}", str6LastCharsOid, Student.StudentCode, TransactingDate);
                 return "";
             }
             

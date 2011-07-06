@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
-  <ActionDesign Id="ActionDesign">
-    <Actions Id="Actions">
-      <Action Id="StudentAccumulationFile.ImportStudentAccumulation" Caption="Import dữ liệu điểm tích lũy" ToolTip="Import dữ liệu điểm tích lũy vào hệ thống" />
-    </Actions>
-  </ActionDesign>
+  <BOModel Id="BOModel">
+    <Class Name="vidoSolution.Module.ReportParameter.LessonReportParametersObject">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="ShowOnlyPaidStudent" Caption="Chỉ in sinh viên không nợ học phí" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
 </Application>

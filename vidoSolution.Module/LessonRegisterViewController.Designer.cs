@@ -32,7 +32,7 @@
             this.CancelRegister = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             this.CheckRegister = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             this.CalculateFeeForLesson = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
-            this.ViewDetailLessonTimetable = new DevExpress.ExpressApp.Actions.PopupWindowShowAction(this.components);
+            //this.ViewDetailLessonTimetable = new DevExpress.ExpressApp.Actions.PopupWindowShowAction(this.components);
             this.DefaultRegisterAction = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             // 
             // CancelRegister
@@ -85,20 +85,21 @@
             // 
             // ViewDetailLessonTimetable
             // 
-            this.ViewDetailLessonTimetable.AcceptButtonCaption = null;
-            this.ViewDetailLessonTimetable.CancelButtonCaption = null;
-            this.ViewDetailLessonTimetable.Caption = "Xem lịch";
-            this.ViewDetailLessonTimetable.Category = "View";
-            this.ViewDetailLessonTimetable.ConfirmationMessage = null;
-            this.ViewDetailLessonTimetable.Id = "ViewDtailTimetable";
-            this.ViewDetailLessonTimetable.ImageName = null;
-            this.ViewDetailLessonTimetable.Shortcut = null;
-            this.ViewDetailLessonTimetable.Tag = null;
-            this.ViewDetailLessonTimetable.TargetObjectsCriteria = null;
-            this.ViewDetailLessonTimetable.TargetViewId = null;
-            this.ViewDetailLessonTimetable.ToolTip = null;
-            this.ViewDetailLessonTimetable.TypeOfView = null;
-            this.ViewDetailLessonTimetable.CustomizePopupWindowParams += new DevExpress.ExpressApp.Actions.CustomizePopupWindowParamsEventHandler(this.ViewDetailLessonTimetable_CustomizePopupWindowParams);
+            //this.ViewDetailLessonTimetable.AcceptButtonCaption = null;
+            //this.ViewDetailLessonTimetable.CancelButtonCaption = null;
+            //this.ViewDetailLessonTimetable.Caption = "Xem lịch";
+            //this.ViewDetailLessonTimetable.Category = "View";
+            //this.ViewDetailLessonTimetable.ConfirmationMessage = null;
+            //this.ViewDetailLessonTimetable.Id = "ViewDtailTimetable";
+            //this.ViewDetailLessonTimetable.ImageName = null;
+            //this.ViewDetailLessonTimetable.Shortcut = null;
+            //this.ViewDetailLessonTimetable.Tag = null;
+            //this.ViewDetailLessonTimetable.TargetObjectsCriteria = null;
+            //this.ViewDetailLessonTimetable.TargetViewId = null;
+            //this.ViewDetailLessonTimetable.ToolTip = null;
+            //this.ViewDetailLessonTimetable.TypeOfView = null;
+            //this.ViewDetailLessonTimetable.CustomizePopupWindowParams += new DevExpress.ExpressApp.Actions.CustomizePopupWindowParamsEventHandler(this.ViewDetailLessonTimetable_CustomizePopupWindowParams);
+                   
             // 
             // DefaultRegisterAction
             // 
@@ -128,11 +129,12 @@
 
         #endregion
         
-        private DevExpress.ExpressApp.Actions.PopupWindowShowAction ViewDetailLessonTimetable;
+        //private DevExpress.ExpressApp.Actions.PopupWindowShowAction ViewDetailLessonTimetable;
         private DevExpress.ExpressApp.Actions.SimpleAction CheckRegister;
         private DevExpress.ExpressApp.Actions.SimpleAction CancelRegister;
         private DevExpress.ExpressApp.Actions.SimpleAction CalculateFeeForLesson;
         private DevExpress.ExpressApp.Actions.SimpleAction DefaultRegisterAction;
+        
         
         
     }
