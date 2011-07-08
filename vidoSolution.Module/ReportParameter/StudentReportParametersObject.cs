@@ -31,6 +31,7 @@ namespace vidoSolution.Module.ReportParameter
 
         }
         Student  student ;
+         [RuleRequiredField("StudentReportParametersObject Student is Require!", "PreviewReport", "Student cannot be empty!")]
         public Student Student 
         {
             get { return student; }

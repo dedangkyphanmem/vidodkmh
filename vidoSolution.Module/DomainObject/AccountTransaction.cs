@@ -17,36 +17,51 @@ namespace vidoSolution.Module.DomainObject
     {
 
         Student fStudent;
+        [ImmediatePostData(true)]
         [Association("Student-AccountTransactions")]
         [RuleRequiredField("RuleRequiredField Student for AccountTransaction", DefaultContexts.Save)]
         public Student Student
         {
             get { return fStudent; }
-            set { SetPropertyValue<Student>("Student", ref fStudent, value); }
+            set
+            {
+                SetPropertyValue<Student>("Student", ref fStudent, value); 
+                //UpdateName();
+            }
         }
 
         Semester semester;
+        [ImmediatePostData(true)]
         [RuleRequiredField("RuleRequiredField Semester for AccountTransaction", DefaultContexts.Save)]
         [Association("Semester-AccountTransactions")]
         public Semester Semester
         {
             get { return semester; }
-            set { SetPropertyValue<Semester>("Semester", ref semester, value); }
+            set
+            {
+                SetPropertyValue<Semester>("Semester", ref semester, value); 
+                //UpdateName();
+            }
         }
 
+        [Persistent("Name")]
+        private string name;
+        
+        private void UpdateName()
+        {
+            string str6LastCharsOid = Oid.ToString();
+            str6LastCharsOid = str6LastCharsOid.Substring(str6LastCharsOid.Length - 6, 6);
+            name = String.Format("{0}-{1}-{2:yyMMdd}", str6LastCharsOid, Student != null ? Student.StudentCode :"", TransactingDate);
+           
+        }
+        [PersistentAlias("name")]
         public string Name
         {
-            get { 
-                string str6LastCharsOid= Oid.ToString();
-                str6LastCharsOid =  str6LastCharsOid.Substring(str6LastCharsOid.Length-6,6); 
-                if (Student!=null)
-                    return String.Format("{0}-{1}-{2:ddMMyy}", str6LastCharsOid, Student.StudentCode, TransactingDate);
-                return "";
-            }
+            get { return EvaluateAlias("Name").ToString(); }
             
         }
 
-        decimal fmoneyamount;
+        decimal fmoneyamount;       
         [RuleRequiredField("RuleRequiredField MoneyAmount for AccountTransaction", DefaultContexts.Save)]
         public decimal MoneyAmount
         {
@@ -55,11 +70,16 @@ namespace vidoSolution.Module.DomainObject
         }
 		
         DateTime ftransactingdate;
+        [ImmediatePostData(true)]
          [RuleRequiredField("RuleRequiredField TransactingDate for AccountTransaction", DefaultContexts.Save)]
         public DateTime TransactingDate
         {
             get { return ftransactingdate; }
-            set { SetPropertyValue<DateTime>("transactingdate", ref ftransactingdate, value); }
+            set
+            {
+                SetPropertyValue<DateTime>("transactingdate", ref ftransactingdate, value);
+                //UpdateName();
+            }
         }
         string fdescription;
         [Size(500)]
@@ -100,12 +120,22 @@ namespace vidoSolution.Module.DomainObject
             }
         }
         public AccountTransaction(Session session) : base(session) { }
-        public override void AfterConstruction() { base.AfterConstruction(); }
+        public override void AfterConstruction()
+        {
+            base.AfterConstruction();
+       //     UpdateName();
+        }
         protected override void OnSaving()
         {
             DateModified = DateTime.Now;
             if (DateCreated == null) DateCreated = DateTime.Now;
+            UpdateName();
             base.OnSaving();
+        }
+        protected override void OnLoaded()
+        {
+            base.OnLoaded();
+     //       UpdateName();
         }
     }
 

@@ -163,6 +163,7 @@ namespace vidoSolution.Module
             CreateReport("Giao dịch học phí sinh viên");
             CreateReport("Kết quả ĐK 1 SV");
             CreateReport("Kết quả ĐK tất cả SV");
+            CreateReport("Kết quả KT ĐK lớp biên chế");
             CreateReport("Kết quả KT ĐK tất cả SV");
             CreateReport("Kết quả học tập");           
             CreateReport("Lịch giảng viên");

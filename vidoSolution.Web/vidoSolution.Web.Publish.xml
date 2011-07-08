@@ -2,7 +2,7 @@
 <publishData>
   <publishProfile publishUrl="ftp://dkmh.vido.edu.vn/dkmh" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FTP" replaceMatchingFiles="True" userName="helpdesk" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnyV6+TodRke/AlUTEfGPXwAAAAACAAAAAAAQZgAAAAEAACAAAAApXCiAXh4wsS6WRORGNBl+HIdG5MlXxvci6WBYmO9+MgAAAAAOgAAAAAIAACAAAAC4W44EmCvu1CqNSdBZJUyQvHMwT7nM/fi1dHOc8KVCvSAAAABOZtVgTA+UErtk70ENK+zIi3ji6Pgx1QcfLyFZaDNy/kAAAADMK09FKDeryppZHC/YA7YAr9TGa1CxX92JlT+jlibME9LPUokWtxAhPe0ye5tmWIW1wfAYKLVNTGCTDv3ILFck" SelectedForPublish="True">
     <file relUrl="App_Themes/Vido/HtmlEditor/tbSeparator.gif" publishTime="10/12/2010 23:06:56" />
-    <file relUrl="App_Themes/Vido/Editors/edtCalendarButtonPressedBack.gif" publishTime="10/12/2010 23:06:56" />
+    <file relUrl="huong dan/hddkmh_files/image003.png" publishTime="02/14/2011 09:36:44" />
     <file relUrl="App_Themes/Vido/Web/tcTabRightBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/Editors/edtButtonBackDis.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="huong dan/hddkmh_files/image018.jpg" publishTime="02/14/2011 09:36:44" />
@@ -16,6 +16,7 @@
     <file relUrl="bin/DevExpress.ExpressApp.Validation.v10.1.pdb" publishTime="01/16/2011 00:20:08" />
     <file relUrl="App_Themes/Vido/Web/rpTopEdge.gif" publishTime="10/12/2010 23:06:58" />
     <file relUrl="Images/ButtonBkg.gif" publishTime="01/14/2011 17:59:08" />
+    <file relUrl="bin/ICSharpCode.SharpZipLib.dll" publishTime="01/18/2011 13:42:42" />
     <file relUrl="Images/SelectedCenterWhite.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="bin/DevExpress.EasyTest.v10.1.dll" publishTime="10/13/2010 12:07:55" />
     <file relUrl="App_Themes/Vido/Web/nbLoading.gif" publishTime="10/12/2010 23:06:56" />
@@ -26,43 +27,41 @@
     <file relUrl="bin/DevExpress.ExpressApp.Reports.Web.Design.v10.1.dll" publishTime="01/16/2011 00:20:50" />
     <file relUrl="App_Themes/Aqua/Xaf/BackgroundRepeat.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="App_Themes/Aqua/ASPxCloudControl.skin" publishTime="01/18/2011 13:55:14" />
+    <file relUrl="App_Themes/Vido/Web/Loading.gif" publishTime="10/12/2010 23:06:56" />
+    <file relUrl="huong dan/hddkmh_files/image005.png" publishTime="02/14/2011 09:36:44" />
     <file relUrl="App_Themes/Aqua/ASPxCheckBox.skin" publishTime="01/18/2011 13:55:14" />
     <file relUrl="App_Themes/Vido/Web/dxpcFooterBack.gif" publishTime="10/12/2010 23:06:56" />
-    <file relUrl="bin/vidoSolution.Module.dll" publishTime="07/06/2011 20:31:56" />
+    <file relUrl="bin/vidoSolution.Module.dll" publishTime="07/08/2011 22:08:43" />
     <file relUrl="App_Themes/Vido/HtmlEditor/tbItemSBack.gif" publishTime="10/12/2010 23:06:56" />
-    <file relUrl="huong dan/hddkmh_files/image015.png" publishTime="02/14/2011 09:36:44" />
+    <file relUrl="App_Themes/Vido/ASPxTabControl.skin" publishTime="05/20/2011 22:30:07" />
     <file relUrl="App_Themes/Vido/ASPxButtonEdit.skin" publishTime="05/20/2011 22:30:06" />
     <file relUrl="App_Themes/Vido/HtmlEditor/RoundPanel/herpLeftEdge.gif" publishTime="10/12/2010 23:06:58" />
     <file relUrl="App_Themes/Vido/ASPxFilterControl.skin" publishTime="05/20/2011 22:30:06" />
-    <file relUrl="App_Themes/Vido/HtmlEditor/RoundPanel/herpNoHeaderTopEdge.gif" publishTime="10/12/2010 23:06:58" />
     <file relUrl="App_Themes/Aqua/Xaf/Logo.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="huong dan/hddkmh_files/image021.png" publishTime="02/14/2011 09:36:45" />
     <file relUrl="App_Themes/Vido/Web/mItemBackVido.gif" publishTime="05/20/2011 23:56:27" />
     <file relUrl="App_Themes/Vido/Editors/spriteEditor.png" publishTime="10/12/2010 23:06:56" />
     <file relUrl="huong dan/hddkmh_files/image017.png" publishTime="02/14/2011 09:36:44" />
     <file relUrl="App_Themes/Vido/Editors/edtSpinIncButtonPressedBack.gif" publishTime="10/12/2010 23:06:56" />
-    <file relUrl="Web.config" publishTime="07/06/2011 20:31:18" />
+    <file relUrl="Web.config" publishTime="07/08/2011 21:54:22" />
     <file relUrl="App_Themes/Vido/ASPxPageControl.skin" publishTime="05/20/2011 22:30:07" />
     <file relUrl="App_Themes/Vido/HtmlEditor/Loading.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/HtmlEditor/tbItemHBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/Editors/edtProgressBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/Web/ucProgressIndicatorBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/ASPxRadioButton.skin" publishTime="05/20/2011 22:30:07" />
-    <file relUrl="huong dan/hddkmh_files/image005.png" publishTime="02/14/2011 09:36:44" />
+    <file relUrl="App_Themes/Vido/ASPxButton.skin" publishTime="05/20/2011 22:30:06" />
     <file relUrl="App_Themes/Vido/ASPxPopupControl.skin" publishTime="05/20/2011 22:30:07" />
     <file relUrl="bin/DevExpress.ExpressApp.Images.v10.1.dll" publishTime="01/16/2011 00:19:00" />
-    <file relUrl="App_Themes/Vido/Web/rcMapImage.png" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/ASPxCalendar.skin" publishTime="05/20/2011 22:30:06" />
     <file relUrl="App_Themes/Vido/ASPxSiteMapControl.skin" publishTime="05/20/2011 22:30:07" />
     <file relUrl="App_Themes/Aqua/ASPxTextBox.skin" publishTime="01/18/2011 13:55:16" />
-    <file relUrl="App_Themes/Aqua/ASPxLabel.skin" publishTime="01/18/2011 13:55:15" />
-    <file relUrl="NestedFrameControl.ascx" publishTime="02/21/2011 15:22:08" />
-    <file relUrl="App_Themes/Vido/Web/nbGroupHeaderBackVido.gif" publishTime="05/21/2011 00:09:02" />
-    <file relUrl="App_Themes/Aqua/ASPxLoadingPanel.skin" publishTime="01/18/2011 13:55:15" />
+    <file relUrl="App_Themes/Vido/Web/rcMapImage.png" publishTime="10/12/2010 23:06:56" />
     <file relUrl="bin/DevExpress.Data.v10.1.dll" publishTime="01/15/2011 23:43:01" />
     <file relUrl="App_Themes/Vido/Editors/edtProgressPositionBack.gif" publishTime="10/12/2010 23:06:58" />
     <file relUrl="App_Themes/Vido/Xaf/styles_xaf.css" publishTime="01/14/2011 17:59:08" />
     <file relUrl="huong dan/hddkmh_files/image020.jpg" publishTime="02/14/2011 09:36:45" />
+    <file relUrl="App_Themes/Vido/GridView/spriteGrid.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Aqua/Xaf/Logo.png" publishTime="01/14/2011 17:59:08" />
     <file relUrl="bin/DevExpress.Persistent.Base.v10.1.pdb" publishTime="01/16/2011 00:18:31" />
     <file relUrl="Images/banner.swf" publishTime="01/17/2011 12:54:58" />
@@ -72,33 +71,36 @@
     <file relUrl="App_Themes/Aqua/ASPxTabControl.skin" publishTime="01/18/2011 13:55:16" />
     <file relUrl="App_Themes/Vido/Web/spriteWeb.png" publishTime="10/12/2010 23:06:58" />
     <file relUrl="App_Themes/Vido/Web/spriteWeb.gif" publishTime="10/12/2010 23:06:58" />
+    <file relUrl="App_Themes/Aqua/Xaf/DialogBackImage.jpg" publishTime="01/14/2011 17:59:08" />
     <file relUrl="huong dan/hddkmh_files/image007.png" publishTime="02/14/2011 09:36:44" />
+    <file relUrl="App_Themes/Vido/ASPxRoundPanel.skin" publishTime="05/20/2011 22:30:07" />
     <file relUrl="App_Themes/Vido/Web/tcTabLeftBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="bin/DevExpress.Charts.v10.1.Core.dll" publishTime="01/15/2011 23:44:45" />
-    <file relUrl="bin/vidoSolution.Module.pdb" publishTime="07/06/2011 20:31:56" />
+    <file relUrl="bin/vidoSolution.Module.pdb" publishTime="07/08/2011 22:08:43" />
     <file relUrl="App_Themes/Vido/Editors/edtDropDownBackDis.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="bin/DevExpress.Web.ASPxGridView.v10.1.pdb" publishTime="01/15/2011 23:48:07" />
-    <file relUrl="bin/Model.xafml" publishTime="07/02/2011 14:31:38" />
+    <file relUrl="bin/Model.xafml" publishTime="07/07/2011 19:12:07" />
     <file relUrl="App_Themes/Vido/Web/rpHeaderBackground.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/Editors/edtDropDownButtonPressedBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/ASPxPopupMenu.skin" publishTime="05/20/2011 22:30:07" />
-    <file relUrl="App_Themes/Aqua/Xaf/DialogBackImage.jpg" publishTime="01/14/2011 17:59:08" />
+    <file relUrl="App_Themes/Vido/Editors/edtSpinDecBtnBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/ASPxRadioButtonList.skin" publishTime="05/20/2011 22:30:07" />
-    <file relUrl="bin/ICSharpCode.SharpZipLib.dll" publishTime="01/18/2011 13:42:42" />
-    <file relUrl="App_Themes/Aqua/ASPxRadioButton.skin" publishTime="01/18/2011 13:55:16" />
-    <file relUrl="bin/DevExpress.XtraPivotGrid.v10.1.pdb" publishTime="01/15/2011 23:46:49" />
-    <file relUrl="App_Themes/Vido/Xaf/BackgroundRepeat.gif" publishTime="01/14/2011 17:59:08" />
-    <file relUrl="bin/vidoSolution.Module.Web.pdb" publishTime="07/06/2011 20:32:04" />
-    <file relUrl="bin/DevExpress.Data.v10.1.pdb" publishTime="01/15/2011 23:43:01" />
-    <file relUrl="bin/DevExpress.XtraReports.v10.1.pdb" publishTime="01/15/2011 23:46:59" />
+    <file relUrl="bin/DevExpress.XtraPivotGrid.v10.1.dll" publishTime="01/15/2011 23:46:49" />
     <file relUrl="App_Themes/Aqua/ASPxSiteMapControl.skin" publishTime="01/18/2011 13:55:16" />
+    <file relUrl="App_Themes/Aqua/ASPxRadioButton.skin" publishTime="01/18/2011 13:55:16" />
+    <file relUrl="Images/SideBarRDCorner.gif" publishTime="01/14/2011 17:59:08" />
+    <file relUrl="App_Themes/Vido/Xaf/BackgroundRepeat.gif" publishTime="01/14/2011 17:59:08" />
+    <file relUrl="bin/vidoSolution.Module.Web.pdb" publishTime="07/08/2011 22:08:48" />
+    <file relUrl="huong dan/hddkmh_files/image015.png" publishTime="02/14/2011 09:36:44" />
+    <file relUrl="App_Themes/Vido/Editors/sprite.css" publishTime="05/20/2011 23:20:25" />
+    <file relUrl="bin/DevExpress.XtraReports.v10.1.pdb" publishTime="01/15/2011 23:46:59" />
+    <file relUrl="App_Themes/Vido/HtmlEditor/RoundPanel/herpBottomEdge.gif" publishTime="10/12/2010 23:06:58" />
     <file relUrl="App_Themes/Aqua/ASPxHyperLink.skin" publishTime="01/18/2011 13:55:15" />
     <file relUrl="App_Themes/Vido/ASPxMemo.skin" publishTime="05/20/2011 22:30:07" />
     <file relUrl="App_Themes/Vido/Web/pcHeaderBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="MoveFooter.js" publishTime="01/14/2011 17:59:08" />
     <file relUrl="App_Themes/Vido/Web/sprite.css" publishTime="05/20/2011 22:48:59" />
     <file relUrl="App_Themes/Vido/Editors/styles.css" publishTime="05/20/2011 23:47:38" />
-    <file relUrl="App_Themes/Vido/ASPxTabControl.skin" publishTime="05/20/2011 22:30:07" />
     <file relUrl="App_Themes/Aqua/ASPxColorEdit.skin" publishTime="01/18/2011 13:55:14" />
     <file relUrl="App_Themes/Aqua/Xaf/template.css" publishTime="05/07/2011 02:25:58" />
     <file relUrl="App_Themes/Aqua/ReportToolbar.skin" publishTime="01/18/2011 13:55:16" />
@@ -112,18 +114,19 @@
     <file relUrl="App_Themes/Vido/Editors/edtButtonHoverBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="bin/DevExpress.ExpressApp.Design.Core.dll" publishTime="10/13/2010 12:08:47" />
     <file relUrl="huong dan/hddkmh_files/image011.png" publishTime="02/14/2011 09:36:44" />
-    <file relUrl="Model.xafml" publishTime="07/02/2011 14:31:38" />
+    <file relUrl="Model.xafml" publishTime="07/07/2011 19:12:07" />
     <file relUrl="App_Themes/Vido/GridView/gvPagerBottomPanelBackground.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="vidotkb20012011.xml" publishTime="01/21/2011 16:01:09" />
     <file relUrl="bin/DevExpress.ExpressApp.Web.v10.1.dll" publishTime="01/16/2011 00:18:54" />
-    <file relUrl="App_Themes/Vido/Editors/edtSpinIncButtonHoverBack.gif" publishTime="10/12/2010 23:06:56" />
+    <file relUrl="App_Themes/Vido/ASPxComboBox.skin" publishTime="05/20/2011 22:30:06" />
     <file relUrl="huong dan/hddkmh_files/image002.jpg" publishTime="02/14/2011 09:36:44" />
     <file relUrl="huong dan/hddkmh_files/image019.png" publishTime="02/14/2011 09:36:45" />
     <file relUrl="DefaultHorizontal.aspx" publishTime="02/16/2011 00:58:47" />
     <file relUrl="Global.asax" publishTime="01/27/2011 14:45:16" />
     <file relUrl="huong dan/hddkmh_files/image008.jpg" publishTime="02/14/2011 09:36:44" />
     <file relUrl="App_Themes/Vido/Editors/spriteEditor.gif" publishTime="10/12/2010 23:06:56" />
-    <file relUrl="App_Themes/Vido/ASPxRoundPanel.skin" publishTime="05/20/2011 22:30:07" />
+    <file relUrl="App_Themes/Vido/HtmlEditor/RoundPanel/herpNoHeaderTopEdge.gif" publishTime="10/12/2010 23:06:58" />
+    <file relUrl="bin/DevExpress.ExpressApp.Reports.v10.1.dll" publishTime="01/16/2011 00:19:26" />
     <file relUrl="App_Themes/Aqua/Xaf/DialogBackRepeat.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="huong dan/hddkmh_files/image010.png" publishTime="02/14/2011 09:36:44" />
     <file relUrl="bin/DevExpress.ExpressApp.Reports.Web.Design.v10.1.pdb" publishTime="01/16/2011 00:20:50" />
@@ -132,8 +135,7 @@
     <file relUrl="App_Themes/Vido/Web/tcTabTopBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/ASPxDateEdit.skin" publishTime="05/20/2011 22:30:06" />
     <file relUrl="App_Themes/Vido/ASPxColorEdit.skin" publishTime="05/20/2011 22:30:06" />
-    <file relUrl="App_Themes/Vido/ASPxComboBox.skin" publishTime="05/20/2011 22:30:06" />
-    <file relUrl="bin/vidoSolution.Module.Web.dll" publishTime="07/06/2011 20:32:04" />
+    <file relUrl="bin/vidoSolution.Module.Web.dll" publishTime="07/08/2011 22:08:48" />
     <file relUrl="App_Themes/Vido/Web/rpLeftEdge.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="bin/DevExpress.XtraReports.v10.1.dll" publishTime="01/15/2011 23:46:59" />
     <file relUrl="App_Themes/Aqua/ASPxSpinEdit.skin" publishTime="01/18/2011 13:55:16" />
@@ -147,12 +149,12 @@
     <file relUrl="App_Themes/Aqua/ASPxCaptcha.skin" publishTime="01/18/2011 13:55:14" />
     <file relUrl="Images/UnSelectedRight.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="bin/DevExpress.ExpressApp.FileAttachment.Web.v10.1.dll" publishTime="01/16/2011 00:19:14" />
-    <file relUrl="App_Themes/Vido/HtmlEditor/RoundPanel/herpBottomEdge.gif" publishTime="10/12/2010 23:06:58" />
     <file relUrl="Images/HeaderBkg.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="App_Themes/Vido/Editors/lbHeaderBackground.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/HtmlEditor/spriteHtml.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/ASPxLoadingPanel.skin" publishTime="05/20/2011 22:30:07" />
     <file relUrl="huong dan/hddkmh_files/image009.png" publishTime="02/14/2011 09:36:44" />
+    <file relUrl="Default.aspx" publishTime="05/07/2011 03:00:37" />
     <file relUrl="bin/DevExpress.Web.ASPxGridView.v10.1.dll" publishTime="01/15/2011 23:48:07" />
     <file relUrl="Images/SelectedLeft.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="App_Themes/Vido/Web/rpHeaderRightEdge.gif" publishTime="10/12/2010 23:06:58" />
@@ -170,33 +172,34 @@
     <file relUrl="App_Themes/Vido/HtmlEditor/styles.css" publishTime="05/20/2011 23:47:39" />
     <file relUrl="huong dan/hddkmh_files/image004.jpg" publishTime="02/14/2011 09:36:44" />
     <file relUrl="App_Themes/Vido/Web/mItemHBackVido.gif" publishTime="10/12/2010 23:06:56" />
-    <file relUrl="Default.aspx" publishTime="05/07/2011 03:00:37" />
+    <file relUrl="bin/DevExpress.ExpressApp.v10.1.dll" publishTime="01/16/2011 00:18:26" />
     <file relUrl="Images/TabContentBkg.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="bin/DevExpress.Xpo.v10.1.Web.dll" publishTime="01/15/2011 23:44:30" />
     <file relUrl="Images/Logo.swf" publishTime="01/17/2011 12:54:58" />
     <file relUrl="App_Themes/Vido/Web/splHSeparatorBackgroundHover.png" publishTime="10/12/2010 23:06:56" />
     <file relUrl="Images/ExpressAppLogo.png" publishTime="01/14/2011 17:59:08" />
-    <file relUrl="App_Themes/Vido/Editors/edtCalendarHeaderBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Aqua/ReportViewer.skin" publishTime="01/18/2011 13:55:16" />
     <file relUrl="App_Themes/Vido/GridView/styles.css" publishTime="05/20/2011 23:47:44" />
     <file relUrl="bin/DevExpress.ExpressApp.Reports.v10.1.pdb" publishTime="01/16/2011 00:19:26" />
     <file relUrl="App_Themes/Vido/Editors/edtProgressIndicatorBack.gif" publishTime="10/12/2010 23:06:56" />
-    <file relUrl="App_Themes/Vido/HtmlEditor/tbBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="bin/DevExpress.Charts.v10.1.Core.pdb" publishTime="01/15/2011 23:44:44" />
     <file relUrl="App_Themes/Vido/Xaf/template.css" publishTime="05/20/2011 01:45:44" />
     <file relUrl="bin/DevExpress.XtraReports.v10.1.Extensions.dll" publishTime="01/15/2011 23:47:11" />
     <file relUrl="App_Themes/Vido/Xaf/background.jpg" publishTime="01/14/2011 17:59:08" />
     <file relUrl="Images/SideBarRUCorner.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="App_Themes/Vido/Editors/edtCalendarButtonHoverBack.gif" publishTime="10/12/2010 23:06:56" />
+    <file relUrl="App_Themes/Vido/Editors/edtCalendarButtonPressedBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/ASPxNavBar.skin" publishTime="05/20/2011 22:30:07" />
+    <file relUrl="App_Themes/Vido/Web/styles.css" publishTime="05/21/2011 00:43:57" />
+    <file relUrl="bin/DevExpress.ExpressApp.Security.v10.1.pdb" publishTime="01/16/2011 00:19:54" />
+    <file relUrl="App_Themes/Vido/ASPxCloudControl.skin" publishTime="05/20/2011 22:30:06" />
     <file relUrl="App_Themes/Aqua/ASPxDropDownEdit.skin" publishTime="01/18/2011 13:55:15" />
     <file relUrl="App_Themes/Vido/Web/splResizingPointer.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="huong dan/hddkmh_files/image022.jpg" publishTime="02/14/2011 09:36:45" />
     <file relUrl="App_Themes/Vido/HtmlEditor/RoundPanel/herpTopEdge.gif" publishTime="10/12/2010 23:06:58" />
-    <file relUrl="bin/DevExpress.XtraCharts.v10.1.pdb" publishTime="01/15/2011 23:45:33" />
+    <file relUrl="bin/DevExpress.XtraReports.v10.1.Web.dll" publishTime="01/15/2011 23:47:14" />
     <file relUrl="App_Themes/Vido/ASPxCheckBox.skin" publishTime="05/20/2011 22:30:06" />
     <file relUrl="Images/FooterBkg.gif" publishTime="01/14/2011 17:59:08" />
-    <file relUrl="Images/SideBarRDCorner.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="Images/SelectedRightWhite.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="bin/DevExpress.Xpo.v10.1.pdb" publishTime="01/15/2011 23:44:29" />
     <file relUrl="App_Themes/Vido/Web/mVertSBack.gif" publishTime="10/12/2010 23:06:56" />
@@ -206,26 +209,24 @@
     <file relUrl="bin/DevExpress.ExpressApp.Reports.Web.v10.1.pdb" publishTime="01/16/2011 00:19:29" />
     <file relUrl="Images/LayoutHeaderBkg.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="App_Themes/Aqua/Xaf/background.jpg" publishTime="01/14/2011 17:59:08" />
-    <file relUrl="bin/vidoSolution.Web.pdb" publishTime="07/06/2011 20:32:14" />
+    <file relUrl="bin/vidoSolution.Web.pdb" publishTime="07/08/2011 22:08:59" />
     <file relUrl="App_Themes/Vido/Web/mItemHBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/Xaf/ULbarC.gif" publishTime="05/20/2011 01:45:31" />
     <file relUrl="App_Themes/Vido/Web/tcTabRightHottrackedBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/Xaf/DialogBackRepeat.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="App_Themes/Aqua/ASPxSplitter.skin" publishTime="01/18/2011 13:55:16" />
-    <file relUrl="bin/DevExpress.ExpressApp.Security.v10.1.pdb" publishTime="01/16/2011 00:19:54" />
+    <file relUrl="App_Themes/Aqua/ASPxPager.skin" publishTime="01/18/2011 13:55:15" />
     <file relUrl="App_Themes/Aqua/ASPxListBox.skin" publishTime="01/18/2011 13:55:15" />
     <file relUrl="App_Themes/Vido/GridView/gvHeaderBackground.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/Web/spriteWeb1.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Aqua/ASPxCallbackPanel.skin" publishTime="01/18/2011 13:55:14" />
     <file relUrl="bin/DevExpress.Web.v10.1.pdb" publishTime="01/15/2011 23:44:04" />
     <file relUrl="App_Themes/Vido/ASPxHyperLink.skin" publishTime="05/20/2011 22:30:07" />
-    <file relUrl="SessionKeepAliveReconnect.aspx" publishTime="01/14/2011 17:59:08" />
     <file relUrl="App_Themes/Vido/ASPxTextBox.skin" publishTime="05/20/2011 22:30:07" />
     <file relUrl="App_Themes/Aqua/Xaf/styles_xaf.css" publishTime="01/14/2011 17:59:08" />
     <file relUrl="Images/SelectedLeftWhite.gif" publishTime="01/14/2011 17:59:08" />
+    <file relUrl="App_Themes/Vido/Editors/edtSpinIncButtonHoverBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/menubar.png" publishTime="05/20/2011 23:40:23" />
-    <file relUrl="App_Themes/Aqua/ASPxPager.skin" publishTime="01/18/2011 13:55:15" />
-    <file relUrl="App_Themes/Aqua/ASPxNavBar.skin" publishTime="01/18/2011 13:55:15" />
     <file relUrl="App_Themes/Vido/ASPxDropDownEdit.skin" publishTime="05/20/2011 22:30:06" />
     <file relUrl="App_Themes/Vido/GridView/spriteGrid.png" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Aqua/ASPxComboBox.skin" publishTime="01/18/2011 13:55:14" />
@@ -238,6 +239,7 @@
     <file relUrl="huong dan/hddkmh_files/image014.jpg" publishTime="02/14/2011 09:36:44" />
     <file relUrl="App_Themes/Vido/ASPxProgressBar.skin" publishTime="05/20/2011 22:30:07" />
     <file relUrl="App_Themes/Vido/ReportToolbar.skin" publishTime="05/20/2011 22:30:08" />
+    <file relUrl="bin/vidoSolution.Web.dll" publishTime="07/08/2011 22:08:59" />
     <file relUrl="App_Themes/Vido/Web/tcTabBottomBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Aqua/ASPxDateEdit.skin" publishTime="01/18/2011 13:55:14" />
     <file relUrl="App_Themes/Vido/GridView/Loading.gif" publishTime="10/12/2010 23:06:56" />
@@ -248,11 +250,12 @@
     <file relUrl="bin/DevExpress.ExpressApp.v10.1.pdb" publishTime="01/16/2011 00:18:26" />
     <file relUrl="App_Themes/Vido/ASPxHeadline.skin" publishTime="05/20/2011 22:30:06" />
     <file relUrl="Images/Progress.gif" publishTime="01/14/2011 17:59:08" />
-    <file relUrl="App_Themes/Vido/Web/mItemBack.gif" publishTime="10/12/2010 23:06:56" />
+    <file relUrl="App_Themes/Vido/Web/ucProgressBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="Error.aspx" publishTime="02/10/2011 14:10:47" />
-    <file relUrl="App_Themes/Vido/ASPxButton.skin" publishTime="05/20/2011 22:30:06" />
+    <file relUrl="bin/DevExpress.XtraPivotGrid.v10.1.pdb" publishTime="01/15/2011 23:46:49" />
     <file relUrl="App_Themes/Aqua/ASPxTitleIndex.skin" publishTime="01/18/2011 13:55:16" />
     <file relUrl="App_Themes/Vido/Editors/edtSpinDecButtonHoverBack.gif" publishTime="10/12/2010 23:06:56" />
+    <file relUrl="App_Themes/Vido/HtmlEditor/RoundPanel/herpRightEdge.gif" publishTime="10/12/2010 23:06:58" />
     <file relUrl="App_Themes/Aqua/ASPxDataView.skin" publishTime="01/18/2011 13:55:14" />
     <file relUrl="huong dan/hddkmh_files/image012.jpg" publishTime="02/14/2011 09:36:44" />
     <file relUrl="App_Themes/Vido/Editors/edtButtonBack.gif" publishTime="10/12/2010 23:06:56" />
@@ -263,10 +266,8 @@
     <file relUrl="App_Themes/Vido/HtmlEditor/spriteHtml.png" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/Web/rpHeaderLeftEdge.gif" publishTime="10/12/2010 23:06:58" />
     <file relUrl="bin/DevExpress.ExpressApp.Security.v10.1.dll" publishTime="01/16/2011 00:19:54" />
-    <file relUrl="bin/DevExpress.XtraReports.v10.1.Web.dll" publishTime="01/15/2011 23:47:14" />
+    <file relUrl="App_Themes/Aqua/ASPxNavBar.skin" publishTime="01/18/2011 13:55:15" />
     <file relUrl="App_Themes/Vido/ASPxSplitter.skin" publishTime="05/20/2011 22:30:07" />
-    <file relUrl="bin/DevExpress.ExpressApp.v10.1.dll" publishTime="01/16/2011 00:18:26" />
-    <file relUrl="App_Themes/Vido/Xaf/Logo.png" publishTime="01/14/2011 17:59:08" />
     <file relUrl="App_Themes/Aqua/ASPxCalendar.skin" publishTime="01/18/2011 13:55:14" />
     <file relUrl="bin/DevExpress.Web.ASPxEditors.v10.1.dll" publishTime="01/15/2011 23:44:23" />
     <file relUrl="App_Themes/Vido/Web/rpBottomEdge.gif" publishTime="10/12/2010 23:06:56" />
@@ -277,6 +278,7 @@
     <file relUrl="bin/DevExpress.Xpo.v10.1.dll" publishTime="01/15/2011 23:44:29" />
     <file relUrl="Images/Flash/banner.swf" publishTime="01/15/2011 19:09:40" />
     <file relUrl="App_Themes/Aqua/ASPxRatingControl.skin" publishTime="01/18/2011 13:55:16" />
+    <file relUrl="NestedFrameControl.ascx" publishTime="02/21/2011 15:22:08" />
     <file relUrl="Dialog.aspx" publishTime="02/16/2011 09:19:39" />
     <file relUrl="bin/DevExpress.Persistent.BaseImpl.v10.1.dll" publishTime="01/16/2011 00:18:33" />
     <file relUrl="App_Themes/Vido/Web/tcTabLeftHottrackedBack.gif" publishTime="10/12/2010 23:06:56" />
@@ -291,11 +293,10 @@
     <file relUrl="huong dan/hddkmh_files/image016.jpg" publishTime="02/14/2011 09:36:44" />
     <file relUrl="App_Themes/Aqua/Xaf/ULbarC.gif" publishTime="01/17/2011 21:36:57" />
     <file relUrl="App_Themes/Aqua/ASPxButton.skin" publishTime="01/18/2011 13:55:14" />
-    <file relUrl="App_Themes/Vido/Web/Loading.gif" publishTime="10/12/2010 23:06:56" />
-    <file relUrl="huong dan/hddkmh_files/image003.png" publishTime="02/14/2011 09:36:44" />
+    <file relUrl="App_Themes/Vido/HtmlEditor/tbBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/ASPxTreeList.skin" publishTime="05/20/2011 22:30:08" />
     <file relUrl="App_Themes/Vido/HtmlEditor/RoundPanel/herpHeaderBackground.gif" publishTime="10/12/2010 23:06:58" />
-    <file relUrl="App_Themes/Vido/ASPxCloudControl.skin" publishTime="05/20/2011 22:30:06" />
+    <file relUrl="App_Themes/Vido/Editors/edtCalendarHeaderBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="huong dan/hddkmh_files/image013.png" publishTime="02/14/2011 09:36:44" />
     <file relUrl="App_Themes/Vido/Web/splHSeparatorBackground.png" publishTime="10/12/2010 23:06:56" />
     <file relUrl="bin/DevExpress.ExpressApp.Validation.v10.1.dll" publishTime="01/16/2011 00:20:08" />
@@ -307,34 +308,33 @@
     <file relUrl="App_Themes/Vido/Web/nbGroupHeaderBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Aqua/ASPxGridView.skin" publishTime="01/18/2011 13:55:15" />
     <file relUrl="App_Themes/Vido/ASPxTitleIndex.skin" publishTime="05/20/2011 22:30:08" />
-    <file relUrl="bin/vidoSolution.Web.dll" publishTime="07/06/2011 20:32:14" />
+    <file relUrl="App_Themes/Vido/Web/mItemBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/ASPxCaptcha.skin" publishTime="05/20/2011 22:30:06" />
-    <file relUrl="App_Themes/Vido/Editors/edtSpinDecBtnBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="bin/DevExpress.Web.v10.1.dll" publishTime="01/15/2011 23:44:04" />
     <file relUrl="App_Themes/Vido/ASPxNewsControl.skin" publishTime="05/20/2011 22:30:07" />
     <file relUrl="App_Themes/Vido/ASPxCallbackPanel.skin" publishTime="05/20/2011 22:30:06" />
-    <file relUrl="App_Themes/Vido/Xaf/Logo.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="App_Themes/Vido/GridView/sprite.css" publishTime="05/20/2011 22:39:19" />
-    <file relUrl="App_Themes/Vido/GridView/spriteGrid.gif" publishTime="10/12/2010 23:06:56" />
+    <file relUrl="App_Themes/Aqua/ASPxLabel.skin" publishTime="01/18/2011 13:55:15" />
     <file relUrl="App_Themes/Aqua/ASPxMemo.skin" publishTime="01/18/2011 13:55:15" />
     <file relUrl="bin/DevExpress.CodeRush.Library.dll" publishTime="10/11/2010 13:19:21" />
-    <file relUrl="App_Themes/Vido/Editors/sprite.css" publishTime="05/20/2011 23:20:25" />
+    <file relUrl="App_Themes/Vido/Xaf/Logo.gif" publishTime="01/14/2011 17:59:08" />
     <file relUrl="App_Themes/Aqua/ASPxHeadline.skin" publishTime="01/18/2011 13:55:15" />
-    <file relUrl="bin/DevExpress.XtraPivotGrid.v10.1.dll" publishTime="01/15/2011 23:46:49" />
+    <file relUrl="App_Themes/Vido/Xaf/Logo.png" publishTime="01/14/2011 17:59:08" />
     <file relUrl="bin/DevExpress.ExpressApp.Web.v10.1.pdb" publishTime="01/16/2011 00:18:54" />
-    <file relUrl="App_Themes/Vido/Web/ucProgressBack.gif" publishTime="10/12/2010 23:06:56" />
+    <file relUrl="bin/DevExpress.Data.v10.1.pdb" publishTime="01/15/2011 23:43:01" />
     <file relUrl="App_Themes/Vido/Editors/edtButtonPressedBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Aqua/Xaf/LogoSmall.png" publishTime="01/14/2011 17:59:08" />
-    <file relUrl="App_Themes/Vido/Web/styles.css" publishTime="05/21/2011 00:43:57" />
+    <file relUrl="App_Themes/Aqua/ASPxLoadingPanel.skin" publishTime="01/18/2011 13:55:15" />
     <file relUrl="App_Themes/Vido/Web/splVSeparatorBackgroundHover.png" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/Web/tcTabBottomHottrackedBack.gif" publishTime="10/12/2010 23:06:56" />
     <file relUrl="App_Themes/Vido/Editors/edtSpinIncBtnBack.gif" publishTime="10/12/2010 23:06:56" />
+    <file relUrl="bin/DevExpress.XtraCharts.v10.1.pdb" publishTime="01/15/2011 23:45:33" />
     <file relUrl="huong dan/hddkmh_files/image001.png" publishTime="02/14/2011 09:36:43" />
     <file relUrl="App_Themes/Aqua/ASPxRoundPanel.skin" publishTime="01/18/2011 13:55:16" />
-    <file relUrl="App_Themes/Vido/HtmlEditor/RoundPanel/herpRightEdge.gif" publishTime="10/12/2010 23:06:58" />
+    <file relUrl="App_Themes/Vido/Web/nbGroupHeaderBackVido.gif" publishTime="05/21/2011 00:09:02" />
     <file relUrl="bin/DevExpress.XtraPivotGrid.v10.1.Core.dll" publishTime="01/15/2011 23:44:26" />
     <file relUrl="App_Themes/Vido/ReportViewer.skin" publishTime="05/20/2011 22:30:08" />
-    <file relUrl="bin/DevExpress.ExpressApp.Reports.v10.1.dll" publishTime="01/16/2011 00:19:26" />
+    <file relUrl="SessionKeepAliveReconnect.aspx" publishTime="01/14/2011 17:59:08" />
     <file relUrl="huong dan/hddkmh_files/colorschememapping.xml" publishTime="02/14/2011 09:36:43" />
     <file relUrl="App_Themes/Aqua/ASPxPageControl.skin" publishTime="01/18/2011 13:55:15" />
   </publishProfile>

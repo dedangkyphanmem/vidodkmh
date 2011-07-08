@@ -31,6 +31,7 @@ namespace vidoSolution.Module.ReportParameter
         }
        
         Semester semester;
+        [RuleRequiredField("SemesterReportParametersObject Semester is Require!", "PreviewReport", "Semester cannot be empty!")]
         public Semester Semester
         {
             get { return semester; }

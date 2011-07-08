@@ -9,6 +9,7 @@
       <Action Id="DefaultRegisterAction" Caption="Chọn nhóm lớp MH mặc định" />
       <Action Id="Delete" Caption="Xóa" ConfirmationMessage="Bạn muốn xóa các dòng đã chọn" />
       <Action Id="DialogCancel" Caption="Bỏ qua" />
+      <Action Id="DialogOK" ValidationContexts="PreviewReport" />
       <Action Id="Download" Caption="Tải về" ToolTip="Tải về File" />
       <Action Id="FullTextSearch" Caption="Tìm" ToolTip="Tìm kiếm bằng chuỗi chuỗi kí tự" ShortCaption="Tìm " />
       <Action Id="ImportStudentAction" Caption="Import Sinh viên" ToolTip="Import Sinh viên vào hệ thống" />
@@ -893,11 +894,30 @@
   <Validation>
     <Contexts>
       <ValidationContext Id="Delete" Caption="Xóa" />
+      <ValidationContext Id="PreviewReport" Caption="Xem trước" />
       <ValidationContext Id="Save" Caption="Lưu" />
     </Contexts>
     <Rules>
+      <RuleRequiredField Id="ClassroomReportParametersObject Classroom is Require!" Name="Phòng học không được để trống" CustomMessageTemplate="Phòng học không được để trống" />
+      <RuleRequiredField Id="ClassroomReportParametersObject Semester is Require!" Name="Học kỳ không được để trống!" CustomMessageTemplate="Học kỳ không được để trống!" />
+      <RuleRequiredField Id="Lesson is Require!" Name="Nhóm lớp MH  không được để trống" CustomMessageTemplate="Nhóm lớp MH  không được để trống" />
+      <RuleRequiredField Id="OfficeReportParametersObject Office is Require!" Name="Cơ sở không được để trống" CustomMessageTemplate="Cơ sở không được để trống" />
+      <RuleRequiredField Id="OfficeReportParametersObject Semester is Require!" Name="Học kỳ không được để trống!" CustomMessageTemplate="Học kỳ không được để trống!" />
+      <RuleUniqueValue Id="RegisterDetail.StudentRegLessonSemester" CustomMessageTemplate="Không đăng ký trùng môn học" Name="Không đăng ký trùng môn học" />
+      <RuleRequiredField Id="RegisterDetailReportParametersObject Semester is Require!" Name="Học kỳ không được để trống!" CustomMessageTemplate="Học kỳ không được để trống!" />
+      <RuleRequiredField Id="RegisterDetailReportParametersObject Student is Require!" Name="Sinh viên không được để trống!" CustomMessageTemplate="Sinh viên không được để trống!" />
+      <RuleRequiredField Id="SemesterReportParametersObject Semester is Require!" Name="Học kỳ không được để trống!" CustomMessageTemplate="Học kỳ không được để trống!" />
+      <RuleRequiredField Id="StudentClassReportParametersObject Semester is Require!" Name="Học kỳ không được để trống!" CustomMessageTemplate="Học kỳ không được để trống!" />
+      <RuleRequiredField Id="StudentClassReportParametersObject StudentClass is Require!" Name="Lớp biên chế không được để trống!" CustomMessageTemplate="Lớp biên chế không được để trống!" />
       <RuleUniqueValue Id="StudentCode is Unique" IsNewNode="True" Name="StudentCode is Unique" CustomMessageTemplate="StudentCode is Unique" TargetType="vidoSolution.Module.DomainObject.Student" TargetPropertyName="StudentCode" TargetContextIDs="Save" />
       <RuleRequiredField Id="StudentCode required" IsNewNode="True" TargetType="vidoSolution.Module.DomainObject.Student" TargetPropertyName="StudentCode" CustomMessageTemplate="StudentCode require" TargetContextIDs="Save" Name="StudentCode required" />
+      <RuleRequiredField Id="StudentReportParametersObject Student is Require!" Name="Sinh viên không được để trống!" CustomMessageTemplate="Sinh viên không được để trống!" />
+      <RuleRequiredField Id="SubjectReportParametersObject Semester is Require!" Name="Học kỳ không được để trống!" CustomMessageTemplate="Học kỳ không được để trống!" />
+      <RuleRequiredField Id="SubjectReportParametersObject Subject is Require!" Name="Môn học không được để trống!" CustomMessageTemplate="Môn học không được để trống!" />
+      <RuleRequiredField Id="TeacherReportParametersObject Semester is Require!" Name="Học kỳ không được để trống!" CustomMessageTemplate="Học kỳ không được để trống!" />
+      <RuleRequiredField Id="TeacherReportParametersObject Teacher is Require!" Name="Giảng viên không được để trống!" CustomMessageTemplate="Giảng viên không được để trống!" />
+      <RuleRequiredField Id="TimetableStudentReportParametersObject Semester is Require!" Name="Học kỳ không được để trống!" CustomMessageTemplate="Học kỳ không được để trống!" />
+      <RuleRequiredField Id="TimetableStudentReportParametersObject Student is Require!" Name="Sinh viên không được để trống!" CustomMessageTemplate="Sinh viên không được để trống!" />
     </Rules>
   </Validation>
   <Views>
@@ -945,17 +965,17 @@
     <ListView Id="AccountTransaction_ListView" AllowEdit="False" ShowAutoFilterRow="True" IsGroupPanelVisible="True" UseServerMode="True">
       <Columns>
         <ColumnInfo Id="DateCreated" IsNewNode="True" Removed="True" PropertyName="DateCreated" Index="-1" Width="70" />
+        <ColumnInfo Id="DateModified" IsNewNode="True" Removed="True" PropertyName="DateModified" Index="-1" Width="70" />
+        <ColumnInfo Id="ImportDescription" Index="-1" />
         <ColumnInfo Id="Student" Index="-1" ImmediatePostData="True" />
         <ColumnInfo Id="Student.StudentCode" IsNewNode="True" PropertyName="Student.StudentCode" Index="0" AllowEdit="False" SortOrder="Ascending" />
         <ColumnInfo Id="Student.FirstName" IsNewNode="True" PropertyName="Student.FirstName" Index="1" AllowEdit="False" />
         <ColumnInfo Id="Student.LastName" IsNewNode="True" PropertyName="Student.LastName" Index="2" AllowEdit="False" />
         <ColumnInfo Id="MoneyAmount" SummaryType="Sum" Index="3" DisplayFormat="{0:0,0}" />
         <ColumnInfo Id="TransactingDate" Index="4" SortOrder="Descending" />
-        <ColumnInfo Id="DateModified" IsNewNode="True" Removed="True" PropertyName="DateModified" Index="5" Width="70" />
         <ColumnInfo Id="Description" Index="5" />
         <ColumnInfo Id="Semester" Index="6" SortOrder="Descending" />
         <ColumnInfo Id="Name" Index="7" SortOrder="None" AllowEdit="True" />
-        <ColumnInfo Id="ImportDescription" Index="8" />
       </Columns>
     </ListView>
     <DetailView Id="AccountTransactionFile_DetailView">

@@ -25,12 +25,14 @@ namespace vidoSolution.Module.ReportParameter
             return CriteriaOperator.Parse("OfficeCode = ? ", Office.OfficeCode);
         }
         Office office;
+        [RuleRequiredField("OfficeReportParametersObject Office is Require!", "PreviewReport", "Office cannot be empty!")]
         public Office Office
         {
             get { return office; }
             set { office = value; }
         }
         Semester semester;
+        [RuleRequiredField("OfficeReportParametersObject Semester is Require!", "PreviewReport", "Semester cannot be empty!")]
         public Semester Semester
         {
             get { return semester; }

@@ -25,12 +25,14 @@ namespace vidoSolution.Module.ReportParameter
             return CriteriaOperator.Parse("ClassroomCode = ? ", Classroom.ClassroomCode);
         }
         Classroom classroom;
+        [RuleRequiredField("ClassroomReportParametersObject Classroom is Require!", "PreviewReport", "Classroom cannot be empty!")]
         public Classroom Classroom
         {
             get { return classroom; }
             set { classroom = value; }
         }
         Semester semester;
+        [RuleRequiredField("ClassroomReportParametersObject Semester is Require!", "PreviewReport", "Semester cannot be empty!")]
         public Semester Semester
         {
             get { return semester; }

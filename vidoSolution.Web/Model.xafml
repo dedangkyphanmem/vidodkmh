@@ -7,11 +7,12 @@
       <Action Id="CancelRegister" Index="2" />
       <Action Id="BookRegister" Index="3" Caption="Thực hiện đăng ký" />
       <Action Id="CheckRegister" Index="4" />
-      <Action Id="ConfirmRegister" Index="5" Caption="In kết quả xác nhận" />
-      <Action Id="ViewDtailTimetable" Index="6" />
+      <Action Id="ConfirmRegister" Index="5" Caption="Xác nhận đăng ký" />
+      <Action Id="PrintRegister" Caption="In kết quả" ToolTip="In kết quả đăng ký" Index="6" />
       <Action Id="ExportRegister" Caption="Xuất dữ liệu (xls)" Index="8" />
       <Action Id="ChangePasswordByUser" Caption="Đổi mật khẩu" />
       <Action Id="Diagnostic Info" Caption="Chẩn đoán" />
+      <Action Id="DialogOK" ValidationContexts="PreviewReport" />
       <Action Id="Edit" Caption="Chỉnh sửa" />
       <Action Id="FullTextSearch" ToolTip="Tìm kiếm bằng chuỗi kí tự" />
       <Action Id="Logoff" Caption="Đăng xuất" />
@@ -22,7 +23,7 @@
       <Action Id="QuickCreateAction" Caption="Tạo nhanh... " />
       <Action Id="ReportViewerDialogController_Back" Caption="Quay lại" />
       <Action Id="ReportViewerDialogController_Close" Caption="Đóng" />
-      <Action Id="ReportViewerDialogController_Preview" Caption="Xem trước" />
+      <Action Id="ReportViewerDialogController_Preview" Caption="Xem trước" ValidationContexts="PreviewReport" />
       <Action Id="ResetPassword" Caption="Thiết lập lại mật khẩu" ToolTip="Thiết lập lại mật khẩu cho người dùng đang chọn" />
       <Action Id="SelectDefaultLesson" Caption="Chọn môn mặc định" />
       <Action Id="ShowAllContexts" Caption="Kiểm tra hợp lệ" ToolTip="Kiểm tra tính hợp lệ dữ liệu " />
@@ -41,7 +42,7 @@
         <ActionLink ActionId="BookRegister" Index="3" />
         <ActionLink ActionId="CheckRegister" Index="4" />
         <ActionLink ActionId="ConfirmRegister" Index="5" />
-        <ActionLink ActionId="ViewDtailTimetable" Index="7" />
+        <ActionLink ActionId="PrintRegister" Index="6" />
         <ActionLink ActionId="ExportRegister" Index="8" />
       </ActionContainer>
     </ActionToContainerMapping>
@@ -428,6 +429,9 @@
       <ValidationContext Id="Delete" Caption="Xóa" />
       <ValidationContext Id="Save" Caption="Lưu" />
     </Contexts>
+    <Rules>
+      <RuleRequiredField Id="Lesson is Require!" CustomMessageTemplate="Vui lòng chọn Nhóm lớp MH" Name="Yêu cầu có Nhóm lớp MH" />
+    </Rules>
   </Validation>
   <Views>
     <DetailView Id="AccountTransaction_DetailView">

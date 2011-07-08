@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="DialogOK" ValidationContexts="PreviewReport" />
+      <Action Id="PreviewReport" ValidationContexts="PreviewReport" />
+    </Actions>
+  </ActionDesign>
   <NavigationItems>
     <Items>
       <Item Id="Default">

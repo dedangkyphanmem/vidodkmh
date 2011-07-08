@@ -23,12 +23,14 @@ namespace vidoSolution.Module.ReportParameter
 
         }
         Semester semester;
+        [RuleRequiredField("RegisterDetailReportParametersObject Semester is Require!", "PreviewReport", "Semester cannot be empty!")]
         public Semester Semester
         {
             get { return semester; }
             set { semester = value; }
         }
         Student student;
+        [RuleRequiredField("RegisterDetailReportParametersObject Student is Require!", "PreviewReport", "Student cannot be empty!")]
         public Student Student
         {
             get { return student; }

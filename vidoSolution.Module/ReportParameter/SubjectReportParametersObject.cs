@@ -37,6 +37,7 @@ namespace vidoSolution.Module.ReportParameter
         Subject subject;
         [ImmediatePostData(true)]
         [DataSourceProperty("AvailableSubjects")]
+        [RuleRequiredField("SubjectReportParametersObject Subject is Require!", "PreviewReport", "Subject cannot be empty!")]
         public Subject Subject
         {
             get { return subject; }
@@ -44,6 +45,7 @@ namespace vidoSolution.Module.ReportParameter
         }
         Semester semester;
         [ImmediatePostData(true)]
+        [RuleRequiredField("SubjectReportParametersObject Semester is Require!", "PreviewReport", "Semester cannot be empty!")]
         public Semester Semester
         {
             get { return semester; }

@@ -37,19 +37,23 @@ namespace vidoSolution.Module.ReportParameter
 
                 return CriteriaOperator.Parse("Student.StudentClass.ClassCode = ? ", StudentClass.ClassCode);
             }
-            else
+            else if (ReportDataType == typeof(Student))
             {
-                return "";
+                return CriteriaOperator.Parse("StudentClass.ClassCode = ? ", StudentClass.ClassCode); 
             }
+            else
+                return CriteriaOperator.Parse("1=1");
             
         }
         StudentClass  studentClass ;
+        [RuleRequiredField("StudentClassReportParametersObject StudentClass is Require!", "PreviewReport", "StudentClass cannot be empty!")]
         public StudentClass StudentClass 
         {
             get { return studentClass; }
             set { studentClass = value; }
         }
         Semester semester;
+        [RuleRequiredField("StudentClassReportParametersObject Semester is Require!", "PreviewReport", "Semester cannot be empty!")]
         public Semester Semester
         {
             get { return semester; }
