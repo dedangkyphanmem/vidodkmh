@@ -1,0 +1,502 @@
+.dxEditors_edtError_Vido,
+.dxEditors_edtCalendarPrevYear_Vido,
+.dxEditors_edtCalendarPrevYearDisabled_Vido,
+.dxEditors_edtCalendarPrevMonth_Vido,
+.dxEditors_edtCalendarPrevMonthDisabled_Vido,
+.dxEditors_edtCalendarNextMonth_Vido,
+.dxEditors_edtCalendarNextMonthDisabled_Vido,
+.dxEditors_edtCalendarNextYear_Vido,
+.dxEditors_edtCalendarNextYearDisabled_Vido,
+.dxEditors_edtCalendarFNPrevYear_Vido,
+.dxEditors_edtCalendarFNNextYear_Vido,
+.dxEditors_edtCheckBoxOn_Vido,
+.dxEditors_edtCheckBoxOff_Vido,
+.dxEditors_edtCheckBoxUndefined_Vido,
+.dxEditors_edtRadioButtonOn_Vido,
+.dxEditors_edtRadioButtonOff_Vido,
+.dxEditors_edtRadioButtonUndefined_Vido,
+.dxEditors_edtEllipsis_Vido,
+.dxEditors_edtEllipsisDisabled_Vido,
+.dxEditors_edtEllipsisHover_Vido,
+.dxEditors_edtEllipsisPressed_Vido,
+.dxEditors_edtDropDown_Vido,
+.dxEditors_edtDropDownDisabled_Vido,
+.dxEditors_edtDropDownHover_Vido,
+.dxEditors_edtDropDownPressed_Vido,
+.dxEditors_edtSpinEditIncrementImage_Vido,
+.dxEditors_edtSpinEditIncrementImageDisabled_Vido,
+.dxEditors_edtSpinEditIncrementImageHover_Vido,
+.dxEditors_edtSpinEditIncrementImagePressed_Vido,
+.dxEditors_edtSpinEditDecrementImage_Vido,
+.dxEditors_edtSpinEditDecrementImageDisabled_Vido,
+.dxEditors_edtSpinEditDecrementImageHover_Vido,
+.dxEditors_edtSpinEditDecrementImagePressed_Vido,
+.dxEditors_edtSpinEditLargeIncImage_Vido,
+.dxEditors_edtSpinEditLargeIncImageDisabled_Vido,
+.dxEditors_edtSpinEditLargeIncImageHover_Vido,
+.dxEditors_edtSpinEditLargeIncImagePressed_Vido,
+.dxEditors_edtSpinEditLargeDecImage_Vido,
+.dxEditors_edtSpinEditLargeDecImageDisabled_Vido,
+.dxEditors_edtSpinEditLargeDecImageHover_Vido,
+.dxEditors_edtSpinEditLargeDecImagePressed_Vido,
+.dxEditors_fcadd_Vido,
+.dxEditors_fcaddhot_Vido,
+.dxEditors_fcremove_Vido,
+.dxEditors_fcremovehot_Vido,
+.dxEditors_fcgroupaddcondition_Vido,
+.dxEditors_fcgroupaddgroup_Vido,
+.dxEditors_fcgroupremove_Vido,
+.dxEditors_fcopany_Vido,
+.dxEditors_fcopbegin_Vido,
+.dxEditors_fcopbetween_Vido,
+.dxEditors_fcopcontain_Vido,
+.dxEditors_fcopnotcontain_Vido,
+.dxEditors_fcopnotequal_Vido,
+.dxEditors_fcopend_Vido,
+.dxEditors_fcopequal_Vido,
+.dxEditors_fcopgreater_Vido,
+.dxEditors_fcopgreaterorequal_Vido,
+.dxEditors_fcopnotblank_Vido,
+.dxEditors_fcopblank_Vido,
+.dxEditors_fcopless_Vido,
+.dxEditors_fcoplessorequal_Vido,
+.dxEditors_fcoplike_Vido,
+.dxEditors_fcopnotany_Vido,
+.dxEditors_fcopnotbetween_Vido,
+.dxEditors_fcopnotlike_Vido,
+.dxEditors_fcgroupand_Vido,
+.dxEditors_fcgroupor_Vido,
+.dxEditors_fcgroupnotand_Vido,
+.dxEditors_fcgroupnotor_Vido,
+.dxEditors_caRefresh_Vido {
+    background-image: url("spriteEditor.png");
+    -background-image: url("spriteEditor.gif"); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxEditors_edtError_Vido {
+    background-position: -170px 0px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtCalendarPrevYear_Vido {
+    background-position: 0px -130px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarPrevYearDisabled_Vido {
+    background-position: -24px -130px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarPrevMonth_Vido {
+    background-position: -57px 0px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarPrevMonthDisabled_Vido {
+    background-position: -57px -20px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarNextMonth_Vido {
+    background-position: -19px 0px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarNextMonthDisabled_Vido {
+    background-position: -19px -20px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarNextYear_Vido {
+    background-position: -48px -130px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarNextYearDisabled_Vido {
+    background-position: -72px -130px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarFNPrevYear_Vido {
+    background-position: 0px 0px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarFNNextYear_Vido {
+    background-position: 0px -20px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxEditors_edtCheckBoxOn_Vido {
+    background-position: -23px -44px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxEditors_edtCheckBoxOff_Vido {
+    background-position: 0px -44px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxEditors_edtCheckBoxUndefined_Vido {
+    background-position: -46px -44px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxEditors_edtRadioButtonOn_Vido {
+    background-position: -91px -44px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtRadioButtonOff_Vido {
+    background-position: -69px -44px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtRadioButtonUndefined_Vido {
+    background-position: -113px -44px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtEllipsis_Vido {
+    background-position: -113px 0px;
+    width: 12px;
+    height: 3px;
+}
+
+.dxEditors_edtEllipsisDisabled_Vido {
+    background-position: -113px -22px;
+    width: 12px;
+    height: 3px;
+}
+
+.dxEditors_edtEllipsisHover_Vido {
+    background-position: -113px -11px;
+    width: 12px;
+    height: 3px;
+}
+
+.dxEditors_edtEllipsisPressed_Vido {
+    background-position: -113px -33px;
+    width: 12px;
+    height: 3px;
+}
+
+.dxEditors_edtDropDown_Vido {
+    background-position: -95px 0px;
+    width: 9px;
+    height: 7px;
+}
+
+.dxEditors_edtDropDownDisabled_Vido {
+    background-position: -95px -22px;
+    width: 9px;
+    height: 7px;
+}
+
+.dxEditors_edtDropDownHover_Vido {
+    background-position: -95px -11px;
+    width: 9px;
+    height: 7px;
+}
+
+.dxEditors_edtDropDownPressed_Vido {
+    background-position: -95px -33px;
+    width: 9px;
+    height: 7px;
+}
+
+.dxEditors_edtSpinEditIncrementImage_Vido {
+    background-position: -150px 0px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxEditors_edtSpinEditIncrementImageDisabled_Vido {
+    background-position: -150px -13px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxEditors_edtSpinEditIncrementImageHover_Vido {
+    background-position: -158px 0px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxEditors_edtSpinEditIncrementImagePressed_Vido {
+    background-position: -158px 0px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxEditors_edtSpinEditDecrementImage_Vido {
+    background-position: -132px 0px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxEditors_edtSpinEditDecrementImageDisabled_Vido {
+    background-position: -132px -13px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxEditors_edtSpinEditDecrementImageHover_Vido {
+    background-position: -140px 0px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxEditors_edtSpinEditDecrementImagePressed_Vido {
+    background-position: -140px 0px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxEditors_edtSpinEditLargeIncImage_Vido {
+    background-position: -145px -26px;
+    width: 7px;
+    height: 9px;
+}
+
+.dxEditors_edtSpinEditLargeIncImageDisabled_Vido {
+    background-position: -171px -26px;
+    width: 7px;
+    height: 9px;
+}
+
+.dxEditors_edtSpinEditLargeIncImageHover_Vido {
+    background-position: -145px -36px;
+    width: 7px;
+    height: 9px;
+}
+
+.dxEditors_edtSpinEditLargeIncImagePressed_Vido {
+    background-position: -145px -36px;
+    width: 7px;
+    height: 9px;
+}
+
+.dxEditors_edtSpinEditLargeDecImage_Vido {
+    background-position: -132px -26px;
+    width: 7px;
+    height: 9px;
+}
+
+.dxEditors_edtSpinEditLargeDecImageDisabled_Vido {
+    background-position: -158px -26px;
+    width: 7px;
+    height: 9px;
+}
+
+.dxEditors_edtSpinEditLargeDecImageHover_Vido {
+    background-position: -132px -36px;
+    width: 7px;
+    height: 9px;
+}
+
+.dxEditors_edtSpinEditLargeDecImagePressed_Vido {
+    background-position: -132px -36px;
+    width: 7px;
+    height: 9px;
+}
+
+.dxEditors_fcadd_Vido {
+    background-position: 0px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcaddhot_Vido {
+    background-position: -21px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcremove_Vido {
+    background-position: -42px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcremovehot_Vido {
+    background-position: -63px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupaddcondition_Vido {
+    background-position: -168px -46px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupaddgroup_Vido {
+    background-position: -147px -46px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupremove_Vido {
+    background-position: -126px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopany_Vido {
+    background-position: 0px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopbegin_Vido {
+    background-position: -42px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopbetween_Vido {
+    background-position: -84px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopcontain_Vido {
+    background-position: -105px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotcontain_Vido {
+    background-position: -147px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotequal_Vido {
+    background-position: -168px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopend_Vido {
+    background-position: -63px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopequal_Vido {
+    background-position: 0px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopgreater_Vido {
+    background-position: -21px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopgreaterorequal_Vido {
+    background-position: -42px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotblank_Vido {
+    background-position: -105px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopblank_Vido {
+    background-position: -126px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopless_Vido {
+    background-position: -63px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcoplessorequal_Vido {
+    background-position: -84px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcoplike_Vido {
+    background-position: -126px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotany_Vido {
+    background-position: -21px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotbetween_Vido {
+    background-position: -147px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotlike_Vido {
+    background-position: -168px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupand_Vido {
+    background-position: -84px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupor_Vido {
+    background-position: -168px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupnotand_Vido {
+    background-position: -105px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupnotor_Vido {
+    background-position: -147px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_caRefresh_Vido {
+	background-position: -100px -126px;
+    width: 21px;
+    height: 23px;
+}

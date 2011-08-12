@@ -1,0 +1,4 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=163290938d0004dc" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=163290938d0004dc" %>
+<dxe:ASPxProgressBar runat="server" Height="25px" CssFilePath="{0}/styles.css" CssPostfix="Vido">
+</dxe:ASPxProgressBar>

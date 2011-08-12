@@ -1,0 +1,741 @@
+.dxHtmlEditor_Icons_heCut_Vido,
+.dxHtmlEditor_Icons_heCutDisabled_Vido,
+.dxHtmlEditor_Icons_heCopy_Vido,
+.dxHtmlEditor_Icons_heCopyDisabled_Vido,
+.dxHtmlEditor_Icons_hePaste_Vido,
+.dxHtmlEditor_Icons_hePasteDisabled_Vido,
+.dxHtmlEditor_Icons_hePasteFromWord_Vido,
+.dxHtmlEditor_Icons_hePasteFromWordDisabled_Vido,
+.dxHtmlEditor_Icons_heUndo_Vido,
+.dxHtmlEditor_Icons_heUndoDisabled_Vido,
+.dxHtmlEditor_Icons_heRedo_Vido,
+.dxHtmlEditor_Icons_heRedoDisabled_Vido,
+.dxHtmlEditor_Icons_heBold_Vido,
+.dxHtmlEditor_Icons_heBoldDisabled_Vido,
+.dxHtmlEditor_Icons_heItalic_Vido,
+.dxHtmlEditor_Icons_heItalicDisabled_Vido,
+.dxHtmlEditor_Icons_heUnderline_Vido,
+.dxHtmlEditor_Icons_heUnderlineDisabled_Vido,
+.dxHtmlEditor_Icons_heStrikethrough_Vido,
+.dxHtmlEditor_Icons_heStrikethroughDisabled_Vido,
+.dxHtmlEditor_Icons_heCenter_Vido,
+.dxHtmlEditor_Icons_heCenterDisabled_Vido,
+.dxHtmlEditor_Icons_heLeft_Vido,
+.dxHtmlEditor_Icons_heLeftDisabled_Vido,
+.dxHtmlEditor_Icons_heRight_Vido,
+.dxHtmlEditor_Icons_heRightDisabled_Vido,
+.dxHtmlEditor_Icons_heJustifyFull_Vido,
+.dxHtmlEditor_Icons_heJustifyFullDisabled_Vido,
+.dxHtmlEditor_Icons_heSuperscript_Vido,
+.dxHtmlEditor_Icons_heSuperscriptDisabled_Vido,
+.dxHtmlEditor_Icons_heSubscript_Vido,
+.dxHtmlEditor_Icons_heSubscriptDisabled_Vido,
+.dxHtmlEditor_Icons_heIndent_Vido,
+.dxHtmlEditor_Icons_heIndentDisabled_Vido,
+.dxHtmlEditor_Icons_heOutdent_Vido,
+.dxHtmlEditor_Icons_heOutdentDisabled_Vido,
+.dxHtmlEditor_Icons_heInsertOrderedList_Vido,
+.dxHtmlEditor_Icons_heInsertOrderedListDisabled_Vido,
+.dxHtmlEditor_Icons_heInsertUnorderedList_Vido,
+.dxHtmlEditor_Icons_heInsertUnorderedListDisabled_Vido,
+.dxHtmlEditor_Icons_heInsertImageDialog_Vido,
+.dxHtmlEditor_Icons_heInsertImageDialogDisabled_Vido,
+.dxHtmlEditor_Icons_heInsertLinkDialog_Vido,
+.dxHtmlEditor_Icons_heInsertLinkDialogDisabled_Vido,
+.dxHtmlEditor_Icons_heInsertTableDialog_Vido,
+.dxHtmlEditor_Icons_heInsertTableDialogDisabled_Vido,
+.dxHtmlEditor_Icons_heChangeTableDialog_Vido,
+.dxHtmlEditor_Icons_heChangeTableDialogDisabled_Vido,
+.dxHtmlEditor_Icons_heChangeTableCellDialog_Vido,
+.dxHtmlEditor_Icons_heChangeTableCellDialogDisabled_Vido,
+.dxHtmlEditor_Icons_heChangeTableColumnDialog_Vido,
+.dxHtmlEditor_Icons_heChangeTableColumnDialogDisabled_Vido,
+.dxHtmlEditor_Icons_heChangeTableRowDialog_Vido,
+.dxHtmlEditor_Icons_heChangeTableRowDialogDisabled_Vido,
+.dxHtmlEditor_Icons_heInsertTableRowAbove_Vido,
+.dxHtmlEditor_Icons_heInsertTableRowAboveDisabled_Vido,
+.dxHtmlEditor_Icons_heInsertTableRowBelow_Vido,
+.dxHtmlEditor_Icons_heInsertTableRowBelowDisabled_Vido,
+.dxHtmlEditor_Icons_heInsertTableColumnOnLeft_Vido,
+.dxHtmlEditor_Icons_heInsertTableColumnOnLeftDisabled_Vido,
+.dxHtmlEditor_Icons_heInsertTableColumnOnRight_Vido,
+.dxHtmlEditor_Icons_heInsertTableColumnOnRightDisabled_Vido,
+.dxHtmlEditor_Icons_heSplitTableCellHorizontal_Vido,
+.dxHtmlEditor_Icons_heSplitTableCellHorizontalDisabled_Vido,
+.dxHtmlEditor_Icons_heSplitTableCellVertical_Vido,
+.dxHtmlEditor_Icons_heSplitTableCellVerticalDisabled_Vido,
+.dxHtmlEditor_Icons_heMergeTableCellHorizontal_Vido,
+.dxHtmlEditor_Icons_heMergeTableCellHorizontalDisabled_Vido,
+.dxHtmlEditor_Icons_heMergeTableCellVertical_Vido,
+.dxHtmlEditor_Icons_heMergeTableCellVerticalDisabled_Vido,
+.dxHtmlEditor_Icons_heDeleteTable_Vido,
+.dxHtmlEditor_Icons_heDeleteTableDisabled_Vido,
+.dxHtmlEditor_Icons_heDeleteTableColumn_Vido,
+.dxHtmlEditor_Icons_heDeleteTableColumnDisabled_Vido,
+.dxHtmlEditor_Icons_heDeleteTableRow_Vido,
+.dxHtmlEditor_Icons_heDeleteTableRowDisabled_Vido,
+.dxHtmlEditor_Icons_heUnlink_Vido,
+.dxHtmlEditor_Icons_heUnlinkDisabled_Vido,
+.dxHtmlEditor_Icons_heBackColor_Vido,
+.dxHtmlEditor_Icons_heBackColorDisabled_Vido,
+.dxHtmlEditor_Icons_heForeColor_Vido,
+.dxHtmlEditor_Icons_heForeColorDisabled_Vido,
+.dxHtmlEditor_Icons_heRemoveFormat_Vido,
+.dxHtmlEditor_Icons_heRemoveFormatDisabled_Vido,
+.dxHtmlEditor_Icons_hePrint_Vido,
+.dxHtmlEditor_Icons_hePrintDisabled_Vido,
+.dxHtmlEditor_Icons_heCheckSpelling_Vido,
+.dxHtmlEditor_Icons_heCheckSpellingDisabled_Vido,
+.dxHtmlEditor_heToolbarPopOut_Vido,
+.dxHtmlEditor_heToolbarPopOutDisabled_Vido,
+.dxHtmlEditor_heToolbarPopOutHover_Vido,
+.dxHtmlEditor_heConstrainProportionsMiddleOn_Vido,
+.dxHtmlEditor_heConstrainProportionsMiddleOff_Vido,
+.dxHtmlEditor_heConstrainProportionsBottom_Vido,
+.dxHtmlEditor_heConstrainProportionsTop_Vido,
+.dxHtmlEditor_RoundPanel_herpHeaderTopLeftCorner_Vido,
+.dxHtmlEditor_RoundPanel_herpHeaderTopRightCorner_Vido,
+.dxHtmlEditor_RoundPanel_herpBottomLeftCorner_Vido,
+.dxHtmlEditor_RoundPanel_herpBottomRightCorner_Vido,
+.dxHtmlEditor_RoundPanel_herpTopLeftCorner_Vido,
+.dxHtmlEditor_RoundPanel_herpTopRightCorner_Vido,
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomLeftCorner_Vido,
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomRightCorner_Vido,
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopLeftCorner_Vido,
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopRightCorner_Vido {
+    background-image: url("spriteHtml.png");
+    -background-image: url("spriteHtml.gif"); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxHtmlEditor_Icons_heCut_Vido {
+    background-position: -48px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCutDisabled_Vido {
+    background-position: -72px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCopy_Vido {
+    background-position: 0px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCopyDisabled_Vido {
+    background-position: -24px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePaste_Vido {
+    background-position: -96px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePasteDisabled_Vido {
+    background-position: -120px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePasteFromWord_Vido {
+    background-position: -144px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePasteFromWordDisabled_Vido {
+    background-position: -168px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUndo_Vido {
+    background-position: -96px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUndoDisabled_Vido {
+    background-position: -120px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRedo_Vido {
+    background-position: -48px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRedoDisabled_Vido {
+    background-position: -72px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heBold_Vido {
+    background-position: -48px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heBoldDisabled_Vido {
+    background-position: -72px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heItalic_Vido {
+    background-position: 0px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heItalicDisabled_Vido {
+    background-position: -24px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUnderline_Vido {
+    background-position: -48px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUnderlineDisabled_Vido {
+    background-position: -72px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heStrikethrough_Vido {
+    background-position: -96px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heStrikethroughDisabled_Vido {
+    background-position: -120px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCenter_Vido {
+    background-position: -96px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCenterDisabled_Vido {
+    background-position: -120px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heLeft_Vido {
+    background-position: -96px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heLeftDisabled_Vido {
+    background-position: -120px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRight_Vido {
+    background-position: -144px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRightDisabled_Vido {
+    background-position: -168px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heJustifyFull_Vido {
+    background-position: -48px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heJustifyFullDisabled_Vido {
+    background-position: -72px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSuperscript_Vido {
+    background-position: 0px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSuperscriptDisabled_Vido {
+    background-position: -24px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSubscript_Vido {
+    background-position: -144px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSubscriptDisabled_Vido {
+    background-position: -168px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heIndent_Vido {
+    background-position: -96px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heIndentDisabled_Vido {
+    background-position: -120px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heOutdent_Vido {
+    background-position: -48px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heOutdentDisabled_Vido {
+    background-position: -72px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertOrderedList_Vido {
+    background-position: -48px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertOrderedListDisabled_Vido {
+    background-position: -72px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertUnorderedList_Vido {
+    background-position: -144px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertUnorderedListDisabled_Vido {
+    background-position: -168px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertImageDialog_Vido {
+    background-position: -144px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertImageDialogDisabled_Vido {
+    background-position: -168px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertLinkDialog_Vido {
+    background-position: 0px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertLinkDialogDisabled_Vido {
+    background-position: -24px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableDialog_Vido {
+    background-position: 0px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableDialogDisabled_Vido {
+    background-position: -24px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableDialog_Vido {
+    background-position: -48px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableDialogDisabled_Vido {
+    background-position: -72px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableCellDialog_Vido {
+    background-position: -144px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableCellDialogDisabled_Vido {
+    background-position: -168px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableColumnDialog_Vido {
+    background-position: 0px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableColumnDialogDisabled_Vido {
+    background-position: -24px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableRowDialog_Vido {
+    background-position: -96px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableRowDialogDisabled_Vido {
+    background-position: -120px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableRowAbove_Vido {
+    background-position: -48px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableRowAboveDisabled_Vido {
+    background-position: -72px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableRowBelow_Vido {
+    background-position: -96px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableRowBelowDisabled_Vido {
+    background-position: -120px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableColumnOnLeft_Vido {
+    background-position: -96px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableColumnOnLeftDisabled_Vido {
+    background-position: -120px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableColumnOnRight_Vido {
+    background-position: -144px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableColumnOnRightDisabled_Vido {
+    background-position: -168px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSplitTableCellHorizontal_Vido {
+    background-position: 0px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSplitTableCellHorizontalDisabled_Vido {
+    background-position: -24px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSplitTableCellVertical_Vido {
+    background-position: -48px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSplitTableCellVerticalDisabled_Vido {
+    background-position: -72px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heMergeTableCellHorizontal_Vido {
+    background-position: -144px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heMergeTableCellHorizontalDisabled_Vido {
+    background-position: -168px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heMergeTableCellVertical_Vido {
+    background-position: 0px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heMergeTableCellVerticalDisabled_Vido {
+    background-position: -24px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTable_Vido {
+    background-position: -96px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableDisabled_Vido {
+    background-position: -120px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableColumn_Vido {
+    background-position: -144px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableColumnDisabled_Vido {
+    background-position: -168px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableRow_Vido {
+    background-position: 0px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableRowDisabled_Vido {
+    background-position: -24px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUnlink_Vido {
+    background-position: -144px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUnlinkDisabled_Vido {
+    background-position: -168px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heBackColor_Vido {
+    background-position: 0px -26px;
+    width: 16px;
+    height: 13px;
+}
+
+.dxHtmlEditor_Icons_heBackColorDisabled_Vido {
+    background-position: -24px -26px;
+    width: 16px;
+    height: 13px;
+}
+
+.dxHtmlEditor_Icons_heForeColor_Vido {
+    background-position: -48px -98px;
+    width: 16px;
+    height: 13px;
+}
+
+.dxHtmlEditor_Icons_heForeColorDisabled_Vido {
+    background-position: -72px -98px;
+    width: 16px;
+    height: 13px;
+}
+
+.dxHtmlEditor_Icons_heRemoveFormat_Vido {
+    background-position: -96px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRemoveFormatDisabled_Vido {
+    background-position: -120px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePrint_Vido {
+    background-position: 0px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePrintDisabled_Vido {
+    background-position: -24px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCheckSpelling_Vido {
+    background-position: -144px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCheckSpellingDisabled_Vido {
+    background-position: -168px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_heToolbarPopOut_Vido {
+    background-position: -135px 0px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxHtmlEditor_heToolbarPopOutDisabled_Vido {
+    background-position: -150px 0px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxHtmlEditor_heToolbarPopOutHover_Vido {
+    background-position: -165px 0px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxHtmlEditor_heConstrainProportionsMiddleOn_Vido {
+    background-position: -19px 0px;
+    width: 11px;
+    height: 18px;
+}
+
+.dxHtmlEditor_heConstrainProportionsMiddleOff_Vido {
+    background-position: 0px 0px;
+    width: 11px;
+    height: 18px;
+}
+
+.dxHtmlEditor_heConstrainProportionsBottom_Vido {
+    background-position: -38px 0px;
+    width: 11px;
+    height: 6px;
+}
+
+.dxHtmlEditor_heConstrainProportionsTop_Vido {
+    background-position: -38px -14px;
+    width: 11px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpHeaderTopLeftCorner_Vido {
+    background-position: -109px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpHeaderTopRightCorner_Vido {
+    background-position: -122px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpBottomLeftCorner_Vido {
+    background-position: -57px -13px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpBottomRightCorner_Vido {
+    background-position: -70px -13px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpTopLeftCorner_Vido {
+    background-position: -57px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpTopRightCorner_Vido {
+    background-position: -70px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomLeftCorner_Vido {
+    background-position: -83px -13px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomRightCorner_Vido {
+    background-position: -96px -13px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopLeftCorner_Vido {
+    background-position: -83px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopRightCorner_Vido {
+    background-position: -96px 0px;
+    width: 5px;
+    height: 5px;
+}
+

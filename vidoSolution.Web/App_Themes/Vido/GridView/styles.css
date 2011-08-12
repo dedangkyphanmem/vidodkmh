@@ -1,0 +1,509 @@
+.dxgvControl_Vido,
+.dxgvDisabled_Vido
+{
+	border: Solid 1px #A3C0E8;
+	font: 9pt Tahoma;
+	background-color: #FFFFFF;
+	color: #000000;
+	cursor: default;
+}
+
+.dxgvDisabled_Vido 
+{
+	color: Gray;
+}
+.dxgvControl_Vido a 
+{
+	color: #3F66A0;
+}
+.dxgvControl_Vido a:hover
+{
+	color: #F39128;
+}
+.dxgvControl_Vido a:visited
+{
+	color: #3F66A0;
+}
+.dxgvDisabled_Vido a
+{
+	color: Gray;
+}
+.dxgvLoadingPanel_Vido
+{
+    font: 9pt Tahoma;
+	color: #2C4D79;
+	background-color: White;
+	border: solid 1px #67A2C6;
+}
+.dxgvLoadingPanel_Vido td
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 10px 20px 8px;
+}
+.dxgvLoadingPanelStatusBar_Vido
+{
+	background-color: transparent;
+	font: 12px Tahoma;
+}
+.dxgvLoadingPanelStatusBar_Vido td
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 0px 2px 0px 2px;
+}
+
+.dxgvFilterPopupWindow_Vido
+{
+	color: Black;
+	font: 9pt Tahoma;
+	border: solid 1px #A3C0E8;
+}
+.dxgvFilterPopupItemsArea_Vido
+{
+	color: Black;
+	background-color: #FFFFFF;
+}
+.dxgvFilterPopupButtonPanel_Vido
+{
+	font: 9pt Tahoma;
+	background-color: #ECF4FE;
+	border: 1px solid #AECAF0;
+	color: #2C4D79;
+}
+
+.dxgvFilterPopupItem_Vido td.dxgv,
+.dxgvFilterPopupActiveItem_Vido td.dxgv,
+.dxgvFilterPopupSelectedItem_Vido td.dxgv
+{
+	padding: 3px 2px 4px 4px;
+	cursor: default;
+	white-space: nowrap;	
+}
+.dxgvFilterPopupActiveItem_Vido
+{
+	background-color: #FFE7A2;
+    color: Black;
+}
+.dxgvFilterPopupSelectedItem_Vido
+{
+    color: Black;
+    background-color: #FFBD69;
+}
+
+.dxgvTable_Vido
+{
+	background-color: #FFFFFF;
+	border: 0;
+	border-collapse: separate!important;
+	overflow: hidden;
+	font: 9pt Tahoma;
+	color: #4F4F4F;
+}
+.dxgvInlineEditRow_Vido,
+.dxgvDataRow_Vido
+{
+}
+.dxgvInlineEditRow_Vido td.dxgv
+{
+	border-bottom: Solid 1px #A3C0E8;
+	border-right: Solid 1px #A3C0E8;
+}
+.dxgvDataRowAlt_Vido
+{
+	background-color: #F7FAFF;
+}
+.dxgvFilterRow_Vido 
+{
+	background-color: #DBEBFF;
+}
+.dxgvEditForm_Vido 
+{
+	background-color: #F7FAFF;
+}
+.dxgvEditForm_Vido td.dxgv
+{
+	border-bottom: Solid 1px #A3C0E8;
+	padding: 15px 15px 15px 15px;
+}
+.dxgvSelectedRow_Vido
+{
+	background-color: #FFBD69;
+	color: #000000;
+}
+.dxgvFocusedRow_Vido
+{
+	background-color: #FF9C3C;
+    color: #000000;
+}
+.dxgvSelectedRow_Vido td.dxgvCommandColumn_Vido a, 
+.dxgvFocusedRow_Vido td.dxgvCommandColumn_Vido a
+{
+    color: #000000;
+}
+.dxgvPreviewRow_Vido
+{
+	background-color: #F7FAFF;
+	color: #000000;
+}
+.dxgvDetailCell_Vido,
+.dxgvPreviewRow_Vido td.dxgv,
+.dxgvEmptyDataRow_Vido td.dxgv
+{
+	padding: 30px 2px 30px 4px;
+	border-bottom: Solid 1px #BED6F6;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
+.dxgvPreviewRow_Vido td.dxgv
+{
+	padding: 15px 15px 15px 20px;
+}
+.dxgvDetailCell_Vido
+{
+	padding: 19px 19px 19px 0px;
+}
+.dxgvDetailRow_Vido td.dxgvIndentCell 
+{
+    padding-left: 0px;
+    padding-right: 0px;
+    border-bottom: Solid 1px #BED6F6;
+}
+
+.dxgvEmptyDataRow_Vido
+{
+	background-color: #EEF3FF;
+	color: #4F4F4F;
+}
+.dxgvEmptyDataRow_Vido td.dxgv
+{
+	text-align: center;
+}
+
+.dxgvEditFormDisplayRow_Vido td.dxgv,
+.dxgvDataRow_Vido td.dxgv,
+.dxgvDataRowAlt_Vido td.dxgv,
+.dxgvSelectedRow_Vido td.dxgv,
+.dxgvFocusedRow_Vido td.dxgv
+{
+	overflow: hidden;
+	border-top: 0;
+	border-left: 0;
+	border-bottom: Solid 1px #BED6F6;
+	border-right: Solid 1px #BED6F6;
+	padding: 4px 5px 5px 5px;
+}
+.dxgvEditFormDisplayRow_Vido td.dxgvCommandColumn_Vido,
+.dxgvDataRow_Vido td.dxgvCommandColumn_Vido,
+.dxgvDataRowAlt_Vido td.dxgvCommandColumn_Vido,
+.dxgvSelectedRow_Vido td.dxgvCommandColumn_Vido,
+.dxgvFocusedRow_Vido td.dxgvCommandColumn_Vido
+{
+	padding: 4px 5px 5px 5px;
+}
+.dxgvEditFormDisplayRow_Vido
+{
+    background-color: #FFFFFF;
+}
+.dxgvEditFormDisplayRow_Vido td.dxgv 
+{
+}
+.dxgvEditingErrorRow_Vido
+{
+	background-color: #F3D6D6;
+	color: #BA1717;
+}
+.dxgvEditingErrorRow_Vido td.dxgv
+{
+	white-space: pre-wrap;
+	border-bottom: Solid 1px #A3C0E8;
+	border-right: 0;
+	border-top: 0;
+	border-left: 0;
+	padding: 6px 12px 6px 12px;
+}
+
+.dxgvFilterRow_Vido td.dxgv
+{
+	border-bottom: Solid 1px #AECAF0;
+	border-right: 0px;
+	border-top: 0;
+	border-left: 0;
+	padding: 2px 1px 2px 1px;
+	overflow: hidden;
+}
+.dxgvGroupRow_Vido
+{
+	background-color: #DBEBFF;
+	color: #4D8AB5;
+}
+.dxgvFocusedGroupRow_Vido
+{
+	background-color: #FFBD69;
+    color: #010100!important;
+}
+.dxgvGroupRow_Vido td.dxgv,
+.dxgvFocusedGroupRow_Vido td.dxgv
+{
+	border: none 0;
+	vertical-align: middle;
+	white-space: nowrap;
+	border-top: 0px;
+	border-bottom: Solid 1px #AECAF0;
+	padding: 4px 5px 5px;
+}
+.dxgvFocusedGroupRow_Vido td.dxgvIndentCell,
+.dxgvFocusedRow_Vido td.dxgvIndentCell,
+.dxgvSelectedRow_Vido td.dxgvIndentCell
+{
+    background-color: #DBEBFF;
+	border-right: solid 1px #A3C0E8;
+	border-top: 0px;
+}
+
+.dxgvFocusedGroupRow_Vido td.dxgv
+{
+	border-bottom: Solid 1px #AECAF0;
+}
+
+.dxgvHeaderPanel_Vido {
+	background-color: #922321/*#922321; /*#E3B3B7*/
+	color: #283B56;
+	padding: 8px 4px 8px 3px;
+	border-bottom: Solid 1px #A3C0E8;
+}
+
+.dxgvHeader_Vido {
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 5px 5px 5px 5px;
+	border: Solid 1px #A3C0E8;
+	background-image: url("gvHeaderBackground.gif");
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #922321;
+	overflow: hidden;
+    font-weight: normal;
+    text-align: left;
+}
+
+.dxgvHeader_Vido a,
+.dxgvHeader_Vido a:hover,
+.dxgvHeader_Vido a:visited {
+	color: #3F66A0;
+}
+
+.dxgvHeader_Vido, .dxgvHeader_Vido table {
+	color: #283B56;
+	font: 9pt Tahoma;
+}
+.dxgvHeader_Vido td {
+	white-space: nowrap;
+}
+.dxgvCustomization_Vido, 
+.dxgvPopupEditForm_Vido
+{
+	width: 100%;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+.dxgvGroupPanel_Vido
+{
+    font-size: 9pt;
+	white-space: nowrap;
+	background-color: #ECF4FE;
+	color: #94a6be;
+	border-bottom: Solid 1px #A3C0E8;
+	background-image: url("gvGroupPanelBackground.gif");
+	background-repeat: repeat-x;
+	background-position: bottom;
+	padding: 10px 4px 10px 6px;
+}
+.dxgvFooter_Vido
+{
+	background-color: #EEF3FF;
+	white-space: nowrap;
+}
+.dxgvFooter_Vido td.dxgv
+{
+	padding: 6px 5px 7px 5px;
+	border-bottom: Solid 1px #A3C0E8;
+	border-right: 0px;
+}
+.dxgvGroupFooter_Vido
+{
+	background-color: #EEF3FF;
+	white-space: nowrap;
+}
+.dxgvGroupFooter_Vido td.dxgv
+{
+	padding: 6px 5px 7px 5px;
+	border-bottom: Solid 1px #A3C0E8;
+	border-right: 0px;
+}
+
+.dxgvDataRow_Vido td.dxgvIndentCell,
+.dxgvGroupRow_Vido td.dxgvIndentCell,
+.dxgvGroupFooter_Vido td.dxgvIndentCell
+{
+    background-color: #DBEBFF;
+	border-right: solid 1px #A3C0E8;
+	border-top: 0px;
+}
+
+.dxgvTitlePanel_Vido,
+.dxgvTable_Vido caption
+{
+	font-weight: normal;
+	padding: 5px;
+	padding-bottom: 6px;
+	text-align: center;	
+	border-bottom: Solid 1px #A3C0E8;
+	color: #283B56;
+	background-color: #F7FAFF;
+}
+.dxgvLoadingDiv_Vido
+{
+	background-color:Gray;	
+	opacity: 0.01;
+	filter:progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=1);
+}
+.dxgvStatusBar_Vido 
+{
+	border-top: Solid 1px #A3C0E8;
+	background-color: #EEF3FF;
+}
+.dxgvStatusBar_Vido tr.dxgv
+{
+	height: 20px;
+}
+.dxgvCommandColumn_Vido
+{
+	padding: 2px 0px 2px 2px;
+}
+.dxgvCommandColumn_Vido a
+{
+	margin: 0px 3px 0px 0px;
+}
+.dxgvCommandColumnItem_Vido
+{	
+}
+.dxgvEditFormTable_Vido
+{
+    margin: 10px 0px 10px 0px;
+	padding: 0px;
+	font: 9pt Tahoma;
+	color: #000000;
+}
+.dxgvEditFormCaption_Vido
+{
+	padding: 4px 4px 4px 8px; 
+	white-space: nowrap;
+}
+
+.dxgvInlineEditCell_Vido
+{
+	padding: 1px; 
+}
+.dxgvInlineEditCell_Vido .dxeButtonEdit_Vido td.dxgv,
+.dxgvInlineEditCell_Vido .dxeTextBox_Vido td.dxgv  
+{
+	padding-left: 1px;
+}
+.dxgvEditFormCell_Vido
+{
+	padding: 4px 4px 4px 4px; 
+	border: 0;
+}
+
+.dxgvFilterBar_Vido 
+{
+	border-top: solid 1px #A3C0E8;	
+	background: #B7D7FF;
+}
+.dxgvFilterBar_Vido a
+{
+	color: #283B56;
+	text-decoration: underline;		
+}
+.dxgvFilterBar_Vido a:hover
+{
+	color: #F39128;
+}
+.dxgvFilterBarCheckBoxCell_Vido
+{
+	padding: 0 3px;
+	padding-right: 7px;
+}
+.dxgvFilterBarImageCell_Vido
+{
+	padding: 0 3px;
+	padding-right: 1px;
+	cursor: pointer;
+}
+.dxgvFilterBarExpressionCell_Vido
+{
+	font-size: 9pt;
+	padding: 5px 5px 8px 0;	
+	white-space: nowrap;
+}
+.dxgvFilterBarClearButtonCell_Vido
+{
+	font-size: 9pt;
+	padding: 5px 6px 8px;	
+}
+.dxgvFilterBuilderMainArea_Vido 
+{
+	background: white;
+	padding: 6px 2px;
+} 
+.dxgvFilterBuilderButtonArea_Vido
+{
+	background-color: #EEF3FF;
+	border-top: solid 1px #A3C0E8;
+	padding: 6px;
+}
+
+.dxgvPagerBottomPanel_Vido, 
+.dxgvPagerTopPanel_Vido
+{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-image: url("gvPagerBottomPanelBackground.gif");
+    background-repeat: repeat-x;
+    background-position: bootom;
+    background-color: #ffffff;
+}
+
+.dxgvDataRowHover_Vido
+{
+	background: #FFE7A2;
+	color: #4F4F4F;
+}
+
+
+.dxgvControl_Vido .dxpControl_Vido  td.dxpCtrl,
+.dxgvDisabled_Vido .dxpControl_Vido  td.dxpCtrl
+{
+	padding: 6px 2px 6px 0px;
+}
+
+.dxgvControl_Vido .dxpLite_Vido,
+.dxgvDisabled_Vido .dxpLite_Vido
+{
+	padding: 6px 0;
+}
+
+.dxgvControl_Vido .dxpSummary_Vido
+{
+	color: #283B56;
+}
+
+.dxgvControl_Vido .dxpLite_Vido .dx-summary
+{
+	color: #283B56;
+}
+
+
+

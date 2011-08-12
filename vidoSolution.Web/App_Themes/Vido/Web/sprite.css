@@ -1,0 +1,300 @@
+.dxWeb_rpHeaderTopLeftCorner_Vido,
+.dxWeb_rpHeaderTopRightCorner_Vido,
+.dxWeb_rpBottomLeftCorner_Vido,
+.dxWeb_rpBottomRightCorner_Vido,
+.dxWeb_rpTopLeftCorner_Vido,
+.dxWeb_rpTopRightCorner_Vido,
+.dxWeb_rpGroupBoxBottomLeftCorner_Vido,
+.dxWeb_rpGroupBoxBottomRightCorner_Vido,
+.dxWeb_rpGroupBoxTopLeftCorner_Vido,
+.dxWeb_rpGroupBoxTopRightCorner_Vido,
+.dxWeb_mHorizontalPopOut_Vido,
+.dxWeb_mVerticalPopOut_Vido,
+.dxWeb_mSubMenuItem_Vido,
+.dxWeb_mSubMenuItemChecked_Vido,
+.dxWeb_nbCollapse_Vido,
+.dxWeb_nbExpand_Vido,
+.dxWeb_splVSeparator_Vido,
+.dxWeb_splVSeparatorHover_Vido,
+.dxWeb_splHSeparator_Vido,
+.dxWeb_splHSeparatorHover_Vido,
+.dxWeb_splVCollapseBackwardButton_Vido,
+.dxWeb_splVCollapseBackwardButtonHover_Vido,
+.dxWeb_splHCollapseBackwardButton_Vido,
+.dxWeb_splHCollapseBackwardButtonHover_Vido,
+.dxWeb_splVCollapseForwardButton_Vido,
+.dxWeb_splVCollapseForwardButtonHover_Vido,
+.dxWeb_splHCollapseForwardButton_Vido,
+.dxWeb_splHCollapseForwardButtonHover_Vido,
+.dxWeb_pcCloseButton_Vido,
+.dxWeb_pcSizeGrip_Vido,
+.dxWeb_pAll_Vido,
+.dxWeb_pAllDisabled_Vido,
+.dxWeb_pPrev_Vido,
+.dxWeb_pPrevDisabled_Vido,
+.dxWeb_pNext_Vido,
+.dxWeb_pNextDisabled_Vido,
+.dxWeb_pLast_Vido,
+.dxWeb_pLastDisabled_Vido,
+.dxWeb_pFirst_Vido,
+.dxWeb_pFirstDisabled_Vido,
+.dxWeb_tiBackToTop_Vido,
+.dxWeb_smLevelBullet_Vido {
+    background-image: url("spriteWeb.png");
+    -background-image: url("spriteWeb.gif"); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxWeb_rpHeaderTopLeftCorner_Vido {
+    background-position: -104px -88px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_rpHeaderTopRightCorner_Vido {
+    background-position: -117px -88px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_rpBottomLeftCorner_Vido {
+    background-position: -78px -88px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_rpBottomRightCorner_Vido {
+    background-position: -91px -88px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_rpTopLeftCorner_Vido {
+    background-position: -52px -88px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_rpTopRightCorner_Vido {
+    background-position: -65px -88px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_rpGroupBoxBottomLeftCorner_Vido {
+    background-position: -26px -88px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_rpGroupBoxBottomRightCorner_Vido {
+    background-position: -39px -88px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_rpGroupBoxTopLeftCorner_Vido {
+    background-position: 0px -88px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_rpGroupBoxTopRightCorner_Vido {
+    background-position: -13px -88px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_mHorizontalPopOut_Vido {
+    background-position: -92px -50px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_mVerticalPopOut_Vido {
+    background-position: -105px -50px;
+    width: 11px;
+    height: 11px;
+}
+
+.dxWeb_mSubMenuItem_Vido {
+    background-position: -48px -50px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxWeb_mSubMenuItemChecked_Vido {
+    background-position: -70px -50px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxWeb_nbCollapse_Vido {
+    background-position: -129px 0px;
+    width: 17px;
+    height: 17px;
+}
+
+.dxWeb_nbExpand_Vido {
+    background-position: -129px -23px;
+    width: 17px;
+    height: 17px;
+}
+
+.dxWeb_splVSeparator_Vido {
+    background-position: -92px -62px;
+    width: 6px;
+    height: 18px;
+}
+
+.dxWeb_splVSeparatorHover_Vido {
+    background-position: -99px -62px;
+    width: 6px;
+    height: 18px;
+}
+
+.dxWeb_splHSeparator_Vido {
+    background-position: -58px -74px;
+    width: 18px;
+    height: 6px;
+}
+
+.dxWeb_splHSeparatorHover_Vido {
+    background-position: -58px -81px;
+    width: 18px;
+    height: 6px;
+}
+
+.dxWeb_splVCollapseBackwardButton_Vido {
+    background-position: -30px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splVCollapseBackwardButtonHover_Vido {
+    background-position: -37px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splHCollapseBackwardButton_Vido {
+    background-position: 0px -74px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splHCollapseBackwardButtonHover_Vido {
+    background-position: 0px -81px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splVCollapseForwardButton_Vido {
+    background-position: -44px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splVCollapseForwardButtonHover_Vido {
+    background-position: -51px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splHCollapseForwardButton_Vido {
+    background-position: -15px -74px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splHCollapseForwardButtonHover_Vido {
+    background-position: -15px -81px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_pcCloseButton_Vido {
+    background-position: 0px -50px;
+    width: 17px;
+    height: 16px;
+}
+
+.dxWeb_pcSizeGrip_Vido {
+    background-position: -24px -50px;
+    width: 12px;
+    height: 12px;
+}
+
+.dxWeb_pAll_Vido {
+    background-position: 0px 0px;
+    width: 27px;
+    height: 19px;
+}
+
+.dxWeb_pAllDisabled_Vido {
+    background-position: 0px -25px;
+    width: 27px;
+    height: 19px;
+}
+
+.dxWeb_pPrev_Vido {
+    background-position: -105px 0px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxWeb_pPrevDisabled_Vido {
+    background-position: -105px -25px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxWeb_pNext_Vido {
+    background-position: -81px 0px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxWeb_pNextDisabled_Vido {
+    background-position: -81px -25px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxWeb_pLast_Vido {
+    background-position: -55px 0px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxWeb_pLastDisabled_Vido {
+    background-position: -55px -25px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxWeb_pFirst_Vido {
+    background-position: -29px 0px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxWeb_pFirstDisabled_Vido {
+    background-position: -29px -25px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxWeb_tiBackToTop_Vido {
+    background-position: -129px -50px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxWeb_smLevelBullet_Vido {
+    background-position: -130px -65px;
+    width: 5px;
+    height: 5px;
+}
+

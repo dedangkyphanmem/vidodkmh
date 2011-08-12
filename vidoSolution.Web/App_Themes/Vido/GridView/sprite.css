@@ -1,0 +1,104 @@
+.dxGridView_gvCollapsedButton_Vido,
+.dxGridView_gvExpandedButton_Vido,
+.dxGridView_gvDetailCollapsedButton_Vido,
+.dxGridView_gvDetailExpandedButton_Vido,
+.dxGridView_gvFilterRowButton_Vido,
+.dxGridView_gvHeaderFilter_Vido,
+.dxGridView_gvHeaderFilterActive_Vido,
+.dxGridView_gvHeaderSortDown_Vido,
+.dxGridView_gvHeaderSortUp_Vido,
+.dxGridView_gvDragAndDropArrowDown_Vido,
+.dxGridView_gvDragAndDropArrowUp_Vido,
+.dxGridView_gvDragAndDropHideColumn_Vido,
+.dxGridView_gvParentGroupRows_Vido,
+.dxGridView_WindowResizer_Vido {
+    background-image: url('spriteGrid.png');
+    -background-image: url('spriteGrid.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxGridView_gvCollapsedButton_Vido {
+    background-position: -36px 0px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxGridView_gvExpandedButton_Vido {
+    background-position: -36px -18px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxGridView_gvDetailCollapsedButton_Vido {
+    background-position: -53px 0px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxGridView_gvDetailExpandedButton_Vido {
+    background-position: -53px -18px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxGridView_gvFilterRowButton_Vido {
+    background-position: -100px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvHeaderFilter_Vido {
+    background-position: 0px -36px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxGridView_gvHeaderFilterActive_Vido {
+    background-position: -23px -36px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxGridView_gvHeaderSortDown_Vido {
+    background-position: -19px 0px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxGridView_gvHeaderSortUp_Vido {
+    background-position: -19px -18px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxGridView_gvDragAndDropArrowDown_Vido {
+    background-position: 0px 0px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropArrowUp_Vido {
+    background-position: 0px -17px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropHideColumn_Vido {
+    background-position: -70px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.dxGridView_gvParentGroupRows_Vido {
+    background-position: -70px -36px;
+    width: 18px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizer_Vido {
+    background-position: -46px -36px;
+    width: 13px;
+    height: 13px;
+}
+

@@ -1,0 +1,8 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=163290938d0004dc" %>
+<%@ Register TagPrefix="dxtc" Namespace="DevExpress.Web.ASPxTabControl" Assembly="DevExpress.Web.v10.1, Version=10.1.7.0, Culture=neutral, PublicKeyToken=163290938d0004dc" %> 
+<dxtc:ASPxTabControl runat="server" CssFilePath="{0}/styles.css" CssPostfix="Vido" TabSpacing="3px">
+    <Paddings Padding="2px" PaddingLeft="5px" PaddingRight="5px" />
+    <ContentStyle>
+        <Border BorderWidth="1px" BorderStyle="Solid" BorderColor="#AECAF0" />
+    </ContentStyle>
+</dxtc:ASPxTabControl>
