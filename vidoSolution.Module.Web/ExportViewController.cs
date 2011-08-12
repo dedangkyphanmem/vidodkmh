@@ -1167,8 +1167,9 @@ namespace vidoSolution.Module.Web
                 View.ObjectSpace.CommitChanges();
                 ms.Message= string.Format("Đã xác nhận đăng ký cho \"{0}\" Nhóm MH,\r\n(Có {1} nhóm MH đã được kiểm tra, xác nhận), \r\n Vui lòng Nhấn In kết quả để xem chi tiết!", i, j);
                 ms.Title = "Kết quả xác nhận!";
-                //dc.Accepting += dc_Accepting_Report;
-                dc.AcceptAction.Active.SetItemValue("object", false);
+                dc.Accepting += dc_Accepting_Report;
+                //dc.AcceptAction.Active.SetItemValue("object", false);
+                dc.AcceptAction.Caption = "In kết quả";
                 dc.CancelAction.Caption = "Đóng";
                 dc.SaveOnAccept = false;
                 
@@ -1211,19 +1212,46 @@ namespace vidoSolution.Module.Web
         {
            
             ObjectSpace objectSpace = Application.CreateObjectSpace();
+            ConstrainstParameter cpNHHK = objectSpace.FindObject<ConstrainstParameter>(
+                           new BinaryOperator("Code", "REGISTERSEMESTER"));
+
+            if (cpNHHK == null || cpNHHK.Value == 0)
+                throw new UserFriendlyException("Người Quản trị chưa thiết lập NHHK để ĐKMH, vui lòng liên hệ quản trị viên.");
+
             ReportData rd = objectSpace.FindObject<ReportData>(
                 new BinaryOperator("Name", "Kết quả ĐK 1 SV"));
             if (rd != null)
             {
                 XafReport report = rd.LoadXtraReport(objectSpace);
-
-                CriteriaOperator criteriaOperator = CriteriaOperator.TryParse(
-                        String.Format("[Student.Oid] = '{0}'", SecuritySystem.CurrentUserId));
+                RegisterDetailReportParametersObject rdrObj = new RegisterDetailReportParametersObject(objectSpace.Session);
                 Student stud = objectSpace.FindObject<Student>(CriteriaOperator.TryParse(
                         String.Format("[Oid] = '{0}'", SecuritySystem.CurrentUserId)));
+                rdrObj.Student = stud;
+                int nhhk = Convert.ToInt32(cpNHHK.Value);
+                nhhk += 1; //NHHK kế tiếp
+                Semester sem = objectSpace.FindObject<Semester>(new BinaryOperator(
+                    "SemesterName", nhhk, BinaryOperatorType.Equal));
+                if (sem == null) //thử nhhk của năm mới 
+                {
+                    nhhk = (nhhk / 10 +1) * 10 + 1;
+                    sem = objectSpace.FindObject<Semester>(new BinaryOperator(
+                    "SemesterName", nhhk, BinaryOperatorType.Equal));
+                }
+                if (sem==null)
+                    throw new UserFriendlyException("Người Quản trị chưa thiết lập NHHK để ĐKMH, vui lòng liên hệ quản trị viên.");
 
+                rdrObj.Semester = sem;
+                
+                //CriteriaOperator criteriaOperator = new GroupOperator(GroupOperatorType.And,
+                //    new BinaryOperator("Student.Oid",SecuritySystem.CurrentUserId,BinaryOperatorType.Equal),
+                //    new BinaryOperator("Lesson.Semester.SemesterName", cpNHHK.Value, BinaryOperatorType.Greater));
+                //
+                //report.Filtering.Filter = criteriaOperator.ToString();
+
+                report.SetFilteringObject(rdrObj);
+                
                 //Frame.GetController<ReportServiceController>().ShowPreview((IReportData)rd, criteriaOperator);
-                report.Filtering.Filter = criteriaOperator.ToString();
+                
                 MemoryStream stream = new MemoryStream();
                 report.ExportToPdf(stream);
                 

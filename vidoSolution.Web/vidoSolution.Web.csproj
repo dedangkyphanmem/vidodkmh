@@ -363,6 +363,7 @@
     <Content Include="NestedFrameControl.ascx" />
     <Content Include="SessionKeepAliveReconnect.aspx" />
     <Content Include="vidotkb20012011.xml" />
+    <Content Include="VidoWebService.asmx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -423,6 +424,10 @@
     </Compile>
     <Compile Include="SessionKeepAliveReconnect.aspx.designer.cs">
       <DependentUpon>SessionKeepAliveReconnect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VidoWebService.asmx.cs">
+      <DependentUpon>VidoWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

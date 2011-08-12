@@ -49,15 +49,18 @@ namespace vidoSolution.Module.DomainObject
         
         private void UpdateName()
         {
-            string str6LastCharsOid = Oid.ToString();
-            str6LastCharsOid = str6LastCharsOid.Substring(str6LastCharsOid.Length - 6, 6);
-            name = String.Format("{0}-{1}-{2:yyMMdd}", str6LastCharsOid, Student != null ? Student.StudentCode :"", TransactingDate);
-           
+            if (Oid != null)
+            {
+                string str6LastCharsOid = Oid.ToString();
+                str6LastCharsOid = str6LastCharsOid.Substring(str6LastCharsOid.Length - 6, 6);
+                name = String.Format("{0}-{1}-{2:yyMMdd}", str6LastCharsOid, Student != null ? Student.StudentCode : "", TransactingDate);
+            }
+            else name = "";
         }
         [PersistentAlias("name")]
         public string Name
         {
-            get { return EvaluateAlias("Name").ToString(); }
+            get { return EvaluateAlias("Name") == null ? "" : EvaluateAlias("Name").ToString(); }
             
         }
 
@@ -135,7 +138,7 @@ namespace vidoSolution.Module.DomainObject
         protected override void OnLoaded()
         {
             base.OnLoaded();
-     //       UpdateName();
+            UpdateName();
         }
     }
 

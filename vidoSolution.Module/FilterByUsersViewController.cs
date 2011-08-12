@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -40,6 +40,18 @@ namespace vidoSolution.Module
                        "Student.StudentCode", student.StudentCode, BinaryOperatorType.Equal);
 
                 }
+                if ((View is ListView) && (View.ObjectTypeInfo.Type == typeof(RegisterDetail)))
+                {
+                    ConstrainstParameter cpNHHK = View.ObjectSpace.FindObject<ConstrainstParameter>(
+                           new BinaryOperator("Code", "REGISTERSEMESTER"));
+
+                    if (cpNHHK == null || cpNHHK.Value == 0)
+                        throw new UserFriendlyException("Người Quản trị chưa thiết lập NHHK để ĐKMH, vui lòng liên hệ quản trị viên.");
+                    else
+                         ((ListView)View).CollectionSource.Criteria[cpNHHK.Value.ToString()] = new BinaryOperator(
+                            "Lesson.Semester.SemesterName", cpNHHK.Value, BinaryOperatorType.Greater);
+                }
+
                 if ((View is ListView) && (View.ObjectTypeInfo.Type == typeof(Student)))
                 {
                     ((ListView)View).CollectionSource.Criteria["ByStudent"] = new BinaryOperator(

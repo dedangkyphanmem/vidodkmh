@@ -7,8 +7,8 @@
       <Action Id="CancelRegister" Index="2" />
       <Action Id="BookRegister" Index="3" Caption="Thực hiện đăng ký" />
       <Action Id="CheckRegister" Index="4" />
-      <Action Id="ConfirmRegister" Index="5" Caption="Xác nhận đăng ký" />
-      <Action Id="PrintRegister" Caption="In kết quả" ToolTip="In kết quả đăng ký" Index="6" />
+      <Action Id="ConfirmRegister" Index="5" Caption="In kết quả xác nhận " />
+      <Action Id="PrintRegister" Caption="Xem KQĐK môn học" ToolTip="Xem lại kết quả đăng ký môn học" Index="6" />
       <Action Id="ExportRegister" Caption="Xuất dữ liệu (xls)" Index="8" />
       <Action Id="ChangePasswordByUser" Caption="Đổi mật khẩu" />
       <Action Id="Diagnostic Info" Caption="Chẩn đoán" />
