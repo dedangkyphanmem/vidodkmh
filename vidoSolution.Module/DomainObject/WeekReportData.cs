@@ -65,7 +65,9 @@ namespace vidoSolution.Module.DomainObject
                     case 7:
                         return _Day7;                        
                     case 8:
-                        return _Day8;   
+                        return _Day8;
+                    case 9:
+                        return _Day9;
                     default:
                         return "";
                 }
@@ -99,7 +101,9 @@ namespace vidoSolution.Module.DomainObject
                     case 8:
                         SetPropertyValue<string>("Day8", ref _Day8, value);
                         break;
-                    
+                    case 9:
+                        SetPropertyValue<string>("Day9", ref _Day9, value);
+                        break;
                 }
             }
         }
@@ -170,6 +174,13 @@ namespace vidoSolution.Module.DomainObject
         {
             get { return _Day8; }
             set { SetPropertyValue<string>("Day8", ref _Day8, value); }
-        }             
+        }
+        string _Day9 = "";
+        [Size(int.MaxValue)]
+        public string Day9
+        {
+            get { return _Day9; }
+            set { SetPropertyValue<string>("Day9", ref _Day9, value); }
+        }     
     }
 }

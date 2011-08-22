@@ -1337,7 +1337,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="Lesson_ListView" MasterDetailMode="ListViewOnly" ShowAutoFilterRow="True" IsGroupPanelVisible="True" GroupSummary="Count" AllowEdit="False" AllowNew="False">
+    <ListView Id="Lesson_ListView" MasterDetailMode="ListViewOnly" ShowAutoFilterRow="True" IsGroupPanelVisible="True" GroupSummary="Count" AllowEdit="False">
       <Columns>
         <ColumnInfo Id="DateCreated" IsNewNode="True" Removed="True" PropertyName="DateCreated" Index="-1" Width="70" />
         <ColumnInfo Id="DateModified" IsNewNode="True" Removed="True" PropertyName="DateModified" Index="-1" Width="70" />
@@ -2225,8 +2225,6 @@
       </Layout>
     </DetailView>
     <ListView Id="TkbClassroom_ListView" AllowNew="False" />
-    <DetailView Id="TkbDay_DetailView" AllowEdit="False" AllowNew="False" />
-    <ListView Id="TkbDay_ListView" AllowNew="False" />
     <DetailView Id="TkbFile_DetailView">
       <Items>
         <PropertyEditor Id="Semester" IsNewNode="True" PropertyName="Semester" />

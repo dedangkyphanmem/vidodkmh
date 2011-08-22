@@ -151,6 +151,23 @@ namespace vidoSolution.Module.Utilities
             return (i1 & i2) != 0;
         }
 
+        public static Semester NextSemester(Semester curSemester)
+        {
+            int nhhk = Convert.ToInt32(curSemester.SemesterName);
+            nhhk += 1; //NHHK kế tiếp
+            Semester sem = curSemester.Session.FindObject<Semester>(new BinaryOperator(
+                "SemesterName", nhhk, BinaryOperatorType.Equal));
+            if (sem == null) //thử nhhk của năm mới 
+            {
+                nhhk = (nhhk / 10 + 1) * 10 + 1;
+                sem = curSemester.Session.FindObject<Semester>(new BinaryOperator(
+                "SemesterName", nhhk, BinaryOperatorType.Equal));
+            }
+
+            if (sem == null)
+                throw new UserFriendlyException("Người Quản trị chưa thiết lập NHHK tiếp theo, vui lòng liên hệ quản trị viên.");
+            return sem;
+        }
 
         private static string[] ChuSo = new string[10] { " không", " một", " hai", " ba", " bốn", " năm", " sáu", " bẩy", " tám", " chín" };
         private static string[] Tien = new string[6] { "", " nghìn", " triệu", " tỷ", " nghìn tỷ", " triệu tỷ" };

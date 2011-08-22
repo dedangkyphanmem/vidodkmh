@@ -1045,6 +1045,7 @@ namespace vidoSolution.Module.Web
         {
             Controller controller = sender as Controller;
             ObjectSpace objectSpace = Application.CreateObjectSpace();
+
             ReportData rd = objectSpace.FindObject<ReportData>(
                 new BinaryOperator("Name", "Kết quả ĐK 1 SV"));
             if (rd != null)
@@ -1055,9 +1056,32 @@ namespace vidoSolution.Module.Web
                         String.Format("[Student.Oid] = '{0}'", SecuritySystem.CurrentUserId));
                 Student stud = objectSpace.FindObject<Student>(CriteriaOperator.TryParse(
                         String.Format("[Oid] = '{0}'", SecuritySystem.CurrentUserId)));
+                
+                ConstrainstParameter cpNHHK = objectSpace.FindObject<ConstrainstParameter>(
+                               new BinaryOperator("Code", "REGISTERSEMESTER"));
+               
+                RegisterDetailReportParametersObject rdrObj = new RegisterDetailReportParametersObject(objectSpace.Session);
+                
+                rdrObj.Student = stud;
+                int nhhk = Convert.ToInt32(cpNHHK.Value);
+                nhhk += 1; //NHHK kế tiếp
+                Semester sem = objectSpace.FindObject<Semester>(new BinaryOperator(
+                    "SemesterName", nhhk, BinaryOperatorType.Equal));
+                if (sem == null) //thử nhhk của năm mới 
+                {
+                    nhhk = (nhhk / 10 + 1) * 10 + 1;
+                    sem = objectSpace.FindObject<Semester>(new BinaryOperator(
+                    "SemesterName", nhhk, BinaryOperatorType.Equal));
+                }
 
-                //Frame.GetController<ReportServiceController>().ShowPreview((IReportData)rd, criteriaOperator);
-                report.Filtering.Filter = criteriaOperator.ToString();
+                if (sem == null)
+                    throw new UserFriendlyException("Người Quản trị chưa thiết lập NHHK để ĐKMH, vui lòng liên hệ quản trị viên.");
+
+                rdrObj.Semester = sem;
+                rdrObj.Student = stud;
+               
+              
+                report.SetFilteringObject(rdrObj);
                 MemoryStream stream = new MemoryStream();
                 report.ExportToPdf(stream);
 
