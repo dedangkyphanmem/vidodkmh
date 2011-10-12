@@ -483,6 +483,7 @@
       </Columns>
     </ListView>
     <ListView Id="ReportData_ListView" Caption="Báo biểu" />
+    <ListView Id="TkbFile_ListView" EditorTypeName="" />
     <DetailView Id="User_DetailView">
       <Items>
         <PropertyEditor Id="FirstName" ImmediatePostData="True" />

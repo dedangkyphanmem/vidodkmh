@@ -35,8 +35,8 @@
       <Action Id="SetFilter" Caption="Lọc" />
       <Action Id="ShowAllContexts" Caption="Kiểm tra hợp lệ" ToolTip="Kiểm tra hợp lệ dữ liệu" />
       <Action Id="ShowNavigationItem" Caption="Duyệt xem" />
-      <Action Id="TkbFile.ExtractZipFile" Caption="Extract Zip File" />
-      <Action Id="TkbFile.ImportTKB" Caption="Import TKB" />
+      <Action Id="TkbFile.ExtractZipFile" Caption="Extract Zip File" SelectionDependencyType="RequireSingleObject" TargetObjectsCriteria="IsImported=false" />
+      <Action Id="TkbFile.ImportTKB" Caption="Import TKB" SelectionDependencyType="RequireSingleObject" />
       <Action Id="Unlink" Caption="Xóa chọn (unlink)" ConfirmationMessage="Bạn đang xóa chọn liên kết, bạn chắc chắn chứ?" />
       <Action Id="ViewClassroomTimetableAction" ShortCaption="Xem lịch" Caption="Xem lịch" ToolTip="Xem lịch phòng học đang chọn" />
       <Action Id="ViewClassTransactionTrackingAction" Caption="Xem tỉ lệ nợ LBC" ToolTip="Xem tỉ lệ nợ LBC đang chọn" />
@@ -600,7 +600,8 @@
         <Member Name="Active" Index="5" Caption="Được đăng ký" />
         <Member Name="Note" Index="6" Caption="Ghi chú" />
         <Member Name="CreateDate" AllowEdit="False" Caption="Ngày tạo" />
-        <Member Name="ResultMessage" Caption="Kết quả Import" />
+        <Member Name="IsImported" Caption="Đã import" AllowEdit="False" />
+        <Member Name="ResultLink" Caption="Kết quả" />
       </OwnMembers>
     </Class>
     <Class Name="vidoSolution.Module.DomainObject.TkbGrade" Caption="Khóa (XTKB)">
@@ -2237,6 +2238,7 @@
                 <LayoutItem Id="Semester" IsNewNode="True" Index="1" />
                 <LayoutItem Id="XmlFile" Index="2" />
                 <LayoutItem Id="Active" IsNewNode="True" Index="3" />
+                <LayoutItem Id="CreateDate" Removed="True" />
                 <LayoutItem Id="LocalPath" Removed="True" />
                 <LayoutItem Id="ZipFile" Removed="True" />
               </LayoutGroup>

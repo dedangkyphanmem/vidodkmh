@@ -76,6 +76,13 @@ namespace vidoSolution.Module.DomainObject
             set { SetPropertyValue<string>("SubjectID", ref fsubjectid, value); }
         }
 
+        int fnumexpectation;
+        public int NumExpectation
+        {
+            get { return fnumexpectation; }
+            set { SetPropertyValue<int>("NumExpectation", ref fnumexpectation, value); }
+        }
+
         int fperiodspercard;
         public int PeriodsPerCard
         {

@@ -65,6 +65,12 @@ namespace vidoSolution.Module.DomainObject
             get { return createDate; }
             set { SetPropertyValue("CreateDate", ref createDate, value); }
         }
+        protected override void OnSaving()
+        {
+           
+            if (CreateDate == null) CreateDate = DateTime.Now;
+            base.OnSaving();
+        }
 
         bool active;
         public bool Active
@@ -80,15 +86,24 @@ namespace vidoSolution.Module.DomainObject
             get { return note; }
             set { SetPropertyValue("Note", ref note, value); }
         }
-
-        string fResultMessage;
-        [Size(255)]
-        public string ResultMessage
+        bool _isImported;
+        public bool IsImported
         {
-            get { return fResultMessage; }
-            set { SetPropertyValue("ResultMessage", ref fResultMessage, value); }
+            get { return _isImported; }
+            set
+            {
+                SetPropertyValue<bool>("IsImported", ref _isImported, value);
+            }
+        }
+        string fResultLink;
+        [Size(255)]
+        public string ResultLink
+        {
+            get { return fResultLink; }
+            set { SetPropertyValue("ResultLink", ref fResultLink, value); }
         }
 
+       
         [Action(ToolTip = "Giải nén file zip")]
         public void ExtractZipFile()
         {
@@ -150,7 +165,8 @@ namespace vidoSolution.Module.DomainObject
             LocalPath = "http://" + HttpContext.Current.Request.Url.Authority + "/TKB/View/index.html";
         }
 
-        [Action(ToolTip = "Import Thời Khóa Biểu vào CSDL")]
+        [Action(TargetObjectsCriteria = "IsImported=false", ToolTip = "Import Thời Khóa Biểu vào CSDL")]
+               
         public void ImportTKB()
         {
             #region path
@@ -161,26 +177,21 @@ namespace vidoSolution.Module.DomainObject
             {
                 tempXmlFolderPath = HttpContext.Current.Request.MapPath("~/tempFolder");
                 tempXmlFile = HttpContext.Current.Request.MapPath("~/tempFolder/" + XmlFile.FileName);
-                tempXmlFileLog = HttpContext.Current.Request.MapPath("~/tempFolder/" + XmlFile.FileName + "-log.txt");
+                tempXmlFileLog = HttpContext.Current.Request.MapPath("~/tempFolder/" + XmlFile.FileName + "-log.html");
             }
             else 
             {
                 tempXmlFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"tempFolder/");
                 tempXmlFile =Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"tempFolder/",XmlFile.FileName);
-                tempXmlFileLog=Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"tempFolder/" , XmlFile.FileName + "-log.txt");
+                tempXmlFileLog=Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"tempFolder/" , XmlFile.FileName + "-log.html");
             }
 
             if (!Directory.Exists(tempXmlFolderPath))
                 Directory.CreateDirectory(tempXmlFolderPath);
-            DirectoryInfo tempXmlFolder = new DirectoryInfo(tempXmlFolderPath);
-            if (tempXmlFolder.GetFiles().Length > 0)
-            {
-                tempXmlFolder.Delete(true);
-                tempXmlFolder.Create();
-            }
+            
             #endregion
 
-            if (Semester != null && Note != "")
+            if (Semester != null && Note != null && Note != "")
             {
                 using (System.IO.FileStream fileStream = new FileStream(tempXmlFile, FileMode.OpenOrCreate))
                 {
@@ -189,6 +200,9 @@ namespace vidoSolution.Module.DomainObject
                         Session.BeginTransaction();
                         try
                         {
+                            fileStreamlog.WriteLine("<html><header><title>" + tempXmlFile + "-"+ DateTime.Now.ToString("dd-MM-yyyy-HHmmss") + "-log </title>	" +
+                   "<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" />" +
+                   "</head><body>\r\n<table border=\"1px\"> <tr><Th>LOẠI</Th><th>THAO TÁC</th><th>THÔNG TIN CHI TIẾT</Th><Th>THỜI GIAN</Th><th>TÌNH TRẠNG</th></Tr>");
                       
                             #region Import data
                             XmlFile.SaveToStream(fileStream);
@@ -305,7 +319,7 @@ namespace vidoSolution.Module.DomainObject
                                 NestedUnitOfWork uow = Session.BeginNestedUnitOfWork();
                                 uow.BeginTransaction();
                                 ImportLessons(Session ,doc.Element(XName.Get("lessons")), lessonDic, 
-                                    subjectDic, classDic, teacherDic, fileStreamlog);
+                                    subjectDic, classDic, groupDic,teacherDic, fileStreamlog);
                                 uow.CommitTransaction();
 
                             }
@@ -331,7 +345,9 @@ namespace vidoSolution.Module.DomainObject
                                 if (tkbsemester != null)
                                 {
                                     tkbsemester.Period += "," + card.Period.ToString();
-                                    fileStreamlog.WriteLine(String.Format("Update tkbsemester: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", tkbsemester.Name, DateTime.Now));
+                                    //fileStreamlog.WriteLine(String.Format("Update tkbsemester: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", tkbsemester.Name, DateTime.Now));
+                                    fileStreamlog.WriteLine(String.Format("<TR><TD>TKBSEMESTER</TD><TD>UPDATE</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                                        tkbsemester.Lesson.LessonCode + "-" + tkbsemester.Name + "-" + tkbsemester.Classroom.ClassroomCode + "-" + tkbsemester.Day.ToString() + "-" + tkbsemester.Period , DateTime.Now));
                                     tkbsemester.Save();
                                 }
                                 else
@@ -343,9 +359,11 @@ namespace vidoSolution.Module.DomainObject
                                         Note = this.Note
                                     };
                                     tkbsemester.Lesson = lesson;
-                                    tkbsemester.Weeks = (lesson.TkbLesson!=null?lesson.TkbLesson.Week:"");
+                                    tkbsemester.Weeks = (lesson.TkbLesson != null ? lesson.TkbLesson.Week : "");
                                     tkbsemester.Classroom = classroom;
-                                    fileStreamlog.WriteLine(String.Format("Create tkbsemester: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", tkbsemester.Name, DateTime.Now));
+                                    //fileStreamlog.WriteLine(String.Format("Create tkbsemester: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", tkbsemester.Name, DateTime.Now));
+                                    fileStreamlog.WriteLine(String.Format("<TR><TD>TKBSEMESTER</TD><TD>CREATE NEW</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                                        tkbsemester.Lesson.LessonCode+"-"+ tkbsemester.Name + "-" + tkbsemester.Classroom.ClassroomCode + "-" + tkbsemester.Day.ToString() + "-" + tkbsemester.Period, DateTime.Now));
                                     tkbsemester.Save();
                                     tkbsemesterList.Add(tkbsemester);
                                 }
@@ -354,9 +372,10 @@ namespace vidoSolution.Module.DomainObject
 
 
                             #endregion
-
-                            fileStreamlog.WriteLine(String.Format("Create {0} lessons Data successfully on {1: dd-mm-yyyy HH:MM:ss}", lessonDic.Count, DateTime.Now));
-                            
+                           
+                            //fileStreamlog.WriteLine(String.Format("Create {0} lessons Data successfully on {1: dd-mm-yyyy HH:MM:ss}", lessonDic.Count, DateTime.Now));
+                             
+                            IsImported = true;
                         }
                         catch (Exception ex)
                         {
@@ -366,6 +385,7 @@ namespace vidoSolution.Module.DomainObject
                         }
                         finally
                         {
+                            fileStreamlog.WriteLine("</table></body></html>");    
                             fileStreamlog.Close();
                             fileStream.Close();
 
@@ -374,11 +394,11 @@ namespace vidoSolution.Module.DomainObject
                         
                     }
                 }
-                ResultMessage = "See log file for detail: Path= \"./tempFolder/" + XmlFile.FileName + "-log.txt\"";
+                ResultLink = "/tempFolder/" + XmlFile.FileName + "-log.html";
             }
             else
             {
-                ResultMessage = "Cannot import data without Semester and Note ";
+                ResultLink = "Cannot import data without Semester and Note ";
 
             }
         }
@@ -401,7 +421,7 @@ namespace vidoSolution.Module.DomainObject
                             classroomids = column.Value;
                             break;
                         case "day":
-                            iday = int.Parse(column.Value);
+                            iday = int.Parse(column.Value)+2;
                             break;
                         case "period":
                             iperiod = int.Parse(column.Value);
@@ -420,10 +440,10 @@ namespace vidoSolution.Module.DomainObject
                 };
                 card.Save();
                 card.Reload();
-                fileStreamlog.WriteLine(String.Format("Create card: \"{0}-{1}-{2}\" successful on {1: dd-mm-yyyy HH:MM:ss}", card.LessonID, card.ClassroomIDs, DateTime.Now));
+                //fileStreamlog.WriteLine(String.Format("Create card: \"{0}-{1}-{2}\" successful on {1: dd-mm-yyyy HH:MM:ss}", card.LessonID, card.ClassroomIDs, DateTime.Now));
                 tkbCardList.Add(card);
             }
-            fileStreamlog.WriteLine(String.Format("Create {0} cards successful on {1: dd-mm-yyyy HH:MM:ss}", tkbCardList.Count, DateTime.Now));
+            //fileStreamlog.WriteLine(String.Format("Create {0} cards successful on {1: dd-mm-yyyy HH:MM:ss}", tkbCardList.Count, DateTime.Now));
                            
         }
 
@@ -431,12 +451,14 @@ namespace vidoSolution.Module.DomainObject
             Dictionary <string,Lesson> lessonDic, 
             Dictionary<string,Subject> subjectDic, 
             Dictionary<string,TkbClass> classDic,
+            Dictionary<string, TkbGroup> groupDic,
             Dictionary<string,TkbTeacher> teacherDic, 
             StreamWriter fileStreamlog)
         {
             SortProperty sort = new SortProperty("LessonCode", SortingDirection.Descending);
             int nextcode = 0;
-            using (XPCollection collection = new XPCollection(uow, typeof(Lesson), null, sort) { TopReturnedObjects = 1 })
+            using (XPCollection collection = new XPCollection(uow, typeof(Lesson), new BinaryOperator(
+                "Semester.SemesterName", Semester.SemesterName), sort) { TopReturnedObjects = 1 })
             {                
                 if (collection.Count > 0)
                 {
@@ -444,7 +466,7 @@ namespace vidoSolution.Module.DomainObject
                     nextcode = firstLesson.LessonCode;
                 }
             }
-            int newcode=Convert.ToInt32(Semester.SemesterName+"000"); //first lesson of semester
+            int newcode=Convert.ToInt32(Semester.SemesterName+"0000"); //first lesson of semester
             if (newcode > nextcode)
                 nextcode = newcode;
             foreach (XElement row in xElement.Elements())
@@ -507,6 +529,37 @@ namespace vidoSolution.Module.DomainObject
                         Note = this.Note,
                         SubjectID = (subjectDic.ContainsKey(subjectid)?subjectDic[subjectid].SubjectCode:null)
                     };
+                    tkblesson.NumExpectation = 0;
+                    tkblesson.GroupIDs = "";
+                    if (groupids != "")
+                    {
+                        foreach (string groupid in groupids.Split(','))
+                        {
+                            string groupname ="";
+                            if (groupDic.ContainsKey(groupid))
+                            {
+                                if (groupDic[groupid].EntireClass)
+                                {
+                                    groupname = classDic.ContainsKey(groupDic[groupid].Classid) ?
+                                        classDic[groupDic[groupid].Classid].Name :
+                                        groupDic[groupid].Name;
+                                }
+                                else
+                                {
+                                    groupname = groupDic[groupid].Name;
+                                }
+                            }
+                            else
+                            {
+                                groupname = groupid;
+                            }
+                           
+                            tkblesson.GroupIDs += (groupname!="" ? groupname  + "," : "");
+                            tkblesson.NumExpectation += (groupDic.ContainsKey(groupid) ? groupDic[groupid].StudentCount : 0);
+                        }
+                        tkblesson.GroupIDs = tkblesson.GroupIDs.TrimEnd(',');
+                    }
+
                     tkblesson.ClassIDs = "";
                     if (classids != "")
                     {
@@ -517,18 +570,19 @@ namespace vidoSolution.Module.DomainObject
                         tkblesson.ClassIDs= tkblesson.ClassIDs.TrimEnd(',');                        
                     }
                     tkblesson.TeacherIDs = "";
+                    
                     if (teacherids != "")
                     {
                         foreach (string teacherid in teacherids.Split(','))
                         {
                             
-                            tkblesson.TeacherIDs += (teacherDic.ContainsKey(teacherid)? teacherDic[teacherid].Short + "," : "");
+                            tkblesson.TeacherIDs += (teacherDic.ContainsKey(teacherid)? teacherDic[teacherid].Short + "," : "");                            
                         }
                         tkblesson.TeacherIDs = tkblesson.TeacherIDs.TrimEnd(',');
                     }
                     tkblesson.Save();
                  
-                    fileStreamlog.WriteLine(String.Format("Create tkblesson: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", tkblesson.ID + "-" + tkblesson.SubjectID, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Create tkblesson: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", tkblesson.ID + "-" + tkblesson.SubjectID, DateTime.Now));
 
                 }
                 else
@@ -537,13 +591,43 @@ namespace vidoSolution.Module.DomainObject
                     tkblesson.ID = sid;
                     tkblesson.PeriodsPerCard = periodspercard;
                     tkblesson.PeriodsPerWeek = periodsperweek;
-                    tkblesson.ClassroomIDs = classroomids;
-                    tkblesson.GroupIDs = groupids;
+                    tkblesson.ClassroomIDs = classroomids;                   
                     tkblesson.StudentIDs = studentcoustudentidsnt;
                     tkblesson.Week = weeks;
                     tkblesson.Note = this.Note;
                     tkblesson.SubjectID = (subjectDic.ContainsKey(subjectid) ? subjectDic[subjectid].SubjectCode : "");
-                    tkblesson.ClassIDs = "";
+
+                    tkblesson.NumExpectation = 0;
+                    tkblesson.GroupIDs = "";
+                    if (groupids != "")
+                    {
+                        foreach (string groupid in groupids.Split(','))
+                        {
+                            string groupname = "";
+                            if (groupDic.ContainsKey(groupid))
+                            {
+                                if (groupDic[groupid].EntireClass)
+                                {
+                                    groupname = classDic.ContainsKey(groupDic[groupid].Classid) ?
+                                        classDic[groupDic[groupid].Classid].Name :
+                                        groupDic[groupid].Name;
+                                }
+                                else
+                                {
+                                    groupname = groupDic[groupid].Name;
+                                }
+                            }
+                            else
+                            {
+                                groupname = groupid;
+                            }
+
+                            tkblesson.GroupIDs += (groupname != "" ? groupname + "," : "");
+                            tkblesson.NumExpectation += (groupDic.ContainsKey(groupid) ? groupDic[groupid].StudentCount : 0);
+                        }
+                        tkblesson.GroupIDs = tkblesson.GroupIDs.TrimEnd(',');
+                    }
+
                     tkblesson.ClassIDs = "";
                     if (classids != "")
                     {
@@ -559,38 +643,50 @@ namespace vidoSolution.Module.DomainObject
                         foreach (string teacherid in teacherids.Split(','))
                         {
 
-                            tkblesson.TeacherIDs += (teacherDic.ContainsKey(teacherid) ? teacherDic[teacherid].Short + "," : "");
+                            tkblesson.TeacherIDs += (teacherDic.ContainsKey(teacherid) ? teacherDic[teacherid].Short + "," : "");                            
                         }
                         tkblesson.TeacherIDs = tkblesson.TeacherIDs.TrimEnd(',');
                     }
                     tkblesson.Save();
 
-                    fileStreamlog.WriteLine(String.Format("Update tkblesson: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", tkblesson.ID, DateTime.Now));
-                }
-               
+                    //fileStreamlog.WriteLine(String.Format("Update tkblesson: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", tkblesson.ID, DateTime.Now));
+                }               
 
                 Lesson lesson = new Lesson(uow)
                 {
-                    CanRegister =false, 
+                    CanRegister = Active, 
                     TkbLesson = tkblesson,
                     Semester = uow.FindObject<Semester>(new BinaryOperator("Oid", this.Semester.Oid)),
                     Subject = (subjectDic.ContainsKey(subjectid) ? subjectDic[subjectid] : null),
                     LessonNote = Note,
-                    ClassIDs = tkblesson.ClassIDs,
+                    ClassIDs = tkblesson.GroupIDs,
+                    NumExpectation = tkblesson.NumExpectation,
                     LessonCode = ++nextcode //tăng dần 
                 };
-
+                foreach (string teacherCode in tkblesson.TeacherIDs.Split(','))
+                {
+                    Teacher teacher = uow.FindObject<Teacher>(new BinaryOperator("TeacherCode", teacherCode));
+                    if (teacher !=null)
+                        lesson.Teachers.Add(teacher);
+                }
                 lesson.Save();
-                if (lesson.Subject!=null)
-                    fileStreamlog.WriteLine(String.Format("Create Lesson: \"{0}\" successfully on {1: dd-mm-yyyy HH:MM:ss}", lesson.Subject.SubjectCode + lesson.TkbLesson.Name, DateTime.Now));
+                if (lesson.Subject != null)
+                {
+                    //fileStreamlog.WriteLine(String.Format("Create Lesson: \"{0}\" successfully on {1: dd-mm-yyyy HH:MM:ss}", lesson.Subject.SubjectCode + lesson.TkbLesson.Name, DateTime.Now));
+                    fileStreamlog.WriteLine(String.Format("<TR><TD>LESSON</TD><TD>CREATE NEW</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                      lesson.LessonCode.ToString() + "-" + lesson.Subject.SubjectCode +"-"+ lesson.ClassIDs, DateTime.Now));
+                }
                 else
-                    fileStreamlog.WriteLine(String.Format("WARNING: Create Lesson: \"{0}\" without Lesson \"{1}\" successfully on {2: dd-mm-yyyy HH:MM:ss}", lesson.TkbLesson.Name,tkblesson.SubjectID, DateTime.Now));
-
+                {
+                    //fileStreamlog.WriteLine(String.Format("WARNING: Create Lesson: \"{0}\" without Lesson \"{1}\" successfully on {2: dd-mm-yyyy HH:MM:ss}", lesson.TkbLesson.Name, tkblesson.SubjectID, DateTime.Now));
+                    fileStreamlog.WriteLine(String.Format("<TR><TD>LESSON</TD><TD>CREATE NEW</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>WARNING</TD></TR>",
+                      lesson.LessonCode.ToString() + "-" + lesson.TkbLesson.Name + "-"+lesson.TkbLesson.SubjectID + "-" + lesson.ClassIDs, DateTime.Now));
+                }
                 lessonDic.Add(sid, lesson);
 
             }
 
-            fileStreamlog.WriteLine(String.Format("Create {0} lesson successfully on {1: dd-mm-yyyy HH:MM:ss}", lessonDic.Count, DateTime.Now));
+            //fileStreamlog.WriteLine(String.Format("Create {0} lesson successfully on {1: dd-mm-yyyy HH:MM:ss}", lessonDic.Count, DateTime.Now));
 
         }
 
@@ -630,7 +726,8 @@ namespace vidoSolution.Module.DomainObject
                     };
                     subject.Save();
                     
-                    fileStreamlog.WriteLine(String.Format("Create TkbSubject: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", subject.Name, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Create TkbSubject: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", subject.Name, DateTime.Now));
+                    
                 }
                 else
                 {
@@ -639,7 +736,7 @@ namespace vidoSolution.Module.DomainObject
                     subject.Short = sshort;
                     subject.Note = this.Note;
                     subject.Save();
-                    fileStreamlog.WriteLine(String.Format("Update TkbSubject: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", subject.Name, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Update TkbSubject: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", subject.Name, DateTime.Now));
                 }
 
 
@@ -649,18 +746,22 @@ namespace vidoSolution.Module.DomainObject
                     subj = new Subject(uow) { SubjectCode = sshort, SubjectName = sname, Note = this.Note };
                     subj.Save();
 
-                    fileStreamlog.WriteLine(String.Format("Create Subject: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", subj.SubjectName, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Create Subject: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", subj.SubjectName, DateTime.Now));
+                    fileStreamlog.WriteLine(String.Format("<TR><TD>SUBJECT</TD><TD>CREATE NEW</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                      subj.SubjectCode + "-" + subj.SubjectName, DateTime.Now));
                 }
                 else
                 {
                     subj.SubjectName = sname;                    
                     subj.Note = this.Note;
                     subject.Save();
-                    fileStreamlog.WriteLine(String.Format("Update Subject: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", subj.SubjectName, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Update Subject: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", subj.SubjectName, DateTime.Now));
+                    fileStreamlog.WriteLine(String.Format("<TR><TD>SUBJECT</TD><TD>UPDATE</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                     subj.SubjectCode + "-" + subj.SubjectName, DateTime.Now));
                 }
                 subjectdic.Add(sid, subj);
             }
-            fileStreamlog.WriteLine(String.Format("Create {0} subjects successfully on {1: dd-mm-yyyy HH:MM:ss}", subjectdic.Count, DateTime.Now));
+            //fileStreamlog.WriteLine(String.Format("Create {0} subjects successfully on {1: dd-mm-yyyy HH:MM:ss}", subjectdic.Count, DateTime.Now));
 
         }
 
@@ -696,10 +797,10 @@ namespace vidoSolution.Module.DomainObject
                             break;
                     }
                 }
-                TkbTeacher teacher = uow.FindObject<TkbTeacher>(new BinaryOperator("ID", tid));
-                if (teacher == null)
+                TkbTeacher tkbteacher = uow.FindObject<TkbTeacher>(new BinaryOperator("ID", tid));
+                if (tkbteacher == null)
                 {
-                    teacher = new TkbTeacher(uow)
+                    tkbteacher = new TkbTeacher(uow)
                     {
                         ID = tid,
                         Name = tname,
@@ -710,25 +811,50 @@ namespace vidoSolution.Module.DomainObject
                         Semester = uow.FindObject<Semester>(new BinaryOperator("Oid", this.Semester.Oid))
                     };
 
-                    teacher.Save();
-                  
-                    fileStreamlog.WriteLine(String.Format("Create teacher: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", teacher.Name, DateTime.Now));
+                    tkbteacher.Save();
+
+                    //fileStreamlog.WriteLine(String.Format("Create tkb teacher: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", tkbteacher.Name, DateTime.Now));
+                    //fileStreamlog.WriteLine(string.Format("<TR><TD>TKBTEACHER</TD><TD>CREATE NEW</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                    //  tkbteacher.ID + "-" + tkbteacher.Name + "-" + tkbteacher.Short + "-" + tkbteacher.Gender.ToString(), DateTime.Now));
                 }
                 else
                 {
-                    teacher.Semester = uow.FindObject<Semester>(new BinaryOperator("Oid", this.Semester.Oid));
-                    teacher.ID = tid;
-                    teacher.Name = tname;
-                    teacher.Gender = tgender;
-                    teacher.Color = tcolor;
-                    teacher.Short = tshort;
-                    teacher.Note = this.Note;
-                    teacher.Save();
-                    fileStreamlog.WriteLine(String.Format("Update teacher: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", teacher.Name, DateTime.Now));
+                    tkbteacher.Semester = uow.FindObject<Semester>(new BinaryOperator("Oid", this.Semester.Oid));
+                    tkbteacher.ID = tid;
+                    tkbteacher.Name = tname;
+                    tkbteacher.Gender = tgender;
+                    tkbteacher.Color = tcolor;
+                    tkbteacher.Short = tshort;
+                    tkbteacher.Note = this.Note;
+                    tkbteacher.Save();
+                    //fileStreamlog.WriteLine(String.Format("Update teacher: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", tkbteacher.Name, DateTime.Now));
+                   // fileStreamlog.WriteLine(string.Format("<TR><TD>TKBTEACHER</TD><TD>UPDATE</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                     //  tkbteacher.ID + "-" + tkbteacher.Name + "-" + tkbteacher.Short + "-" + tkbteacher.Gender.ToString(), DateTime.Now));
                 }
-                teacherDic.Add(tid,teacher);
+                Teacher teacher = uow.FindObject<Teacher>(new BinaryOperator("TeacherCode", tshort));
+                if (teacher == null)
+                {
+                    teacher = new Teacher(uow)
+                    {
+                        TeacherCode = tshort,
+                        LastName = tname,
+                        ShortName = tshort,
+                        Sex = tgender
+                    };
+                    //fileStreamlog.WriteLine(String.Format("Create Teacher: \"{0}-{1}\" successfully on {2: dd-mm-yyyy HH:MM:ss}", teacher.LastName, teacher.TeacherCode, DateTime.Now));
+                    fileStreamlog.WriteLine(String.Format("<TR><TD>TEACHER</TD><TD>CREATE NEW</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                       teacher.TeacherCode + "-" + teacher.FullName, DateTime.Now));
+                    teacher.Save();
+                }
+                else
+                {
+                    fileStreamlog.WriteLine(String.Format("<TR><TD>TEACHER</TD><TD></TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>EXISTED</TD></TR>",
+                          teacher.TeacherCode + "-" + teacher.FullName, DateTime.Now));
+                }
+
+                teacherDic.Add(tid, tkbteacher);
             }
-            fileStreamlog.WriteLine(String.Format("Create {0} teachers successfully on {1: dd-mm-yyyy HH:MM:ss}", teacherDic.Count, DateTime.Now));
+            //fileStreamlog.WriteLine(String.Format("Create {0} teachers successfully on {1: dd-mm-yyyy HH:MM:ss}", teacherDic.Count, DateTime.Now));
 
         }
 
@@ -767,14 +893,14 @@ namespace vidoSolution.Module.DomainObject
                         Semester = uow.FindObject<Semester>(new BinaryOperator("Oid", this.Semester.Oid))
                     };
                     tkbclassroom.Save();                   
-                    fileStreamlog.WriteLine(String.Format("Create tkbclassroom: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", tkbclassroom.ID, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Create tkbclassroom: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", tkbclassroom.ID, DateTime.Now));
                 }
                 else
                 {
                     tkbclassroom.Semester = uow.FindObject<Semester>(new BinaryOperator("Oid", this.Semester.Oid));
                     tkbclassroom.Name = cname;
                     tkbclassroom.Short = cshort;
-                    fileStreamlog.WriteLine(String.Format("Update tkbclassroom: \"{0}\" on database - {1: dd-mm-yyyy HH:MM:ss}", tkbclassroom.ID, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Update tkbclassroom: \"{0}\" on database - {1: dd-mm-yyyy HH:MM:ss}", tkbclassroom.ID, DateTime.Now));
                     tkbclassroom.Save();
                 }               
 
@@ -783,20 +909,29 @@ namespace vidoSolution.Module.DomainObject
                 if (office == null)
                 {
                     office = new Office(uow) { OfficeCode = scname[0], Name = scname[0] };
-                    fileStreamlog.WriteLine(String.Format("Create office: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", office.Name, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Create office: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", office.Name, DateTime.Now));
+                    fileStreamlog.WriteLine(String.Format("<TR><TD>OFFICE</TD><TD>CREATE NEW</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                         office.OfficeCode , DateTime.Now));
                     office.Save();
                 }
-
+                
                 Classroom csroom = uow.FindObject<Classroom>(new BinaryOperator("ClassroomCode", cname));
                 if (csroom == null)
                 {
                     csroom = new Classroom(uow) { ClassroomCode = cname, ClassroomName = cname, Office = office };
-                    fileStreamlog.WriteLine(String.Format("Create classroom: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", csroom.ClassroomCode, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Create classroom: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", csroom.ClassroomCode, DateTime.Now));
+                    fileStreamlog.WriteLine(String.Format("<TR><TD>CLASSROOM</TD><TD>CREATE NEW</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                        csroom.ClassroomCode, DateTime.Now));
                     csroom.Save();
+                }
+                else
+                {
+                    fileStreamlog.WriteLine(String.Format("<TR><TD>CLASSROOM</TD><TD></TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>EXISTED</TD></TR>",
+                       csroom.ClassroomCode, DateTime.Now));
                 }
                 roomDic.Add(sid, csroom);
             }
-            fileStreamlog.WriteLine(String.Format("Create {0} classroom successfully on {1: dd-mm-yyyy HH:MM:ss}", roomDic.Count, DateTime.Now));
+            //fileStreamlog.WriteLine(String.Format("Create {0} classroom successfully on {1: dd-mm-yyyy HH:MM:ss}", roomDic.Count, DateTime.Now));
 
         }
 
@@ -828,7 +963,9 @@ namespace vidoSolution.Module.DomainObject
                 {
                     period = new TkbPeriod(uow) { Name = iname, StartTime = starttime, EndTime = endtime, Note = this.Note };
                     period.Save();
-                    fileStreamlog.WriteLine(String.Format("Create period: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", period.Name, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Create period: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", period.Name, DateTime.Now));
+                    fileStreamlog.WriteLine(string.Format("<TR><TD>PERIOD</TD><TD>CREATE NEW</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                        period.Name + "-" + period.StartTime + "-" + period.EndTime, DateTime.Now));
                 }
                 else
                 {
@@ -837,7 +974,9 @@ namespace vidoSolution.Module.DomainObject
                     period.EndTime = endtime;
                     period.Note = this.Note;
                     period.Save();
-                    fileStreamlog.WriteLine(String.Format("Update Period: \"{0}\" successfully on database - {1: dd-mm-yyyy HH:MM:ss}", period.Name, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Update Period: \"{0}\" successfully on database - {1: dd-mm-yyyy HH:MM:ss}", period.Name, DateTime.Now));
+                    fileStreamlog.WriteLine(string.Format("<TR><TD>PERIOD</TD><TD>UPDATE</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                        period.Name + "-" + period.StartTime + "-" + period.EndTime, DateTime.Now));
                 }
                 periodDic.Add(iname.ToString(), period);
             }
@@ -860,7 +999,7 @@ namespace vidoSolution.Module.DomainObject
                             dshort = column.Value;
                             break;
                         case "day":
-                            dday = int.Parse(column.Value);
+                            dday = int.Parse(column.Value)+2;
                             break;
                         default:
                             break;
@@ -871,7 +1010,9 @@ namespace vidoSolution.Module.DomainObject
                 {
                     day = new TkbDay(uow) { Day = dday, Short = dshort, Name = dname, Note = this.Note };
                     day.Save();
-                    fileStreamlog.WriteLine(String.Format("Create day: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", day.Name, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Create day: \"{0}\" successful on {1: dd-mm-yyyy HH:MM:ss}", day.Name, DateTime.Now));
+                    fileStreamlog.WriteLine(string.Format("<TR><TD>DAY</TD><TD>CREATE NEW</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                        day.Day.ToString() +"-"+day.Name + "-"+day.Short, DateTime.Now));
                 }
                 else
                 {
@@ -880,7 +1021,10 @@ namespace vidoSolution.Module.DomainObject
                     day.Name = dname;
                     day.Note = this.Note;
                     day.Save();
-                    fileStreamlog.WriteLine(String.Format("Update Day: \"{0}\" successfully on database - {1: dd-mm-yyyy HH:MM:ss}", day.Name, DateTime.Now));
+                    
+                    //fileStreamlog.WriteLine(String.Format("Update Day: \"{0}\" successfully on database - {1: dd-mm-yyyy HH:MM:ss}", day.Name, DateTime.Now));
+                    fileStreamlog.WriteLine(string.Format("<TR><TD>DAY</TD><TD>UPDATE</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                        day.Day.ToString() + "-" + day.Name + "-" + day.Short, DateTime.Now));
                 }
                 dayDic.Add(dday.ToString(), day);
             }
@@ -895,6 +1039,7 @@ namespace vidoSolution.Module.DomainObject
                 int divisiontag = 0, studentcount = 0;
                 foreach (XAttribute column in row.Attributes())
                 {
+                    int temp;
                     switch (column.Name.LocalName)
                     {
                         case "id":
@@ -909,11 +1054,10 @@ namespace vidoSolution.Module.DomainObject
                         case "entireclass":
                             entireclass = column.Value == "0" ? false : true;
                             break;
-                        case "divisiontag":
-                            divisiontag = int.Parse(column.Value);
+                        case "divisiontag":                            
+                            divisiontag = int.TryParse(column.Value, out temp) ? temp : 0;
                             break;
-                        case "studentcount":
-                            int temp;
+                        case "studentcount":                            
                             studentcount = int.TryParse(column.Value, out temp) ? temp : 0;
                             break;
                         default:
@@ -936,7 +1080,7 @@ namespace vidoSolution.Module.DomainObject
                         Semester = uow.FindObject<Semester>(new BinaryOperator("Oid", this.Semester.Oid))
                     };
                     tkbGroup.Save();
-                    fileStreamlog.WriteLine(string.Format("Create new tkbGroup : \"{0}\" successfully on {1:dd-mm-yy HH:MM:ss}", name, DateTime.Now));
+                    //fileStreamlog.WriteLine(string.Format("Create new tkbGroup : \"{0}\" successfully on {1:dd-mm-yy HH:MM:ss}", name, DateTime.Now));
                 }
                 else
                 {
@@ -949,7 +1093,7 @@ namespace vidoSolution.Module.DomainObject
                     tkbGroup.Note = this.Note;
                     tkbGroup.Semester = uow.FindObject<Semester>(new BinaryOperator("Oid", this.Semester.Oid));
                     tkbGroup.Save();
-                    fileStreamlog.WriteLine(String.Format("Update tkbGroup: \"{0}\" successfully on database {1: dd-mm-yyyy HH:MM:ss}", name, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Update tkbGroup: \"{0}\" successfully on database {1: dd-mm-yyyy HH:MM:ss}", name, DateTime.Now));
                 }
                 groupDic.Add(grid, tkbGroup);
             }
@@ -998,7 +1142,7 @@ namespace vidoSolution.Module.DomainObject
                     };
                     tkbclass.Save();
                 
-                    fileStreamlog.WriteLine(string.Format("Create new tkbclass: \"{0}\" successfully on {1:dd-mm-yy HH:MM:ss}", clname, DateTime.Now));
+                    //fileStreamlog.WriteLine(string.Format("Create new tkbclass: \"{0}\" successfully on {1:dd-mm-yy HH:MM:ss}", clname, DateTime.Now));
                 }
                 else
                 {
@@ -1012,7 +1156,7 @@ namespace vidoSolution.Module.DomainObject
                     tkbclass.Semester = uow.FindObject<Semester>(new BinaryOperator("Oid", this.Semester.Oid));
                     tkbclass.Save();
 
-                    fileStreamlog.WriteLine(String.Format("Update class: \"{0}\" successfully on database {1: dd-mm-yyyy HH:MM:ss}", clname, DateTime.Now));
+                    //fileStreamlog.WriteLine(String.Format("Update class: \"{0}\" successfully on database {1: dd-mm-yyyy HH:MM:ss}", clname, DateTime.Now));
                 }
                 classDic.Add(clid, tkbclass);
             }
@@ -1057,15 +1201,19 @@ namespace vidoSolution.Module.DomainObject
                         Semester = uow.FindObject<Semester>(new BinaryOperator("Oid", this.Semester.Oid))
                     };
                     grade.Save();
-                    fileStreamlog.WriteLine(string.Format("Create new grade: \"{0}\" on {1:dd-mm-yy HH:MM:ss}", ggrade, DateTime.Now));
+                    fileStreamlog.WriteLine(string.Format("<TR><TD>GRADE</TD><TD>CREATE NEW</TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD>OK</TD></TR>",
+                        ggrade, DateTime.Now));
                 }
                 else
                 {
-                    fileStreamlog.WriteLine(String.Format("Grade: \"{0}\" had defined on database {1: dd-mm-yyyy HH:MM:ss}", grade.Name, DateTime.Now));
+                    fileStreamlog.WriteLine(String.Format("<TR><TD>GRADE</TD><TD></TD><TD>\"{0}\"</TD><TD> {1:dd-mm-yy HH:MM:ss}</TD><TD> EXISTED </TD></TR>",
+                        grade.Name, DateTime.Now));
                 }
                 gradeDic.Add(gid, grade);
             }
         }
+
+        
     }
 }
 

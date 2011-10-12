@@ -372,10 +372,10 @@ namespace vidoSolution.Module.Utilities
                             foreach (AccountTransaction accTrans in student.AccountTransactions)
                             {
                                 if ((accTrans.Semester != null && 
-                                    Convert.ToInt32(accTrans.Semester.SemesterName)<Convert.ToInt32(semester.SemesterName))||
-                                    accTrans.TransactingDate< semester.StartDate)
+                                    Convert.ToInt32(accTrans.Semester.SemesterName)<Convert.ToInt32(semester.SemesterName)))
+                                //||accTrans.TransactingDate< semester.StartDate)
                                     beforedebtvalue += accTrans.MoneyAmount;
-                                else if (accTrans.TransactingDate <= semesterLastDate || 
+                                else if (//accTrans.TransactingDate <= semesterLastDate || 
                                     (accTrans.Semester!=null && accTrans.Semester.SemesterName ==semester.SemesterName))
                                 {
                                     if (accTrans.MoneyAmount < 0) //money has to paid
@@ -441,13 +441,13 @@ namespace vidoSolution.Module.Utilities
                             foreach (AccountTransaction accTrans in student.AccountTransactions)
                             {
                                 if ((accTrans.Semester != null &&
-                                    Convert.ToInt32(accTrans.Semester.SemesterName) < Convert.ToInt32(semester.SemesterName)) ||
-                                    accTrans.TransactingDate < semester.StartDate)
+                                    Convert.ToInt32(accTrans.Semester.SemesterName) < Convert.ToInt32(semester.SemesterName)))
+                                    //||accTrans.TransactingDate < semester.StartDate)
                                     
                                     beforedebtvalue += accTrans.MoneyAmount;
 
-                                else if ((accTrans.Semester != null && accTrans.Semester.SemesterName == semester.SemesterName)||
-                                    accTrans.TransactingDate <= semesterLastDate )
+                                else if ((accTrans.Semester != null && accTrans.Semester.SemesterName == semester.SemesterName))
+                                    //||accTrans.TransactingDate <= semesterLastDate )
                                 {
                                     if (accTrans.MoneyAmount < 0) //money has to paid
                                     {

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
   <BOModel Id="BOModel">
-    <Class Name="vidoSolution.Module.ReportParameter.LessonReportParametersObject">
+    <Class Name="vidoSolution.Module.DomainObject.TkbFile">
       <OwnMembers Id="OwnMembers">
-        <Member Name="ShowOnlyPaidStudent" Caption="Chỉ in sinh viên không nợ học phí" />
+        <Member Name="ResultMessage" Caption="Kết quả Import" />
       </OwnMembers>
     </Class>
   </BOModel>
